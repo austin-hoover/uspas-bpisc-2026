@@ -1,0 +1,48 @@
+---
+title: Beam Mismatch and Halo Formation
+subtitle: USPAS - Beam Physics with Intense Space Charge
+toc: true
+format: 
+  revealjs:
+    fontsize: 28px
+    width: 50%
+    slide-number: true
+    embed-resources: true
+    incremental: true
+---
+        
+# 2D envelope modes in continuous focusing channels
+
+
+## Derivation of equilibrium beam radius
+
+Start from the KV envelope equations:
+
+$$
+\begin{aligned}
+r_x'' + \kappa_x(s) r_x - \frac{2 Q}{r_x + r_y} - \frac{\varepsilon_x^2}{r_x^3} &= 0,
+\\
+r_y'' + \kappa_y(s) r_y - \frac{2 Q}{r_x + r_y} - \frac{\varepsilon_y^2}{r_y^3} &= 0,
+\end{aligned}
+$${#eq-env}
+
+where $r_{x, y}$ are the beam ellipse radii, $\varepsilon_{x, y}$ are the invariant emittances, $\kappa_{x, y}(s)$ are the linear focusing strengths, and $Q$ is the dimensionless perveance.
+
+
+##
+
+Assume a continuous, axisymmetric lattice: $\kappa_x(s) = \kappa_y(s) = k_0^2$; also assume that the beam has equal emittances in both planes: $\varepsilon_x = \varepsilon_y = \varepsilon$.
+
+$$
+\begin{aligned}
+r_x'' + k_0^2 r_x - \frac{2 Q}{r_x + r_y} - \frac{\varepsilon^2}{r_x^3} &= 0 ,
+\\
+r_y'' + k_0^2 r_y - \frac{2 Q}{r_x + r_y} - \frac{\varepsilon^2}{r_y^3} &= 0.
+\end{aligned}
+$${#eq-env-continuous}
+
+Equilibrium occurs at $r_x = r_y = r_0$ when $r_x'' = r_y'' = 0$, indicating exact force balance between external and internal fields.
+
+$$
+r_0 = \frac{Q^{1/2}}{k_0} \left[ \frac{1}{2} + \frac{1}{2} \sqrt{1 + \frac{4 k_0^2 \varepsilon^2}{Q^2}} \right]^{1/2}.
+$${#eq-env-radius-2}
