@@ -3,6 +3,8 @@ title: Beam Mismatch and Halo Formation
 subtitle: USPAS - Beam Physics with Intense Space Charge
 author: A. Hoover, D. Winklehner, S. Lund, J. Barnard
 toc: true
+bibliography: references.bib 
+csl: aps.csl
 format: 
   revealjs:
     fontsize: 26px
@@ -86,7 +88,7 @@ $${#eq-1}
 We can also use $k^2$ to simplify the expression for the equilibrium radius in @eq-env-radius-2:
 
 $$
-r_0 = \sqrt{\frac{\epsilon}{k}}.
+r_0 = \sqrt{\frac{\varepsilon}{k}}.
 $${#eq-1}
 
 This makes sense: the equilibrium radius depends on the *relative* strengths of the external and self-generated fields.
@@ -115,8 +117,27 @@ Donec egestas quam eget nisl condimentum, vitae tempus nulla placerat. Curabitur
 Vestibulum semper felis eu velit viverra interdum. Aenean non lacinia nunc. Nulla hendrerit enim vel lorem laoreet, sit amet tempus sem egestas. Suspendisse potenti. Integer libero leo, efficitur a risus eu, interdum egestas justo. Pellentesque nec tellus eu arcu vulputate tristique. Sed eget justo pharetra, suscipit leo in, lobortis leo. Maecenas sit amet lectus at nulla pellentesque fringilla. Donec a fringilla lectus. Pellentesque volutpat mauris eget ligula tempus venenatis ac dignissim felis. Donec nibh risus, pretium et massa congue, pretium facilisis purus. Donec eleifend sem sed magna fermentum pellentesque.
 
 
+## Test citation
+
+This sentence ends with a citation @qiang_2026_study.
+
 
 # 3D envelope modes in continuous focusing channels
 
+## Section 1
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed egestas at magna ut rhoncus. Donec euismod est tortor, sit amet posuere eros porta nec. Morbi convallis vestibulum leo eu consectetur. Sed felis mi, maximus vel viverra id, rhoncus quis dui. Curabitur eu lacus at dolor consequat sagittis a a mi. Fusce sed dolor vitae leo tincidunt condimentum a vel dui. Etiam sodales ornare neque quis efficitur. Sed in imperdiet elit, luctus pellentesque lacus. Ut et eleifend eros. Vestibulum sapien sapien, pellentesque et mi ullamcorper, hendrerit sodales sem. Nunc nec gravida lorem. Mauris vitae nisl nec tortor lacinia fringilla. Duis at dignissim ipsum, quis euismod massa. Suspendisse condimentum felis sit amet blandit commodo.
+
 
 # Particle-core model of halo formation
+
+## Section 2
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed egestas at magna ut rhoncus. Donec euismod est tortor, sit amet posuere eros porta nec. Morbi convallis vestibulum leo eu consectetur. Sed felis mi, maximus vel viverra id, rhoncus quis dui. Curabitur eu lacus at dolor consequat sagittis a a mi. Fusce sed dolor vitae leo tincidunt condimentum a vel dui. Etiam sodales ornare neque quis efficitur. Sed in imperdiet elit, luctus pellentesque lacus. Ut et eleifend eros. Vestibulum sapien sapien, pellentesque et mi ullamcorper, hendrerit sodales sem. Nunc nec gravida lorem. Mauris vitae nisl nec tortor lacinia fringilla. Duis at dignissim ipsum, quis euismod massa. Suspendisse condimentum felis sit amet blandit commodo.
+
+
+
+## References
+
+::: {#refs}
+:::

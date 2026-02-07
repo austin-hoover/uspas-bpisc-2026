@@ -2,8 +2,14 @@
 
 This repo is under construction.
 
-Render documents:
+Render individual document:
 
 ```
 quarto render filename.qmd
+```
+
+Render all documents:
+
+```
+./make.sh
 ```
