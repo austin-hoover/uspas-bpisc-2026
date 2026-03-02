@@ -1,5 +1,19 @@
 [
   {
+    "objectID": "lectures/collision/index.html#gas-and-electron-effects",
+    "href": "lectures/collision/index.html#gas-and-electron-effects",
+    "title": "Intrabeam Collisions, Gas and Electron Effects",
+    "section": "Gas and electron effects",
+    "text": "Gas and electron effects\n\nEffects depend strongly on particle mass and charge.\nTimescales are much different in circular accelerators vs. linacs (\\(t_{residence}\\) ~ milliseconds to days vs. 10’s of microseconds).\nLong vs. short pulse (\\(t_{pulse}\\) ~ 10’s of microseconds vs. 10’s of nanoseconds)."
+  },
+  {
+    "objectID": "lectures/collision/index.html#coulomb-collisions-1",
+    "href": "lectures/collision/index.html#coulomb-collisions-1",
+    "title": "Intrabeam Collisions, Gas and Electron Effects",
+    "section": "Coulomb collisions",
+    "text": "Coulomb collisions\nConsider effects of Coulomb collisions in a continuous beam propagating through a continuous focusing channel with \\(T_{\\perp} \\ne T_{\\parallel}\\). (If \\(T_{\\perp} \\ne T_{\\parallel}\\), the beam is already relaxed.)\nFrom Ichimaru and Rosenbluth  [1]:\n\\[\n\\frac{d T_\\perp}{dt} = -\\frac{1}{2} \\frac{d T_\\parallel}{dt} = \\frac{T_\\parallel - T_\\perp}{\\tau} .\n\\]\n(Since \\(T_x = T_y = T_\\perp\\), \\(T_\\parallel\\) changes at twice the rate of \\(T_\\perp\\). Abd since \\(2 k_B T_\\perp + k_B T_\\parallel = \\text{constant}\\).)\n\\[\n\\begin{aligned}\n\\tau\n&= \\text{relaxation time} \\\\\n&= \\frac{}{}\n\\end{aligned}\n\\]"
+  },
+  {
     "objectID": "lectures/halo/index.html#equilibrium-beam-radius",
     "href": "lectures/halo/index.html#equilibrium-beam-radius",
     "title": "Beam Mismatch and Halo Formation",
@@ -95,7 +109,7 @@
     "href": "index.html",
     "title": "USPAS BPISC 2026",
     "section": "",
-    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nTitle\n\n\n\nAuthor\n\n\n\n\n\n\n\n\nPlasma Physics of Beams\n\n\nAustin Hoover, John Barnard\n\n\n\n\n\n\nEnvelope Equations\n\n\nAustin Hoover, John Barnard\n\n\n\n\n\n\nBeam Current Limits\n\n\nAustin Hoover, John Barnard\n\n\n\n\n\n\nBeam Mismatch and Halo Formation\n\n\nAustin Hoover, John Barnard\n\n\n\n\n\n\nIntrabeam Collisions, Gas, and Electron Effects\n\n\nAustin Hoover, John Barnard\n\n\n\n\n\n\nTransverse Particle Dynamics\n\n\nSteven Lund\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nTitle\n\n\n\nAuthor\n\n\n\n\n\n\n\n\nPlasma Physics of Beams\n\n\nAustin Hoover, John Barnard\n\n\n\n\n\n\nEnvelope Equations\n\n\nAustin Hoover, John Barnard\n\n\n\n\n\n\nBeam Current Limits\n\n\nAustin Hoover, John Barnard\n\n\n\n\n\n\nBeam Mismatch and Halo Formation\n\n\nAustin Hoover, John Barnard\n\n\n\n\n\n\nIntrabeam Collisions, Gas and Electron Effects\n\n\nAustin Hoover, John Barnard\n\n\n\n\n\n\nTransverse Particle Dynamics\n\n\nSteven Lund\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "lectures/envelope/index.html#conservation-of-canonical-angular-momentum",
