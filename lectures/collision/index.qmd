@@ -14,8 +14,27 @@ csl: aps.csl
 
 # Coulomb collisions
 
+## Gas and electron effects
+
+* Effects depend strongly on particle mass and charge.
+* Timescales are much different in circular accelerators vs. linacs ($t_{residence}$ \~ milliseconds to days vs. 10's of microseconds).
+
+* Long vs. short pulse ($t_{pulse}$ \~ 10's of microseconds vs. 10's of nanoseconds).
+
+
+---
+
+![](images/processes.png){.absolute left=0 right=0 bottom=0 top=0 height="100%" style="margin: auto auto;"}
+
+
+---
+
+![](images/wall_interactions.png){.absolute left=0 right=0 bottom=0 top=0 height="100%" style="margin: auto auto;"}
+
+
 
 ## Coulomb collisions
+
 Consider effects of Coulomb collisions in a continuous beam propagating through a continuous focusing channel with $T_{\perp} \ne T_{\parallel}$. (If $T_{\perp} \ne T_{\parallel}$, the beam is already relaxed.)
 
 From Ichimaru and Rosenbluth @ichimaru_1970_relaxation:
@@ -24,9 +43,17 @@ $$
 \frac{d T_\perp}{dt} = -\frac{1}{2} \frac{d T_\parallel}{dt} = \frac{T_\parallel - T_\perp}{\tau} .
 $$
 
-(Since $T_x = T_y = T_\perp$, $T_\parallel$ changes at twice the rate of $T_\perp$.)
+(Since $T_x = T_y = T_\perp$, $T_\parallel$ changes at twice the rate of $T_\perp$. Abd since $2 k_B T_\perp + k_B T_\parallel = \text{constant}$.)
 
-(Since $2 k_B T_\perp + k_B T_\parallel = \text{constant}$.)
+$$
+\begin{aligned}
+\tau 
+&= \text{relaxation time} \\
+&= \frac{}{}
+\end{aligned}
+$$
+
+
 
 # Beam-gas scattering
 
