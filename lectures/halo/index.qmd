@@ -14,9 +14,6 @@ csl: aps.csl
 # 2D envelope modes in continuous focusing channels
 
 
-## S1B: Applied Fields used to Focus, Bend, and Accelerate Beam
-
-Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing 
 
 
 ## Equilibrium beam radius
@@ -135,6 +132,14 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed egestas at magna ut
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed egestas at magna ut rhoncus. Donec euismod est tortor, sit amet posuere eros porta nec. Morbi convallis vestibulum leo eu consectetur. Sed felis mi, maximus vel viverra id, rhoncus quis dui. Curabitur eu lacus at dolor consequat sagittis a a mi. Fusce sed dolor vitae leo tincidunt condimentum a vel dui. Etiam sodales ornare neque quis efficitur. Sed in imperdiet elit, luctus pellentesque lacus. Ut et eleifend eros. Vestibulum sapien sapien, pellentesque et mi ullamcorper, hendrerit sodales sem. Nunc nec gravida lorem. Mauris vitae nisl nec tortor lacinia fringilla. Duis at dignissim ipsum, quis euismod massa. Suspendisse condimentum felis sit amet blandit commodo.
 
+
+## Test slide
+
+Some text.
+
+::: {.notes}
+Test speaker notes.
+:::
 
 
 ## References
