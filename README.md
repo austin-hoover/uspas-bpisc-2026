@@ -2,14 +2,8 @@
 
 This repo is under construction.
 
-Render individual document:
+Build website on local machine:
 
 ```
-quarto render filename.qmd
-```
-
-Render all documents:
-
-```
-./make.sh
+quarto preview
 ```
