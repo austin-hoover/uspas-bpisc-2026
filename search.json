@@ -1,0 +1,163 @@
+[
+  {
+    "objectID": "lectures/halo/index.html#equilibrium-beam-radius",
+    "href": "lectures/halo/index.html#equilibrium-beam-radius",
+    "title": "Beam Mismatch and Halo Formation",
+    "section": "Equilibrium beam radius",
+    "text": "Equilibrium beam radius\nStart from the KV envelope equations:\n\\[\n\\begin{aligned}\nr_x'' + \\kappa_x(s) r_x - \\frac{2 Q}{r_x + r_y} - \\frac{\\varepsilon_x^2}{r_x^3} &= 0,\n\\\\\nr_y'' + \\kappa_y(s) r_y - \\frac{2 Q}{r_x + r_y} - \\frac{\\varepsilon_y^2}{r_y^3} &= 0,\n\\end{aligned}\n\\tag{1}\\]\nwhere \\(r_{x, y}\\) are the beam ellipse radii, \\(\\varepsilon_{x, y}\\) are the invariant emittances, \\(\\kappa_{x, y}(s)\\) are the linear focusing strengths, and \\(Q\\) is the dimensionless perveance."
+  },
+  {
+    "objectID": "lectures/halo/index.html#equilibrium-beam-radius-1",
+    "href": "lectures/halo/index.html#equilibrium-beam-radius-1",
+    "title": "Beam Mismatch and Halo Formation",
+    "section": "Equilibrium beam radius",
+    "text": "Equilibrium beam radius\nAssume a continuous, axisymmetric lattice: \\(\\kappa_x(s) = \\kappa_y(s) = k_0^2\\). Also assume that the beam has equal emittances in both planes: \\(\\varepsilon_x = \\varepsilon_y = \\varepsilon\\).\n\\[\n\\begin{aligned}\nr_x'' + k_0^2 r_x - \\frac{2 Q}{r_x + r_y} - \\frac{\\varepsilon^2}{r_x^3} &= 0 ,\n\\\\\nr_y'' + k_0^2 r_y - \\frac{2 Q}{r_x + r_y} - \\frac{\\varepsilon^2}{r_y^3} &= 0.\n\\end{aligned}\n\\tag{2}\\]"
+  },
+  {
+    "objectID": "lectures/halo/index.html#equilibrium-beam-radius-2",
+    "href": "lectures/halo/index.html#equilibrium-beam-radius-2",
+    "title": "Beam Mismatch and Halo Formation",
+    "section": "Equilibrium beam radius",
+    "text": "Equilibrium beam radius\nEquilibrium occurs at \\(r_x = r_y = r_0\\) when \\(r_x'' = r_y'' = 0\\), indicating exact force balance between internal and external fields.\n\\[\nr_0 = \\frac{Q^{1/2}}{k_0} \\left[ \\frac{1}{2} + \\frac{1}{2} \\sqrt{1 + \\frac{4 k_0^2 \\varepsilon^2}{Q^2}} \\right]^{1/2}.\n\\tag{3}\\]\nIn the limit of a space-charge-dominated beam (\\(2 \\kappa_0 \\varepsilon \\ll Q\\)), or emittance-dominated beam (\\(2 \\kappa_0 \\varepsilon \\gg Q\\)), the equilibrium radius approaches\n\\[\nr_0 \\rightarrow\n\\begin{cases}\n    \\sqrt{Q} / {k_0}, & 2 k_0 \\varepsilon \\ll Q, \\\\\n    \\sqrt{\\varepsilon / k_0}, & 2 k_0 \\varepsilon \\gg Q.\n\\end{cases}\n\\tag{4}\\]\nThe equilibrium beam size increases with the beam perveance and emittance and decreases with the lattice focusing strength."
+  },
+  {
+    "objectID": "lectures/halo/index.html#space-charge-tune-depression",
+    "href": "lectures/halo/index.html#space-charge-tune-depression",
+    "title": "Beam Mismatch and Halo Formation",
+    "section": "Space charge tune depression",
+    "text": "Space charge tune depression\nParticles perform harmonic oscillations within the equilibrium beam distribution:\n\\[\n\\begin{align}\n    x'' + k^2 x = 0, \\\\\n    y'' + k^2 y = 0, \\\\\n\\end{align}\n\\tag{5}\\]\nwhere \\(k^2\\) is the depressed frequency:\n\\[ \\label{eq:depressed_focusing_strength}\n    k^2 \\equiv k_0^2 - \\frac{Q}{r_0^2}.\n\\tag{6}\\]\nWe can also use \\(k^2\\) to simplify the expression for the equilibrium radius in Equation 3:\n\\[\nr_0 = \\sqrt{\\frac{\\varepsilon}{k}}.\n\\tag{7}\\]\nThis makes sense: the equilibrium radius depends on the relative strengths of the external and self-generated fields."
+  },
+  {
+    "objectID": "lectures/halo/index.html#test-image",
+    "href": "lectures/halo/index.html#test-image",
+    "title": "Beam Mismatch and Halo Formation",
+    "section": "Test image",
+    "text": "Test image"
+  },
+  {
+    "objectID": "lectures/halo/index.html#test-animation",
+    "href": "lectures/halo/index.html#test-animation",
+    "title": "Beam Mismatch and Halo Formation",
+    "section": "Test animation",
+    "text": "Test animation"
+  },
+  {
+    "objectID": "lectures/halo/index.html#test-scrollable-slide",
+    "href": "lectures/halo/index.html#test-scrollable-slide",
+    "title": "Beam Mismatch and Halo Formation",
+    "section": "Test scrollable slide",
+    "text": "Test scrollable slide\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed egestas at magna ut rhoncus. Donec euismod est tortor, sit amet posuere eros porta nec. Morbi convallis vestibulum leo eu consectetur. Sed felis mi, maximus vel viverra id, rhoncus quis dui. Curabitur eu lacus at dolor consequat sagittis a a mi. Fusce sed dolor vitae leo tincidunt condimentum a vel dui. Etiam sodales ornare neque quis efficitur. Sed in imperdiet elit, luctus pellentesque lacus. Ut et eleifend eros. Vestibulum sapien sapien, pellentesque et mi ullamcorper, hendrerit sodales sem. Nunc nec gravida lorem. Mauris vitae nisl nec tortor lacinia fringilla. Duis at dignissim ipsum, quis euismod massa. Suspendisse condimentum felis sit amet blandit commodo.\nQuisque malesuada suscipit massa nec posuere. Morbi mi ante, ultricies sed libero nec, elementum tempus leo. Fusce pulvinar pharetra nulla, eu fermentum nisl. Etiam eget vestibulum nisi, vitae faucibus ex. Duis lobortis ultricies enim, eu pretium ex efficitur vitae. Nam accumsan orci sagittis semper ullamcorper. Phasellus in felis id leo luctus fermentum vitae eget tortor. Donec semper a ligula et pharetra. Cras vitae molestie risus, sit amet rutrum velit. In gravida augue magna, nec consectetur erat feugiat id.\nMaecenas et posuere sem, sed volutpat diam. Donec non est enim. Pellentesque malesuada lacus lacus, sit amet cursus diam feugiat id. Mauris pretium imperdiet tristique. Integer sed odio faucibus, luctus turpis non, tristique ex. Sed quis dignissim nunc, in mollis enim. Morbi tempus mollis magna, ut condimentum dui mollis a. Vivamus eget diam sed nulla fermentum imperdiet. Vivamus malesuada, purus sed venenatis fringilla, sapien ligula imperdiet purus, quis scelerisque lacus diam non felis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla tempus nisl id orci elementum, eget mollis neque ornare. Nam vulputate sed eros quis maximus.\nDonec egestas quam eget nisl condimentum, vitae tempus nulla placerat. Curabitur aliquam turpis justo, sed gravida felis volutpat non. Nam egestas commodo purus, sed eleifend ligula gravida sit amet. Suspendisse et ipsum vel augue tincidunt elementum. Ut pellentesque lorem ut elit tempus facilisis. Pellentesque eget dictum libero. Nunc convallis sem id nunc placerat, id facilisis nulla malesuada. Nunc vulputate pharetra libero, et auctor lectus feugiat ut. Ut feugiat venenatis volutpat. Donec scelerisque mattis nisl, sit amet iaculis mi commodo eu. Vestibulum bibendum non magna sodales venenatis. Suspendisse dapibus nisl et fringilla congue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam a justo turpis. Nunc sit amet cursus dolor. Aliquam pretium lobortis nisi in sagittis.\nVestibulum semper felis eu velit viverra interdum. Aenean non lacinia nunc. Nulla hendrerit enim vel lorem laoreet, sit amet tempus sem egestas. Suspendisse potenti. Integer libero leo, efficitur a risus eu, interdum egestas justo. Pellentesque nec tellus eu arcu vulputate tristique. Sed eget justo pharetra, suscipit leo in, lobortis leo. Maecenas sit amet lectus at nulla pellentesque fringilla. Donec a fringilla lectus. Pellentesque volutpat mauris eget ligula tempus venenatis ac dignissim felis. Donec nibh risus, pretium et massa congue, pretium facilisis purus. Donec eleifend sem sed magna fermentum pellentesque."
+  },
+  {
+    "objectID": "lectures/halo/index.html#test-citation",
+    "href": "lectures/halo/index.html#test-citation",
+    "title": "Beam Mismatch and Halo Formation",
+    "section": "Test citation",
+    "text": "Test citation\nThis sentence ends with a citation  [1]."
+  },
+  {
+    "objectID": "lectures/halo/index.html#section-1",
+    "href": "lectures/halo/index.html#section-1",
+    "title": "Beam Mismatch and Halo Formation",
+    "section": "Section 1",
+    "text": "Section 1\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed egestas at magna ut rhoncus. Donec euismod est tortor, sit amet posuere eros porta nec. Morbi convallis vestibulum leo eu consectetur. Sed felis mi, maximus vel viverra id, rhoncus quis dui. Curabitur eu lacus at dolor consequat sagittis a a mi. Fusce sed dolor vitae leo tincidunt condimentum a vel dui. Etiam sodales ornare neque quis efficitur. Sed in imperdiet elit, luctus pellentesque lacus. Ut et eleifend eros. Vestibulum sapien sapien, pellentesque et mi ullamcorper, hendrerit sodales sem. Nunc nec gravida lorem. Mauris vitae nisl nec tortor lacinia fringilla. Duis at dignissim ipsum, quis euismod massa. Suspendisse condimentum felis sit amet blandit commodo."
+  },
+  {
+    "objectID": "lectures/halo/index.html#section-2",
+    "href": "lectures/halo/index.html#section-2",
+    "title": "Beam Mismatch and Halo Formation",
+    "section": "Section 2",
+    "text": "Section 2\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed egestas at magna ut rhoncus. Donec euismod est tortor, sit amet posuere eros porta nec. Morbi convallis vestibulum leo eu consectetur. Sed felis mi, maximus vel viverra id, rhoncus quis dui. Curabitur eu lacus at dolor consequat sagittis a a mi. Fusce sed dolor vitae leo tincidunt condimentum a vel dui. Etiam sodales ornare neque quis efficitur. Sed in imperdiet elit, luctus pellentesque lacus. Ut et eleifend eros. Vestibulum sapien sapien, pellentesque et mi ullamcorper, hendrerit sodales sem. Nunc nec gravida lorem. Mauris vitae nisl nec tortor lacinia fringilla. Duis at dignissim ipsum, quis euismod massa. Suspendisse condimentum felis sit amet blandit commodo."
+  },
+  {
+    "objectID": "lectures/halo/index.html#test-slide",
+    "href": "lectures/halo/index.html#test-slide",
+    "title": "Beam Mismatch and Halo Formation",
+    "section": "Test slide",
+    "text": "Test slide\nSome text.\n\nTest speaker notes."
+  },
+  {
+    "objectID": "lectures/halo/index.html#references",
+    "href": "lectures/halo/index.html#references",
+    "title": "Beam Mismatch and Halo Formation",
+    "section": "References",
+    "text": "References\n\n\n[1] J. Qiang, Study of Fully Coupled Three-Dimensional Envelope Instability Using Automatic Differentiation, Phys. Rev. Accel. Beams 29, L024201 (2026)."
+  },
+  {
+    "objectID": "lectures/plasma/index.html#useful-quantities",
+    "href": "lectures/plasma/index.html#useful-quantities",
+    "title": "Plasma Physics of Beams",
+    "section": "Useful quantities",
+    "text": "Useful quantities"
+  },
+  {
+    "objectID": "lectures/plasma/index.html#klimontovich-equation",
+    "href": "lectures/plasma/index.html#klimontovich-equation",
+    "title": "Plasma Physics of Beams",
+    "section": "Klimontovich Equation",
+    "text": "Klimontovich Equation"
+  },
+  {
+    "objectID": "lectures/plasma/index.html#vlasov-equation",
+    "href": "lectures/plasma/index.html#vlasov-equation",
+    "title": "Plasma Physics of Beams",
+    "section": "Vlasov Equation",
+    "text": "Vlasov Equation"
+  },
+  {
+    "objectID": "lectures/plasma/index.html#consequences-of-the-vlasov-equation",
+    "href": "lectures/plasma/index.html#consequences-of-the-vlasov-equation",
+    "title": "Plasma Physics of Beams",
+    "section": "Consequences of the Vlasov equation",
+    "text": "Consequences of the Vlasov equation"
+  },
+  {
+    "objectID": "lectures/plasma/index.html#references",
+    "href": "lectures/plasma/index.html#references",
+    "title": "Plasma Physics of Beams",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "code/particle_core.html",
+    "href": "code/particle_core.html",
+    "title": "USPAS BPISC 2026",
+    "section": "",
+    "text": "import os\nimport pathlib\n\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom ipywidgets import interact\nfrom ipywidgets import widgets\n\nplt.style.use(\"style.mplstyle\")\n\n\noutput_dir = \"outputs\"\nos.makedirs(output_dir, exist_ok=True)\n\n\ndef func_eps_cos_psi(w: np.ndarray, delta: float, C: float) -&gt; np.ndarray:\n    return delta - (3.0 / 8.0) * w - C / w\n\n\neps = 0.1\ndelta = 0.35\n\nc_arr = np.arange(-0.04, 0.14, 0.02)\n\nfig, ax = plt.subplots(figsize=(5, 3))\nfor c in c_arr:\n    w = np.linspace(0.001, 1.6, 1000)\n    eps_cos_psi = func_eps_cos_psi(w, delta, c)\n    ax.plot(w, eps_cos_psi, color=\"black\")\nax.set_ylim(-0.2, 0.5)\nax.set_xlim(0.0, 1.4)\nax.set_xlabel(r\"$w$\")\nax.set_ylabel(r\"$\\epsilon \\cos{\\Psi}$\")\nplt.savefig(os.path.join(output_dir, \"fig_eps_cos_vs_w\"))\nplt.show()\n\n\n\n\n\n\n\n\n\ndef func_hamiltonian(w: np.ndarray, psi: np.ndarray, delta: float, eps: float) -&gt; np.ndarray:\n    return +delta * w - (3.0 / 8.0) * w**2 - eps * w * np.cos(psi)\n\n\ndelta = 0.35\neps = 0.1\n\nnbins = 100\ngrid_x = np.linspace(-1.4, 0.75, nbins)\ngrid_y = np.linspace(-1.0, 1.0, nbins)\ngrid_points = np.stack([np.ravel(c) for c in np.meshgrid(grid_x, grid_y, indexing=\"ij\")], axis=-1)\n\nx = grid_points[:, 0]\ny = grid_points[:, 1]\n\nw = np.sqrt(x**2 + y**2)\npsi = np.arccos(x / w)\n\ngrid_values = func_hamiltonian(w, psi, delta=delta, eps=eps)\ngrid_values = grid_values.reshape((nbins, nbins))\ngrid_values -= np.min(grid_values)\ngrid_values /= np.max(grid_values)\n\nlevels = np.linspace(0.75, 1.0, 10)\n\nfig, ax = plt.subplots(figsize=(4.5, 4))\nax.contour(grid_x, grid_y, grid_values.T, colors=\"black\", levels=levels)\nplt.savefig(os.path.join(output_dir, \"fig_polar\"))\nplt.show()\n\n\n\n\n\n\n\n\n\ndelta = 0.35\neps = 0.1\n\nnbins = 100\ngrid_x = np.linspace(-1.5, 1.5, nbins)\ngrid_y = np.linspace(-1.25, 1.25, nbins)\ngrid_points = np.stack([np.ravel(c) for c in np.meshgrid(grid_x, grid_y, indexing=\"ij\")], axis=-1)\n\nx = grid_points[:, 0]\ny = grid_points[:, 1]\n\npsi = 2.0 * np.arctan(x / y)\nw = 2.0 * x * y / np.sin(psi)\n\ngrid_values = func_hamiltonian(w, psi, delta=delta, eps=eps)\ngrid_values = grid_values.reshape((nbins, nbins))\ngrid_values -= np.min(grid_values)\ngrid_values /= np.max(grid_values)\n\nlevels = np.linspace(0.95, 1.0, 10)\n\nfig, ax = plt.subplots(figsize=(4.5, 4))\nax.contour(grid_x, grid_y, grid_values.T, colors=\"black\", levels=levels)\n# ax.pcolormesh(grid_x, grid_y, grid_values.T, vmin=0.90, vmax=1.0)\nplt.savefig(os.path.join(output_dir, \"fig_xy\"))\nplt.show()"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "USPAS BPISC 2026",
+    "section": "",
+    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nTitle\n\n\n\nAuthor\n\n\n\n\n\n\n\n\nBeam Current Limits\n\n\nAustin Hoover, John Barnard\n\n\n\n\n\n\nBeam Mismatch and Halo Formation\n\n\nAustin Hoover, John Barnard\n\n\n\n\n\n\nEnvelope Equations\n\n\nAustin Hoover, John Barnard\n\n\n\n\n\n\nIntrabeam Collisions, Gas, and Electron Effects\n\n\nAustin Hoover, John Barnard\n\n\n\n\n\n\nPlasma Physics of Beams\n\n\nAustin Hoover, John Barnard\n\n\n\n\n\n\nTransverse Particle Dynamics\n\n\nSteven Lund\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "lectures/envelope/index.html#conservation-of-canonical-angular-momentum",
+    "href": "lectures/envelope/index.html#conservation-of-canonical-angular-momentum",
+    "title": "Envelope Equations",
+    "section": "Conservation of canonical angular momentum",
+    "text": "Conservation of canonical angular momentum"
+  },
+  {
+    "objectID": "lectures/envelope/index.html#series-expansion-of-axially-symmetric-fields",
+    "href": "lectures/envelope/index.html#series-expansion-of-axially-symmetric-fields",
+    "title": "Envelope Equations",
+    "section": "Series expansion of axially symmetric fields",
+    "text": "Series expansion of axially symmetric fields"
+  },
+  {
+    "objectID": "lectures/envelope/index.html#derivation-of-paraxial-ray-equation",
+    "href": "lectures/envelope/index.html#derivation-of-paraxial-ray-equation",
+    "title": "Envelope Equations",
+    "section": "Derivation of paraxial ray equation",
+    "text": "Derivation of paraxial ray equation"
+  },
+  {
+    "objectID": "lectures/envelope/index.html#references",
+    "href": "lectures/envelope/index.html#references",
+    "title": "Envelope Equations",
+    "section": "References",
+    "text": "References"
+  }
+]
