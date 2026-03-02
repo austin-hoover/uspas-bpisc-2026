@@ -84,41 +84,6 @@
     "text": "References\n\n\n[1] J. Qiang, Study of Fully Coupled Three-Dimensional Envelope Instability Using Automatic Differentiation, Phys. Rev. Accel. Beams 29, L024201 (2026)."
   },
   {
-    "objectID": "lectures/plasma/index.html#useful-quantities",
-    "href": "lectures/plasma/index.html#useful-quantities",
-    "title": "Plasma Physics of Beams",
-    "section": "Useful quantities",
-    "text": "Useful quantities"
-  },
-  {
-    "objectID": "lectures/plasma/index.html#klimontovich-equation",
-    "href": "lectures/plasma/index.html#klimontovich-equation",
-    "title": "Plasma Physics of Beams",
-    "section": "Klimontovich Equation",
-    "text": "Klimontovich Equation"
-  },
-  {
-    "objectID": "lectures/plasma/index.html#vlasov-equation",
-    "href": "lectures/plasma/index.html#vlasov-equation",
-    "title": "Plasma Physics of Beams",
-    "section": "Vlasov Equation",
-    "text": "Vlasov Equation"
-  },
-  {
-    "objectID": "lectures/plasma/index.html#consequences-of-the-vlasov-equation",
-    "href": "lectures/plasma/index.html#consequences-of-the-vlasov-equation",
-    "title": "Plasma Physics of Beams",
-    "section": "Consequences of the Vlasov equation",
-    "text": "Consequences of the Vlasov equation"
-  },
-  {
-    "objectID": "lectures/plasma/index.html#references",
-    "href": "lectures/plasma/index.html#references",
-    "title": "Plasma Physics of Beams",
-    "section": "References",
-    "text": "References"
-  },
-  {
     "objectID": "code/particle_core.html",
     "href": "code/particle_core.html",
     "title": "USPAS BPISC 2026",
@@ -130,7 +95,7 @@
     "href": "index.html",
     "title": "USPAS BPISC 2026",
     "section": "",
-    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nTitle\n\n\n\nAuthor\n\n\n\n\n\n\n\n\nBeam Current Limits\n\n\nAustin Hoover, John Barnard\n\n\n\n\n\n\nBeam Mismatch and Halo Formation\n\n\nAustin Hoover, John Barnard\n\n\n\n\n\n\nEnvelope Equations\n\n\nAustin Hoover, John Barnard\n\n\n\n\n\n\nIntrabeam Collisions, Gas, and Electron Effects\n\n\nAustin Hoover, John Barnard\n\n\n\n\n\n\nPlasma Physics of Beams\n\n\nAustin Hoover, John Barnard\n\n\n\n\n\n\nTransverse Particle Dynamics\n\n\nSteven Lund\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nTitle\n\n\n\nAuthor\n\n\n\n\n\n\n\n\nPlasma Physics of Beams\n\n\nAustin Hoover, John Barnard\n\n\n\n\n\n\nEnvelope Equations\n\n\nAustin Hoover, John Barnard\n\n\n\n\n\n\nBeam Current Limits\n\n\nAustin Hoover, John Barnard\n\n\n\n\n\n\nBeam Mismatch and Halo Formation\n\n\nAustin Hoover, John Barnard\n\n\n\n\n\n\nIntrabeam Collisions, Gas, and Electron Effects\n\n\nAustin Hoover, John Barnard\n\n\n\n\n\n\nTransverse Particle Dynamics\n\n\nSteven Lund\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "lectures/envelope/index.html#conservation-of-canonical-angular-momentum",
