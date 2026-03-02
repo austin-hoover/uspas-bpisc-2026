@@ -1,5 +1,5 @@
 ---
-title: "Intrabeam Collisions, Gas, and Electron Effects"
+title: "Intrabeam Collisions, Gas and Electron Effects"
 subtitle: USPAS Beam Physics with Intense Space Charge
 author:
   - name: Austin Hoover
@@ -12,7 +12,21 @@ csl: aps.csl
 ---
 
 
-# Beam-beam coulomb collisions
+# Coulomb collisions
+
+
+## Coulomb collisions
+Consider effects of Coulomb collisions in a continuous beam propagating through a continuous focusing channel with $T_{\perp} \ne T_{\parallel}$. (If $T_{\perp} \ne T_{\parallel}$, the beam is already relaxed.)
+
+From Ichimaru and Rosenbluth @ichimaru_1970_relaxation:
+
+$$
+\frac{d T_\perp}{dt} = -\frac{1}{2} \frac{d T_\parallel}{dt} = \frac{T_\parallel - T_\perp}{\tau} .
+$$
+
+(Since $T_x = T_y = T_\perp$, $T_\parallel$ changes at twice the rate of $T_\perp$.)
+
+(Since $2 k_B T_\perp + k_B T_\parallel = \text{constant}$.)
 
 # Beam-gas scattering
 
