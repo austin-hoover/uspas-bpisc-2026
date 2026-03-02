@@ -12,3 +12,4 @@ format:
     standalone: true
     # title-slide-style: pandoc
     center-title-slide: true
+    fig-align: center
