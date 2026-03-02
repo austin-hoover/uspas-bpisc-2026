@@ -1,0 +1,9 @@
+project:
+  type: website
+
+website:
+  title: "USPAS BPISC 2026"    
+
+format:
+  html:
+    fontsize: 14px

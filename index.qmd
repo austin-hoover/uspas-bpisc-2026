@@ -1,0 +1,11 @@
+---
+title: "USPAS BPISC 2026"
+listing:
+  type: table
+  contents: 
+    - /lectures
+    - title: "Transverse Particle Dynamics"
+      path: "https://people.frib.msu.edu/~lund/uspas/bpisc_2020//lec_set_02/tpd.pdf"
+      author: Steven Lund
+---
+

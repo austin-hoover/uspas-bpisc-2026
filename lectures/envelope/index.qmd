@@ -1,0 +1,29 @@
+---
+title: "Envelope Equations"
+subtitle: USPAS - Beam Physics with Intense Space Charge
+author:
+  - name: Austin Hoover
+    affiliation: Oak Ridge National Laboratory
+  - name: John Barnard
+    affiliation: Lawrence Livermore National Laboratory
+toc: true
+bibliography: references.bib 
+csl: aps.csl
+---
+
+# Paraxial ray equation
+
+## Conservation of canonical angular momentum
+
+## Series expansion of axially symmetric fields
+
+## Derivation of paraxial ray equation
+
+# Envelope equations for axially symmetric beams
+
+# Envelope equations for elliptically symmetric beams
+
+## References
+
+::: {#refs}
+:::

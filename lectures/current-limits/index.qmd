@@ -1,0 +1,12 @@
+---
+title: "Beam Current Limits"
+subtitle: USPAS - Beam Physics with Intense Space Charge
+author:
+  - name: Austin Hoover
+    affiliation: Oak Ridge National Laboratory
+  - name: John Barnard
+    affiliation: Lawrence Livermore National Laboratory
+toc: true
+bibliography: references.bib 
+csl: aps.csl
+---

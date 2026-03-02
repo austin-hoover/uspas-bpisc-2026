@@ -4,3 +4,6 @@
 *.html
 __pycache__
 outputs
+
+/.quarto/
+**/*.quarto_ipynb

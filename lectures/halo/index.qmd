@@ -1,21 +1,14 @@
 ---
 title: Beam Mismatch and Halo Formation
 subtitle: USPAS - Beam Physics with Intense Space Charge
-author: A. Hoover, D. Winklehner, S. Lund, J. Barnard
+author:
+  - name: Austin Hoover
+    affiliation: Oak Ridge National Laboratory
+  - name: John Barnard
+    affiliation: Lawrence Livermore National Laboratory
 toc: true
 bibliography: references.bib 
 csl: aps.csl
-format: 
-  revealjs:
-    theme: [default, style.scss]
-    fontsize: 24px
-    width: 800
-    auto-stretch: false
-    slide-number: true
-    incremental: false
-    scrollable: true
-    embed-resources: true
-    standalone: true
 ---
         
 # 2D envelope modes in continuous focusing channels
