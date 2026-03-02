@@ -11,4 +11,4 @@ format:
     embed-resources: true
     standalone: true
     # title-slide-style: pandoc
-    center-title-slide: false
+    center-title-slide: true
