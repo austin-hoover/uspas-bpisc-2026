@@ -7,16 +7,23 @@ bibliography: references.bib
 csl: aps.csl
 format: 
   revealjs:
-    fontsize: 26px
-    width: 50%
+    theme: [default, style.scss]
+    fontsize: 24px
+    width: 800
     auto-stretch: false
     slide-number: true
-    embed-resources: true
     incremental: false
     scrollable: true
+    embed-resources: true
+    standalone: true
 ---
         
 # 2D envelope modes in continuous focusing channels
+
+
+## S1B: Applied Fields used to Focus, Bend, and Accelerate Beam
+
+Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing 
 
 
 ## Equilibrium beam radius
