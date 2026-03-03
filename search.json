@@ -11,7 +11,63 @@
     "href": "lectures/collision/index.html#coulomb-collisions-1",
     "title": "Intrabeam Collisions, Gas and Electron Effects",
     "section": "Coulomb collisions",
-    "text": "Coulomb collisions\nConsider effects of Coulomb collisions in a continuous beam propagating through a continuous focusing channel with \\(T_{\\perp} \\ne T_{\\parallel}\\). (If \\(T_{\\perp} \\ne T_{\\parallel}\\), the beam is already relaxed.)\nFrom Ichimaru and Rosenbluth  [1]:\n\\[\n\\frac{d T_\\perp}{dt} = -\\frac{1}{2} \\frac{d T_\\parallel}{dt} = \\frac{T_\\parallel - T_\\perp}{\\tau} .\n\\]\n(Since \\(T_x = T_y = T_\\perp\\), \\(T_\\parallel\\) changes at twice the rate of \\(T_\\perp\\). Abd since \\(2 k_B T_\\perp + k_B T_\\parallel = \\text{constant}\\).)\n\\[\n\\begin{aligned}\n\\tau\n&= \\text{relaxation time} \\\\\n&= \\frac{}{}\n\\end{aligned}\n\\]"
+    "text": "Coulomb collisions\nConsider effects of Coulomb collisions in a continuous beam propagating through a continuous focusing channel with \\(T_{\\perp} \\ne T_{\\parallel}\\). (If \\(T_{\\perp} \\ne T_{\\parallel}\\), the beam is already relaxed.)\nFrom Ichimaru and Rosenbluth  [1]:\n\\[\n\\frac{d T_\\perp}{dt} = -\\frac{1}{2} \\frac{d T_\\parallel}{dt} = \\frac{T_\\parallel - T_\\perp}{\\tau} .\n\\]\n(Since \\(T_x = T_y = T_\\perp\\), \\(T_\\parallel\\) changes at twice the rate of \\(T_\\perp\\). Abd since \\(2 k_B T_\\perp + k_B T_\\parallel = \\text{constant}\\).)\n\\[\n\\begin{aligned}\n\\tau\n&= \\text{relaxation time} \\\\\n&= \\frac{15(k_B \\tilde{T} / mc^2)^{3/2} (4 \\pi \\epsilon_0)^2 m^2 c^3}{8 \\pi^{1/2} q^4 \\ln{\\Lambda} \\, n} \\\\\n&= \\left( \\frac{15 \\pi^{1/2}}{8 \\ln{\\Lambda}} \\right) \\frac{1}{\\nu_c} ,\n\\end{aligned}\n\\]\nwhere \\(\\nu_c\\) is the collision frequency at thermal equilibrium:\n\\[\n\\nu_c \\sim \\pi \\left( \\frac{q^2}{4 \\pi \\epsilon_0 k_B T} \\right)^2 n_0 \\left( \\frac{k_B T}{m} \\right)^{1/2} .\n\\]\nAbove we have defined \\(\\tilde{T}\\) as an average of \\(T_\\perp\\) and \\(T_\\parallel\\):\n\\[\n\\tilde{T} = T_\\perp\n\\left[\n    \\frac{15}{4} \\int_{-1}^{1} \\frac{\\mu^2 (1 - \\mu^2) d\\mu}{ \\left[ (1 - \\mu^2) + \\mu^2 (T_\\parallel / T_\\perp) \\right]^{3/2} }\n\\right]^{-2/3} ,\n\\]\nand the quantity \\(\\ln\\Lambda\\) as\n\\[\n\\ln\\Lambda = \\begin{cases}\n\\ln \\left[ \\frac{12 \\pi (\\epsilon_0 k_B \\tilde{T})^{3/2}}{q^3 n^{1/2}} \\right] , & \\lambda_D &lt; r_b \\\\\n\\ln \\left[ \\frac{12 \\pi \\epsilon_0 k_B \\tilde{T} r_b}{q^2} \\right], & \\lambda_D &gt; r_b .\n\\end{cases}\n\\]"
+  },
+  {
+    "objectID": "lectures/collision/index.html#section-2",
+    "href": "lectures/collision/index.html#section-2",
+    "title": "Intrabeam Collisions, Gas and Electron Effects",
+    "section": "",
+    "text": "[…]"
+  },
+  {
+    "objectID": "lectures/collision/index.html#section-3",
+    "href": "lectures/collision/index.html#section-3",
+    "title": "Intrabeam Collisions, Gas and Electron Effects",
+    "section": "",
+    "text": "[…]"
+  },
+  {
+    "objectID": "lectures/collision/index.html#the-boersch-effect",
+    "href": "lectures/collision/index.html#the-boersch-effect",
+    "title": "Intrabeam Collisions, Gas and Electron Effects",
+    "section": "The Boersch effect",
+    "text": "The Boersch effect\nAren’t collisions negligible? Putting in numbers for ions:\n\\[\n\\begin{align}\n\\tau_{\\text{eff}} &=\n4.3 \\cdot 10^{-4} [s]\n\\left( \\frac{A^{1/2}}{Z^4} \\right)\n\\left( \\frac{k \\tilde{T}}{[eV]} \\right)^{3/2}\n\\left( \\frac{15}{\\ln\\Lambda} \\right)\n\\left( \\frac{10^{10} [cm^{-3}]}{n} \\right) \\\\\n\\Lambda &= \\frac{1.5 \\cdot 10^5 (k_B T / [eV])^{3/2} }{Z^3 (n / 10^{10} [cm^{-3}])}\n\\end{align}\n\\]\nExample: 2 MeV injector:\n[…]"
+  },
+  {
+    "objectID": "lectures/collision/index.html#coulomb-collisions-in-residual-gas",
+    "href": "lectures/collision/index.html#coulomb-collisions-in-residual-gas",
+    "title": "Intrabeam Collisions, Gas and Electron Effects",
+    "section": "Coulomb collisions in residual gas",
+    "text": "Coulomb collisions in residual gas\nRate of change of momentum transverse to velocity:\n\\[\n\\frac{dp_x}{dt} = \\frac{Z Z_g e^2}{4 \\pi \\epsilon_0 r^2} \\frac{b}{r}\n\\]\nTotal change in momentum:\n\\[\n\\begin{aligned}\n\\Delta p\n&= \\int_{-\\infty}^{\\infty} \\frac{dp_x}{dt} dt \\\\\n&= \\int_{-\\infty}^{\\infty} \\frac{dp_x}{dt} \\frac{dt}{dz} dz \\\\\n&= \\frac{Z Z_g e^2 b}{4 \\pi \\epsilon_0 v} \\int_{\\infty}^{\\infty} \\frac{dz}{(z^2 + b^2)^{3/2}} \\\\\n&= \\frac{2 Z Z_g e^2 b}{4 \\pi \\epsilon_0 v b} .\n\\end{aligned}\n\\]\nApproximate deflection angle \\(\\theta\\):\n\\[\n\\theta \\approx \\frac{\\Delta p}{p} = \\frac{2 Z Z_g e^2 b}{4 \\pi \\epsilon_0 p v b}\n\\]\nThis implies \\(db/d\\theta \\sim 1 / \\theta^2\\).\nThe differential cross section \\(d\\sigma\\) for scattering with impact parameter \\(b\\) into solid angle \\(d\\Omega\\) at angle \\(\\theta\\) satisfies\n\\[\n\\underbrace{2 \\pi b db}_{\\text{Area}} = \\frac{d\\sigma}{d\\Omega} \\underbrace{2 \\pi \\sin\\theta d\\theta}_{\\text{Solid angle}}\n\\]\nTherefore,\n\\[\n\\frac{d\\sigma}{d\\Omega}\n= \\frac{b}{\\sin\\theta} \\left| \\frac{db}{d\\theta} \\right|\n= \\left( \\frac{2 Z Z_g e^2}{4 \\pi \\epsilon_0 p v} \\right)^2 \\frac{1}{\\theta^4}\n\\]\nElectron screening puts cutoff at small \\(\\theta\\) (large \\(b\\)), so better to use:\n\\[\n\\frac{d\\sigma}{d\\Omega} = \\left( \\frac{2 Z Z_g e^2}{4 \\pi \\epsilon_0 p v} \\right)^2 \\frac{1}{\\left( \\theta^2 + \\theta_{min}^2 \\right)} .\n\\]\nAverage angle squared for a single scattering event is:\n\\[\n\\begin{aligned}\n\\langle \\theta \\rangle^2\n&= \\frac{\\int \\theta^2 \\frac{d\\sigma}{d\\Omega} 2 \\pi \\sin\\theta d\\theta}{\\int \\frac{d\\sigma}{d\\Omega} 2 \\pi \\sin\\theta d\\theta} .\n\\end{aligned}\n\\]\nAssuming \\(\\theta_{max}^2 \\gg \\theta_{min}^2\\) and \\(\\ln(\\theta_{max} / \\theta_{min}) \\gg 1\\), we have an approximate expression for \\(\\bar\\theta^2\\):\n\\[\n\\begin{aligned}\n\\langle \\theta \\rangle^2 &\\approx\n\\frac\n{\\int_{0}^{\\theta_{max}} \\frac{\\theta^3}{(\\theta^2 + \\theta_{min}^2)^2} d\\theta}\n{\\int_{0}^{\\theta_{max}} \\frac{\\theta  }{(\\theta^2 + \\theta_{min}^2)^2} d\\theta} \\\\\n&\\approx 2 \\theta_{min}^2 \\ln{\\left( \\frac{\\theta_{max}}{\\theta_{min}} \\right)} .\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "lectures/collision/index.html#multiple-collisions",
+    "href": "lectures/collision/index.html#multiple-collisions",
+    "title": "Intrabeam Collisions, Gas and Electron Effects",
+    "section": "Multiple collisions",
+    "text": "Multiple collisions\nAfter traversing distance \\(s\\) and undergoing \\(N_s\\) collisions, the mean square angle \\(\\langle \\Theta^2 \\rangle\\) can be written\n\\[\n\\begin{aligned}\n\\langle \\Theta^2 \\rangle \\\\\n&= N_s \\langle \\theta \\rangle^2 \\\\\n&= n_g \\sigma_s s \\langle\\theta\\rangle^2 \\\\\n&= 8 \\pi n_g \\left( \\frac{Z Z_g e^2}{4 \\pi \\epsilon_0 m c^2 \\gamma \\beta^2} \\right)^2 \\ln\\left(\\frac{\\theta_{max}}{\\theta_{min}}\\right) s\n\\end{aligned}\n\\]\nWriting\n\\[\n\\langle \\Theta^2 \\rangle = \\langle x'^2 \\rangle + \\langle y'^2 \\rangle = 2 \\langle x'^2 \\rangle ,\n\\]\nand taking the \\(s\\)-derivative gives a dynamical equation for \\(\\langle x'^2 \\rangle\\):\n\\[\n\\begin{align}\n\\frac{d}{ds} \\langle x'^2 \\rangle\n&= 4 \\pi n_g \\left( \\frac{Z Z_g e^2}{4 \\pi \\epsilon_0 m c^2 \\gamma \\beta^2} \\right)^2 \\ln\\left(\\frac{\\theta_{max}}{\\theta_{min}}\\right) \\\\\n&\\equiv C .\n\\end{align}\n\\]"
+  },
+  {
+    "objectID": "lectures/collision/index.html#jacksons-approximation-of-theta_min-and-theta_max",
+    "href": "lectures/collision/index.html#jacksons-approximation-of-theta_min-and-theta_max",
+    "title": "Intrabeam Collisions, Gas and Electron Effects",
+    "section": "Jackson’s approximation of \\(\\theta_{min}\\) and \\(\\theta_{max}\\)",
+    "text": "Jackson’s approximation of \\(\\theta_{min}\\) and \\(\\theta_{max}\\)\nJackson argues that \\(\\theta_{max}\\) arises from the distributed nature of the nucleus and \\(\\theta_{min}\\) from the screening of electrons or the quantum uncertainty principle.\n\\[\n\\ln\\left(\\frac{\\theta_{max}}{\\theta_{min}}\\right)\n\\approx 2 \\ln\\left( 204 Z_g^{-1/3} \\right)\n\\]"
+  },
+  {
+    "objectID": "lectures/collision/index.html#how-does-scattering-affect-the-envelope-equations",
+    "href": "lectures/collision/index.html#how-does-scattering-affect-the-envelope-equations",
+    "title": "Intrabeam Collisions, Gas and Electron Effects",
+    "section": "How does scattering affect the envelope equations?",
+    "text": "How does scattering affect the envelope equations?\nThin lens approximation: assume the scattering locally changes the transverse momentum without directly changing the position.\nLet the initial phase space coordinates be \\(x = x_0\\) and \\(x' = x_0'\\). After an incremental distance \\(\\delta s\\),\n\\[\n\\begin{align}\nx  &\\rightarrow x_0 \\\\\nx' &\\rightarrow x_0' + \\delta x'.\n\\end{align}\n\\]\nWe can then calculate the incremental change in the second-order moments:\n\\[\n\\begin{aligned}\ndelta \\langle x'^2 \\rangle &= \\langle \\dots \\rangle\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "lectures/collision/index.html#references",
+    "href": "lectures/collision/index.html#references",
+    "title": "Intrabeam Collisions, Gas and Electron Effects",
+    "section": "References",
+    "text": "References\n\n\n[1] S. Ichimaru and M. N. Rosenbluth, Relaxation Processes in Plasmas with Magnetic Field. Temperature Relaxations, The Physics of Fluids 13, 2778 (1970)."
   },
   {
     "objectID": "lectures/halo/index.html#equilibrium-beam-radius",
