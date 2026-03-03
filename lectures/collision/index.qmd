@@ -198,17 +198,77 @@ $$
 \langle \Theta^2 \rangle \\
 &= N_s \langle \theta \rangle^2 \\
 &= n_g \sigma_s s \langle\theta\rangle^2 \\
-&= 8 \pi n_g \left( \frac{Z Z_g e^2}{4]pi \epsilon_0 m c^2 \gamma \beta^2} \right) \ln\left(\frac{\theta_{max}}{\theta_{min}}\right) s
+&= 8 \pi n_g \left( \frac{Z Z_g e^2}{4 \pi \epsilon_0 m c^2 \gamma \beta^2} \right)^2 \ln\left(\frac{\theta_{max}}{\theta_{min}}\right) s
 \end{aligned}
 $$
 
+Writing
+
+$$
+\langle \Theta^2 \rangle = \langle x'^2 \rangle + \langle y'^2 \rangle = 2 \langle x'^2 \rangle ,
+$$
+
+and taking the $s$-derivative gives a dynamical equation for $\langle x'^2 \rangle$:
+
+$$
+\begin{align}
+\frac{d}{ds} \langle x'^2 \rangle 
+&= 4 \pi n_g \left( \frac{Z Z_g e^2}{4 \pi \epsilon_0 m c^2 \gamma \beta^2} \right)^2 \ln\left(\frac{\theta_{max}}{\theta_{min}}\right) \\
+&\equiv C .
+\end{align}
+$$
+
+
+
+## Jackson's approximation of $\theta_{min}$ and $\theta_{max}$
+
 Jackson argues that $\theta_{max}$ arises from the distributed nature of the nucleus and $\theta_{min}$ from the screening of electrons or the quantum uncertainty principle.
+
+$$
+\ln\left(\frac{\theta_{max}}{\theta_{min}}\right)
+\approx 2 \ln\left( 204 Z_g^{-1/3} \right)
+$$
+
+
+## How does scattering affect the envelope equations?
+
+*Thin lens approximation*: assume the scattering locally changes the transverse momentum without directly changing the position.
+
+Let the initial phase space coordinates be $x = x_0$ and $x' = x_0'$. After an incremental distance $\delta s$,
+
+$$
+\begin{align}
+x  &\rightarrow x_0 \\
+x' &\rightarrow x_0' + \delta x'.
+\end{align}
+$$
+
+We can then calculate the incremental change in the second-order moments:
+
+$$
+\begin{aligned}
+delta \langle x'^2 \rangle &= \langle \dots \rangle
+\end{aligned}
+$$
 
 
 # Charge-changing processes
 
+##
+
 # Gas pressure instability
+
+##
 
 # Electron cloud processes
 
+##
+
 # Electron-ion instability
+
+##
+
+## References
+
+::: {#refs}
+:::
