@@ -13,3 +13,4 @@ format:
     # title-slide-style: pandoc
     center-title-slide: true
     fig-align: center
+    html-math-method: mathjax

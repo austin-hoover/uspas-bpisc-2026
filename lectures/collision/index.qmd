@@ -14,6 +14,7 @@ csl: aps.csl
 
 # Coulomb collisions
 
+
 ## Gas and electron effects
 
 * Effects depend strongly on particle mass and charge.
@@ -22,15 +23,14 @@ csl: aps.csl
 * Long vs. short pulse ($t_{pulse}$ \~ 10's of microseconds vs. 10's of nanoseconds).
 
 
----
+##
 
 ![](images/processes.png){.absolute left=0 right=0 bottom=0 top=0 height="100%" style="margin: auto auto;"}
 
 
----
+##
 
 ![](images/wall_interactions.png){.absolute left=0 right=0 bottom=0 top=0 height="100%" style="margin: auto auto;"}
-
 
 
 ## Coulomb collisions
@@ -79,7 +79,131 @@ $$
 $$
 
 
+##
+
+![](images/temp_a.png){height=400 fig-align=center}
+
+[...]
+
+
+##
+
+![](images/temp_b.png){height=400 fig-align=center}
+
+[...]
+
+
+## The Boersch effect
+
+Aren't collisions negligible? Putting in numbers for ions:
+
+$$
+\begin{align}
+\tau_{\text{eff}} &= 
+4.3 \cdot 10^{-4} [s]
+\left( \frac{A^{1/2}}{Z^4} \right)
+\left( \frac{k \tilde{T}}{[eV]} \right)^{3/2}
+\left( \frac{15}{\ln\Lambda} \right)
+\left( \frac{10^{10} [cm^{-3}]}{n} \right) \\
+\Lambda &= \frac{1.5 \cdot 10^5 (k_B T / [eV])^{3/2} }{Z^3 (n / 10^{10} [cm^{-3}])} 
+\end{align}
+$$
+
+
+Example: 2 MeV injector:
+
+[...]
+
+
+
+
 # Beam-gas scattering
+
+## Coulomb collisions in residual gas
+
+Rate of change of momentum transverse to velocity:
+
+$$
+\frac{dp_x}{dt} = \frac{Z Z_g e^2}{4 \pi \epsilon_0 r^2} \frac{b}{r}
+$$
+
+Total change in momentum:
+
+$$
+\begin{aligned}
+\Delta p
+&= \int_{-\infty}^{\infty} \frac{dp_x}{dt} dt \\
+&= \int_{-\infty}^{\infty} \frac{dp_x}{dt} \frac{dt}{dz} dz \\
+&= \frac{Z Z_g e^2 b}{4 \pi \epsilon_0 v} \int_{\infty}^{\infty} \frac{dz}{(z^2 + b^2)^{3/2}} \\
+&= \frac{2 Z Z_g e^2 b}{4 \pi \epsilon_0 v b} .
+\end{aligned}
+$$
+
+Approximate deflection angle $\theta$:
+
+$$
+\theta \approx \frac{\Delta p}{p} = \frac{2 Z Z_g e^2 b}{4 \pi \epsilon_0 p v b}
+$$
+
+This implies $db/d\theta \sim 1 / \theta^2$.
+
+The differential cross section $d\sigma$ for scattering with impact parameter $b$ into solid angle $d\Omega$ at angle $\theta$ satisfies
+
+$$
+\underbrace{2 \pi b db}_{\text{Area}} = \frac{d\sigma}{d\Omega} \underbrace{2 \pi \sin\theta d\theta}_{\text{Solid angle}}
+$$
+
+Therefore,
+
+$$
+\frac{d\sigma}{d\Omega} 
+= \frac{b}{\sin\theta} \left| \frac{db}{d\theta} \right|
+= \left( \frac{2 Z Z_g e^2}{4 \pi \epsilon_0 p v} \right)^2 \frac{1}{\theta^4}
+$$
+
+Electron screening puts cutoff at small $\theta$ (large $b$), so better to use:
+
+$$
+\frac{d\sigma}{d\Omega} = \left( \frac{2 Z Z_g e^2}{4 \pi \epsilon_0 p v} \right)^2 \frac{1}{\left( \theta^2 + \theta_{min}^2 \right)} .
+$$
+
+Average angle squared for a single scattering event is:
+
+$$
+\begin{aligned}
+\langle \theta \rangle^2
+&= \frac{\int \theta^2 \frac{d\sigma}{d\Omega} 2 \pi \sin\theta d\theta}{\int \frac{d\sigma}{d\Omega} 2 \pi \sin\theta d\theta} .
+\end{aligned}
+$$
+
+Assuming $\theta_{max}^2 \gg \theta_{min}^2$ and $\ln(\theta_{max} / \theta_{min}) \gg 1$, we have an approximate expression for $\bar\theta^2$:
+
+$$
+\begin{aligned}
+\langle \theta \rangle^2 &\approx 
+\frac
+{\int_{0}^{\theta_{max}} \frac{\theta^3}{(\theta^2 + \theta_{min}^2)^2} d\theta}
+{\int_{0}^{\theta_{max}} \frac{\theta  }{(\theta^2 + \theta_{min}^2)^2} d\theta} \\
+&\approx 2 \theta_{min}^2 \ln{\left( \frac{\theta_{max}}{\theta_{min}} \right)} .
+\end{aligned}
+$$
+
+
+## Multiple collisions
+
+After traversing distance $s$ and undergoing $N_s$ collisions, the mean square angle $\langle \Theta^2 \rangle$ can be written
+
+$$
+\begin{aligned}
+\langle \Theta^2 \rangle \\
+&= N_s \langle \theta \rangle^2 \\
+&= n_g \sigma_s s \langle\theta\rangle^2 \\
+&= 8 \pi n_g \left( \frac{Z Z_g e^2}{4]pi \epsilon_0 m c^2 \gamma \beta^2} \right) \ln\left(\frac{\theta_{max}}{\theta_{min}}\right) s
+\end{aligned}
+$$
+
+Jackson argues that $\theta_{max}$ arises from the distributed nature of the nucleus and $\theta_{min}$ from the screening of electrons or the quantum uncertainty principle.
+
 
 # Charge-changing processes
 
