@@ -49,10 +49,34 @@ $$
 \begin{aligned}
 \tau 
 &= \text{relaxation time} \\
-&= \frac{}{}
+&= \frac{15(k_B \tilde{T} / mc^2)^{3/2} (4 \pi \epsilon_0)^2 m^2 c^3}{8 \pi^{1/2} q^4 \ln{\Lambda} \, n} \\
+&= \left( \frac{15 \pi^{1/2}}{8 \ln{\Lambda}} \right) \frac{1}{\nu_c} ,
 \end{aligned}
 $$
 
+where $\nu_c$ is the collision frequency at thermal equilibrium:
+
+$$
+\nu_c \sim \pi \left( \frac{q^2}{4 \pi \epsilon_0 k_B T} \right)^2 n_0 \left( \frac{k_B T}{m} \right)^{1/2} .
+$$
+
+Above we have defined $\tilde{T}$ as an average of $T_\perp$ and $T_\parallel$:
+
+$$
+\tilde{T} = T_\perp 
+\left[ 
+    \frac{15}{4} \int_{-1}^{1} \frac{\mu^2 (1 - \mu^2) d\mu}{ \left[ (1 - \mu^2) + \mu^2 (T_\parallel / T_\perp) \right]^{3/2} }
+\right]^{-2/3} ,
+$$
+
+and the quantity $\ln\Lambda$ as
+
+$$
+\ln\Lambda = \begin{cases}
+\ln \left[ \frac{12 \pi (\epsilon_0 k_B \tilde{T})^{3/2}}{q^3 n^{1/2}} \right] , & \lambda_D < r_b \\
+\ln \left[ \frac{12 \pi \epsilon_0 k_B \tilde{T} r_b}{q^2} \right], & \lambda_D > r_b .
+\end{cases}
+$$
 
 
 # Beam-gas scattering
