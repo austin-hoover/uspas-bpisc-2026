@@ -9,4 +9,5 @@ author:
 toc: true
 bibliography: references.bib 
 csl: aps.csl
+format: html
 ---

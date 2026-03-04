@@ -521,6 +521,6 @@ $${#eq-1}
 The projected emittances are conserved only for *uncoupled* symplectic linear transformations. The Vlasov evolution does *not* necessarily conserve statistical quantities such as the emittances. In general, nonlinear forces will tend to increase the emittances, as shown in @fig-plasma-diagram.
 
 
-![Plasmas characterized by temperature and number density. Green lines indicate constant plasma parameter $\Lambda$. [Updated version?]](images/plasma_diagram.png){#fig-plasma-diagram width=400px}
+![Plasmas characterized by temperature and number density. Green lines indicate constant plasma parameter $\Lambda$. [Updated version?]](../lectures/plasma/images/plasma_diagram.png){#fig-plasma-diagram width=400px}
 
-![Root-mean-square (rms) emittance growth under nonlinear forces.](images/spirals.png){#fig-spirals width=500px}
+![Root-mean-square (rms) emittance growth under nonlinear forces.](../lectures/plasma/images/spirals.png){#fig-spirals width=500px}
