@@ -1033,12 +1033,12 @@ John Barnard
 </section>
 <section class="slide level2">
 
-<p>We will adopt several concepts and techniques from the field of plasma physics to describe the behavior of intense charged particle beams. In this section, we introduce the kinetic theory of plasmas, a self-consistent treatment including both external and self-generated electromagnetic fields. The endpoint will be the Vlasov-Poisson (V-P) equations, which provide a basis for the analysis in the rest of the course.</p>
+<p>We will adopt several concepts and techniques from the field of plasma physics to describe the behavior of intense charged particle beams. In this section, we introduce the kinetic theory of plasmas, a self-consistent treatment including both external and self-generated electromagnetic fields. [Comment on fluid treatment?] The endpoint will be the Vlasov-Poisson (V-P) equations, which provide a basis for the analysis in the rest of the course.</p>
 </section>
 <section>
 <section id="useful-quantities" class="title-slide slide level1 center">
 <h1>Useful quantities</h1>
-<p>We start by introducing several useful quantities: the , , and . These quantities are derived for neutral plasmas in thermal equilibrium, but they will also appear in the analysis of charged particle beams, i.e., non-neutral plasmas.</p>
+<p>We start by introducing several useful quantities: the <em>Debye length</em>, <em>plasma parameter</em>, and <em>plasma frequency</em>. These quantities are derived for neutral plasmas in thermal equilibrium, but they will also appear in the analysis of charged particle beams, i.e., non-neutral plasmas.</p>
 </section>
 <section id="debye-length" class="slide level2">
 <h2>Debye length</h2>
@@ -1068,11 +1068,11 @@ John Barnard
     = \frac{q_t}{4 \pi \epsilon_0 r} e^{-r/\lambda_D} = \phi_0(r) e^{-r/\lambda_D},
 \end{aligned}
 \end{equation}\]</span></p>
-<p>where <span class="math inline">\(\lambda_D\)</span> is the :</p>
+<p>where <span class="math inline">\(\lambda_D\)</span> is the <em>Debye length</em>:</p>
 <p><span class="math display">\[\begin{equation}
     \lambda_D = \sqrt{\frac{\epsilon_0 T}{n_0 q^2}}.
 \end{equation}\]</span></p>
-<p>The Yukawa potential describes a bare point-charge potential <span class="math inline">\(\phi_0\)</span> screened by an exponential function with characteristic length scale <span class="math inline">\(\lambda_D\)</span>. The exponential decay of the potential is known as or .</p>
+<p>The Yukawa potential describes a bare point-charge potential <span class="math inline">\(\phi_0\)</span> screened by an exponential function with characteristic length scale <span class="math inline">\(\lambda_D\)</span>. The exponential decay of the potential is known as <em>Debye shielding</em> or <em>Debye screening</em>.</p>
 </section>
 <section id="plasma-parameter" class="slide level2">
 <h2>Plasma parameter</h2>
@@ -1086,15 +1086,15 @@ John Barnard
     T \gg q^2 n_0^{1/3}.
 \end{aligned}
 \end{equation}\]</span></p>
-<p>This can be equivalently stated by defining the <span class="math inline">\(\Lambda\)</span>:</p>
+<p>This can be equivalently stated by defining the <em>plasma parameter</em> <span class="math inline">\(\Lambda\)</span>:</p>
 <p><span class="math display">\[\begin{equation}  \label{eq:plasma_parameter}
     \Lambda \equiv n_0 \lambda_D^3 \gg 1.
 \end{equation}\]</span></p>
-<p>The plasma parameter defines the average number of particles within a of volume <span class="math inline">\(\lambda_D^3\)</span>. We will assume Eq.~<span class="math inline">\(\eqref{eq:plasma_parameter}\)</span> is satisfied for all systems studied in this course. Systems for which the average nearest-neighbor potential energy is comparable to the average kinetic energy are labeled plasmas and will not be considered.</p>
+<p>The plasma parameter defines the average number of particles within a <em>Debye cube</em> of volume <span class="math inline">\(\lambda_D^3\)</span>. We will assume Eq.~<span class="math inline">\(\eqref{eq:plasma_parameter}\)</span> is satisfied for all systems studied in this course. Systems for which the average nearest-neighbor potential energy is comparable to the average kinetic energy are labeled <em>strongly coupled</em> plasmas and will not be considered.</p>
 </section>
 <section id="plasma-frequency" class="slide level2">
 <h2>Plasma frequency</h2>
-<p>The <span class="math inline">\(\omega_p\)</span> is derived by considering a one-dimensional slab of uniform density ions and electrons, constrained to the region <span class="math inline">\(0 \le x \le L\)</span>. Displacing the electrons by a small distance <span class="math inline">\(\Delta \ll L\)</span> will create an electric field <span class="math inline">\(E(\Delta) = - n_0 q \Delta / \epsilon_0\)</span>. The resulting harmonic oscillations are described by</p>
+<p>The <em>plasma frequency</em> <span class="math inline">\(\omega_p\)</span> is derived by considering a one-dimensional slab of uniform density ions and electrons, constrained to the region <span class="math inline">\(0 \le x \le L\)</span>. Displacing the electrons by a small distance <span class="math inline">\(\Delta \ll L\)</span> will create an electric field <span class="math inline">\(E(\Delta) = - n_0 q \Delta / \epsilon_0\)</span>. The resulting harmonic oscillations are described by</p>
 <p><span class="math display">\[\begin{equation}
     \ddot{\Delta} + \omega^2 \Delta = 0,
 \end{equation}\]</span></p>
@@ -1102,12 +1102,11 @@ John Barnard
 <p><span class="math display">\[\begin{equation}
     \omega_p \equiv \left( \frac{n_0 q^2}{\epsilon_0 m} \right)^{1/2}.
 \end{equation}\]</span></p>
-<p>The relationship between the plasma frequency and Debye length defines the <span class="math inline">\(v_p\)</span>:</p>
+<p>The relationship between the plasma frequency and Debye length defines the <em>thermal velocity</em> <span class="math inline">\(v_p\)</span>:</p>
 <p><span class="math display">\[\begin{equation}
     v_p \equiv \omega_p \lambda_D = \left( \frac{T}{m} \right)^{1/2}.
 \end{equation}\]</span></p>
 <p>The Debye length <span class="math inline">\(\lambda_D\)</span>, plasma frequency <span class="math inline">\(\omega_p\)</span>, and thermal velocity <span class="math inline">\(v_p\)</span> define the characteristic length and time scales of collective oscillations.</p>
-<p></p>
 </section></section>
 <section id="klimontovich-equation" class="title-slide slide level1 center">
 <h1>Klimontovich Equation</h1>
@@ -1118,7 +1117,7 @@ John Barnard
     \delta \left[ \mathbf{x} - \mathbf{X}_i(t) \right]
     \delta \left[ \mathbf{p} - \mathbf{P}_i(t) \right],
 \end{equation}\]</span></p>
-<p>where <span class="math inline">\(\delta\)</span> is the Dirac delta function and <span class="math inline">\(m\)</span> stands for , indicating a singular distribution function describing a set of point-particles, rather than a smooth density. The total number of particles is constant and is given by the integral of the density function over the phase space coordinates:</p>
+<p>where <span class="math inline">\(\delta\)</span> is the Dirac delta function and <span class="math inline">\(m\)</span> stands for <em>microscopic</em>, indicating a singular distribution function describing a set of point-particles, rather than a smooth density. The total number of particles is constant and is given by the integral of the density function over the phase space coordinates:</p>
 <p><span class="math display">\[\begin{equation} \label{eq:dist_norm}
     N = \int f^m(\mathbf{x}, \mathbf{p}, t) d\mathbf{x} d\mathbf{p}.
 \end{equation}\]</span></p>
@@ -1222,7 +1221,7 @@ John Barnard
 }
 \end{aligned}
 \end{equation}\]</span></p>
-<p> Eq.~<span class="math inline">\(\eqref{eq:klimontovich}\)</span> is known as the .</p>
+<p>[I’m not quite know how to show this. It makes sense if <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are functions, but in our case we have an operator acting on the delta function.] Eq.~<span class="math inline">\(\eqref{eq:klimontovich}\)</span> is known as the <em>Klimontovich Equation</em>.</p>
 </section>
 
 <section id="vlasov-equation" class="title-slide slide level1 center">
@@ -1266,12 +1265,12 @@ f(\mathbf{x}, \mathbf{p}, t)
         \right]
 \right \rangle
 \end{multline}\]</span></p>
-<p>The left side of Eq.~<span class="math inline">\(\eqref{eq:kinetic}\)</span> describes effects involving smoothly varying quantities, while the right side describes effects involving rapidly varying quantities. The importance of collisional effects may be estimated using classical scattering theory. This is not described in any detail here. A rough estimate is obtained by defining a collisional cross section <span class="math inline">\(\sigma\)</span> and collision frequency <span class="math inline">\(\omega_c = \sigma n v_t\)</span>. The ratio between the collision frequency <span class="math inline">\(\omega_c\)</span> and plasma frequency <span class="math inline">\(\omega_p\)</span> gives the approximate relation:</p>
+<p>The left side of Eq.~<span class="math inline">\(\eqref{eq:kinetic}\)</span> describes <em>collective</em> effects involving smoothly varying quantities, while the right side describes <em>collisional</em> effects involving rapidly varying quantities. The importance of collisional effects may be estimated using classical scattering theory. This is not described in any detail here. A rough estimate is obtained by defining a collisional cross section <span class="math inline">\(\sigma\)</span> and collision frequency <span class="math inline">\(\omega_c = \sigma n v_t\)</span>. The ratio between the collision frequency <span class="math inline">\(\omega_c\)</span> and plasma frequency <span class="math inline">\(\omega_p\)</span> gives the approximate relation:</p>
 <p><span class="math display">\[\begin{equation}
     \frac{\text{Collisional effects}}{\text{Collective effects}} \sim \frac{1}{\Lambda}.
 \end{equation}\]</span></p>
-<p>Recall that the plasma parameter <span class="math inline">\(\Lambda\)</span> is the typical number of particles within a Debye cube, which is a large number for weakly coupled plasmas. More detailed estimates can be found in . </p>
-<p>Setting the collisional terms Eq.~<span class="math inline">\(\eqref{eq:kinetic}\)</span> to zero gives the :</p>
+<p>Recall that the plasma parameter <span class="math inline">\(\Lambda\)</span> is the typical number of particles within a Debye cube, which is a large number for weakly coupled plasmas. More detailed estimates can be found in . [Do we need to include a more detailed estimate of collisional effects and when to ignore them? We do have a lecture at the end of the course that focused on scattering.]</p>
+<p>Setting the collisional terms Eq.~<span class="math inline">\(\eqref{eq:kinetic}\)</span> to zero gives the <em>Vlasov Equation</em>:</p>
 <p><span class="math display">\[\begin{equation} \label{eq:vlasov}
 \boxed{
     \left[
@@ -1303,7 +1302,7 @@ f(\mathbf{x}, \mathbf{p}, t)
 &amp;= \mathbf{J}^0(\mathbf{x}, t)
 + q \int \dot{\mathbf{x}} f(\mathbf{x}, \mathbf{p}, t) d\mathbf{p}.
 \end{align}\]</span></p>
-<p></p>
+<p>[Note on when to go from Vlasov-Maxwell to Vlasov-Poisson?]</p>
 </section>
 
 <section>
@@ -1313,7 +1312,7 @@ f(\mathbf{x}, \mathbf{p}, t)
 </section>
 <section id="liouville-theorem" class="slide level2">
 <h2>Liouville Theorem</h2>
-<p>The Vlasov equation will be the starting point for much of the analysis in the rest of this course. Before proceeding, we will briefly discuss one of its important features: the conservation of phase space density. The Vlasov equation may be viewed as an expression of the , which states that the phase space density is conserved along particle trajectories (orbits) in Hamiltonian systems:</p>
+<p>The Vlasov equation will be the starting point for much of the analysis in the rest of this course. Before proceeding, we will briefly discuss one of its important features: the conservation of phase space density. The Vlasov equation may be viewed as an expression of the <em>Liouville Theorem</em>, which states that the phase space density is conserved along particle trajectories (orbits) in Hamiltonian systems:</p>
 <p><span class="math display">\[\begin{equation}
     \frac{df}{dt} \bigg\rvert_{\text{orbit}} = 0.
 \end{equation}\]</span></p>
@@ -1356,7 +1355,7 @@ f(\mathbf{x}, \mathbf{p}, t)
 = 0.
 \end{aligned}
 \end{equation}\]</span></p>
-<p>Or, defining the ,</p>
+<p>Or, defining the <em>Poisson bracket</em>,</p>
 <p><span class="math display">\[\begin{equation}
     \left\{ H, f \right\} \equiv
       \frac{\partial H}{\partial \mathbf{p}} \cdot \frac{\partial f}{\partial \mathbf{q}}
@@ -1370,7 +1369,7 @@ f(\mathbf{x}, \mathbf{p}, t)
 </section>
 <section id="statistical-measures-of-phase-space-volume" class="slide level2">
 <h2>Statistical measures of phase space volume</h2>
-<p>It will later be useful to describe the phase space density by its low-order moments. The most common quantity used in accelerator physics is the statistical . Emittances are calculated from the second-order moments in the covariance matrix <span class="math inline">\(\bm{\Sigma}\)</span>:</p>
+<p>It will later be useful to describe the phase space density by its low-order moments. The most common quantity used in accelerator physics is the statistical <em>emittance</em>. Emittances are calculated from the second-order moments in the covariance matrix <span class="math inline">\(\bm{\Sigma}\)</span>:</p>
 <p><span class="math display">\[\begin{equation}
 \bm{\Sigma} = \int \mathbf{z} \mathbf{z}^T f(\mathbf{z}) d\mathbf{z}.
 \end{equation}\]</span></p>
@@ -1425,7 +1424,7 @@ f(\mathbf{x}, \mathbf{p}, t)
 <p><span class="math display">\[\begin{equation}
     \varepsilon = \sqrt{ \det{\bm{\Sigma}} }.
 \end{equation}\]</span></p>
-<p>The emittance is the volume of an ellipsoid defined by the covariance matrix. It is conserved under linear symplectic transformations. The <span class="math inline">\(K\)</span>-dimensional emittance may be written as the product of the emittances <span class="math inline">\(\varepsilon_1, \dots, \varepsilon_K\)</span>:</p>
+<p>The emittance is the volume of an ellipsoid defined by the covariance matrix. It is conserved under linear symplectic transformations. The <span class="math inline">\(K\)</span>-dimensional emittance may be written as the product of the <em>intrinsic</em> emittances <span class="math inline">\(\varepsilon_1, \dots, \varepsilon_K\)</span>:</p>
 <p><span class="math display">\[\begin{equation}
     \varepsilon = \prod_{k = 1}^{K} \varepsilon_k,
 \end{equation}\]</span></p>
@@ -1442,7 +1441,7 @@ f(\mathbf{x}, \mathbf{p}, t)
         0 &amp; 0 &amp; \mathbf{\Sigma}_{zz}
     \end{bmatrix},
 \end{equation}\]</span></p>
-<p>the intrinsic emittances reduce the emittances <span class="math inline">\(\varepsilon_x\)</span>, <span class="math inline">\(\varepsilon_y\)</span>, <span class="math inline">\(\varepsilon_z\)</span>:</p>
+<p>the intrinsic emittances reduce the <em>projected</em> emittances <span class="math inline">\(\varepsilon_x\)</span>, <span class="math inline">\(\varepsilon_y\)</span>, <span class="math inline">\(\varepsilon_z\)</span>:</p>
 <p><span class="math display">\[\begin{equation}
 \begin{aligned}
     \varepsilon_x &amp;= \sqrt{ \det{ \mathbf{\Sigma}_{xx} }}, \\
@@ -1450,7 +1449,9 @@ f(\mathbf{x}, \mathbf{p}, t)
     \varepsilon_z &amp;= \sqrt{ \det{ \mathbf{\Sigma}_{zz} }}. \\
 \end{aligned}
 \end{equation}\]</span></p>
-<p>The projected emittances are conserved only for symplectic linear transformations. The Vlasov evolution does necessarily conserve statistical quantities such as the emittances. In general, nonlinear forces will tend to increase the emittances, as shown in Fig.~<span class="math inline">\(\ref{fig:plasma_diagram}\)</span>.</p>
+<p>The projected emittances are conserved only for <em>uncoupled</em> symplectic linear transformations. The Vlasov evolution does <em>not</em> necessarily conserve statistical quantities such as the emittances. In general, nonlinear forces will tend to increase the emittances, as shown in Fig.~<span class="math inline">\(\ref{fig:plasma_diagram}\)</span>.</p>
+<p>\begin{figure} \caption{Plasmas characterized by temperature and number density. Green lines indicate constant plasma parameter <span class="math inline">\(\Lambda\)</span>. [Updated version?] \end{figure}</p>
+<p>\begin{figure} \caption{Root-mean-square (rms) emittance growth under nonlinear forces. [Create new version.] \end{figure}</p>
 
 
 </section></section>
