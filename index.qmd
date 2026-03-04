@@ -6,7 +6,6 @@ listing:
   sort: false
   contents:
     - lectures/plasma/index.qmd
-    - lectures/plasma/notes.qmd
     - notes/plasma.qmd
     - lectures/envelope/index.qmd
     - lectures/current-limits/index.qmd
