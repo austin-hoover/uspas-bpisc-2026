@@ -2,11 +2,12 @@
   {
     "listing": "/index.html",
     "items": [
-      "/lectures/plasma/index.html",
-      "/lectures/envelope/index.html",
-      "/lectures/current-limits/index.html",
-      "/lectures/halo/index.html",
-      "/lectures/collision/index.html"
+      "/lecture-notes/plasma.html",
+      "/lecture-slides/plasma/index.html",
+      "/lecture-slides/envelope/index.html",
+      "/lecture-slides/current-limits/index.html",
+      "/lecture-slides/halo/index.html",
+      "/lecture-slides/collision/index.html"
     ]
   }
 ]
