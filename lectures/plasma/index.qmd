@@ -7,18 +7,17 @@ author:
   - name: John Barnard
     affiliation: Lawrence Livermore National Laboratory
 toc: true
-format: 
-  html: default
+format: revealjs
 ---
 
 We will adopt several concepts and techniques from the field of plasma physics to describe the behavior of intense charged particle beams. In this section, we introduce the kinetic theory of plasmas, a self-consistent treatment including both external and self-generated electromagnetic fields. [Comment on fluid treatment?] The endpoint will be the Vlasov-Poisson (V-P) equations, which provide a basis for the analysis in the rest of the course.
 
 
-## Useful quantities
+# Useful quantities
 
 We start by introducing several useful quantities: the *Debye length*, *plasma parameter*, and *plasma frequency*. These quantities are derived for neutral plasmas in thermal equilibrium, but they will also appear in the analysis of charged particle beams, i.e., non-neutral plasmas.
 
-### Debye length
+## Debye length
 
 Consider an infinite, uniform distribution of electrons and ions. A test particle of charge $q_t$ and infinite mass is placed at the origin $\mathbf{x} = 0$. We will study the effect of the test charge on the electric potential $\phi(\mathbf{x})$. The Poisson equation relates the potential to the charge density:
 
@@ -60,7 +59,7 @@ $$
 The Yukawa potential describes a bare point-charge potential $\phi_0$ screened by an exponential function with characteristic length scale $\lambda_D$. The exponential decay of the potential is known as *Debye shielding* or *Debye screening*.
 
 
-### Plasma parameter
+## Plasma parameter
 
 For a collection of particles with average density $n_0$, the average nearest-neighbor distance is given by $n_0^{-1/3}$. The average potential energy between particles is given by
 
@@ -83,7 +82,7 @@ $${#eq-plasma-parameter}
 The plasma parameter defines the average number of particles within a *Debye cube* of volume $\lambda_D^3$. We will assume @eq-plasma-parameter is satisfied for all systems studied in this course. Systems for which the average nearest-neighbor potential energy is comparable to the average kinetic energy are labeled *strongly coupled* plasmas and will not be considered.
 
 
-### Plasma frequency
+## Plasma frequency
 
 The *plasma frequency* $\omega_p$ is derived by considering a one-dimensional slab of uniform density ions and electrons, constrained to the region $0 \le x \le L$. Displacing the electrons by a small distance $\Delta \ll L$ will create an electric field $E(\Delta) = - n_0 q \Delta / \epsilon_0$. The resulting harmonic oscillations are described by
 
@@ -105,6 +104,8 @@ $${#eq-1}
 
 The Debye length $\lambda_D$, plasma frequency $\omega_p$, and thermal velocity $v_p$ define the characteristic length and time scales of collective oscillations.
 
+
+# Klimontovich Equation
 
 ## Klimontovich Equation
 
@@ -245,6 +246,9 @@ $${#eq-klimontovich}
 @eq-klimontovich is known as the *Klimontovich Equation*.
 
 
+# Vlasov Equation
+
+
 ## Vlasov Equation
 
 The Klimontovich equation, combined with the Maxwell equations, is an exact description of the $N$-particle system. However, this is more information than we need. We will proceed by calculating a smooth density function $f(\mathbf{x}, \mathbf{p}, t)$ by averaging the microscopic density function $f^m(\mathbf{x}, \mathbf{p}, t)$ over a box of dimensions $\Delta_x$, $\Delta_p$ in phase space:
@@ -346,9 +350,9 @@ where $\rho(\mathbf{x}, t)$ and $\mathbf{J}(\mathbf{x}, t)$ are the smoothed cha
 [Note on when to go from Vlasov-Maxwell to Vlasov-Poisson?]
 
 
-## Consequences of Vlasov equation
+# Consequences of Vlasov equation
 
-### Liouville Theorem
+## Liouville Theorem
 
 The Vlasov equation will be the starting point for much of the analysis in the rest of this course. Before proceeding, we will briefly discuss one of its important features: the conservation of phase space density. The Vlasov equation may be viewed as an expression of the *Liouville Theorem*, which states that the phase space density is conserved along particle trajectories (orbits) in Hamiltonian systems:
 
@@ -423,7 +427,7 @@ $${#eq-1}
 Non-Hamiltonian processes (such as scattering) violate the Liouville Theorem and do not conserve phase space density.
 
 
-### Statistical measures of phase space volume
+## Statistical measures of phase space volume
 
 It will later be useful to describe the phase space density by its low-order moments. The most common quantity used in accelerator physics is the statistical *emittance*. Emittances are calculated from the second-order moments in the covariance matrix $\mathbf{\Sigma}$:
 
@@ -522,6 +526,6 @@ $${#eq-1}
 The projected emittances are conserved only for *uncoupled* symplectic linear transformations. The Vlasov evolution does *not* necessarily conserve statistical quantities such as the emittances. In general, nonlinear forces will tend to increase the emittances, as shown in @fig-plasma-diagram.
 
 
-![Plasmas characterized by temperature and number density. Green lines indicate constant plasma parameter $\Lambda$. [Updated version?]](../lecture-slides/plasma/images/plasma_diagram.png){#fig-plasma-diagram width=400px}
+![Plasmas characterized by temperature and number density. Green lines indicate constant plasma parameter $\Lambda$. [Updated version?]](images/plasma_diagram.png){#fig-plasma-diagram width=400px}
 
-![Root-mean-square (rms) emittance growth under nonlinear forces.](../lecture-slides/plasma/images/spirals.png){#fig-spirals width=500px}
+![Root-mean-square (rms) emittance growth under nonlinear forces.](images/spirals.png){#fig-spirals width=500px}

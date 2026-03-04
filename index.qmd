@@ -1,16 +1,14 @@
 ---
-title: "USPAS BPISC 2026"
+title: "Beam Physics with Intense Space Charge"
+subtitle: "USPAS 2026"
 listing:
   type: table
   sort: false
-  contents: 
-    - /lecture-notes/plasma.qmd
-    - /lecture-slides/plasma
-    - /lecture-slides/envelope
-    - /lecture-slides/current-limits
-    - /lecture-slides/halo
-    - /lecture-slides/collision
-    - title: "Transverse Particle Dynamics"
-      path: "https://people.frib.msu.edu/~lund/uspas/bpisc_2020//lec_set_02/tpd.pdf"
-      author: Steven Lund
+  contents:
+    - lectures/plasma/index.qmd
+    - lectures/plasma/notes.qmd
+    - lectures/envelope/index.qmd
+    - lectures/current-limits/index.qmd
+    - lectures/halo/index.qmd
+    - lectures/collision/index.qmd
 ---

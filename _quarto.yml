@@ -2,8 +2,8 @@ project:
   type: website
 
 website:
-  title: "USPAS BPISC 2026"   
-  navbar: true
+  title: "USPAS 2026: BPISC"
+  navbar: false
 
 format:
   html:

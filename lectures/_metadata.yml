@@ -1,6 +1,6 @@
 format:
   revealjs:
-    theme: [default, style.scss]
+    theme: [default, style_slide.scss]
     fontsize: 24px
     width: 800
     auto-stretch: false
@@ -10,7 +10,6 @@ format:
     scrollable: true
     embed-resources: true
     standalone: true
-    # title-slide-style: pandoc
     center-title-slide: true
     fig-align: center
     html-math-method: mathjax
