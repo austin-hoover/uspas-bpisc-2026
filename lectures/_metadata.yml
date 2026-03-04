@@ -13,3 +13,4 @@ format:
     center-title-slide: true
     fig-align: center
     html-math-method: mathjax
+    output-file: slides.html
