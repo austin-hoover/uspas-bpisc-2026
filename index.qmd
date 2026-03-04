@@ -4,11 +4,12 @@ listing:
   type: table
   sort: false
   contents: 
-    - /lectures/plasma
-    - /lectures/envelope
-    - /lectures/current-limits
-    - /lectures/halo
-    - /lectures/collision
+    - /lecture-notes/plasma.qmd
+    - /lecture-slides/plasma
+    - /lecture-slides/envelope
+    - /lecture-slides/current-limits
+    - /lecture-slides/halo
+    - /lecture-slides/collision
     - title: "Transverse Particle Dynamics"
       path: "https://people.frib.msu.edu/~lund/uspas/bpisc_2020//lec_set_02/tpd.pdf"
       author: Steven Lund
