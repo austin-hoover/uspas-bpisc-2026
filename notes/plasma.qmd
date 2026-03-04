@@ -10,7 +10,7 @@ toc: true
 format: html
 ---
 
-We will adopt several concepts and techniques from the field of plasma physics to describe the behavior of intense charged particle beams. In this section, we introduce the kinetic theory of plasmas, a self-consistent treatment including both external and self-generated electromagnetic fields. [Comment on fluid treatment?] The endpoint will be the Vlasov-Poisson (V-P) equations, which provide a basis for the analysis in the rest of the course.
+We will adopt several concepts and techniques from the field of plasma physics to describe the behavior of intense charged particle beams. In this section, we introduce the kinetic theory of plasmas, a self-consistent treatment including both external and self-generated electromagnetic fields. [[Comment on fluid treatment?]]{style="color: red;"} The endpoint will be the Vlasov-Poisson (V-P) equations, which provide a basis for the analysis in the rest of the course.
 
 
 ## Useful quantities
@@ -240,7 +240,7 @@ $$
 \end{aligned}
 $${#eq-klimontovich}
 
-[I'm not quite know how to show this. It makes sense if $a$ and $b$ are functions, but in our case we have an operator acting on the delta function.]
+[[I'm not quite know how to show this. It makes sense if $a$ and $b$ are functions, but in our case we have an operator acting on the delta function.]]{style="color: red;"}
 @eq-klimontovich is known as the *Klimontovich Equation*.
 
 
@@ -302,7 +302,7 @@ $$
 \frac{\text{Collisional effects}}{\text{Collective effects}} \sim \frac{1}{\Lambda}.
 $${#eq-1}
 
-Recall that the plasma parameter $\Lambda$ is the typical number of particles within a Debye cube, which is a large number for weakly coupled plasmas. More detailed estimates can be found in \cite{nicholson_intro}. [Do we need to include a more detailed estimate of collisional effects and when to ignore them? We do have a lecture at the end of the course that focused on scattering.]
+Recall that the plasma parameter $\Lambda$ is the typical number of particles within a Debye cube, which is a large number for weakly coupled plasmas. More detailed estimates can be found in \cite{nicholson_intro}. [[Do we need to include a more detailed estimate of collisional effects and when to ignore them? We do have a lecture at the end of the course that focused on scattering.]]{style="color: red;"}
 
 Setting the collisional terms @eq-kinetic to zero gives the *Vlasov Equation*:
 

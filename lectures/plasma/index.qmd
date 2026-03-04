@@ -10,7 +10,7 @@ toc: true
 format: revealjs
 ---
 
-We will adopt several concepts and techniques from the field of plasma physics to describe the behavior of intense charged particle beams. In this section, we introduce the kinetic theory of plasmas, a self-consistent treatment including both external and self-generated electromagnetic fields. [Comment on fluid treatment?] The endpoint will be the Vlasov-Poisson (V-P) equations, which provide a basis for the analysis in the rest of the course.
+We will adopt several concepts and techniques from the field of plasma physics to describe the behavior of intense charged particle beams. In this section, we introduce the kinetic theory of plasmas, a self-consistent treatment including both external and self-generated electromagnetic fields. [[Comment on fluid treatment?]]{style="color: red;"} The endpoint will be the Vlasov-Poisson (V-P) equations, which provide a basis for the analysis in the rest of the course.
 
 
 # Useful quantities
@@ -242,7 +242,7 @@ $$
 \end{aligned}
 $${#eq-klimontovich}
 
-[I'm not quite know how to show this. It makes sense if $a$ and $b$ are functions, but in our case we have an operator acting on the delta function.]
+[[I'm not quite know how to show this. It makes sense if $a$ and $b$ are functions, but in our case we have an operator acting on the delta function.]]{style="color: red;"}
 @eq-klimontovich is known as the *Klimontovich Equation*.
 
 
@@ -307,7 +307,7 @@ $$
 \frac{\text{Collisional effects}}{\text{Collective effects}} \sim \frac{1}{\Lambda}.
 $${#eq-1}
 
-Recall that the plasma parameter $\Lambda$ is the typical number of particles within a Debye cube, which is a large number for weakly coupled plasmas. More detailed estimates can be found in \cite{nicholson_intro}. [Do we need to include a more detailed estimate of collisional effects and when to ignore them? We do have a lecture at the end of the course that focused on scattering.]
+Recall that the plasma parameter $\Lambda$ is the typical number of particles within a Debye cube, which is a large number for weakly coupled plasmas. More detailed estimates can be found in \cite{nicholson_intro}. [[Do we need to include a more detailed estimate of collisional effects and when to ignore them? We do have a lecture at the end of the course that focused on scattering.]]{style="color: red;"}
 
 Setting the collisional terms @eq-kinetic to zero gives the *Vlasov Equation*:
 
@@ -347,7 +347,7 @@ where $\rho(\mathbf{x}, t)$ and $\mathbf{J}(\mathbf{x}, t)$ are the smoothed cha
 + q \int \dot{\mathbf{x}} f(\mathbf{x}, \mathbf{p}, t) d\mathbf{p}.
 \end{align}
 
-[Note on when to go from Vlasov-Maxwell to Vlasov-Poisson?]
+[[Note on when to go from Vlasov-Maxwell to Vlasov-Poisson?]]{style="color: red;"}
 
 
 # Consequences of Vlasov equation
@@ -526,6 +526,6 @@ $${#eq-1}
 The projected emittances are conserved only for *uncoupled* symplectic linear transformations. The Vlasov evolution does *not* necessarily conserve statistical quantities such as the emittances. In general, nonlinear forces will tend to increase the emittances, as shown in @fig-plasma-diagram.
 
 
-![Plasmas characterized by temperature and number density. Green lines indicate constant plasma parameter $\Lambda$. [Updated version?]](images/plasma_diagram.png){#fig-plasma-diagram width=400px}
+![Plasmas characterized by temperature and number density. Green lines indicate constant plasma parameter $\Lambda$. [[Updated version?]]{style="color: red;"}](images/plasma_diagram.png){#fig-plasma-diagram width=400px}
 
 ![Root-mean-square (rms) emittance growth under nonlinear forces.](images/spirals.png){#fig-spirals width=500px}
