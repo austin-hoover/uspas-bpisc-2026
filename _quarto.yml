@@ -9,3 +9,5 @@ format:
   html:
     theme: [default, style.scss]
     fontsize: 14px
+    grid:
+      body-width: 800px
