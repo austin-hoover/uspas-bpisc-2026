@@ -443,7 +443,7 @@
 
   <meta name="author" content="Austin Hoover">
   <meta name="author" content="John Barnard">
-  <title>USPAS BPISC 2026 – Beam Mismatch and Halo Formation</title>
+  <title>USPAS 2026: BPISC – Beam Mismatch and Halo Formation</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -2440,7 +2440,7 @@ window.QuartoSupport = function () {
         }
           var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
           var mailtoRegex = new RegExp(/^mailto:/);
-            var filterRegex = new RegExp('/' + window.location.host + '/');
+            var filterRegex = new RegExp("https:\/\/austin-hoover\.github\.io\/uspas-bpisc-2026\/");
           var isInternal = (href) => {
               return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
           }
