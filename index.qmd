@@ -11,4 +11,7 @@ listing:
     - lectures/current-limits/index.qmd
     - lectures/halo/index.qmd
     - lectures/collision/index.qmd
+    - title: "Transverse Equilibrium Distributions"
+      author: Steve Lund
+      path: "https://people.frib.msu.edu/~lund/uspas/bpisc_2020/lec_set_03/ted.pdf"
 ---
