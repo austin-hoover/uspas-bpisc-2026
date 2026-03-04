@@ -1033,13 +1033,18 @@ John Barnard
 <nav role="doc-toc"> 
 <h2 id="toc-title">Table of contents</h2>
 <ul>
+
 <li><a href="#/paraxial-ray-equation" id="/toc-paraxial-ray-equation">Paraxial ray equation</a>
 <ul>
+<li><a href="#/equation-of-motion-in-cylindrical-coordinates" id="/toc-equation-of-motion-in-cylindrical-coordinates">Equation of motion in cylindrical coordinates</a></li>
 <li><a href="#/conservation-of-canonical-angular-momentum" id="/toc-conservation-of-canonical-angular-momentum">Conservation of canonical angular momentum</a></li>
 <li><a href="#/series-expansion-of-axially-symmetric-fields" id="/toc-series-expansion-of-axially-symmetric-fields">Series expansion of axially symmetric fields</a></li>
 <li><a href="#/derivation-of-paraxial-ray-equation" id="/toc-derivation-of-paraxial-ray-equation">Derivation of paraxial ray equation</a></li>
 </ul></li>
-<li><a href="#/envelope-equations-for-axially-symmetric-beams" id="/toc-envelope-equations-for-axially-symmetric-beams">Envelope equations for axially symmetric beams</a></li>
+<li><a href="#/envelope-equations-for-axially-symmetric-beams" id="/toc-envelope-equations-for-axially-symmetric-beams">Envelope equations for axially symmetric beams</a>
+<ul>
+<li><a href="#/envelope-equations-for-axially-symmetric-beams-1" id="/toc-envelope-equations-for-axially-symmetric-beams-1">Envelope equations for axially symmetric beams</a></li>
+</ul></li>
 <li><a href="#/envelope-equations-for-elliptically-symmetric-beams" id="/toc-envelope-equations-for-elliptically-symmetric-beams">Envelope equations for elliptically symmetric beams</a>
 <ul>
 <li><a href="#/references" id="/toc-references">References</a></li>
@@ -1047,25 +1052,678 @@ John Barnard
 </ul>
 </nav>
 </section>
+<section class="slide level2">
+
+<p>The previous lecture introduced the Vlasov-Poisson (V-P) equations, which describe a collisionless ensemble of charged particles evolving in external and self-generated fields. In this lecture, we consider a reduced-order description of the dynamics in terms of second-order moments and the application to long-pulse charged particle beams in linear transverse fields. <span style="color: red;">[Add comment on why these models are useful?]</span> We will start by focusing on beams with axial symmetry, then move on to beams with elliptical symmetry. <span style="color: red;">[There is quite a bit of work in deriving the paraxial ray equation and radial envelope equation due to the use of cylindrical coordinates. Would it make any sense to start with cartesian coordinates, then look at cylindrical symmetry as a special case?]</span></p>
+</section>
 <section>
 <section id="paraxial-ray-equation" class="title-slide slide level1 center">
 <h1>Paraxial ray equation</h1>
 
 </section>
+<section id="equation-of-motion-in-cylindrical-coordinates" class="slide level2">
+<h2>Equation of motion in cylindrical coordinates</h2>
+<p>The equation of motion for a particle of mass <span class="math inline">\(m\)</span> and charge <span class="math inline">\(q\)</span> in an electric field <span class="math inline">\(\mathbf{E}\)</span> and magnetic field <span class="math inline">\(\mathbf{B}\)</span> is:</p>
+<p><span id="eq-lorentz"><span class="math display">\[
+\begin{equation}
+    \frac{d\mathbf{p}}{dt} = \frac{d(\gamma m \dot{\mathbf{x}})}{dt} = q \left( \mathbf{E} + \dot{\mathbf{x}} \times \mathbf{B} \right),
+\end{equation}
+\tag{1}\]</span></span></p>
+<p>where <span class="math inline">\(\mathbf{x}\)</span> is the position, <span class="math inline">\(\dot{\mathbf{x}} = d\mathbf{x} / dt\)</span> is the velocity, and <span class="math inline">\(\mathbf{p} = \gamma m \dot{\mathbf{x}}\)</span> is the momentum. Preparing for systems with axial symmetry, we switch from cartesian coordinates <span class="math inline">\((x, y, z)\)</span> to cylindrical coordinates <span class="math inline">\((r, \theta, z)\)</span>, where <span class="math inline">\(r\)</span> is the distance from the origin and <span class="math inline">\(\theta\)</span> is the angle above the <span class="math inline">\(x\)</span> axis in the transverse plane. We will use hats to identify unit vectors and subscripts to identify vector components. For example, the momentum vector is written:</p>
+<p><span id="eq-momentum-cylindrical"><span class="math display">\[
+\begin{align} \label{eq:momentum_cylindrical}
+    \mathbf{p}
+    &amp;= p_x \hat{x} + p_y \hat{y} + p_z \hat{z} \\
+    &amp;= p_r \hat{r} + p_\theta^* \hat{\theta} + p_z \hat{z}.
+\end{align}
+\tag{2}\]</span></span></p>
+<p>The components <span class="math inline">\(p_r\)</span> and <span class="math inline">\(p_\theta^*\)</span> are given by</p>
+<p><span id="eq-momentum-components"><span class="math display">\[
+\begin{align}
+    p_r &amp;=  \gamma m \dot{r}, \\
+    p_\theta^* &amp;= \gamma m r \dot{\theta}.
+\end{align}
+\tag{3}\]</span></span></p>
+<p>The symbol <span class="math inline">\(p_\theta^*\)</span> is used to reserve <span class="math inline">\(p_\theta\)</span> for the canonical angular momentum, defined later.</p>
+<p>In cylindrical coordinates, the unit vectors depend on the particle position and thus change with time (see Fig.~<span class="math inline">\(\ref{?}\)</span>):</p>
+<p><span id="eq-cylindrical-unit-vector-dt"><span class="math display">\[
+\begin{align}
+    \dot{\hat{r}} &amp;\equiv d\hat{r} / dt = \dot{\theta} \hat{\theta} ,\\
+    \dot{\hat{\theta}} &amp;\equiv d \hat{\theta} / dt = -\dot{\theta} \hat{r}.
+\end{align}
+\tag{4}\]</span></span></p>
+<p>Thus, the time derivative of the momentum vector in <a href="#/eq-momentum-cylindrical" class="quarto-xref">Equation 2</a> is:</p>
+<p><span id="eq-dpdt"><span class="math display">\[
+\begin{align}
+\frac{d\mathbf{p}}{dt}
+&amp;=  
+\frac{d}{dt} \left( p_r \hat{r} + p_\theta^* \hat{\theta} + p_z \hat{z} \right)
+\\
+\frac{d\mathbf{p}}{dt} &amp;=
+\dot{p_r} \hat{r}
++ p_r \dot{\hat{r}}
++ \dot{p}_\theta \hat{\theta}
++ p_\theta^* \dot{\hat{\theta}}
++ \dot{p}_z \hat{z}
+\\
+\frac{d\mathbf{p}}{dt} &amp;=
+\left( \dot{p}_r  - p_\theta^* \dot{\theta} \right) \hat{r}
++ \left( p_r \dot{\theta} + \dot{p}_\theta \right) \hat{\theta}
++ \dot{p}_z \hat{z}
+\\
+\frac{d\mathbf{p}}{dt} &amp;=
+   \left[ \frac{d(\gamma m \dot{r})}{dt} - \gamma m r \dot{\theta}^2\right] \hat{r}
++ \left[ \gamma m \dot{r} \dot{\theta} + \frac{d(\gamma m r \dot{\theta})}{dt} \right] \hat{\theta}
++ \left[ \frac{d(\gamma m \dot{z})}{dt} \right] \hat{z}.
+\end{align}
+\tag{5}\]</span></span></p>
+<p>The second bracketed term is equal to the angular momentum:</p>
+<p><span class="math display">\[
+\begin{equation}
+    \frac{1}{r} \frac{d(\gamma m r^2 \dot{\theta})}{dt}
+    =
+    \gamma m \dot{r} \dot{\theta} + \frac{d(\gamma m r \dot{\theta})}{dt}.
+\end{equation}
+\]</span></p>
+<p>Rewriting gives:</p>
+<p><span class="math display">\[
+\begin{equation}
+\frac{d\mathbf{p}}{dt} =
+   \left[ \frac{d(\gamma m \dot{r})}{dt} - \gamma m r \dot{\theta}^2\right] \hat{r}
++ \left[ \frac{1}{r} \frac{d(\gamma m r^2 \dot{\theta})}{dt} \right] \hat{\theta}
++ \left[ \frac{d(\gamma m \dot{z})}{dt} \right] \hat{z}.
+\end{equation}
+\]</span></p>
+<p>This takes care of the left side of the Lorentz force equation (<a href="#/eq-lorentz" class="quarto-xref">Equation 1</a>). The right side of the equation requires the cylindrical field components:</p>
+<p><span class="math display">\[
+\begin{align}
+    \mathbf{E} &amp;= E_r \hat{r} + E_\theta \hat{\theta} + E_z \hat{z}, \\
+    \mathbf{B} &amp;= B_r \hat{r} + B_\theta \hat{\theta} + B_z \hat{z}.
+\end{align}
+\]</span></p>
+<p>Evaluating the cross product <span class="math inline">\(\dot{\mathbf{x}} \times \mathbf{B}\)</span>,</p>
+<p><span class="math display">\[
+\begin{equation}
+    \dot{\mathbf{x}} \times \mathbf{B} =
+    \begin{vmatrix}
+        \hat{r} &amp; \hat{\theta} &amp; \hat{z} \\
+        \dot{r} &amp; r \dot{\theta} &amp; \dot{z} \\
+        B_r &amp; B_\theta &amp; B_z
+    \end{vmatrix},
+\end{equation}
+\]</span></p>
+<p>leads to the following equations for the <span class="math inline">\(\hat{r}\)</span>, <span class="math inline">\(\theta\)</span>, and <span class="math inline">\(\hat{z}\)</span> components of <span class="math inline">\(d\mathbf{p} / dt\)</span>:</p>
+<p><span class="math display">\[
+\begin{align}
+\frac{d(\gamma m \dot{r})}{dt} - \gamma m r \dot{\theta}^2
+&amp;= q \left( E_r + r \dot{\theta} B_z - \dot{z} B_\theta \right) ,
+\label{eq:dpdt_cylindrical_r}
+\\
+\frac{1}{r} \frac{d(\gamma m r^2 \dot{\theta})}{dt}
+&amp;= q \left( E_\theta + \dot{z} B_r - \dot{r} B_z \right) \label{eq:hi} ,
+\\
+\frac{d(\gamma m \dot{z})}{dt}
+&amp;= q \left( E_z + \dot{r} B_\theta - r \dot{\theta} B_r \right)
+\end{align}
+\]</span></p>
+</section>
 <section id="conservation-of-canonical-angular-momentum" class="slide level2">
 <h2>Conservation of canonical angular momentum</h2>
+<p>Write the fields in terms of the scalar potential <span class="math inline">\(\phi(\mathbf{x})\)</span> and vector potential <span class="math inline">\(\mathbf{A}(\mathbf{x})\)</span>:</p>
+<p><span class="math display">\[
+\begin{align}
+    \mathbf{E} &amp;= -\nabla \phi - \frac{\partial \mathbf{A}}{\partial t}, \\
+    \mathbf{B} &amp;= \nabla \times \mathbf{A}.
+\end{align}
+\]</span></p>
+<p>The gradient <span class="math inline">\(\nabla \phi\)</span> in cylindrical coordinates is:</p>
+<p><span id="eq-cylindrical-grad"><span class="math display">\[
+\begin{equation}
+    \nabla \phi
+    = \left[ \frac{\partial \phi}{\partial r} \right] \hat{r}
+    + \left[ \frac{1}{r} \frac{\partial \phi}{\partial \theta} \right] \hat{\theta}
+    + \left[ \frac{\partial \phi}{\partial z} \right] \hat{z}.
+\end{equation}
+\tag{6}\]</span></span></p>
+<p>And the curl <span class="math inline">\(\nabla \times \mathbf{A}\)</span> is:</p>
+<p><span id="eq-cylindrical-curl"><span class="math display">\[
+\begin{equation}
+    \nabla \times \mathbf{A}
+    =
+    \left[
+          \frac{1}{r}\frac{\partial A_z}{\partial A_\theta}
+        - \frac{\partial A_\theta}{\partial z}
+    \right]
+    \hat{r}
+    +
+    \left[  
+        \frac{\partial A_r}{\partial z} - \frac{\partial A_z}{\partial r}
+    \right]
+    \hat{\theta}
+    +
+    \left[  
+        \frac{1}{r}
+        \left(
+            \frac{\partial (r A_\theta)}{\partial r} - \frac{\partial A_r}{\partial \theta}
+        \right)
+    \right]
+    \hat{z} .
+\end{equation}
+\tag{7}\]</span></span></p>
+<p>Axial symmetry means all partial derivatives with respect to <span class="math inline">\(\theta\)</span> are zero in <a href="#/eq-cylindrical-grad" class="quarto-xref">Equation 6</a> and <a href="#/eq-cylindrical-curl" class="quarto-xref">Equation 7</a>. This gives the following expressions for the fields in terms of the potentials in cylindrical coordinates:</p>
+<p><span class="math display">\[
+\begin{align}
+    E_r &amp;= -\frac{\partial \phi}{\partial r} - \frac{\partial A_r}{\partial t} , \\
+    E_\theta &amp;= -\frac{\partial A_\theta}{\partial t} , \\
+    E_z &amp;= -\frac{\partial \phi}{\partial z} - \frac{\partial A_z}{\partial t} , \\
+    B_r &amp;= -\frac{\partial A_\theta}{\partial r} , \\
+    B_\theta &amp;= \frac{\partial A_r}{\partial z} - \frac{\partial A_z}{\partial r} , \\
+    B_z &amp;= \frac{1}{r} \frac{\partial (r A_\theta)}{\partial r} .
+\end{align}
+\]</span></p>
+<p><span class="math display">\[
+\begin{align}
+\mathbf{E} &amp;=
+   \left[ -\frac{\partial \phi}{\partial r} - \frac{\partial A_r}{\partial t} \right] \hat{r}
++ \left[ -\frac{\partial A_\theta}{\partial t} \right] \hat{\theta}
++ \left[ -\frac{\partial \phi}{\partial z} - \frac{\partial A_z}{\partial t} \right] \hat{z}
+,
+\\
+\mathbf{B} &amp;=
+   \left[ -\frac{\partial A_\theta}{\partial a} \right] \hat{r}
++ \left[ \frac{\partial A_r}{\partial z} - \frac{\partial A_z}{\partial r}\right] \hat{\theta}
++ \left[ \frac{1}{r} \frac{\partial (r A_\theta)}{\partial r} \right] \hat{z}.
+\end{align}
+\]</span></p>
+<p>Use the potentials to rewrite <strong>?@eq-hi</strong>:</p>
+<p><span id="eq-canonical-momentum-derivation"><span class="math display">\[
+\begin{equation}
+\begin{aligned}
+\frac{d}{dt}\left( \gamma m r^2 \dot{\theta} \right)
+&amp;= q r \left( E_\theta + \dot{z} B_r - \dot{r} B_z \right) \\
+&amp;= q r
+\left(
+    \left[ -\frac{\partial A_\theta}{\partial t} \right]
+    + \dot{z} \left[ -\frac{\partial A_\theta}{\partial z} \right]
+    - \dot{r} \left[ \frac{1}{r} \frac{\partial(r A_\theta)}{\partial r} \right]
+\right) \\
+&amp;= -q
+\left(
+    \frac{\partial(rA_\theta)}{\partial t}
+    + \dot{z} \frac{\partial(rA_\theta)}{\partial z}
+    + \dot{r} \frac{\partial(rA_\theta)}{\partial r}
+\right) \\
+&amp;= -q
+\left[
+    \frac{\partial}{\partial t}
+    + \dot{z} \frac{\partial}{\partial z}
+    + \dot{r} \frac{\partial}{\partial r}
+\right] \left( r A_\theta \right) \\
+&amp;= -q
+\left[
+    \frac{\partial}{\partial t} + \dot{\mathbf{x}} \cdot \nabla     
+\right] \left( r A_\theta \right) \\
+&amp;= -\frac{d(qrA_\theta)}{dt}.
+\end{aligned}
+\end{equation}
+\tag{8}\]</span></span></p>
+<p><a href="#/eq-canonical-momentum-derivation" class="quarto-xref">Equation 8</a>} can then be written as:</p>
+<p><span id="eq-canonical-momentum-conserved"><span class="math display">\[
+\begin{equation}
+    \frac{d}{dt} \left( \gamma m r^2 \dot{\theta} + q r A_\theta \right) = 0.
+\end{equation}
+\tag{9}\]</span></span></p>
+<p>This motivates the definition of the :</p>
+<p><span id="eq-canonical-momentum"><span class="math display">\[
+\begin{equation} \label{eq:canonical_momentum}
+    p_\theta \equiv \gamma m r^2 \dot{\theta} + q r A_\theta,
+\end{equation}
+\tag{10}\]</span></span></p>
+<p>such that <span class="math inline">\(dp_\theta / dt = 0\)</span>. We may also write <span class="math inline">\(p_\theta\)</span> in terms of the magnetic flux <span class="math inline">\(\psi(r)\)</span> though a circle of radius <span class="math inline">\(r\)</span> :</p>
+<p><span class="math display">\[
+\begin{equation}
+    \psi(r) = \int \mathbf{B} \cdot d\mathbf{\Omega} = \int \nabla \times \mathbf{A} \cdot d\mathbf{\Omega} = \oint \mathbf{A} \cdot d\mathbf{l} = 2 \pi A_\theta.  
+\end{equation}
+\]</span></p>
+<p><span class="math display">\[
+\begin{equation}
+    p_\theta \equiv \gamma m r^2 \dot{\theta} + \frac{q \psi(r)}{2 \pi}.
+\end{equation}
+\]</span></p>
 </section>
 <section id="series-expansion-of-axially-symmetric-fields" class="slide level2">
 <h2>Series expansion of axially symmetric fields</h2>
+<p>Consider external fields <span class="math inline">\(\mathbf{E}\)</span> and <span class="math inline">\(\mathbf{B}\)</span> with azimuthal symmetry (<span class="math inline">\(\partial / \partial \theta = 0\)</span>). In the absence of charge and current densities,</p>
+<p><span class="math display">\[
+\begin{align}
+    \nabla \cdot \mathbf{E} &amp;= 0 , \\
+    \nabla \cdot \mathbf{B} &amp;= 0 , \\
+    \nabla \times \mathbf{E} &amp;= 0 , \\
+    \nabla \times \mathbf{B} &amp;= 0 . \\
+\end{align}
+\]</span></p>
+<p>The vanishing curl means we can express the fields as</p>
+<p><span class="math display">\[
+\begin{align}
+\mathbf{E} &amp;= -\nabla \phi, \\
+\mathbf{B} &amp;= -\nabla \phi_m,
+\end{align}
+\]</span></p>
+<p>for scalar potentials <span class="math inline">\(\phi\)</span> and <span class="math inline">\(\phi_m\)</span>. Additionally, the vanishing divergence leads to the Laplace equation for the scalar potential:</p>
+<p><span class="math display">\[
+\nabla^2 \phi = 0.
+\]</span></p>
+<p>In cylindrical coordinates, the Laplace equation reads:</p>
+<p><span class="math display">\[
+\frac{1}{r} \frac{\partial}{\partial r} \left( r \frac{\partial \phi}{\partial r} \right) + \frac{\partial^2 \phi}{\partial z^2} = 0.
+\]</span></p>
+<p>The azimuthal symmetry will lead to a simplified form of the scalar potential in terms of its on-axis derivatives along the <span class="math inline">\(z\)</span> axis. First, expand the potential <span class="math inline">\(\phi(r, z)\)</span> as a power series,</p>
+<p><span class="math display">\[
+\phi(r, z) = \sum_{n = 0}^{\infty} h_{2n}(z) r^{2n},
+\]</span></p>
+<p>where the <span class="math inline">\(h_{2n}(z)\)</span> are functions of <span class="math inline">\(z\)</span>. (The rotational symmetry eliminates all odd powers of <span class="math inline">\(r\)</span>.) The derivatives in the Laplace equation are:</p>
+<p><span class="math display">\[
+\begin{align}
+\frac{1}{r} \frac{\partial}{\partial r} \left( r \frac{\partial \phi}{\partial r} \right)
+&amp;= \sum_{n = 1}^{\infty} (2n)^2 h_{2n}(z) r^{2n - 2},
+\\
+\frac{\partial^2 \phi}{\partial z^2} &amp;= \sum_{n=0}^{\infty} h_{2n}&#39;(z) r^{2n},
+\end{align}
+\]</span></p>
+<p>with <span class="math inline">\(h&#39;(z) = dh(z)/dz.\)</span> Thus, <span class="math inline">\(\nabla^2 \phi = 0\)</span> becomes:</p>
+<p><span class="math display">\[
+\begin{align}
+  \sum_{n = 1}^{\infty} (2n)^2 h_{2n}(z) r^{2n - 2}
++ \sum_{n=0}^{\infty} h_{2n}&#39;&#39;(z) r^{2n}
+&amp;= 0
+\\
+  \sum_{n = 0}^{\infty} (2n + 2)^2 h_{2n + 2}(z) r^{2n}
++ \sum_{n=0}^{\infty} h_{2n}&#39;&#39;(z) r^{2n}
+&amp;= 0
+\\
+  \sum_{n = 0}^{\infty} \left[ (2n + 2)^2 h_{2n + 2}(z)
++ h_{2n}&#39;&#39;(z) \right]
+&amp;= 0
+\end{align}
+\]</span></p>
+<p>The result is a recurrence relation,</p>
+<p><span class="math display">\[
+h_{2n + 2}(z) = - \frac{h_{2n}&#39;&#39;(z)}{(2n + 2)^2},
+\]</span></p>
+<p>with which we can write all terms as derivatives of <span class="math inline">\(h_0(z)\)</span> with respect to <span class="math inline">\(z\)</span>:</p>
+<p><span class="math display">\[
+\begin{align}
+h_2(z)  &amp;= -\frac{1}{4}\frac{\partial^2 h_0(z)}{\partial z^2},
+\\
+h_4(z)  &amp;= +\frac{1}{64}\frac{\partial^4 h_0(z)}{\partial z^4},
+\\
+\vdots
+\end{align}
+\]</span></p>
+<p>We may thus write the potential at all points in space using only the <span class="math inline">\(z\)</span>-derivatives of the on-axis potential <span class="math inline">\(\phi(0, z)\)</span>:</p>
+<p><span id="eq-axially-symmetric-field-series"><span class="math display">\[
+\begin{equation}
+    \phi(r, z) = \sum_{n = 0}^{\infty}
+    \frac{(-1)^n}{(n!)^2}
+    \frac{\partial^{2n} \phi(0, z) }{\partial z^{2n}}
+    \left( \frac{r}{2} \right)^{2n} .
+\end{equation}
+\tag{11}\]</span></span></p>
+<p>We now express the fields in terms of the expanded scalar potentials. Write the magnetic field as <span class="math inline">\(\mathbf{B} = B_r \hat{r} + B_z \hat{z}\)</span>. Using the series expansion of <span class="math inline">\(\phi_m(r, z)\)</span>, we find for the <span class="math inline">\(z\)</span> component of the field:</p>
+<p><span id="eq-bz-expansion"><span class="math display">\[
+\begin{align}
+B_z(r, z)
+&amp;= -\frac{\partial \phi_m}{\partial z} \\
+&amp;= -\frac{\partial}{\partial z} \left[ \sum_{n=0}^{\infty} \frac{(-1)^{2n}}{(n!)^2} \frac{\partial^{2n} \phi_m(0, z)}{\partial z^{2n}} \left(\frac{r}{2}\right)^2 \right]
+\\
+&amp;= -\sum_{n=0}^{\infty} \frac{(-1)^{2n}}{(n!)^2} \frac{\partial^{2n + 1} \phi_m(0, z)}{\partial z^{2n + 1}} \left(\frac{r}{2}\right)^2
+.
+\end{align}
+\tag{12}\]</span></span></p>
+<p>Define <span class="math inline">\(B(z)\)</span> as the on-axis value of <span class="math inline">\(B_z(z)\)</span>:</p>
+<p><span id="eq-def-bz"><span class="math display">\[
+\begin{equation}
+    B(z) \equiv B_z(0, z) = -\frac{\partial \phi_m(0, z)}{\partial z} .
+\end{equation}
+\tag{13}\]</span></span></p>
+<p>Inserting <a href="#/eq-def-bz" class="quarto-xref">Equation 13</a> into <a href="#/eq-bz-expansion" class="quarto-xref">Equation 14</a> gives:</p>
+<p><span id="eq-bz-expansion"><span class="math display">\[
+\begin{align}
+B_z(r, z)
+&amp;= \sum_{n=0}^{\infty} \frac{(-1)^{2n}}{(n!)^2} \frac{\partial^{2n}}{\partial z^{2n}} \left[ -\frac{\partial \phi_m(0, z)}{\partial z} \right] \left(\frac{r}{2}\right)^2
+\\
+B_z(r, z)
+&amp;= \sum_{n=0}^{\infty} \frac{(-1)^{2n}}{(n!)^2} \frac{\partial^{2n} B(z)}{\partial z^{2n}} \left(\frac{r}{2}\right)^2
+.
+\end{align}
+\tag{14}\]</span></span></p>
+<p>For the radial component, we find:</p>
+<p><span class="math display">\[
+B_r(r, z) =
+\sum_{n=1}^{\infty} \frac{(-1)^{n}}{n! (n - 1)!} \frac{\partial^{2n - 1} B(z)}{\partial z^{2n - 1}} \left(\frac{r}{2}\right)^{2n - 1}
+.
+\]</span></p>
+<p>A similar procedure gives the radial and longitudinal components of the electric field <span class="math inline">\(\mathbf{E} = E_r \hat{r} + E_z \hat{z}\)</span>. Define <span class="math inline">\(V(z)\)</span> as the on-axis value of the electric potential <span class="math inline">\(\phi\)</span>:</p>
+<p><span class="math display">\[
+V(z) \equiv \phi(0, z).
+\]</span></p>
+<p>This gives:</p>
+<p><span class="math display">\[
+\begin{align}
+E_z(r, z)
+&amp;= -\frac{\partial \phi}{\partial z}
+= -\sum_{n=0}^{\infty} \frac{(-1)^{n}}{(n!)^2} \frac{\partial^{2n + 1} V(z)}{\partial z^{2n + 1}} \left(\frac{r}{2}\right)^{2n}
+.
+\\
+E_r(r, z)
+&amp;= -\frac{\partial \phi}{\partial r}
+= -\sum_{n=1}^{\infty} \frac{(-1)^{n}}{n! (n - 1)!} \frac{\partial^{2n} V(z)}{\partial z^{2n}} \left(\frac{r}{2}\right)^{2n - 1}
+.
+\end{align}
+\]</span></p>
 </section>
 <section id="derivation-of-paraxial-ray-equation" class="slide level2">
 <h2>Derivation of paraxial ray equation</h2>
+<p>We will now take the limit of small transverse velocity relative to to longitudinal velocity: <span class="math inline">\(\dot{r} \ll \dot{z}\)</span>, <span class="math inline">\(r\dot{\theta} \ll \dot{z}\)</span>. If <span class="math inline">\(v = (v_r^2 + v_\theta^2 + v_z^2)^{1/2}\)</span> is the total velocity, where <span class="math inline">\(v_r = \dot{r}\)</span>, <span class="math inline">\(v_\theta = r\dot{\theta}\)</span>, and <span class="math inline">\(v_z = \dot{z}\)</span>, the paraxial limit gives <span class="math inline">\(\dot{z} = (v^2 - \dot{r}^2 - r^2\dot{\theta}^2)^{1/2} \approx v.\)</span> We will therefore only keep terms linear in <span class="math inline">\(r\)</span> in the equations of motion.</p>
+<p>We will also add the self-generated fields to the equation of motion, writing</p>
+<p><span class="math display">\[
+\begin{align}
+    \mathbf{E} &amp;= \mathbf{E}^{(ext)} + \mathbf{E}^{(self)}, \\
+    \mathbf{B} &amp;= \mathbf{B}^{(ext)} + \mathbf{B}^{(self)}.
+\end{align}
+\]</span></p>
+<p><span style="color: red;">[Is there a way to derive the ray equation first, then add the self-fields later?]</span> To first order in <span class="math inline">\(r\)</span>, the external fields are:</p>
+<p><span class="math display">\[
+\begin{align}
+E_r^{(ext)} &amp;\approx \frac{r}{2} \frac{\partial^2 V(z)}{\partial z^2} , \\
+E_z^{(ext)} &amp;\approx -\frac{\partial V(z)}{\partial z} , \\
+B_r^{(ext)} &amp;\approx -\frac{r}{2} \frac{\partial B(z)}{\partial z} , \\
+B_z^{(ext)} &amp;\approx B(z).
+\end{align}
+\]</span></p>
+<p>Recall that <span class="math inline">\(V(z) = \phi(0, z)\)</span> and <span class="math inline">\(B(z) = -\partial \phi_m(0, z) / \partial z\)</span>.</p>
+<p>Plug these truncated fields into <strong>?@eq-dpdt-cylindrical-r</strong>} (the radial equation of motion):</p>
+<p><span class="math display">\[
+\begin{align}
+\frac{d(\gamma m \dot{r})}{dt} - \gamma m r \dot{\theta}^2
+&amp;= q \left( E_r + r \dot{\theta} B_z - \dot{z} B_\theta \right) ,
+\\
+&amp;\approx
+q
+\underbrace{
+    \left(
+        \frac{r}{2} \frac{\partial^2 V(z)}{\partial z^2}
+        + r \dot{\theta} B(z)
+    \right)
+}_{\text{external fields}}
++
+q
+\underbrace{
+    \left(
+        E_r^{(self)} - \dot{z} B_\theta^{(self)}
+    \right)
+}_{\text{self fields}}
+.
+\end{align}
+\]</span></p>
+<p>The <span class="math inline">\(B_z^{(\text{self})}\)</span> term is ignored in the paraxial limit.</p>
+<p>Two more steps will lead to our definition of the . First, we will switch to the axial coordinate <span class="math inline">\(z\)</span> as the independent variable rather than the time <span class="math inline">\(t\)</span>. It is more common in accelerator physics to use the label <span class="math inline">\(s\)</span>, so we define <span class="math inline">\(s \equiv z\)</span> and <span class="math inline">\(ds = v_z dt = \beta c dt\)</span>, where <span class="math inline">\(c\)</span> is the speed of light. Also define <span class="math inline">\(&#39; \equiv d/ds\)</span>. This gives (dropping the <span class="math inline">\(\approx\)</span> symbol from now on):</p>
+<p><span id="eq-rpp"><span class="math display">\[
+\begin{multline}
+\beta c \frac{d\left( \gamma \beta m c r&#39; \right)}{ds}
+-
+\gamma m r (\beta c \theta&#39;)^2
+= \\
+q \left( \frac{1}{2} rV&#39;&#39;(s) + r \beta c \theta&#39; B(s) \right)
++
+q \left( E_r^{(self)} - \beta c B_\theta^{(self)} \right)
+.
+\end{multline}
+\tag{15}\]</span></span></p>
+<p>Expand the derivative in the first term and divide by <span class="math inline">\(\gamma m \beta^2 c^2\)</span>:</p>
+<p><span class="math display">\[
+r&#39;&#39; + \frac{(\gamma \beta)&#39;}{(\gamma \beta)} r&#39; - r \theta&#39;^2
+=
+\frac{q}{\gamma m \beta^2 c^2}
+\left( \frac{r}{2} V&#39;&#39;(s) + \beta c r \theta&#39; B(s) + E_r^{(self)} - \beta c B_\theta^{(self)} \right).
+\]</span></p>
+<p>Now use the definition of the canonical angular momentum <span class="math inline">\(p_\theta\)</span> (<a href="#/eq-canonical-momentum" class="quarto-xref">Equation 10</a>) to eliminate <span class="math inline">\(\theta&#39;\)</span>, noting that the flux <span class="math inline">\(\psi(r) = \pi r^2 B\)</span>:</p>
+<p><span id="eq-theta-prime"><span class="math display">\[
+\begin{align}
+    \theta&#39;
+    &amp;= \frac{\dot{\theta}}{\beta c}
+    \\
+    \theta&#39;
+    &amp;= \frac{1}{\gamma \beta m c r^2} \left( p_\theta - \frac{q \psi(r)}{2 \pi} \right),
+    \\
+    \theta&#39;
+    &amp;= \frac{p_\theta}{\gamma \beta m c r^2} - \frac{\omega_c}{2 \gamma \beta c},
+\end{align}
+\tag{16}\]</span></span></p>
+<p>where we have defined the :</p>
+<p><span id="eq-cyclotron-frequency"><span class="math display">\[
+\omega_c \equiv \frac{qB}{m} .
+\tag{17}\]</span></span></p>
+<p>Substitution of <span class="citation" data-cites="eq:theta-prime"> [<a href="#/references" role="doc-biblioref" onclick><strong>eq:theta-prime?</strong></a>]</span> into <a href="#/eq-rpp" class="quarto-xref">Equation 15</a> gives:</p>
+<p><span id="eq-paraxial-1"><span class="math display">\[
+\begin{multline}
+    r&#39;&#39; + \frac{(\gamma\beta)&#39;}{\gamma\beta} r
+    + \left( \frac{\omega_c}{2 \gamma \beta c} \right)^2 r
+    - \left(\frac{p_\theta}{\gamma \beta m c} \right)^2 \frac{1}{r^3}
+    = \\
+    \frac{q}{\gamma m \beta^2 c^2}
+    \left(
+        \frac{V&#39;&#39;}{2} r + E_r^{(self)} - \beta c B_\theta^{(self)}
+    \right)
+\end{multline}
+\tag{18}\]</span></span></p>
+<p>Let us derive simplified expressions for <span class="math inline">\(E_r^{(self)}\)</span> and <span class="math inline">\(B_\theta^{(self)}\)</span> in terms of the charge and current density. Assuming cylindrical symmetry of the beam, the Poisson equation for the self-generated electric field is:</p>
+<p><span id="eq-poisson-self-field"><span class="math display">\[
+\begin{align}
+    \nabla^2 \phi^{(self)}
+    = \frac{1}{r} \frac{\partial}{\partial r} \left( r \frac{\partial \phi^{(self)}}{\partial r} \right)
+    + \frac{\partial^2 \phi^{(self)}}{\partial s^2}
+    = -\frac{\rho}{\epsilon_0}.
+\end{align}
+\tag{19}\]</span></span></p>
+<p>Solving for <span class="math inline">\(\partial \phi^{(self)} / \partial r\)</span>:</p>
+<p><span class="math display">\[
+\begin{align}
+    E_r^{(self)}
+    = -\frac{\partial \phi^{(self)}}{\partial r}
+    = \frac{\lambda(r)}{2 \pi \epsilon_0 r} + \frac{r}{2} \frac{\partial^2 \phi^{(self)}}{\partial s^2},
+\end{align}
+\]</span></p>
+<p>where <span class="math inline">\(\lambda\)</span> is the line-charge density:</p>
+<p><span class="math display">\[
+\lambda(r) \equiv 2\pi \int_{0}^{r} \rho(\tilde{r}) \tilde{r} d\tilde{r},
+\]</span></p>
+<p>For the <span class="math inline">\(B_\theta^{(self)}\)</span> component of the self-generated magnetic field, we use Ampere’s law:</p>
+<p><span class="math display">\[
+\begin{align}
+    2 \pi r B_\theta^{(self)}
+    = \mu_0 \int_{0}^{r} 2 \pi \tilde{r} J_z(\tilde{r}) d\tilde{r}.
+    = \mu_0 \beta c \lambda(r)
+\end{align}
+\]</span></p>
+<p>Using the definition <span class="math inline">\(\mu_0 \epsilon_0 = c^{-2}\)</span>,</p>
+<p><span class="math display">\[
+B_\theta^{(self)} = \frac{\beta}{c} \frac{\lambda(r)}{2 \pi \epsilon_0 r}.
+\]</span></p>
+<p>With these approximations of the self-field components, <a href="#/eq-paraxial-1" class="quarto-xref">Equation 18</a> becomes:</p>
+<p><span id="eq-paraxial-2"><span class="math display">\[
+\begin{multline}
+    r&#39;&#39; + \frac{(\gamma\beta)&#39;}{\gamma\beta} r
+    + \left( \frac{\omega_c}{2 \gamma \beta c} \right)^2 r
+    - \left(\frac{p_\theta}{\gamma \beta m c} \right)^2 \frac{1}{r^3}
+    = \\
+    \frac{q}{\gamma m \beta^2 c^2}
+    \left[
+        \frac{r}{2} \left( \frac{\partial^2 V}{\partial s^2} + \frac{\partial^2 \phi^{(self)}}{\partial s^2} \right)
+        + \frac{1}{\gamma^2} \frac{\lambda(r)}{2 \pi \epsilon_0 r}
+    \right]
+    .
+\end{multline}
+\tag{20}\]</span></span></p>
+<p>A further simplification can be made by for the second derivatives of the potentials. The rate of change in the particle energy is given by</p>
+<p><span class="math display">\[
+\frac{d (\gamma m c^2)}{dt} = q \mathbf{E} \cdot \mathbf{v}.
+\]</span></p>
+<p>In the paraxial limit, the energy gain is almost entirely due to the longitudinal field:</p>
+<p><span class="math display">\[
+\frac{d (\gamma m c^2)}{dt} \approx q E_z v_z = q \beta c E_z.
+\]</span></p>
+<p>Switching to <span class="math inline">\(s\)</span> as the independent variable, we find</p>
+<p><span class="math display">\[
+\begin{align}
+    \gamma&#39; &amp;\approx \frac{q E_z}{m c^2}
+    \\
+    \gamma&#39;&#39; &amp;\approx \frac{q}{mc^2} \frac{dE_z}{ds}
+    \\
+    \gamma&#39;&#39; &amp;\approx \frac{q}{mc^2} \frac{d}{ds} \left( E_z^{(ext)} + E_z^{(self)} \right)
+    \\
+    \gamma&#39;&#39; &amp;\approx -\frac{q}{mc^2} \left( \frac{\partial^2 V}{\partial s^2} + \frac{\partial^2 \phi^{(self)}}{\partial s^2} \right).
+\end{align}
+\]</span></p>
+<p>Inserting this approximation of <span class="math inline">\(\lambda&#39;&#39;\)</span> in <a href="#/eq-paraxial-2" class="quarto-xref">Equation 20</a> gives our final form of the :</p>
+<p><span id="eq-paraxial"><span class="math display">\[
+\begin{align}
+\boxed{
+r&#39;&#39;
++ {\frac{(\gamma\beta)&#39;}{(\gamma\beta)} r&#39;}
++ \left( \frac{\gamma&#39;&#39;}{2 q \gamma \beta^2} \right) r
++ \left( \frac{\omega_c}{2\gamma \beta c} \right)^2 r
+- \left( \frac{p_\theta}{\gamma \beta m c} \right)^2 \frac{1}{r^3}
+= \frac{q}{m c^2 \beta^2 \gamma^3} \frac{\lambda(r)}{2 \pi \epsilon_0 r}
+}
+\end{align}
+\tag{21}\]</span></span></p>
+<p>The equations are valid for axisymmetric external focusing forces in the paraxial limit, with the inclusion of linearized self-fields of an axially symmetric beam. The terms in <a href="#/eq-paraxial" class="quarto-xref">Equation 21</a> represent, in order: (i) […]; (ii) accelerative damping; <span class="math inline">\(E_r\)</span> from converging field lines; (iii) solenoidal focusing (<span class="math inline">\(v_\theta B_z\)</span>); (iv) centrifugal defocusing; (v) linearized self-field (<span class="math inline">\(E_r - v_z B_\theta\)</span>).</p>
 </section></section>
+<section>
 <section id="envelope-equations-for-axially-symmetric-beams" class="title-slide slide level1 center">
 <h1>Envelope equations for axially symmetric beams</h1>
 
 </section>
-
+<section id="envelope-equations-for-axially-symmetric-beams-1" class="slide level2">
+<h2>Envelope equations for axially symmetric beams</h2>
+<p>The strategy in this section will be to compute the second moments of the transverse distribution function <span class="math inline">\(f(x, x&#39;, y, y&#39;, s)\)</span>. For axially symmetric beams, the Vlasov equation will generate a set of differential equations for the evolution of the second moments such as <span class="math inline">\(\langle rr \rangle\)</span>, <span class="math inline">\(\langle rr&#39; \rangle\)</span>, <span class="math inline">\(\langle rr&#39;&#39; \rangle\)</span>, etc. Combining with the paraxial ray equation will generate a set of ordinary differential equations (ODEs) for the evolution of the beam radius <span class="math inline">\(r_b = \sqrt{2 \langle rr \rangle}\)</span>.</p>
+<p>Start with the Vlasov equation:</p>
+<p><span id="eq-vlasov"><span class="math display">\[
+\frac{\partial f}{\partial s}
++ \mathbf{x}&#39; \cdot \frac{\partial f}{\partial \mathbf{x}}
++ \mathbf{x}&#39;&#39; \cdot \frac{\partial f}{\partial \mathbf{x}&#39;}
+= 0,
+\tag{22}\]</span></span></p>
+<p>where <span class="math inline">\(\mathbf{x} = (x, y)\)</span>. Multiply the Vlasov equation by <span class="math inline">\(g(\mathbf{x}, \mathbf{x}&#39;)\)</span>, an arbitrary function of the phase space coordinates, and integrate over all phase space space:</p>
+<p><span id="eq-vlasov-g-int"><span class="math display">\[
+\iint
+\left[
+    g \frac{\partial f}{\partial s}
+    + g \mathbf{x}&#39; \cdot \frac{\partial f}{\partial \mathbf{x}}
+    + g \mathbf{x}&#39;&#39; \cdot \frac{\partial f}{\partial \mathbf{x}&#39;}
+\right]
+d\mathbf{x} d\mathbf{x}&#39;
+= 0.
+\tag{23}\]</span></span></p>
+<p>Introduce bracket notation to indicate the expected value under the distribution; e.g.,</p>
+<p><span class="math display">\[
+\langle g \rangle \equiv \iint g f(\mathbf{x}, \mathbf{x&#39;}) d\mathbf{x} d\mathbf{x}&#39;.
+\]</span></p>
+<p>The first term is equivalent to <span class="math inline">\(d\langle g \rangle /ds\)</span>:</p>
+<p><span class="math display">\[
+\iint g(\mathbf{x}, \mathbf{x}&#39;) \frac{\partial f(\mathbf{x}, \mathbf{x}&#39;, s)}{\partial s} d\mathbf{x}d\mathbf{x}&#39;
+= \frac{d \langle g \rangle}{d s}.
+\]</span></p>
+<p><span style="color: red;">[Shouldn’t this be <span class="math inline">\(\partial \langle g \rangle / \partial s\)</span> instead of <span class="math inline">\(d \langle g \rangle / ds\)</span>?]</span> Since the distribution function vanishes at the integration boundary, we can use integration by parts to flip the gradients from <span class="math inline">\(f\)</span> to <span class="math inline">\(g\)</span> in the next two terms.</p>
+<p><span class="math display">\[
+\begin{aligned}
+    \iint \left[ g \mathbf{x}&#39; \cdot \frac{\partial f}{\partial \mathbf{x}} \right] d\mathbf{x}d\mathbf{x}&#39;
+    &amp;= -\iint \left[ \mathbf{x}&#39; \cdot \frac{\partial g}{\partial \mathbf{x}} f \right] d\mathbf{x}d\mathbf{x}&#39;
+    \\
+    &amp;= -\langle \mathbf{x}&#39; \cdot {\partial g}/{\partial \mathbf{x}} \rangle.
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+    \iint \left[ g \mathbf{x}&#39;&#39; \cdot \frac{\partial f}{\partial \mathbf{x}&#39;} \right] d\mathbf{x}d\mathbf{x}&#39;
+    &amp;= -\iint \left[ \mathbf{x}&#39;&#39; \cdot \frac{\partial g}{\partial \mathbf{x}&#39;} f \right] d\mathbf{x}d\mathbf{x}&#39;
+    \\
+    &amp;= -\langle \mathbf{x}&#39;&#39; \cdot {\partial g}/{\partial \mathbf{x}&#39;} \rangle.
+\end{aligned}
+\]</span></p>
+<p><a href="#/eq-vlasov-g-int" class="quarto-xref">Equation 23</a> then becomes:</p>
+<p><span class="math display">\[
+\frac{d \langle g \rangle}{d s}
+= \langle \mathbf{x}&#39; \cdot {\partial g}/{\partial \mathbf{x}} \rangle
++ \langle \mathbf{x}&#39;&#39; \cdot {\partial g}/{\partial \mathbf{x}&#39;} \rangle .
+\]</span></p>
+<p>From the definition of the total derivative with respect to <span class="math inline">\(s\)</span>:</p>
+<p><span class="math display">\[
+\frac{dg}{ds}
+= \mathbf{x}&#39; \cdot {\partial g}/{\partial \mathbf{x}}
++ \mathbf{x}&#39;&#39; \cdot {\partial g}/{\partial \mathbf{x}&#39;}.
+\]</span></p>
+<p>Therefore, the time-derivative of the average <span class="math inline">\(\langle g \rangle\)</span> is the same as the average of the time-derivative <span class="math inline">\(dg/dt\)</span>:</p>
+<p><span class="math display">\[
+d \langle g \rangle / ds = \langle g&#39; \rangle.
+\]</span></p>
+<p><span style="color: red;">[Is this not trivial?]</span></p>
+<p>Define the root-mean-square (rms) beam radius <span class="math inline">\(r_b\)</span>:</p>
+<p><span id="eq-radius"><span class="math display">\[
+r_b \equiv \sqrt{2\langle rr \rangle}.
+\tag{24}\]</span></span></p>
+<p>We will also call <span class="math inline">\(r_b\)</span> the . <a href="#/eq-radius" class="quarto-xref">Equation 24</a>, the time-evolution of the rms beam radius is:</p>
+<p><span id="eq-env-1"><span class="math display">\[
+r_b&#39;&#39; = \frac{2 \langle rr&#39;&#39; \rangle}{r_b}
++ \frac{4 \langle rr \rangle \langle r&#39;r&#39; \rangle - 4 \langle rr&#39; \rangle^2 }{r_b^3}
+.
+\tag{25}\]</span></span></p>
+<p>Evaluate <span class="math inline">\(\langle rr&#39;&#39; \rangle\)</span>: […]</p>
+<p><span id="eq-rrp"><span class="math display">\[
+\begin{multline}
+    \langle rr&#39;&#39; \rangle
+    = \frac{\gamma&#39;}{\beta^2 \gamma} \langle rr&#39; \rangle
+    + \frac{\gamma&#39;&#39;}{2 \gamma \beta^2} \langle rr \rangle
+    - \frac{q}{mc^2 \beta^2 \gamma^3} \frac{\langle \lambda(r) \rangle}{2\pi\epsilon_0}
+    \\
+    + \left( \frac{\langle p_\theta \rangle}{\gamma\beta mc} \right)^2 \frac{1}{\langle r^2 \rangle}
+    - \left( \frac{\omega_c}{2 \gamma \beta c} \right)^2 \langle rr \rangle
+    - \frac{\langle r^2 \theta&#39; \rangle^2}{\langle rr \rangle}
+    + \langle r^2 \theta&#39;^2 \rangle
+    .
+\end{multline}
+\tag{26}\]</span></span></p>
+<p>Inserting <a href="#/eq-rrp" class="quarto-xref">Equation 26</a> <a href="#/eq-env-1" class="quarto-xref">Equation 25</a> gives the following : […]</p>
+<p><span id="eq-env"><span class="math display">\[
+\boxed{
+    r_b&#39;&#39;
+    + \left( \frac{\gamma&#39;}{\gamma\beta^2} \right) r_b&#39;
+    + \left( \frac{\gamma&#39;&#39;}{2 \gamma\beta^2} \right) r_b
+    + \left( \frac{\omega_c}{2 \gamma \beta c} \right) r_b
+    - \left( \frac{2 \langle p_\theta \rangle}{\gamma \beta m c} \right)^2 \frac{1}{r_b^3}
+    - \frac{\varepsilon_r^2}{r_b^3} - \frac{Q}{r_b},
+}
+\tag{27}\]</span></span></p>
+<p>where <span class="math inline">\(Q\)</span> is the :</p>
+<p><span class="math display">\[
+Q \equiv [\dots],
+\]</span></p>
+<p>and <span class="math inline">\(\varepsilon_r\)</span> is the :</p>
+<p><span class="math display">\[
+\begin{aligned}
+    \varepsilon_r^2
+    &amp;\equiv
+    4 \left(
+        \langle r^2 \rangle \langle r&#39;^2 \rangle - \langle rr&#39; \rangle^2 + \langle r^2 \rangle \langle r^2 \theta&#39;^2 \rangle - \langle r^2 \theta&#39; \rangle^2
+    \right)
+    \\
+    \varepsilon_r^2
+    &amp;= \varepsilon_x^2 - 4 \langle r^2 \theta&#39;\rangle^2
+    .
+\end{aligned}
+\]</span></p>
+</section></section>
 <section>
 <section id="envelope-equations-for-elliptically-symmetric-beams" class="title-slide slide level1 center">
 <h1>Envelope equations for elliptically symmetric beams</h1>
