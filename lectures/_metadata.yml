@@ -1,7 +1,7 @@
 format:
   revealjs:
     theme: [default, style_slide.scss]
-    fontsize: 22px
+    fontsize: 24px
     width: 800
     auto-stretch: false
     slide-number: true
@@ -12,4 +12,4 @@ format:
     standalone: true
     center-title-slide: true
     fig-align: center
-    html-math-method: mathjax
+    # html-math-method: mathjax
