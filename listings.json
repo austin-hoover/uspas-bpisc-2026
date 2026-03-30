@@ -3,7 +3,6 @@
     "listing": "/index.html",
     "items": [
       "/lectures/plasma/index.html",
-      "/notes/plasma.html",
       "/lectures/envelope/index.html",
       "/lectures/current-limits/index.html",
       "/lectures/halo/index.html",
