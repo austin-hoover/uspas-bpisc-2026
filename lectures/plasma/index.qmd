@@ -8,19 +8,27 @@ author:
     affiliation: Lawrence Livermore National Laboratory
 toc: true
 format: revealjs
+bibliography: references.bib
+csl: aps.csl
 ---
+
 
 ## Overview 
 
 * We'll use concepts/techniques from plasma physics to describe intense charged particle beams.
 * This lecture introduces the *kinetic theory* of plasmas, a self-consistent treatment including both external and self-generated electromagnetic fields. 
 * We'll derive the Vlasov-Poisson (V-P) equations, which are the basis of the analysis in the rest of the course.
-
-
-# Useful quantities
-
 * We start by introducing several useful quantities: the *Debye length*, *plasma parameter*, and *plasma frequency*. 
 * These quantities are derived for neutral plasmas in thermal equilibrium, but they will also appear in the analysis of charged particle beams (non-neutral plasmas).
+
+
+# Debye length, plasma parameter, and plasma frequency
+
+## What is a plasma?
+
+> A *plasma* is a gas of charged particles, in which the potential energy of a typical particle due to its nearest neighbor is much smaller than its kinetic energy. @nicholson_1983_introduction
+
+When this condition is violated, we have a *strongly coupled* plasma. (Example: electrons in metals.)
 
 
 ## Debye length
@@ -32,12 +40,12 @@ n_i(\mathbf{x}) = n_e(\mathbf{x}) = n_0
 $$
 
 * Add test particle of charge $q_T$ and infinite mass at $\mathbf{x} = 0$.
-* How does the test particle change the electric potential $\phi(\mathbf{x})$?
+* How does the test particle change the potential $\phi(\mathbf{x})$?
 
 
 ---
 
-Poisson equation:
+Add test charge to Poisson equation:
 
 $$
 \nabla^2 \phi(\mathbf{x}) = 
@@ -70,7 +78,7 @@ $$
 \exp{ \left( \frac{e \phi(\mathbf{x})}{T_e} \right) } \approx 1 + \frac{e \phi(\mathbf{x})}{T_e}
 $${#eq-1}
 
-Insert truncated density functions into @eq-poisson. Away from the origin, in radial coordiantes ($r = |\mathbf{x}|$):
+Insert truncated density functions into @eq-poisson. Away from the origin, in radial coordinates ($r = |\mathbf{x}|$):
 
 $$
 \frac{1}{r^2} \frac{\partial }{\partial r} \left( r^2 \frac{\partial \phi}{\partial r} \right) 
@@ -84,7 +92,7 @@ $$
 \lambda_{e} = \sqrt{\frac{\epsilon_0 T_{e}}{n_0 e^2}}, \quad\quad \lambda_{i} = \sqrt{\frac{\epsilon_0 T_{i}}{n_0 e^2}}
 $$
 
-And the total Debye length $\lambda_D^{-2} = \lambda_e^{-2} + \lambda_i^{-2}$ such that
+And total Debye length $\lambda_D^{-2} = \lambda_e^{-2} + \lambda_i^{-2}$ such that
 
 $$
 \frac{1}{r^2} \frac{\partial }{\partial r} \left( r^2 \frac{\partial \phi}{\partial r} \right) 
@@ -107,27 +115,35 @@ $${#eq-yukawa}
 * Similar potentials appear in nuclear physics.
 
 
+
+
+
 ## Plasma parameter
 
-For a collection of particles with average density $n_0$, the average nearest-neighbor distance is given by $n_0^{-1/3}$. The average potential energy between particles is given by
+In plasma with average density $n_0$, average nearest-neighbor distance is $r \sim n_0^{-1/3}$. 
+
+Average potential energy between neighboring particles:
 
 $$
-\left| q\phi(\mathbf{x}) \right| \sim q^2 r^{-1} \sim q^2 n_0^{1/3}, 
+\left| q\phi(\mathbf{x}) \right| \sim q^2 r^{-1} \sim q^2 n_0^{1/3} .
 $${#eq-1}
 
-ignoring scaling factors. We will assume that the average kinetic energy $T$ is much larger than the average nearest-neighbor potential energy:
+Typical kinetic energy is much larger than nearest-neighbor potential energy:
 
 $$
 T \gg q^2 n_0^{1/3}.
 $${#eq-1}
 
-This can be equivalently stated by defining the *plasma parameter* $\Lambda$:
+Therefore,
 
 $$
 \Lambda \equiv n_0 \lambda_D^3 \gg 1.
 $${#eq-plasma-parameter}
 
-The plasma parameter defines the average number of particles within a *Debye cube* of volume $\lambda_D^3$. We will assume @eq-plasma-parameter is satisfied for all systems studied in this course. Systems for which the average nearest-neighbor potential energy is comparable to the average kinetic energy are labeled *strongly coupled* plasmas and will not be considered.
+The **plasma parameter** $\Lambda$ defines the average number of particles within a *Debye cube* of volume $\lambda_D^3$. @eq-plasma-parameter is true by definition (weakly coupled plasma).
+
+
+
 
 
 ## Plasma frequency
@@ -144,16 +160,16 @@ $$
 \omega_p \equiv \left( \frac{n_0 q^2}{\epsilon_0 m} \right)^{1/2}.
 $${#eq-1}
 
-The relationship between the plasma frequency and Debye length defines the *thermal velocity* $v_p$:
+The relationship between the plasma frequency and Debye length defines a *thermal velocity* $v_p$:
 
 $$
 v_p \equiv \omega_p \lambda_D = \left( \frac{T}{m} \right)^{1/2}.
 $${#eq-1}
 
-The Debye length $\lambda_D$, plasma frequency $\omega_p$, and thermal velocity $v_p$ define the characteristic length and time scales of collective oscillations.
+The Debye length $\lambda_D$, plasma frequency $\omega_p$, and thermal velocity $v_p$ define the characteristic length and time scales of collective oscillations in the plasma.
 
 
-# Klimontovich Equation
+# Kinetic theory
 
 ## Klimontovich Equation
 
@@ -292,9 +308,6 @@ $${#eq-klimontovich}
 
 [[I'm not quite know how to show this. It makes sense if $a$ and $b$ are functions, but in our case we have an operator acting on the delta function.]]{style="color: red;"}
 @eq-klimontovich is known as the *Klimontovich Equation*.
-
-
-# Vlasov Equation
 
 
 ## Vlasov Equation
