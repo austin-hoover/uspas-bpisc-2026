@@ -2,11 +2,11 @@
   {
     "listing": "/index.html",
     "items": [
-      "/lectures/plasma/index.html",
-      "/lectures/envelope/index.html",
-      "/lectures/current-limits/index.html",
-      "/lectures/halo/index.html",
-      "/lectures/collision/index.html"
+      "/lectures/01-plasma-physics/index.html",
+      "/lectures/02-envelope-equations/index.html",
+      "/lectures/03-current-limits/index.html",
+      "/lectures/04-halo-formation/index.html",
+      "/lectures/05-collisions/index.html"
     ]
   }
 ]
