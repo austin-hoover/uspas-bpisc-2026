@@ -1,11 +1,5 @@
 ---
 title: "Intrabeam Collisions, Gas and Electron Effects"
-subtitle: USPAS Beam Physics with Intense Space Charge
-author:
-  - name: Austin Hoover
-    affiliation: Oak Ridge National Laboratory
-  - name: John Barnard
-    affiliation: Lawrence Livermore National Laboratory
 toc: true
 bibliography: references.bib 
 csl: aps.csl
@@ -97,7 +91,6 @@ $$
 
 Aren't collisions negligible? Putting in numbers for ions:
 
-$$
 \begin{align}
 \tau_{\text{eff}} &= 
 4.3 \cdot 10^{-4} [s]
@@ -107,7 +100,6 @@ $$
 \left( \frac{10^{10} [cm^{-3}]}{n} \right) \\
 \Lambda &= \frac{1.5 \cdot 10^5 (k_B T / [eV])^{3/2} }{Z^3 (n / 10^{10} [cm^{-3}])} 
 \end{align}
-$$
 
 
 Example: 2 MeV injector:
@@ -210,13 +202,11 @@ $$
 
 and taking the $s$-derivative gives a dynamical equation for $\langle x'^2 \rangle$:
 
-$$
 \begin{align}
 \frac{d}{ds} \langle x'^2 \rangle 
 &= 4 \pi n_g \left( \frac{Z Z_g e^2}{4 \pi \epsilon_0 m c^2 \gamma \beta^2} \right)^2 \ln\left(\frac{\theta_{max}}{\theta_{min}}\right) \\
 &\equiv C .
 \end{align}
-$$
 
 
 
@@ -236,12 +226,10 @@ $$
 
 Let the initial phase space coordinates be $x = x_0$ and $x' = x_0'$. After an incremental distance $\delta s$,
 
-$$
 \begin{align}
 x  &\rightarrow x_0 \\
 x' &\rightarrow x_0' + \delta x'.
 \end{align}
-$$
 
 We can then calculate the incremental change in the second-order moments:
 

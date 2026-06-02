@@ -1,13 +1,6 @@
 ---
 title: "Plasma Physics of Beams"
-subtitle: USPAS - Beam Physics with Intense Space Charge
-author:
-  - name: Austin Hoover
-    affiliation: Oak Ridge National Laboratory
-  - name: John Barnard
-    affiliation: Lawrence Livermore National Laboratory
 toc: true
-format: revealjs
 bibliography: references.bib
 csl: aps.csl
 ---
@@ -35,9 +28,9 @@ When this condition is violated, we have a *strongly coupled* plasma. (Example: 
 
 * Consider uniform density of electrons and ions over all space.
 
-$$
+\begin{equation}
 n_i(\mathbf{x}) = n_e(\mathbf{x}) = n_0
-$$
+\end{equation}
 
 * Add test particle of charge $q_T$ and infinite mass at $\mathbf{x} = 0$.
 * How does the test particle change the potential $\phi(\mathbf{x})$?
@@ -47,25 +40,25 @@ $$
 
 Add test charge to Poisson equation:
 
-$$
+\begin{equation} \label{eq-poisson}
 \nabla^2 \phi(\mathbf{x}) = 
 -\underbrace{\frac{e \left( n_i(\mathbf{x}) - n_e(\mathbf{x}) \right) }{\epsilon_0}}_{\text{background}} 
 - \underbrace{\frac{q_T \delta(\mathbf{x}) }{\epsilon_0}}_{\text{perturbation}} ,
-$${#eq-poisson}
+\end{equation}
 
 where $e$ is elementary charge, $\epsilon_0$ is electric constant, $n_e(\mathbf{x})$ is electron density, $n_i(\mathbf{x})$ is ion density, and $\delta$ is Dirac delta function.
 
 Electron-electron collisions drive electron distribution to thermal equilibrium at temperature $T_e$ (measured in eV):
 
-$$
+\begin{equation}
 n_e(\mathbf{x}) = n_0 \exp{ \left( \frac{e \phi(\mathbf{x})}{T_e} \right) } 
-$${#eq-1}
+\end{equation}
 
 Ion-ion collisions eventually drive ion distribution to equilibrium at temperture $T_i$.
 
-$$
+\begin{equation}
 n_i(\mathbf{x}) = n_0 \exp{ \left( -\frac{e \phi(\mathbf{x})}{T_i} \right) } 
-$${#eq-1}
+\end{equation}
 
 Stop here, before electron-ion collisions relax the entire distribution to equilibrium at the same temperature.
 
@@ -74,41 +67,40 @@ Stop here, before electron-ion collisions relax the entire distribution to equil
 
 Assume thermal energy dominates: $e \phi \ll T_{i, e}$. Truncate exponential after single term in Taylor series:
 
-$$
+\begin{equation}
 \exp{ \left( \frac{e \phi(\mathbf{x})}{T_e} \right) } \approx 1 + \frac{e \phi(\mathbf{x})}{T_e}
-$${#eq-1}
+\end{equation}
 
-Insert truncated density functions into @eq-poisson. Away from the origin, in radial coordinates ($r = |\mathbf{x}|$):
+Insert truncated density functions into Eq. \eqref{eq-poisson}. Away from the origin, in radial coordinates ($r = |\mathbf{x}|$):
 
-$$
+\begin{equation} \label{eq-poisson-radial}
 \frac{1}{r^2} \frac{\partial }{\partial r} \left( r^2 \frac{\partial \phi}{\partial r} \right) 
 = \frac{e^2 n_0}{\epsilon_0} \left( \frac{1}{T_e} + \frac{1}{T_i} \right) \phi(r) .
-$${#eq-poisson-radial}
-
+\end{equation}
 
 Define **Debye length** $\lambda_{e}$ and $\lambda_i$ for electrons and ions:
 
-$$
+\begin{equation}
 \lambda_{e} = \sqrt{\frac{\epsilon_0 T_{e}}{n_0 e^2}}, \quad\quad \lambda_{i} = \sqrt{\frac{\epsilon_0 T_{i}}{n_0 e^2}}
-$$
+\end{equation}
 
 And total Debye length $\lambda_D^{-2} = \lambda_e^{-2} + \lambda_i^{-2}$ such that
 
-$$
+\begin{equation} \label{eq-poisson-radial-debye}
 \frac{1}{r^2} \frac{\partial }{\partial r} \left( r^2 \frac{\partial \phi}{\partial r} \right) 
 = \lambda_D^{-2} \phi(r) .
-$${#eq-poisson-radial-debye}
+\end{equation}
 
 
 --- 
 
-The solution to @eq-poisson-radial-debye is the *Yukawa potential*:
+The solution to Eq. \eqref{eq-poisson-radial-debye} is the *Yukawa potential*:
 
-$$
+\begin{equation} \label{eq-yukawa}
 \boxed{
 \phi(r) = \frac{q_T}{4 \pi \epsilon_0 r} e^{-r/\lambda_D} = \phi_0(r) e^{-r/\lambda_D}
 }
-$${#eq-yukawa}
+\end{equation}
 
 * Describes *screening* effect: test particle attracts cloud of opposite charge.
 * Deybe length $\lambda_D$ sets length scale for *collective* vs. *collisional* effects.
@@ -124,23 +116,23 @@ In plasma with average density $n_0$, average nearest-neighbor distance is $r \s
 
 Average potential energy between neighboring particles:
 
-$$
+\begin{equation}
 \left| q\phi(\mathbf{x}) \right| \sim q^2 r^{-1} \sim q^2 n_0^{1/3} .
-$${#eq-1}
+\end{equation}
 
 Typical kinetic energy is much larger than nearest-neighbor potential energy:
 
-$$
+\begin{equation}
 T \gg q^2 n_0^{1/3}.
-$${#eq-1}
+\end{equation}
 
 Therefore,
 
-$$
+\begin{equation} \label{eq-plasma-parameter}
 \Lambda \equiv n_0 \lambda_D^3 \gg 1.
-$${#eq-plasma-parameter}
+\end{equation}
 
-The **plasma parameter** $\Lambda$ defines the average number of particles within a *Debye cube* of volume $\lambda_D^3$. @eq-plasma-parameter is true by definition (weakly coupled plasma).
+The **plasma parameter** $\Lambda$ defines the average number of particles within a *Debye cube* of volume $\lambda_D^3$. Eq. \eqref{eq-plasma-parameter} is true by definition (weakly coupled plasma).
 
 
 
@@ -148,21 +140,21 @@ The **plasma parameter** $\Lambda$ defines the average number of particles withi
 
 The *plasma frequency* $\omega_p$ is derived by considering a one-dimensional slab of uniform density ions and electrons, constrained to the region $0 \le x \le L$. Displacing the electrons by a small distance $\Delta \ll L$ will create an electric field $E(\Delta) = - n_0 q \Delta / \epsilon_0$. The resulting harmonic oscillations are described by
 
-$$
+\begin{equation}
 \ddot{\Delta} + \omega_p^2 \Delta = 0,
-$${#eq-1}
+\end{equation}
 
 where
 
-$$
+\begin{equation}
 \omega_p \equiv \left( \frac{n_0 q^2}{\epsilon_0 m} \right)^{1/2}.
-$${#eq-1}
+\end{equation}
 
 The relationship between the plasma frequency and Debye length defines a *thermal velocity* $v_p$:
 
-$$
+\begin{equation}
 v_p \equiv \omega_p \lambda_D = \left( \frac{T}{m} \right)^{1/2}.
-$${#eq-1}
+\end{equation}
 
 The Debye length $\lambda_D$, plasma frequency $\omega_p$, and thermal velocity $v_p$ define the characteristic length and time scales of collective oscillations in the plasma.
 
@@ -183,53 +175,55 @@ The Debye length $\lambda_D$, plasma frequency $\omega_p$, and thermal velocity 
 * Let $\left\{ \mathbf{X}_i(t) ,\mathbf{P}_i(t) \right\}$ be the *orbit* or *trajectory* of particle number $i$ at time $t$.
 
 * Let $f^m(\mathbf{x}, \mathbf{p}, t)$ be the distribution function:
-$$
+
+\begin{equation} \label{eq-dist-dirac}
 f^m(\mathbf{x}, \mathbf{p}, t) = 
 \sum_{i=1}^{N}
 \delta \left[ \mathbf{x} - \mathbf{X}_i(t) \right]
 \delta \left[ \mathbf{p} - \mathbf{P}_i(t) \right],
-$${#eq-dist-dirac}
+\end{equation}
+
 where $\delta$ is the Dirac delta function. Here $m$ stands for *microscopic*, indicating a singular distribution function describing a set of point-particles, rather than a smooth density. 
 
 * Total number of particles does not change.
 
-$$
-    N = \int f^m(\mathbf{x}, \mathbf{p}, t) d\mathbf{x} d\mathbf{p}.
-$${#eq-dist-norm}
+\begin{equation} \label{eq-dist-norm}
+N = \int f^m(\mathbf{x}, \mathbf{p}, t) d\mathbf{x} d\mathbf{p}.
+\end{equation}
 
 
 ---
 
 The charge density $\rho^m(\mathbf{x}, t)$ and current density $\mathbf{J}^m(\mathbf{x}, t)$ are written as
 
-$$
+\begin{equation}
 \begin{aligned}
-    \rho^m(\mathbf{x}, t) 
-    &= 
-    \rho^{ext}(\mathbf{x}, t) + 
-    q \int f^m(\mathbf{x}, \mathbf{p}, t) d\mathbf{p} \\
-    &= 
-    \rho^{ext}(\mathbf{x}, t) + 
-    q \sum_{i=1}^{N} {
-        \delta \left[ \mathbf{x} - \mathbf{X}_i(t) \right]
-    },
+\rho^m(\mathbf{x}, t) 
+&= 
+\rho^{ext}(\mathbf{x}, t) + 
+q \int f^m(\mathbf{x}, \mathbf{p}, t) d\mathbf{p} \\
+&= 
+\rho^{ext}(\mathbf{x}, t) + 
+q \sum_{i=1}^{N} {
+    \delta \left[ \mathbf{x} - \mathbf{X}_i(t) \right]
+},
 \end{aligned}
-$${#eq-1}
+\end{equation}
 
-$$
+\begin{equation}
 \begin{aligned}
-    \mathbf{J}^m(\mathbf{x}, t) 
-    &= 
-    \mathbf{J}^{ext}(\mathbf{x}, t) +
-    q \int \dot{\mathbf{x}} f^m(\mathbf{x}, \mathbf{p}, t) d\mathbf{p} \\
-    &= 
-    \mathbf{J}^{ext}(\mathbf{x}, t) + 
-    q \sum_{i=1}^{N} {
-        \dot{\mathbf{X}}_i(t) 
-        \delta \left[ \mathbf{x} - \mathbf{X}_i(t) \right]
-    },
+\mathbf{J}^m(\mathbf{x}, t) 
+&= 
+\mathbf{J}^{ext}(\mathbf{x}, t) +
+q \int \dot{\mathbf{x}} f^m(\mathbf{x}, \mathbf{p}, t) d\mathbf{p} \\
+&= 
+\mathbf{J}^{ext}(\mathbf{x}, t) + 
+q \sum_{i=1}^{N} {
+    \dot{\mathbf{X}}_i(t) 
+    \delta \left[ \mathbf{x} - \mathbf{X}_i(t) \right]
+},
 \end{aligned}
-$${#eq-1}
+\end{equation}
 
 where $\rho^{ext}(\mathbf{x}, t)$ and $\mathbf{J}^{ext}(\mathbf{x}, t)$ are from external sources.
 
@@ -238,7 +232,7 @@ where $\rho^{ext}(\mathbf{x}, t)$ and $\mathbf{J}^{ext}(\mathbf{x}, t)$ are from
 
 The charge and current densities generate an electric field $\mathbf{E}^m(\mathbf{x}, t)$ and magnetic field $\mathbf{B}^m(\mathbf{x}, t)$, which satisfy the Maxwell equations:
 
-$$ \label{eq: micro_maxwell}
+\begin{equation} \label{eq-micro-maxwell}
 \begin{aligned}
     \nabla \cdot \mathbf{E}^m(\mathbf{x}, t) &= \rho^m(\mathbf{x}, t) / \epsilon_0. \\
     \nabla \cdot \mathbf{B}^m(\mathbf{x}, t) &= 0. \\
@@ -247,31 +241,31 @@ $$ \label{eq: micro_maxwell}
         \mu_0 \mathbf{J}^m(\mathbf{x}, t) + 
         \mu_0 \epsilon_0  \partial_t \mathbf{E}^m(\mathbf{x}, t),
 \end{aligned}
-$${#eq-1}
+\end{equation}
 
 along with boundary conditions. The microscopic fields and particle trajectories determine the force $\mathbf{F}_i$ on particle $i$
 
-$$
+\begin{equation}
 \begin{aligned}
-    \mathbf{F}_i
-    = \dot{\mathbf{P}}_i(t)
-    = q 
-    \left(
-        \mathbf{E}^{m} \left[ \mathbf{X}_i(t), t \right] 
-        + \dot{\mathbf{X}}_i(t) \times \mathbf{B}^{m} \left[ \mathbf{X}_i(t), t \right]
-    \right),
+\mathbf{F}_i
+= \dot{\mathbf{P}}_i(t)
+= q 
+\left(
+    \mathbf{E}^{m} \left[ \mathbf{X}_i(t), t \right] 
+    + \dot{\mathbf{X}}_i(t) \times \mathbf{B}^{m} \left[ \mathbf{X}_i(t), t \right]
+\right),
 \end{aligned}
-$${#eq-1}
+\end{equation}
 
 Note the relationship between the velocity and momentum:
 
-$$
+\begin{equation}
 \mathbf{P}_i(t) = \gamma_i m \dot{\mathbf{X}}_i(t),
-$${#eq-1}
+\end{equation}
 
-$$
-    \gamma_i = \left[ 1 + \frac{|\mathbf{P}_i|^2}{(mc)^2} \right]^{1/2}.
-$${#eq-1}
+\begin{equation}
+\gamma_i = \left[ 1 + \frac{|\mathbf{P}_i|^2}{(mc)^2} \right]^{1/2}.
+\end{equation}
 
 This is an exact/complete description of the system.
 
@@ -280,31 +274,31 @@ This is an exact/complete description of the system.
 
 We will study the time-evolution of the microscopic distribution function:
 
-$$
+\begin{equation}
 \begin{aligned}
-    \partial_t f^m(\mathbf{x, \mathbf{p}, t})
-    &= 
-    \partial_t  
-    \left[
-        \sum_{i=1}^{N}
-        \delta \left[ \mathbf{x} - \mathbf{X}_i(t) \right]
-        \delta \left[ \mathbf{p} - \mathbf{P}_i(t) \right]
-    \right] \\
-    &= 
-    - 
+\partial_t f^m(\mathbf{x, \mathbf{p}, t})
+&= 
+\partial_t  
+\left[
     \sum_{i=1}^{N}
-        \left[
-              \dot{\mathbf{X}}_i(t) \cdot \partial_{\mathbf{x}}
-            + \dot{\mathbf{P}}_i(t) \cdot \partial_{\mathbf{p}}
-        \right]
-        \delta \left[ \mathbf{x} - \mathbf{X}_i(t) \right]
-        \delta \left[ \mathbf{p} - \mathbf{P}_i(t) \right]
+    \delta \left[ \mathbf{x} - \mathbf{X}_i(t) \right]
+    \delta \left[ \mathbf{p} - \mathbf{P}_i(t) \right]
+\right] \\
+&= 
+- 
+\sum_{i=1}^{N}
+    \left[
+          \dot{\mathbf{X}}_i(t) \cdot \partial_{\mathbf{x}}
+        + \dot{\mathbf{P}}_i(t) \cdot \partial_{\mathbf{p}}
+    \right]
+    \delta \left[ \mathbf{x} - \mathbf{X}_i(t) \right]
+    \delta \left[ \mathbf{p} - \mathbf{P}_i(t) \right]
 \end{aligned}
-$${#eq-1}
+\end{equation}
 
 Since $a \delta(a - b) = b \delta(a - b)$, we can replace $\mathbf{X}_i$ and $\mathbf{P}_i$ with $\mathbf{x}$ and $\mathbf{p}$:
 
-$$
+\begin{equation} \label{eq-klimontovich}
 \begin{aligned}
 \boxed{
     \left\{
@@ -320,13 +314,11 @@ $$
     f^m(\mathbf{x}, \mathbf{p}, t) =0
 }
 \end{aligned}
-$${#eq-klimontovich}
+\end{equation}
 
 [[I'm not quite know how to show this. It makes sense if $a$ and $b$ are functions, but in our case we have an operator acting on the delta function.]]{style="color: red;"}
 
-@eq-klimontovich is known as the *Klimontovich Equation*.
-
-
+Eq. \eqref{eq-klimontovich} is known as the *Klimontovich Equation*.
 
 
 ## Vlasov Equation
@@ -335,15 +327,15 @@ The Klimontovich equation, combined with the Maxwell equations, is an exact desc
 
 Generate smooth distribution function $f(\mathbf{x}, \mathbf{p}, t)$ by averaging $f^m(\mathbf{x}, \mathbf{p}, t)$ over a box of dimensions $\Delta_x$, $\Delta_p$:
 
-$$
+\begin{equation}
 \begin{aligned}
-    f(\mathbf{x}, \mathbf{p}, t)
-    &= \langle f^m(\mathbf{x}, \mathbf{p}, t) \rangle \\
-    &= 
-    \frac{1}{\Delta_{x}^3 \Delta_{p}^3}
-    \int_{\Delta_{\mathbf{x}}} \int_{\Delta_{\mathbf{p}}} f^m(\mathbf{x}, \mathbf{p}, t) d\mathbf{x} d\mathbf{p}.
+f(\mathbf{x}, \mathbf{p}, t)
+&= \langle f^m(\mathbf{x}, \mathbf{p}, t) \rangle \\
+&= 
+\frac{1}{\Delta_{x}^3 \Delta_{p}^3}
+\int_{\Delta_{\mathbf{x}}} \int_{\Delta_{\mathbf{p}}} f^m(\mathbf{x}, \mathbf{p}, t) d\mathbf{x} d\mathbf{p}.
 \end{aligned}
-$${#eq-1}
+\end{equation}
 
 * Assume spatial averaging window much smaller than Debye length: $n^{-1/3} \ll \Delta_{x} \ll \lambda_D$. (Always possible!)
 
@@ -354,20 +346,20 @@ $${#eq-1}
 
 With the averaging procedure defined, split distribution function into smooth and rapidly fluctuating components:
 
-$$
-    f^m(\mathbf{x}, \mathbf{p}, t) = f(\mathbf{x}, \mathbf{p}, t) + \delta f(\mathbf{x}, \mathbf{p}, t)
-$${#eq-smooth-f}
+\begin{equation} \label{eq-smooth-f}
+f^m(\mathbf{x}, \mathbf{p}, t) = f(\mathbf{x}, \mathbf{p}, t) + \delta f(\mathbf{x}, \mathbf{p}, t)
+\end{equation}
 
 Averaging procedure gives $\langle \delta f \rangle = 0$. 
 
 Do the same to the fields:
 
-$$
-\begin{aligned}
+\begin{equation}
+\begin{aligned} \label{eq-smooth-fields}
 \mathbf{E}^m(\mathbf{x}, t) &= \mathbf{E}(\mathbf{x}, t) + \delta \mathbf{E}(\mathbf{x}, t), \\
 \mathbf{B}^m(\mathbf{x}, t) &= \mathbf{B}(\mathbf{x}, t) + \delta \mathbf{B}(\mathbf{x}, t),
 \end{aligned}
-$${#eq-smooth-fields}
+\end{equation}
 
 where $\langle \delta \mathbf{E} \rangle = \langle \delta \mathbf{B} \rangle = 0$, $\mathbf{E} = \langle \mathbf{E}^m \rangle$, and $\mathbf{B} = \langle \mathbf{B}^m \rangle$.  
 
@@ -376,15 +368,14 @@ where $\langle \delta \mathbf{E} \rangle = \langle \delta \mathbf{B} \rangle = 0
 
 The course-grained Klimontovich equation gives:
 
-$$
-\begin{multline}
+\begin{equation} \label{eq-kinetic}
 \left[
     \partial_{t} + 
     \dot{\mathbf{x}} \cdot \partial_{\mathbf{x}}
     + q \left[ \mathbf{E}(\mathbf{x}, t) + \dot{\mathbf{x}} \times \mathbf{B}(\mathbf{x}, t) \right]  \cdot \partial_{\mathbf{p}}   
 \right]
 f(\mathbf{x}, \mathbf{p}, t)
-= \\
+=
 -q 
 \left\langle 
     \left[ 
@@ -392,23 +383,22 @@ f(\mathbf{x}, \mathbf{p}, t)
         + \dot{\mathbf{x}} \times \delta\mathbf{B}(\mathbf{x}, t) 
         \right]
 \right \rangle
-\end{multline}
-$${#eq-kinetic}
+\end{equation}
 
 * LHS describes *collective* effects involving *smoothly varying* quantities.
 * RHS describes *collisional* effects involving *rapidly varying* quantities. 
 * Rough estimate: define collisional cross section $\sigma$ and collision frequency $\omega_c = \sigma n v_t$; ratio of collision frequency to plasma frequency gives approximate relation:
 
-$$
+\begin{equation}
 \frac{\text{Collisional effects}}{\text{Collective effects}} \sim \frac{1}{\Lambda}.
-$${#eq-1}
+\end{equation}
 
 
 ---
 
-Setting collisional terms to zero in @eq-kinetic gives the *Vlasov Equation*:
+Setting collisional terms to zero in Eq. \eqref{eq-kinetic} gives the *Vlasov Equation*:
 
-$$
+\begin{equation} \label{eq-vlasov}
 \boxed{
     \left[
         \partial_{t} + 
@@ -418,11 +408,11 @@ $$
     f(\mathbf{x}, \mathbf{p}, t)
     = 0
 }
-$${#eq-vlasov}
+\end{equation}
 
 The smoothed fields satisfy the Maxwell equations: 
 
-$$
+\begin{equation} \label{eq-maxwell}
 \begin{aligned}
 \nabla \cdot \mathbf{E}(\mathbf{x}, t) &= \rho(\mathbf{x}, t) / \epsilon_0, \\
 \nabla \cdot \mathbf{B}(\mathbf{x}, t) &= 0, \\
@@ -431,7 +421,7 @@ $$
     \mu_0 \mathbf{J}(\mathbf{x}, t) + 
     \mu_0 \epsilon_0  \partial_t \mathbf{E}(\mathbf{x}, t),
 \end{aligned}
-$${#eq-maxwell}
+\end{equation}
 
 where $\rho(\mathbf{x}, t)$ and $\mathbf{J}(\mathbf{x}, t)$ are the smoothed charge and current densities:
 
@@ -457,28 +447,28 @@ where $\rho(\mathbf{x}, t)$ and $\mathbf{J}(\mathbf{x}, t)$ are the smoothed cha
 
 The Vlasov equation will be the starting point for much of the analysis in the rest of this course. Before proceeding, we will briefly discuss one of its important features: the conservation of phase space density. The Vlasov equation may be viewed as an expression of the *Liouville Theorem*, which states that the phase space density is conserved along particle trajectories (orbits) in Hamiltonian systems:
 
-$$
-    \frac{df}{dt} \bigg\rvert_{\text{orbit}} = 0.
-$${#eq-1}
+\begin{equation}
+\frac{df}{dt} \bigg\rvert_{\text{orbit}} = 0.
+\end{equation}
 
 To show this, start from the continuity equation for the phase space density:
 
-$$
-    \partial_{t} f + \nabla{\mathbf{z}} (f \dot{\mathbf{z}}) = 0,
-$${#eq-1}
+\begin{equation}
+\partial_{t} f + \nabla{\mathbf{z}} (f \dot{\mathbf{z}}) = 0,
+\end{equation}
 
 with $\mathbf{z} = (\mathbf{q}, \mathbf{p})$ containing the canonical coordinate vector $\mathbf{q}$ and momentum $\mathbf{p}$. Given a Hamiltonian $H(\mathbf{q}, \mathbf{p}, t)$, the coordinates evolve according to
 
-$$
+\begin{equation}
 \begin{aligned}
 \dot{\mathbf{q}} &= +\partial_{\mathbf{p}} H, \\
 \dot{\mathbf{p}} &= -\nabla{\mathbf{q}} H.
 \end{aligned}
-$${#eq-1}
+\end{equation}
 
 Thus, the divergence of $\dot{\mathbf{z}}$ vanishes:
 
-$$
+\begin{equation}
 \begin{aligned}
 \nabla{\mathbf{z}} \cdot \dot{\mathbf{z}}
 &= \nabla{\mathbf{q}} \cdot \dot{\mathbf{q}} 
@@ -486,44 +476,44 @@ $$
 &= \left[ \nabla{\mathbf{q}} \cdot \partial_{\mathbf{p}} - \partial_{\mathbf{p}} \cdot \nabla{\mathbf{q}} \right] H \\
 &= 0.
 \end{aligned}
-$${#eq-1}
+\end{equation}
 
 And the continuity equation reduces to the time derivative along the orbit:
 
-$$
+\begin{equation}
 \begin{aligned}
     \partial_{t} f  + \nabla{\mathbf{z}} (f \dot{\mathbf{z}}) &= 0,  \\
     \partial_{t} f + \dot{\mathbf{z}} \cdot (\nabla{\mathbf{z}} f) + (\nabla{\mathbf{z}} \cdot \dot{\mathbf{z}}) f &= 0, \\
     \partial_{t} f + \dot{\mathbf{z}} \cdot (\nabla{\mathbf{z}} f) &= 0, \\
     \frac{df}{dt} \bigg\rvert_{\text{orbit}} &= 0.
 \end{aligned}
-$${#eq-1}
+\end{equation}
 
 
 Liouville's theorem is true for any set of canonical phase space variables. It also remains true when mean-field (averaged) collective effects are included. In canonical phase space coordinates, the Vlasov equation takes the form:
 
-$$
+\begin{equation}
 \begin{aligned}
 \frac{\partial f}{\partial t}
 + \frac{\partial H}{\partial \mathbf{p}} \cdot \frac{\partial f}{\partial \mathbf{q}}
 - \frac{\partial H}{\partial \mathbf{q}} \cdot \frac{\partial f}{\partial \mathbf{p}}
 = 0.
 \end{aligned}
-$${#eq-1}
+\end{equation}
 
 Or, defining the *Poisson bracket*,
 
-$$
-    \left\{ H, f \right\} \equiv
-      \frac{\partial H}{\partial \mathbf{p}} \cdot \frac{\partial f}{\partial \mathbf{q}}
-    - \frac{\partial H}{\partial \mathbf{q}} \cdot \frac{\partial f}{\partial \mathbf{p}},
-$${#eq-1}
+\begin{equation}
+\left\{ H, f \right\} \equiv
+  \frac{\partial H}{\partial \mathbf{p}} \cdot \frac{\partial f}{\partial \mathbf{q}}
+- \frac{\partial H}{\partial \mathbf{q}} \cdot \frac{\partial f}{\partial \mathbf{p}},
+\end{equation}
 
 the Vlasov equation becomes:
 
-$$
-    \frac{\partial f}{\partial t} + \left\{ H, f \right\} = 0.
-$${#eq-1}
+\begin{equation}
+\frac{\partial f}{\partial t} + \left\{ H, f \right\} = 0.
+\end{equation}
 
 Non-Hamiltonian processes (such as scattering) violate the Liouville Theorem and do not conserve phase space density.
 
@@ -532,99 +522,99 @@ Non-Hamiltonian processes (such as scattering) violate the Liouville Theorem and
 
 ## Statistical measures of phase space volume
 
-It will later be useful to describe the phase space density by its low-order moments. The most common quantity used in accelerator physics is the statistical *emittance*. Emittances are calculated from the second-order moments in the covariance matrix $\mathbf{\Sigma}$:
+It will later be useful to describe the phase space density by its low-order moments. The most common quantity used in accelerator physics is the statistical *emittance*. Emittances are calculated from the second-order moments in the covariance matrix $\boldsymbol{\Sigma}$:
 
-$$
-\mathbf{\Sigma} = \int \mathbf{z} \mathbf{z}^T f(\mathbf{z}) d\mathbf{z}.
-$${#eq-1}
+\begin{equation}
+\boldsymbol{\Sigma} = \int \mathbf{z} \mathbf{z}^T f(\mathbf{z}) d\mathbf{z}.
+\end{equation}
 
 For example, with $\mathbf{z} = (x, p_x, y, p_y, z, p_z)$,
  
-$$
- \mathbf{\Sigma} = 
- \begin{bmatrix}
-     \langle x x \rangle & 
-     \langle x p_x \rangle & 
-     \langle x y \rangle & 
-     \langle x p_y \rangle & 
-     \langle x z \rangle & 
-     \langle x p_z \rangle
-     \\
-     \langle p_x x \rangle & 
-     \langle p_x p_x \rangle & 
-     \langle p_x y \rangle & 
-     \langle p_x p_y \rangle & 
-     \langle p_x z \rangle & 
-     \langle p_x p_z \rangle
-     \\
-     \langle y x \rangle & 
-     \langle y p_x \rangle & 
-     \langle y y \rangle & 
-     \langle y p_y \rangle & 
-     \langle y z \rangle & 
-     \langle y p_z \rangle
-     \\
-     \langle p_y x \rangle & 
-     \langle p_y p_x \rangle & 
-     \langle p_y y \rangle & 
-     \langle p_y p_y \rangle & 
-     \langle p_y z \rangle & 
-     \langle p_y p_z \rangle
-     \\
-     \langle z x \rangle & 
-     \langle z p_x \rangle & 
-     \langle z y \rangle & 
-     \langle z p_y \rangle & 
-     \langle z z \rangle & 
-     \langle z p_z \rangle
-     \\
-     \langle p_z x \rangle & 
-     \langle p_z p_x \rangle & 
-     \langle p_z y \rangle & 
-     \langle p_z p_y \rangle & 
-     \langle p_z z \rangle & 
-     \langle p_z p_z \rangle
- \end{bmatrix}.
-$${#eq-1}
+\begin{equation}
+\boldsymbol{\Sigma} = 
+\begin{bmatrix}
+   \langle x x \rangle & 
+   \langle x p_x \rangle & 
+   \langle x y \rangle & 
+   \langle x p_y \rangle & 
+   \langle x z \rangle & 
+   \langle x p_z \rangle
+   \\
+   \langle p_x x \rangle & 
+   \langle p_x p_x \rangle & 
+   \langle p_x y \rangle & 
+   \langle p_x p_y \rangle & 
+   \langle p_x z \rangle & 
+   \langle p_x p_z \rangle
+   \\
+   \langle y x \rangle & 
+   \langle y p_x \rangle & 
+   \langle y y \rangle & 
+   \langle y p_y \rangle & 
+   \langle y z \rangle & 
+   \langle y p_z \rangle
+   \\
+   \langle p_y x \rangle & 
+   \langle p_y p_x \rangle & 
+   \langle p_y y \rangle & 
+   \langle p_y p_y \rangle & 
+   \langle p_y z \rangle & 
+   \langle p_y p_z \rangle
+   \\
+   \langle z x \rangle & 
+   \langle z p_x \rangle & 
+   \langle z y \rangle & 
+   \langle z p_y \rangle & 
+   \langle z z \rangle & 
+   \langle z p_z \rangle
+   \\
+   \langle p_z x \rangle & 
+   \langle p_z p_x \rangle & 
+   \langle p_z y \rangle & 
+   \langle p_z p_y \rangle & 
+   \langle p_z z \rangle & 
+   \langle p_z p_z \rangle
+\end{bmatrix}.
+\end{equation}
  
 For a phase space of dimension $K$, the $K$-dimensional emittance $\varepsilon$ is the square root of the determinant of the covariance matrix.
 
-$$
-\varepsilon = \sqrt{ \det{\mathbf{\Sigma}} }.
-$${#eq-1}
+\begin{equation}
+\varepsilon = \sqrt{ \det{\boldsymbol{\Sigma}} }.
+\end{equation}
 
 The emittance is the volume of an ellipsoid defined by the covariance matrix. It is conserved under linear symplectic transformations. The $K$-dimensional emittance may be written as the product of the *intrinsic* emittances $\varepsilon_1, \dots, \varepsilon_K$:
 
-$$
-    \varepsilon = \prod_{k = 1}^{K} \varepsilon_k,
-$${#eq-1}
+\begin{equation}
+\varepsilon = \prod_{k = 1}^{K} \varepsilon_k,
+\end{equation}
 
 defined by the following eigenvalue problem:
 
-$$
-    \det(\mathbf{\Sigma} \mathbf{U} - i\varepsilon_k \mathbf{I}) = 0,
-$${#eq-1}
+\begin{equation}
+\det(\boldsymbol{\Sigma} \mathbf{U} - i\varepsilon_k \mathbf{I}) = 0,
+\end{equation}
 
 where $\mathbf{U}$ is the Poisson matrix \cite{lebedev_2010_betatron}. The intrinsic emittances are individually conserved under any symplectic linear transformation. If the covariance matrix takes the following block-diagonal form
 
-$$
-    \mathbf{\Sigma} = 
-    \begin{bmatrix}
-        \mathbf{\Sigma}_{xx} & 0 & 0 \\
-        0 & \mathbf{\Sigma}_{yy} & 0 \\
-        0 & 0 & \mathbf{\Sigma}_{zz}
-    \end{bmatrix},
-$${#eq-1}
+\begin{equation}
+\boldsymbol{\Sigma} = 
+\begin{bmatrix}
+    \boldsymbol{\Sigma}_{xx} & 0 & 0 \\
+    0 & \boldsymbol{\Sigma}_{yy} & 0 \\
+    0 & 0 & \boldsymbol{\Sigma}_{zz}
+\end{bmatrix},
+\end{equation}
 
 the intrinsic emittances reduce the *projected* emittances $\varepsilon_x$, $\varepsilon_y$, $\varepsilon_z$:
 
-$$
+\begin{equation}
 \begin{aligned}
-    \varepsilon_x &= \sqrt{ \det{ \mathbf{\Sigma}_{xx} }}, \\
-    \varepsilon_y &= \sqrt{ \det{ \mathbf{\Sigma}_{yy} }}, \\
-    \varepsilon_z &= \sqrt{ \det{ \mathbf{\Sigma}_{zz} }}. \\
+    \varepsilon_x &= \sqrt{ \det{ \boldsymbol{\Sigma}_{xx} }}, \\
+    \varepsilon_y &= \sqrt{ \det{ \boldsymbol{\Sigma}_{yy} }}, \\
+    \varepsilon_z &= \sqrt{ \det{ \boldsymbol{\Sigma}_{zz} }}. \\
 \end{aligned}
-$${#eq-1}
+\end{equation}
 
 The projected emittances are conserved only for *uncoupled* symplectic linear transformations. The Vlasov evolution does *not* necessarily conserve statistical quantities such as the emittances. In general, nonlinear forces will tend to increase the emittances, as shown in @fig-plasma-diagram.
 

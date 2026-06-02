@@ -1,15 +1,25 @@
+subtitle: USPAS - Beam Physics with Intense Space Charge
+date: July 2026
+author:
+  - name: Austin Hoover
+    affiliation: Oak Ridge National Laboratory
+  - name: Steven Lund
+    affiliation: Michigan State University
+  - name: Daniel Winklehner
+    affiliation: Massachusetts Institute of Technology
+  - name: John Barnard
+    affiliation: Lawrence Livermore National Laboratory
+    
 format:
-  revealjs:
-    theme: [default, style_slide.scss]
-    fontsize: 24px
-    width: 800
-    auto-stretch: false
-    slide-number: true
-    number-sections: false
-    incremental: false
-    scrollable: true
-    embed-resources: true
-    standalone: true
-    center-title-slide: true
-    fig-align: center
-    # html-math-method: mathjax
+  beamer:
+    fontsize: "9pt"
+    fonttheme: serif
+    colortheme: seagull
+    pdf-engine: lualatex
+    include-in-header:
+      text: |
+        \setbeamerfont{titlelike}{series=\bfseries, size=\huge}
+        \setbeamerfont{frametitle}{series=\bfseries, size=\LARGE}
+        \setbeamerfont{title}{series=\bfseries, size=\huge}
+        \setbeamerfont{subtitle}{series=\bfseries}
+        \setbeamertemplate{footline}[frame number]

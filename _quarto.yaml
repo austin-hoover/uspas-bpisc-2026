@@ -1,0 +1,10 @@
+project:
+  type: website
+  title: "USPAS BPISC 2026"
+  render:
+    - index.qmd
+    - lectures/*.qmd
+
+format:
+  html:
+    theme: pandoc
