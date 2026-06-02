@@ -14,186 +14,189 @@ csl: aps.csl
 
 The KV envelope equations describe the evolution of the elliptical beam radii $r_{x, y}$ in a linear focusing system:
 
-$$
+\begin{equation}
 \begin{aligned}
 r_x'' + \kappa_x(s) r_x - \frac{2 Q}{r_x + r_y} - \frac{\varepsilon_x^2}{r_x^3} &= 0,
 \\
 r_y'' + \kappa_y(s) r_y - \frac{2 Q}{r_x + r_y} - \frac{\varepsilon_y^2}{r_y^3} &= 0,
 \end{aligned}
-$$
+\end{equation}
 
 where $\varepsilon_{x, y}$ are the invariant emittances, $Q$ is the beam perveance, and $\kappa_{x, y}(s)$ are the linear focusing strengths. We will study continuous, axisymmetric focusing systems with $\kappa_x(s) = \kappa_y(s) = k_0^2$. We will also assume equal emittances in each plane: $\varepsilon_x = \varepsilon_y = 0$. With these assumptions, the envelope equations become:
 
-$$
+\begin{equation} \label{eq-env-continuous}
 \begin{aligned}
 r_x'' + k_0^2 r_x - \frac{2 Q}{r_x + r_y} - \frac{\varepsilon^2}{r_x^3} &= 0,
 \\
 r_y'' + k_0^2 r_y - \frac{2 Q}{r_x + r_y} - \frac{\varepsilon^2}{r_y^3} &= 0.
 \end{aligned}
-$${#eq-env-continuous}
+\end{equation}
 
 An equilibrium occurs when $r_x'' = r_y'' = 0$, indicating exact balance between external and internal forces. This gives the following expression for the equilibrium radius $r_x = r_y = r_0$:
 
-$$
+\begin{equation}
+\label{eq-equilibrium-radius-equation}
 k_0^2 r_0 - Q r_0^{-1} - \varepsilon_2 r_0^{-3} = 0.
-$${#eq-equilibrium-radius-equation}
+\end{equation}
 
 Solving @eq-equilibrium-radius-equation for $r_0$ gives:
 
-$$
+\begin{equation}
+\label{eq-radius}
 r_0 = \frac{Q^{1/2}}{k_0} \left[ \frac{1}{2} + \frac{1}{2} \sqrt{1 + \frac{4 k_0^2 \varepsilon^2}{Q^2}} \right]^{1/2}.
-$${#eq-radius}
+\end{equation}
 
 In the limit of a space-charge-dominated beam ($2 \kappa_0 \varepsilon \ll Q$), or emittance-dominated beam ($2 \kappa_0 \varepsilon \gg Q$), the equilibrium radius approaches
 
-$$
+\begin{equation}
 r_0 \rightarrow \left\{
 \begin{array}{@{}ll@{}}
   \sqrt{Q} / {k_0}, & 2 k_0 \varepsilon \ll Q, \\
   \sqrt{\varepsilon / k_0}, & 2 k_0 \varepsilon \gg Q.
 \end{array}
 \right.
-$$
+\end{equation}
 
 
 ## Definition of depressed betatron frequency
 
 The single-particle equations of motion in the continuous focusing system are:
 
-$$
+\begin{equation}
 \begin{aligned}
 x'' + k_0^2 x - \frac{2 Q}{r_x + r_y} \frac{x}{r_x} = 0, \\
 y'' + k_0^2 y - \frac{2 Q}{r_x + r_y} \frac{y}{r_y} = 0.
 \end{aligned}
-$$
+\end{equation}
 
 At equilibrium ($r_x = r_y = r_0$),
 
-$$
+\begin{equation}
 \begin{aligned}
 x'' + \left( k_0^2 - \frac{Q}{r_0^2} \right) x = 0, \\
 y'' + \left( k_0^2 - \frac{Q}{r_0^2} \right) y = 0. \\
 \end{aligned}
-$$
+\end{equation}
 
 We thus define the \textit{depressed} (net) focusing strength $k^2$:
 
-$$
+\begin{equation}
+\label{eq-depressed-focusing-strength}
 k^2 \equiv k_0^2 - \frac{Q}{r_0^2},
-$${#eq-depressed-focusing-strength}
+\end{equation}
 
 so that the single-particle equations of motion take the following form:
 
-$$
+\begin{equation}
 \begin{aligned}
 x'' + k^2 x = 0, \\
 y'' + k^2 y = 0. \\
 \end{aligned}
-$$
+\end{equation}
 
 
 ## Perturbation of equilibrium distribution
 
 Define deviations from the equilibrium radius in each plane;
 
-$$
+\begin{equation} \label{eq-env-deviations}
 \begin{aligned}
 r_x(s) = r_0 + \eta_x(s), \\
 r_y(s) = r_0 + \eta_y(s). \\
 \end{aligned}
-$${#eq-env-deviations}
+\end{equation}
 
 Substituting @eq-env_deviations into @eq-env_continuous gives:
 
-$$
+\begin{equation}
 \begin{aligned}
 \eta_x'' + k_0^2 (r_0 + \eta_x) - \frac{Q}{r_0} \left(1 + \frac{\eta_x + \eta_y}{2 r_0}\right)^{-1} - \frac{\varepsilon^2}{r_0^3} \left( 1 + \frac{\eta_x}{r_0} \right)^{-3} &= 0, 
 \\
 \eta_y'' + k_0^2 (r_0 + \eta_y) - \frac{Q}{r_0} \left(1 + \frac{\eta_x + \eta_y}{2 r_0}\right)^{-1} - \frac{\varepsilon^2}{r_0^3} \left( 1 + \frac{\eta_y}{r_0} \right)^{-3} &= 0.
 \end{aligned}
-$$
+\end{equation}
 
 We will assume the deviations $\eta_y$ and $\eta_x$ are much smaller than the equilibrium radius $r_0$. With this assumption, we may linearize the perturbed envelope equations via the approximation $(1 + x)^r \approx 1 + rx$. This gives:
 
-$$
+\begin{equation}
 \begin{aligned}
 \eta_x'' + k_0^2 (r_0 + \eta_x) - \frac{Q}{r_0} \left( 1 - \frac{\eta_x + \eta_y}{2 r_0} \right) - \frac{\varepsilon^2}{r_0^3} \left(1 - 3 \frac{\eta_x}{r_0} \right) = 0,
 \\
 \eta_y'' + k_0^2 (r_0 + \eta_y) - \frac{Q}{r_0} \left( 1 - \frac{\eta_x + \eta_y}{2 r_0} \right) - \frac{\varepsilon^2}{r_0^3} \left(1 - 3 \frac{\eta_y}{r_0} \right) = 0.
 \end{aligned}
-$$
+\end{equation}
 
 Factoring $\eta_x$ and $\eta_y$ gives:
 
-$$
+\begin{equation}
 \begin{aligned}
 \eta_x'' + \left( k_0^2 + \frac{Q}{2 r_0^2} + \frac{3 \varepsilon^2}{r_0^4} \right) \eta_x + \left( \frac{Q}{2 r_0^2} \right) \eta_y &= 0,
 \\
 \eta_y'' + \left( k_0^2 + \frac{Q}{2 r_0^2} + \frac{3 \varepsilon^2}{r_0^4} \right) \eta_y + \left( \frac{Q}{2 r_0^2} \right) \eta_x &= 0,
 \end{aligned}
-$$
+\end{equation}
 
 where we have used @eq-equilibrium-radius-equation to eliminate the remaining terms. Using the definition of $k$ (@eq-depressed-focusing-strength) we find:
 
-$$
+\begin{equation} \label{eq-env-pert-coupled-1}
 \begin{aligned}
 \eta_x'' + \left( \frac{3}{2}k_0^2 + \frac{5}{2} k^2 \right) \eta_x + \left( \frac{1}{2}k_0^2 - \frac{1}{2} k^2 \right) \eta_y &= 0,
 \\
 \eta_y'' + \left( \frac{3}{2}k_0^2 + \frac{5}{2} k^2 \right) \eta_y + \left( \frac{1}{2}k_0^2 - \frac{1}{2} k^2 \right) \eta_x &= 0.
 \end{aligned}
-$${#eq-env-pert-coupled-1}
+\end{equation}
 
 
 ## Eigenmode analysis or perturbed envelope equations
 
 @eq-env-pert-coupeld-1 defines a coupled linear system of equations for $\eta_{x, y}$. We will analyze this system in terms of its normal modes. In vector form, @eq-env-pert-coupeld-1 can be written:
 
-$$
+\begin{equation}
 \mathbf{\eta}'' + \mathbf{A}\mathbf{\eta} = 0,
-$$
+\end{equation}
 
 where $\mathbf{\eta} = [\eta_x, \eta_y]^T$ is the vector of perturbed envelope radii and $\mathbf{A}$ is a matrix of coefficients:
 
-$$
+\begin{equation}
 \mathbf{A} = 
 \begin{bmatrix}
     \alpha_1 & \alpha_2 \\ \alpha_2 & \alpha_1
 \end{bmatrix},
-$$
+\end{equation}
 
 with entries defined as: 
 
-$$
+\begin{equation}
 \begin{aligned}
     \alpha_1 &= \frac{3}{2}k_0^2 + \frac{5}{2} k^2 , \\
     \alpha_2 &= \frac{1}{2}k_0^2 - \frac{1}{2} k^2.
 \end{aligned}
-$$
+\end{equation}
 
 We search for solutions of the form
 
-$$
+\begin{equation} \label{eq-ansantz}
 \mathbf{\eta}_\pm(s) = \mathbf{\eta}_0 e^{i k_\pm s},
-$${#eq-ansantz}
+\end{equation}
 
 where $k_\pm$ are two distinct frequencies. This leads to an eivenvalue problem:
 
-$$
+\begin{equation}
 \left( \mathbf{A} - \mathbf{I} k_\pm^2 \right) \mathbf{\eta}_\pm = 0.
-$$
+\end{equation}
 
 The eigenvalues correspond to the following frequencies, written in terms of the natural frequency $k_0$ and depressed frequency $k$, are:
 
-$$
+\begin{equation}
 \begin{aligned}
     k_+ &= \alpha_1 + \alpha_2 = 2k_0^2 + 2k^2. \\
     k_- &= \alpha_1 - \alpha_2 =  k_0^2 + 3k^2.
 \end{aligned}
-$$
+\end{equation}
 
 The frequencies correspond to eigenvectors $\mathbf{\eta}_\pm$:
 
-$$
+\begin{equation}
 \begin{aligned}
 \mathbf{\eta}_+ &= \sqrt{\frac{1}{2}} 
 \begin{bmatrix} +1 \\ +1 \end{bmatrix} \quad \text{(breathing mode)}.
@@ -201,7 +204,7 @@ $$
 \mathbf{\eta}_- &= \sqrt{\frac{1}{2}} 
 \begin{bmatrix} +1 \\ -1 \end{bmatrix} \quad \text{(quadrupole mode)}.
 \end{aligned}
-$$
+\end{equation}
 
 
 [Plots showing mode frequency vs. tune depression.]
@@ -238,7 +241,7 @@ This section will focus on an important paper written by Gluckstern in 1994 \cit
 
 Consider a matched KV distribution of radius $R$ in a continuous focusing channel. The single-particle equation of motion in the horizontal plane is
 
-$$
+\begin{equation}
 \begin{aligned}
 x'' + k_0^2 x &= 
 \begin{cases}
@@ -246,69 +249,75 @@ x'' + k_0^2 x &=
   \frac{Q}{r^2} x, &  r \ge R ,
 \end{cases} 
 \end{aligned}
-$$
+\end{equation}
 
 where $r^2 = x^2 + y^2$.  (The equation is the same in the vertical plane.) For convenience, we will rewrite the equations using the step function function $\Theta$:
 
-$$
+\begin{equation}
+\label{eq-pcm-eom-exact}
 x'' + k_0^2 x = 
 \underbrace{\left(\frac{Q}{r^2}\right) x \Theta(r - R)}_{\text{Exterior}} +  \underbrace{\left(\frac{Q}{R^2}\right) x \Theta(R - r)}_{\text{Interior}} ,
-$${#eq-pcm-eom-exact}
+\end{equation}
 
 where
 
-$$
+\begin{equation}
 \Theta(x) =
     \begin{cases}
       1, & x \ge 0,\\
       0, &  x < 0 .
     \end{cases} 
-$$
+\end{equation}
 
 Define a sinusoidal perturbation of the beam envelope radius:
 
-$$
+\begin{equation}
 R(s) + R_0 \left( 1  - \epsilon \cos(k_+ s) \right),
-$$
+\end{equation}
 
 where $k_+$ is the breathing mode frequency, $R_0$ is the equilibrium radius, and $\epsilon$ is the strength of the perturbation. Subtracting the linear defocusing force $Q x / R_0^2$ from both sides gives
 
-$$
+\begin{equation}
+\label{eq-pcm-eom-perturbed}
 x'' + k^2 x = 
 -\frac{Q}{R_0^2} \left( 1 - \frac{R_0^2}{r^2} \right) x \Theta(r - R)
 +  Q \left( \frac{1}{R^2} -  \frac{1}{R_0^2}\right) x \Theta(R - r) ,
-$${#eq-pcm-eom-perturbed}
+\end{equation}
 
 where $k^2$ is the depressed oscillation frequency within the beam:
 
-$$
+\begin{equation}
+\label{eq-depressed-frequency}
 k^2 =  k_0^2 - \frac{Q}{R_0^2}.
-$${#eq-depressed-frequency}
+\end{equation}
 
 If $\epsilon$ is small,  the $1 / R^{2}$ term can be approximated by truncating its Taylor series expansion:
 
-$$
+\begin{equation}
+\label{eq-pcm-taylor}
 R^{-2} 
 = R_0^{-2} \left( 1 - \epsilon \cos(k_{+}s) \right)^{-2} 
 \approx R_0^{-2} \left( 1 + 2 \epsilon \cos(k_+ s) \right).
-$${#eq-pcm-taylor}
+\end{equation}
 
 Substituting the approximation into the equation of motion gives:
 
-$$
+\begin{equation}
+\label{eq-pcm-eom}
 x'' + k^2 x
 = -\frac{Q}{R_0^2} \left( 1 - \frac{R_0^2}{r^2} \right) x \Theta(r - R)
 + \frac{2 \epsilon Q}{R_0^2} x \cos(k_+ s) \Theta(R - r) .
-$${#eq-pcm-eom}
+\end{equation}
 
 The first term is a nonlinear force that gives rise to an amplitude-dependent frequency. The second term is a linear force arising from the envelope perturbation. This term allows the transfer of particles from the interior to the exterior of the hard-edged beam core.
 
 We will make two further approximations in our analysis. First, we will assume there is no angular momentum and simply the one-dimensional oscillations along the $x$ axis. Second, we will approximate the nonlinear defocusing outside the beam using a \textit{pendulum model}:
 
-$$
+\begin{equation}
+\label{eq-pcm-eom-pendulum}
 x'' + k^2 x
 = -\frac{Q}{R_0^4} x^3 + \frac{2 \epsilon Q}{R_0^2} x \cos(k_+ s).
-$${#eq-pcm-eom-pendulum}
+\end{equation}
 
 Note that the second term (core oscillation) now extends beyond the core. While the pendulum model is a crude approximation of the external nonlinearity, it can still capture the essential physics. We will return to the full model later on. 
 
@@ -324,45 +333,48 @@ To analyze the equations of motion in @eq-pcm-eom-pendulum}, we transform to amp
 
 with the phase $\psi(s)$ defined as
 
-$$
+\begin{equation}
+\label{eq-pcm-psi}
 \psi(s) = k s + \alpha(s),
-$${#eq-pcm-psi}
+\end{equation}
 
 where $ks$ is the unperturbed phase advance within the beam and $\alpha(s)$ is a slowly varying function. We will derive dynamical equations for $A$ and $\psi$ by substituting @eq-pcm-phase-amp-x and @eq-pcm-phase-amp-xp into @eq-pcm-eom-pendulum. First, note that the $s$-derivative of @eq-pcm-phase-amp-x gives
 
-$$
+\begin{equation}
 \frac{x'}{R_0} = A' \sin\psi + A (k + \alpha') \cos\psi .
-$$
+\end{equation}
 
 Therefore, from the definition in @eq-pcm-phase-amp-x,
 
-$$
+\begin{equation}
+\label{eq-pcm-deriv-x}
 A' \sin\psi + \alpha' A \cos\psi = 0.
-$${#eq-pcm-deriv-x}
+\end{equation}
 
 The derivative of $x'$ in @eq-pcm-phase-amp-xp gives
 
-$$
+\begin{equation}
 \frac{x''}{R_0} = k A' \cos\psi - k A (k + \alpha') \sin\psi .
-$${#eq-pcm-deriv-xp}
+\end{equation}
 
 The equation of motion @eq-pcm-eom-pendulum can then be written as
 
-$$
+\begin{equation}
+\label{eq-pcm-eom-pendulum-amp-phase}
 R_0 k \left( A' \cos\psi - A \alpha' \sin\psi  \right) = f(A, \psi, s),
-$${#eq-pcm-eom-pendulum-amp-phase}
+\end{equation}
 
 where $f(A, \psi, s)$ is the driving force on the right hand side of @eq-pcm-eom-pendulum expressed in the new coordinates:
 
-$$
+\begin{equation} \label{eq-pcm-amp-phase-drive}
 \begin{aligned}
     f(A, \psi, s) &= \frac{Q}{R_0} \left[ -A^3 \sin^3\psi + 2 \epsilon A \sin\psi \cos(k_+ s) \right] .
 \end{aligned}
-$${#eq-pcm-amp-phase-drive}
+\end{equation}
 
 @eq-pcm-deriv-x and @eq-pcm-eom-pendulum-amp-phase} define a linear system to solve for $A'$ and $\alpha'$.
 
-$$
+\begin{equation}
 \begin{bmatrix}
     kR_0 \cos\psi & -k R_0 A\sin\psi \\
     \sin\psi & A \cos\psi
@@ -374,44 +386,47 @@ $$
 \begin{bmatrix}
     f \\ 0
 \end{bmatrix} .
-$$
+\end{equation}
 
 Solving the linear system gives the dynamics of the amplitude and phase:
 
-\begin{align} \label{eq:pcm_dyn_phase}.
+\begin{align} 
+\label{eq:pcm_dyn_phase}.
 A'       &= \frac{f(A, \psi, s)}{k R_0  } \cos\psi , \\
 -\alpha' &= \frac{f(A, \psi, s)}{k R_0 A} \sin\psi .
 \end{align}
+
 
 ## Phase averaging
 
 We expect resonance to occur when the envelope oscillation frequency $k_+$ is a multiple of the particle oscillation frequency $k$. Therefore, we define a shifted phase coordinate $\Psi$ which will vary slowly near the resonant frequency:
 
-$$
+\begin{equation}
+\label{eq-pcm-psi-shifted}
 \Psi \equiv 2 \psi - k_{+}s. 
-$${#eq-pcm-psi-shifted}
+\end{equation}
 
 Using this new variable, the driving force in @eq-pcm-amp-phase-drive becomes
 
-$$
+\begin{equation} \label{eq-pcm-amp-phase-drive-new}
 \begin{aligned}
     f(A, \Psi, \psi) &= \frac{Q}{R_0} \left[ -A^3 \sin^3\psi + 2 \epsilon A \sin\psi \cos(2\psi - \Psi) \right] ,
 \end{aligned}
-$${#eq-pcm-amp-phase-drive-new}
+\end{equation}
 
 and the full expressions for $A'$ and $\alpha'$ become:
 
-$$
+\begin{equation} \label{eq-pcm-dyn}
 \begin{aligned}
 A' &= \frac{Q}{k R_0^2} \left[ A^3 \sin^3\psi \cos\psi + 2 \epsilon A \sin\psi \cos\psi \cos(2\psi - \Psi) \right]
 \\
 \alpha' &= \frac{Q}{k R_0^2} \left[ A^2 \sin^4\psi - 2 \epsilon \sin^2\psi \cos(2\psi - \Psi) \right]
 \end{aligned}
-$${#eq-pcm-dyn}
+\end{equation}
 
 We now average the expressions @eq-pcm-dyn over one period:
 
-$$
+\begin{equation}
 \begin{aligned}
 A'      &\rightarrow \frac{1}{2\pi} \int_{0}^{2\pi} A'      d\psi
 = \frac{\epsilon Q}{2 k R_0^2} A \sin\Psi ,
@@ -419,35 +434,35 @@ A'      &\rightarrow \frac{1}{2\pi} \int_{0}^{2\pi} A'      d\psi
 \alpha' &\rightarrow \frac{1}{2\pi} \int_{0}^{2\pi} \alpha' d\psi 
 = \frac{3Q}{8 k R_0^2}A^2  + \frac{\epsilon Q}{2 k R_0^2} \cos\Psi .
 \end{aligned}
-$$
+\end{equation}
 
 The resonant phase $\Psi$ is held constant during the integration.
 
 Switching to variables $w = A^2 / R_0^2$ and $\Psi' = (2k - k_+) + 2 \alpha'$:
 
-$$
+\begin{equation}
 \begin{aligned}
 w'    &= \frac{\epsilon Q}{k R_0^2} w \sin\Psi , \\
 \Psi' &= \frac{Q}{kR_0^2} \left[ -\Delta + \frac{3w}{4} + \epsilon \cos\Psi \right] ,
 \end{aligned}
-$$
+\end{equation}
 
 where 
 
-$$
+\begin{equation}
 \Delta = k (k_+ - 2k) \frac{R_0^2 }{Q} .
-$$
+\end{equation}
 
 
 The variables $w$ and $\Psi$ are canonically conjugate: their evolution equations can be derived from a Hamiltonian $H$:
 
-$$
+\begin{equation}
 \begin{aligned}
 H(w, \Psi) &= \frac{Q}{k R_0^2} \left[ \Delta w - \frac{3}{8}w^2 - \epsilon w \cos\Psi \right] , \\
 w'    &= \partial H / \partial \Psi , \\
 \Psi' &= \partial H \partial w . 
 \end{aligned}
-$$
+\end{equation}
 
 ## Analysis of the Hamiltonian
 
@@ -459,11 +474,11 @@ $$
 
 @fig-ham-xxp plots the Hamiltonian contours as a function of the phase space variables $x$ and $x'$. [...]
 
-![To do: limit range from -$\epsilon$ to $\epsilon$.](images/eps_cos_vs_w.png){#fig-ham-eps-cos-psi width=400px}
+![To do: limit range from -$\epsilon$ to $\epsilon$.](images/pcm_eps_cos_vs_w.png){#fig-ham-eps-cos-psi width=400px}
 
-![Hamiltonian contours as function of $w \cos\Psi$ and $w\sin\Psi$.](images/contours_polar.png){#fig-ham-polar width=400px}
+![Hamiltonian contours as function of $w \cos\Psi$ and $w\sin\Psi$.](images/pcm_contours_polar.png){#fig-ham-polar width=400px}
 
-![Hamiltonian contours as function of $x \propto \sqrt{w} \sin\Psi$ and $x' \propto \sqrt{w}\cos\Psi$.](images/contours_xy.png){#fig-ham-xxp width=400px}
+![Hamiltonian contours as function of $x \propto \sqrt{w} \sin\Psi$ and $x' \propto \sqrt{w}\cos\Psi$.](images/pcm_contours_xy.png){#fig-ham-xxp width=400px}
 
 
 ## Comparison to exact model
