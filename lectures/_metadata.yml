@@ -1,5 +1,6 @@
 subtitle: USPAS - Beam Physics with Intense Space Charge
 date: July 2026
+date-format: MMMM YYYY
 author:
   - name: Austin Hoover
     affiliation: Oak Ridge National Laboratory
@@ -12,14 +13,21 @@ author:
     
 format:
   beamer:
-    fontsize: "9pt"
+    theme: metropolis
+    # colortheme: seagull
     fonttheme: serif
-    colortheme: seagull
+    fontsize: "9pt"
     pdf-engine: lualatex
     include-in-header:
       text: |
-        \setbeamerfont{titlelike}{series=\bfseries, size=\huge}
         \setbeamerfont{frametitle}{series=\bfseries, size=\LARGE}
         \setbeamerfont{title}{series=\bfseries, size=\huge}
         \setbeamerfont{subtitle}{series=\bfseries}
         \setbeamertemplate{footline}[frame number]
+
+
+# \setbeamerfont{titlelike}{series=\bfseries, size=\huge}
+# \setbeamerfont{frametitle}{series=\bfseries, size=\LARGE}
+# \setbeamerfont{title}{series=\bfseries, size=\huge}
+# \setbeamerfont{subtitle}{series=\bfseries}
+# \setbeamertemplate{footline}[frame number]
