@@ -282,6 +282,7 @@ p_\theta \equiv \gamma m r^2 \dot{\theta} + \frac{q \psi(r)}{2 \pi}.
 \end{equation}
 
 
+
 ## Series expansion of axially symmetric fields
 
 Consider external fields $\mathbf{E}$ and $\mathbf{B}$ with azimuthal symmetry ($\partial / \partial \theta = 0$). In the absence of charge and current densities, 
@@ -310,6 +311,9 @@ for scalar potentials $\phi$ and $\phi_m$. Additionally, the vanishing divergenc
 \nabla^2 \phi = 0.
 \end{equation}
 
+
+---
+
 In cylindrical coordinates, the Laplace equation reads:
 
 \begin{equation}
@@ -333,7 +337,12 @@ where the $h_{2n}(z)$ are functions of $z$. (The rotational symmetry eliminates 
 \end{aligned}
 \end{equation}
 
-with $h'(z) = dh(z)/dz.$ Thus, $\nabla^2 \phi = 0$ becomes:
+with $h'(z) = dh(z)/dz.$ 
+
+
+---
+
+Thus, $\nabla^2 \phi = 0$ becomes:
 
 \begin{equation}
 \begin{aligned}
@@ -369,6 +378,8 @@ h_4(z)  &= +\frac{1}{64}\frac{\partial^4 h_0(z)}{\partial z^4},
 \end{aligned}
 \end{equation}
 
+---
+
 We may thus write the potential at all points in space using only the $z$-derivatives of the on-axis potential $\phi(0, z)$:
 
 \begin{equation}
@@ -379,6 +390,7 @@ We may thus write the potential at all points in space using only the $z$-deriva
 \left( \frac{r}{2} \right)^{2n} .
 \end{equation}
 
+---
 
 We now express the fields in terms of the expanded scalar potentials. Write the magnetic field as $\mathbf{B} = B_r \hat{r} + B_z \hat{z}$. Using the series expansion of $\phi_m(r, z)$, we find for the $z$ component of the field:
 
@@ -401,6 +413,9 @@ Define $B(z)$ as the on-axis value of $B_z(z)$:
 B(z) \equiv B_z(0, z) = -\frac{\partial \phi_m(0, z)}{\partial z} .
 \end{equation}
 
+
+---
+
 Inserting Eq. \eqref{eq-def-bz} into Eq. \eqref{eq-bz-expansion} gives:
 
 \begin{equation}
@@ -412,7 +427,7 @@ B_z(r, z)
 &= \sum_{n=0}^{\infty} \frac{(-1)^{2n}}{(n!)^2} \frac{\partial^{2n} B(z)}{\partial z^{2n}} \left(\frac{r}{2}\right)^2 
 .
 \end{aligned}
-\end{equation}{#eq-bz-expansion}
+\end{equation}
 
 For the radial component, we find:
 
@@ -422,6 +437,8 @@ B_r(r, z) =
 .
 \end{equation}
 
+
+---
 
 A similar procedure gives the radial and longitudinal components of the electric field $\mathbf{E} = E_r \hat{r} + E_z \hat{z}$. Define $V(z)$ as the on-axis value of the electric potential $\phi$:
 
@@ -462,6 +479,10 @@ We will also add the self-generated fields to the equation of motion, writing
 \end{equation}
 
 [[Is there a way to derive the ray equation first, then add the self-fields later?]]{style="color: red;"}
+
+
+---
+
 To first order in $r$, the external fields are:
 
 \begin{equation}
@@ -503,6 +524,9 @@ q
 
 The $B_z^{(\text{self})}$ term is ignored in the paraxial limit.
 
+
+---
+
 Two more steps will lead to our definition of the \textit{paraxial ray equation}. First, we will switch to the axial coordinate $z$ as the independent variable rather than the time $t$. It is more common in accelerator physics to use the label $s$, so we define $s \equiv z$ and $ds = v_z dt = \beta c dt$, where $c$ is the speed of light. Also define $' \equiv d/ds$. This gives (dropping the $\approx$ symbol from now on):
 
 \begin{multline}
@@ -524,6 +548,9 @@ r'' + \frac{(\gamma \beta)'}{(\gamma \beta)} r' - r \theta'^2
 \frac{q}{\gamma m \beta^2 c^2}
 \left( \frac{r}{2} V''(s) + \beta c r \theta' B(s) + E_r^{(self)} - \beta c B_\theta^{(self)} \right).
 \end{equation}
+
+
+---
 
 Now use the definition of the canonical angular momentum $p_\theta$ (Eq. \eqref{eq-canonical-momentum}) to eliminate $\theta'$, noting that the flux $\psi(r) = \pi r^2 B$:
 
@@ -561,6 +588,9 @@ Substitution of Eq. \eqref{eq-theta-prime} into Eq. \eqref{eq-rpp} gives:
     \right)
 \end{multline}
 
+
+---
+
 Let us derive simplified expressions for $E_r^{(self)}$ and $B_\theta^{(self)}$ in terms of the charge and current density. Assuming cylindrical symmetry of the beam, the Poisson equation for the self-generated electric field is:
 
 \begin{equation}
@@ -587,6 +617,9 @@ where $\lambda$ is the line-charge density:
 \begin{equation}
 \lambda(r) \equiv 2\pi \int_{0}^{r} \rho(\tilde{r}) \tilde{r} d\tilde{r},
 \end{equation}
+
+
+---
 
 For the $B_\theta^{(self)}$ component of the self-generated magnetic field, we use Ampere's law:
 
@@ -619,6 +652,9 @@ With these approximations of the self-field components, Eq. \eqref{eq-paraxial-1
     .
 \end{multline}
 
+
+---
+
 A further simplification can be made by for the second derivatives of the potentials. The rate of change in the particle energy is given by
 
 \begin{equation}
@@ -644,6 +680,9 @@ Switching to $s$ as the independent variable, we find
     \gamma'' &\approx -\frac{q}{mc^2} \left( \frac{\partial^2 V}{\partial s^2} + \frac{\partial^2 \phi^{(self)}}{\partial s^2} \right).
 \end{aligned}
 \end{equation}
+
+
+---
 
 Inserting this approximation of $\lambda''$ in Eq. \eqref{eq-paraxial-2} gives our final form of the \textit{paraxial ray equation}:
 
