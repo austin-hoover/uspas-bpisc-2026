@@ -1,10 +1,9 @@
 ---
 title: "Beam Mismatch and Halo Formation"
-toc: true
+toc: false
 bibliography: references.bib 
 csl: aps.csl
 ---
-
 
 
 # 2D envelope modes in continuous focusing channels
@@ -12,7 +11,7 @@ csl: aps.csl
 
 ## Derivation of equilibrium beam radius
 
-The KV envelope equations describe the evolution of the elliptical beam radii $r_{x, y}$ in a linear focusing system:
+KV envelope equations describe evolution of elliptical beam radii $r_{x, y}$ in linear focusing system:
 
 \begin{equation}
 \begin{aligned}
@@ -22,7 +21,12 @@ r_y'' + \kappa_y(s) r_y - \frac{2 Q}{r_x + r_y} - \frac{\varepsilon_y^2}{r_y^3} 
 \end{aligned}
 \end{equation}
 
-where $\varepsilon_{x, y}$ are the invariant emittances, $Q$ is the beam perveance, and $\kappa_{x, y}(s)$ are the linear focusing strengths. We will study continuous, axisymmetric focusing systems with $\kappa_x(s) = \kappa_y(s) = k_0^2$. We will also assume equal emittances in each plane: $\varepsilon_x = \varepsilon_y = 0$. With these assumptions, the envelope equations become:
+where $\varepsilon_{x, y}$ are invariant emittances, $Q$ is beam perveance, and $\kappa_{x, y}(s)$ are linear focusing strengths. 
+
+
+---
+
+Restrict attention to continuous, axisymmetric focusing systems with $\kappa_x(s) = \kappa_y(s) = k_0^2$. Also assume equal emittances: $\varepsilon_x = \varepsilon_y = 0$.
 
 \begin{equation} \label{eq-env-continuous}
 \begin{aligned}
@@ -32,21 +36,22 @@ r_y'' + k_0^2 r_y - \frac{2 Q}{r_x + r_y} - \frac{\varepsilon^2}{r_y^3} &= 0.
 \end{aligned}
 \end{equation}
 
-An equilibrium occurs when $r_x'' = r_y'' = 0$, indicating exact balance between external and internal forces. This gives the following expression for the equilibrium radius $r_x = r_y = r_0$:
+
+---
+
+Equilibrium occurs when $r_x'' = r_y'' = 0$. The equilibrium radius $r_x = r_y = r_0$ solves:
 
 \begin{equation}
 \label{eq-equilibrium-radius-equation}
 k_0^2 r_0 - Q r_0^{-1} - \varepsilon_2 r_0^{-3} = 0.
 \end{equation}
 
-Solving @eq-equilibrium-radius-equation for $r_0$ gives:
-
 \begin{equation}
 \label{eq-radius}
 r_0 = \frac{Q^{1/2}}{k_0} \left[ \frac{1}{2} + \frac{1}{2} \sqrt{1 + \frac{4 k_0^2 \varepsilon^2}{Q^2}} \right]^{1/2}.
 \end{equation}
 
-In the limit of a space-charge-dominated beam ($2 \kappa_0 \varepsilon \ll Q$), or emittance-dominated beam ($2 \kappa_0 \varepsilon \gg Q$), the equilibrium radius approaches
+In limit of space-charge-dominated ($2 \kappa_0 \varepsilon \ll Q$), or emittance-dominated ($2 \kappa_0 \varepsilon \gg Q$) beam,
 
 \begin{equation}
 r_0 \rightarrow \left\{
@@ -58,9 +63,10 @@ r_0 \rightarrow \left\{
 \end{equation}
 
 
+
 ## Definition of depressed betatron frequency
 
-The single-particle equations of motion in the continuous focusing system are:
+Single-particle equations of motion within beam edge:
 
 \begin{equation}
 \begin{aligned}
@@ -78,14 +84,10 @@ y'' + \left( k_0^2 - \frac{Q}{r_0^2} \right) y = 0. \\
 \end{aligned}
 \end{equation}
 
-We thus define the \textit{depressed} (net) focusing strength $k^2$:
 
-\begin{equation}
-\label{eq-depressed-focusing-strength}
-k^2 \equiv k_0^2 - \frac{Q}{r_0^2},
-\end{equation}
+---
 
-so that the single-particle equations of motion take the following form:
+Define \textit{depressed} focusing strength $k^2 \equiv k_0^2 - {Q} / {r_0^2}$:
 
 \begin{equation}
 \begin{aligned}
@@ -95,9 +97,10 @@ y'' + k^2 y = 0. \\
 \end{equation}
 
 
+
 ## Perturbation of equilibrium distribution
 
-Define deviations from the equilibrium radius in each plane;
+Define deviations from the equilibrium radii:
 
 \begin{equation} \label{eq-env-deviations}
 \begin{aligned}
@@ -106,7 +109,7 @@ r_y(s) = r_0 + \eta_y(s). \\
 \end{aligned}
 \end{equation}
 
-Substituting @eq-env_deviations into @eq-env_continuous gives:
+Substituting \eqref{eq-env-deviations} into \eqref{eq-env_continuous} gives:
 
 \begin{equation}
 \begin{aligned}
@@ -116,7 +119,10 @@ Substituting @eq-env_deviations into @eq-env_continuous gives:
 \end{aligned}
 \end{equation}
 
-We will assume the deviations $\eta_y$ and $\eta_x$ are much smaller than the equilibrium radius $r_0$. With this assumption, we may linearize the perturbed envelope equations via the approximation $(1 + x)^r \approx 1 + rx$. This gives:
+
+---
+
+Assume deviations $\eta_{x, y}$ are much smaller than equilibrium radius $r_0$. Then linearize perturbed envelope equations (using $(1 + x)^r \approx 1 + rx$. This gives:
 
 \begin{equation}
 \begin{aligned}
@@ -136,7 +142,12 @@ Factoring $\eta_x$ and $\eta_y$ gives:
 \end{aligned}
 \end{equation}
 
-where we have used @eq-equilibrium-radius-equation to eliminate the remaining terms. Using the definition of $k$ (@eq-depressed-focusing-strength) we find:
+where we have used @eq-equilibrium-radius-equation to eliminate the remaining terms. 
+
+
+---
+
+Using the definition of $k$ (@eq-depressed-focusing-strength) we find:
 
 \begin{equation} \label{eq-env-pert-coupled-1}
 \begin{aligned}
@@ -147,15 +158,16 @@ where we have used @eq-equilibrium-radius-equation to eliminate the remaining te
 \end{equation}
 
 
+
 ## Eigenmode analysis or perturbed envelope equations
 
-@eq-env-pert-coupeld-1 defines a coupled linear system of equations for $\eta_{x, y}$. We will analyze this system in terms of its normal modes. In vector form, @eq-env-pert-coupeld-1 can be written:
+\eqref{eq-env-pert-coupled-1} defines a coupled linear system of equations for $\eta_{x, y}$. We will analyze this system in terms of its normal modes. In vector form, @eq-env-pert-coupeld-1 can be written:
 
 \begin{equation}
-\mathbf{\eta}'' + \mathbf{A}\mathbf{\eta} = 0,
+\boldsymbol{\eta}'' + \mathbf{A}\boldsymbol{\eta} = 0,
 \end{equation}
 
-where $\mathbf{\eta} = [\eta_x, \eta_y]^T$ is the vector of perturbed envelope radii and $\mathbf{A}$ is a matrix of coefficients:
+where $\boldsymbol{\eta} = [\eta_x, \eta_y]^T$ is the vector of perturbed envelope radii and $\mathbf{A}$ is a matrix of coefficients:
 
 \begin{equation}
 \mathbf{A} = 
@@ -173,17 +185,24 @@ with entries defined as:
 \end{aligned}
 \end{equation}
 
+
+---
+
 We search for solutions of the form
 
 \begin{equation} \label{eq-ansantz}
-\mathbf{\eta}_\pm(s) = \mathbf{\eta}_0 e^{i k_\pm s},
+\boldsymbol{\eta}_\pm(s) = \boldsymbol{\eta}_0 e^{i k_\pm s},
 \end{equation}
 
 where $k_\pm$ are two distinct frequencies. This leads to an eivenvalue problem:
 
 \begin{equation}
-\left( \mathbf{A} - \mathbf{I} k_\pm^2 \right) \mathbf{\eta}_\pm = 0.
+\left( \mathbf{A} - \mathbf{I} k_\pm^2 \right) \boldsymbol{\eta}_\pm = 0.
 \end{equation}
+
+
+---
+
 
 The eigenvalues correspond to the following frequencies, written in terms of the natural frequency $k_0$ and depressed frequency $k$, are:
 
@@ -194,47 +213,73 @@ The eigenvalues correspond to the following frequencies, written in terms of the
 \end{aligned}
 \end{equation}
 
-The frequencies correspond to eigenvectors $\mathbf{\eta}_\pm$:
+The frequencies correspond to eigenvectors $\boldsymbol{\eta}_\pm$:
 
 \begin{equation}
 \begin{aligned}
-\mathbf{\eta}_+ &= \sqrt{\frac{1}{2}} 
+\boldsymbol{\eta}_+ &= \sqrt{\frac{1}{2}} 
 \begin{bmatrix} +1 \\ +1 \end{bmatrix} \quad \text{(breathing mode)}.
 \\    
-\mathbf{\eta}_- &= \sqrt{\frac{1}{2}} 
+\boldsymbol{\eta}_- &= \sqrt{\frac{1}{2}} 
 \begin{bmatrix} +1 \\ -1 \end{bmatrix} \quad \text{(quadrupole mode)}.
 \end{aligned}
 \end{equation}
 
 
+## Mode frequency vs. tune depression
+
 [Plots showing mode frequency vs. tune depression.]
 
-[Plots showing breathing vs. quadrupole model.]
+
+## Breathing vs. quadrupole mode
+
+[Plots showing breathing vs. quadrupole mode.]
 
 
 
-# 3D envelope modes in continuous focusing channels
+## 3D envelope modes in continuous focusing channels
 
 It is natural to extend the above analysis to three-dimensional systems. We will simplify things by restricting our attention to upright beams with axial symmetry. We study the coupling between the transverse radius $r_\perp$ and the longitudinal radius $r_z$.
 
 [...]
 
 
+
 # Particle-core models of halo formation
 
-## Introduction
 
-Beam distributions in high-intensity accelerators tend to develop a low-density cloud of charge surrounding a dense, oscillating core, which we call a *halo*. For example, @fig-sns-lw shows the measured two-dimensional phase space density after acceleration in the Spallation Neutron Source (SNS) linac. Although the halo density can be orders of magnitude less than the core, it still presents a problem in the SNS and other high-power facilities. The accelerator operating power is ultimately constrained by uncontrolled *beam loss*, which leads to radioactivation in the accelerator tunnel. High-power facilities must adhere to strict beam loss limits---typically set at 1 W/m. For a 1-MW beam, the loss limit corresponds to one out of every million particles, or a fractional loss of $10^{-6}$. Once the loss limit is reached, increasing the beam power requires a proportional decrease in the beam loss. Understanding the mechanisms of halo formation is, therefore, highly relevant for modern and future high-power accelerators.
+## Measured phase space distribution in SNS linac
 
-![Measured phase space density (log scale) in the SNS linac.](images/sns_lw.png){#fig-sns-lw width=400px}
+![](images/sns_lw.png){#fig-sns-lw width=300px}
 
-In this section, we introduce a class of \textit{particle-core} models of space-charge-driven halo formation. Such models describe the motion of "test" particles in the field of an oscillating beam core, where the core is unaffected by the test particles. The particle-core treatment is, of course, much simpler than the self-consistent Vlasov-Poisson (V-P) treatment of the dynamics. The approach is useful because it isolates important halo formation mechanisms within a simple model, and because these mechanisms appear in the more realistic simulations.
 
-We will continue to focus on KV equilibria in two-dimensional, axisymmetric, continuous focusing systems. Particles in the KV distribution experience only \textit{linear} forces and remain within the hard-edged beam core for all time. But suppose a particle deviates from its characteristic trajectory within the beam. For example, suppose the particle exists the core. What will happen? 
+## What is halo?
+
+* Vague definition: low-density cloud surrounding dense core.
+* Important for high-power accelerators (beam loss).
+* Difficult to measure and predict.
+
+
+## Particle-core models of halo formation
+
+* Describe motion of "test" particles in field of lattice + oscillating beam core.
+* Much simpler than self-consistent Vlasov-Poisson (V-P) model, but useful for isolating halo formation mechanisms.
+* Basic features of particle-core models show up in PIC simulations.
+
+
+## Plan of attack
+
+* Start with KV equilibria in two-dimensional, axisymmetric, continuous focusing systems. 
+* Particles within beam experience \textit{linear} forces and remain there for all time. (Even with mismatch!)
+* Introduce mismatch of envelope, such that particles can move in/out of the core.
+
+##  
 
 Return to @fig-mode-freq which plots the envelope mode frequencies $k_{\pm}$ as a function of the depressed single-particle frequency (a measure of space charge intensity). Particles far from the core oscillate at the natural frequency $k_0$, which is determined by the external focusing strength. Particles inside the core oscillate at the depressed frequency $k \le k_0$. Outside the core, the oscillation frequency decreases continuously and nonlinearly with the radius $r$. We expect resonances to occur when the particle oscillation frequency is a multiple of the envelope frequency $k_\pm$---particularly when the envelope frequency is \textit{twice} the single-particle frequency. We also expect resonances to be enhanced by larger oscillations of the beam. [...]
 
-This section will focus on an important paper written by Gluckstern in 1994 \cite{?}. At the time, the maximum halo extent was an important theoretical question---and an important practical question for the design of new high-power accelerator. Gluckstern used classical perturbation theory to derive an approximate Hamiltonian to describe the resonant particle dynamics and, consequently, an upper bound on the halo amplitude. The Hamiltonian contours form the famous ``peanut diagram'' and is reproduced quite well by PIC simulations. [...]
+This section will focus on an important paper written by Gluckstern in 1994 @gluckstern_1994_analytic. At the time, the maximum halo extent was an important theoretical question---and an important practical question for the design of new high-power accelerator. Gluckstern used classical perturbation theory to derive an approximate Hamiltonian to describe the resonant particle dynamics and, consequently, an upper bound on the halo amplitude. The Hamiltonian contours form the famous ``peanut diagram'' and is reproduced quite well by PIC simulations. [...]
+
+
 
 
 ## Equations of motion
@@ -269,6 +314,9 @@ where
     \end{cases} 
 \end{equation}
 
+
+---
+
 Define a sinusoidal perturbation of the beam envelope radius:
 
 \begin{equation}
@@ -291,6 +339,9 @@ where $k^2$ is the depressed oscillation frequency within the beam:
 k^2 =  k_0^2 - \frac{Q}{R_0^2}.
 \end{equation}
 
+
+---
+
 If $\epsilon$ is small,  the $1 / R^{2}$ term can be approximated by truncating its Taylor series expansion:
 
 \begin{equation}
@@ -311,6 +362,9 @@ x'' + k^2 x
 
 The first term is a nonlinear force that gives rise to an amplitude-dependent frequency. The second term is a linear force arising from the envelope perturbation. This term allows the transfer of particles from the interior to the exterior of the hard-edged beam core.
 
+
+---
+
 We will make two further approximations in our analysis. First, we will assume there is no angular momentum and simply the one-dimensional oscillations along the $x$ axis. Second, we will approximate the nonlinear defocusing outside the beam using a \textit{pendulum model}:
 
 \begin{equation}
@@ -320,6 +374,9 @@ x'' + k^2 x
 \end{equation}
 
 Note that the second term (core oscillation) now extends beyond the core. While the pendulum model is a crude approximation of the external nonlinearity, it can still capture the essential physics. We will return to the full model later on. 
+
+
+
 
 
 ## Phase-amplitude coordinates
@@ -338,7 +395,12 @@ with the phase $\psi(s)$ defined as
 \psi(s) = k s + \alpha(s),
 \end{equation}
 
-where $ks$ is the unperturbed phase advance within the beam and $\alpha(s)$ is a slowly varying function. We will derive dynamical equations for $A$ and $\psi$ by substituting @eq-pcm-phase-amp-x and @eq-pcm-phase-amp-xp into @eq-pcm-eom-pendulum. First, note that the $s$-derivative of @eq-pcm-phase-amp-x gives
+where $ks$ is the unperturbed phase advance within the beam and $\alpha(s)$ is a slowly varying function. We will derive dynamical equations for $A$ and $\psi$ by substituting @eq-pcm-phase-amp-x and @eq-pcm-phase-amp-xp into @eq-pcm-eom-pendulum. 
+
+
+---
+
+First, note that the $s$-derivative of @eq-pcm-phase-amp-x gives
 
 \begin{equation}
 \frac{x'}{R_0} = A' \sin\psi + A (k + \alpha') \cos\psi .
@@ -357,6 +419,9 @@ The derivative of $x'$ in @eq-pcm-phase-amp-xp gives
 \frac{x''}{R_0} = k A' \cos\psi - k A (k + \alpha') \sin\psi .
 \end{equation}
 
+
+---
+
 The equation of motion @eq-pcm-eom-pendulum can then be written as
 
 \begin{equation}
@@ -371,6 +436,9 @@ where $f(A, \psi, s)$ is the driving force on the right hand side of @eq-pcm-eom
     f(A, \psi, s) &= \frac{Q}{R_0} \left[ -A^3 \sin^3\psi + 2 \epsilon A \sin\psi \cos(k_+ s) \right] .
 \end{aligned}
 \end{equation}
+
+
+---
 
 @eq-pcm-deriv-x and @eq-pcm-eom-pendulum-amp-phase} define a linear system to solve for $A'$ and $\alpha'$.
 
@@ -395,6 +463,8 @@ Solving the linear system gives the dynamics of the amplitude and phase:
 A'       &= \frac{f(A, \psi, s)}{k R_0  } \cos\psi , \\
 -\alpha' &= \frac{f(A, \psi, s)}{k R_0 A} \sin\psi .
 \end{align}
+
+
 
 
 ## Phase averaging
@@ -424,6 +494,9 @@ A' &= \frac{Q}{k R_0^2} \left[ A^3 \sin^3\psi \cos\psi + 2 \epsilon A \sin\psi \
 \end{aligned}
 \end{equation}
 
+
+---
+
 We now average the expressions @eq-pcm-dyn over one period:
 
 \begin{equation}
@@ -437,6 +510,9 @@ A'      &\rightarrow \frac{1}{2\pi} \int_{0}^{2\pi} A'      d\psi
 \end{equation}
 
 The resonant phase $\Psi$ is held constant during the integration.
+
+
+---
 
 Switching to variables $w = A^2 / R_0^2$ and $\Psi' = (2k - k_+) + 2 \alpha'$:
 
@@ -453,7 +529,6 @@ where
 \Delta = k (k_+ - 2k) \frac{R_0^2 }{Q} .
 \end{equation}
 
-
 The variables $w$ and $\Psi$ are canonically conjugate: their evolution equations can be derived from a Hamiltonian $H$:
 
 \begin{equation}
@@ -464,21 +539,23 @@ w'    &= \partial H / \partial \Psi , \\
 \end{aligned}
 \end{equation}
 
+
+
+
+
 ## Analysis of the Hamiltonian
 
-@fig-ham-eps-cos-psi plots [...]
+![To do: limit range from -$\epsilon$ to $\epsilon$.](images/pcm_eps_cos_vs_w.png){#fig-ham-eps-cos-psi width=200px}
 
 
-@fig-ham-polar plots the contours of the Hamiltonian as a function of $w \cos\Psi$ and $w \sin\Psi$. Note that $w$ is the \textit{squared} amplitude. [...]
+## Hamiltonian contours (polar coordinates)
+
+![Hamiltonian contours as function of $w \cos\Psi$ and $w\sin\Psi$.](images/pcm_contours_polar.png){#fig-ham-polar width=200px}
 
 
-@fig-ham-xxp plots the Hamiltonian contours as a function of the phase space variables $x$ and $x'$. [...]
+## Hamiltonian contours (phase space coordinates)
 
-![To do: limit range from -$\epsilon$ to $\epsilon$.](images/pcm_eps_cos_vs_w.png){#fig-ham-eps-cos-psi width=400px}
-
-![Hamiltonian contours as function of $w \cos\Psi$ and $w\sin\Psi$.](images/pcm_contours_polar.png){#fig-ham-polar width=400px}
-
-![Hamiltonian contours as function of $x \propto \sqrt{w} \sin\Psi$ and $x' \propto \sqrt{w}\cos\Psi$.](images/pcm_contours_xy.png){#fig-ham-xxp width=400px}
+![Hamiltonian contours as function of $x \propto \sqrt{w} \sin\Psi$ and $x' \propto \sqrt{w}\cos\Psi$.](images/pcm_contours_xy.png){#fig-ham-xxp width=200px}
 
 
 ## Comparison to exact model
@@ -496,10 +573,10 @@ The exact (hard-edged) model in @eq-pcm-eom-exact can be treated in the same way
 \textcolor{red}{[Will cover longitudinal stuff in Barnard lecture.]}
 
 
+
 ## Summary
 
-
-
+[...]
 
 
         
@@ -508,3 +585,4 @@ The exact (hard-edged) model in @eq-pcm-eom-exact can be treated in the same way
 
 ::: {#refs}
 :::
+
