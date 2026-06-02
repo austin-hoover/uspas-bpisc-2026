@@ -22,7 +22,6 @@ format:
       text: |
         \setbeamerfont{frametitle}{series=\bfseries, size=\LARGE}
         \setbeamerfont{title}{series=\bfseries, size=\huge}
-        \setbeamerfont{subtitle}{series=\bfseries}
         \setbeamertemplate{footline}[frame number]
 
 
