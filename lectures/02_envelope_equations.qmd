@@ -165,6 +165,7 @@ The gradient $\nabla \phi$ in cylindrical coordinates is:
 And the curl $\nabla \times \mathbf{A}$ is:
 
 \begin{equation}
+\label{eq-cylindrical-curl}
 \nabla \times \mathbf{A}
 = 
 \left[ 
@@ -186,6 +187,9 @@ And the curl $\nabla \times \mathbf{A}$ is:
 \right] 
 \hat{z} .
 \end{equation}
+
+
+---
 
 Axial symmetry means all partial derivatives with respect to $\theta$ are zero in Eq. \eqref{eq-cylindrical-grad} and Eq. \eqref{eq-cylindrical-curl}. This gives the following expressions for the fields in terms of the potentials in cylindrical coordinates:
 
@@ -214,6 +218,9 @@ Axial symmetry means all partial derivatives with respect to $\theta$ are zero i
  + \left[ \frac{1}{r} \frac{\partial (r A_\theta)}{\partial r} \right] \hat{z}.
 \end{aligned}
 \end{equation}
+
+
+---
 
 Use the potentials to rewrite Eq. \eqref{eq-hi}:
 
@@ -248,6 +255,8 @@ Use the potentials to rewrite Eq. \eqref{eq-hi}:
 \end{aligned}
 \end{equation}
 
+---
+
 Eq. \eqref{eq-canonical-momentum-derivation} can then be written as:
 
 \begin{equation}
@@ -271,6 +280,7 @@ such that $dp_\theta / dt = 0$. We may also write $p_\theta$ in terms of the mag
 \begin{equation}
 p_\theta \equiv \gamma m r^2 \dot{\theta} + \frac{q \psi(r)}{2 \pi}.
 \end{equation}
+
 
 ## Series expansion of axially symmetric fields
 
