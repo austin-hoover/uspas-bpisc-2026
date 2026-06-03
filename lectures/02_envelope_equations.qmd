@@ -70,8 +70,7 @@ In cylindrical coordinates, the unit vectors depend on the particle position and
 
 Thus, the time derivative of the momentum vector in Eq. \eqref{eq-momentum-cylindrical} is:
 
-\begin{equation}
-\begin{aligned}
+\begin{align}
 \label{eq-dpdt}
 \frac{d\mathbf{p}}{dt} 
 &=  
@@ -82,12 +81,13 @@ Thus, the time derivative of the momentum vector in Eq. \eqref{eq-momentum-cylin
 + p_r \dot{\hat{r}}
 + \dot{p}_\theta \hat{\theta} 
 + p_\theta^* \dot{\hat{\theta}}
-+ \dot{p}_z \hat{z} 
++ \dot{p}_z \hat{z}
 \\
 &= 
   \left( \dot{p}_r - p_\theta^* \dot{\theta} \right) \hat{r}
 + \left( \dot{p}_\theta + p_r \dot{\theta} \right) \hat{\theta}
 + \dot{p}_z \hat{z} 
+\label{eq-dpdt-theta}
 \\
 &= 
    \left[ \frac{d(\gamma m \dot{r})}{dt} - \gamma m r \dot{\theta}^2\right] \hat{r}
@@ -98,8 +98,7 @@ Thus, the time derivative of the momentum vector in Eq. \eqref{eq-momentum-cylin
    \left[ \frac{d(\gamma m \dot{r})}{dt} - \gamma m r \dot{\theta}^2\right] \hat{r}
 + \left[ \frac{1}{r}\frac{d}{dt}\left(\gamma m r^2 \dot{\theta}\right) \right] \hat{\theta}
 + \left[ \frac{d(\gamma m \dot{z})}{dt} \right] \hat{z}.
-\end{aligned}
-\end{equation}
+\end{align}
 
 This takes care of the left side of the Lorentz force equation (Eq. \eqref{eq-lorentz}).
 
@@ -127,21 +126,22 @@ Evaluating the cross product $\dot{\mathbf{x}} \times \mathbf{B}$,
 
 leads to
 
-\begin{equation}
-\begin{aligned}
+\begin{align}
 \frac{d(\gamma m \dot{r})}{dt} - \gamma m r \dot{\theta}^2 
 &= q \left( E_r + r \dot{\theta} B_z - \dot{z} B_\theta \right) ,
+\label{eq-eom-r}
 \\
 \frac{1}{r} \frac{d(\gamma m r^2 \dot{\theta})}{dt}
 &= q \left( E_\theta + \dot{z} B_r - \dot{r} B_z \right) ,
+\label{eq-eom-theta}
 \\
 \frac{d(\gamma m \dot{z})}{dt} 
 &= q \left( E_z + \dot{r} B_\theta - r \dot{\theta} B_r \right)
-\end{aligned}
-\end{equation}
+\label{eq-eom-z}
+\end{align}
 
 
-## Conservation of canonical angular momentum
+## From fields to potentials
 
 Write the fields in terms of the scalar potential $\phi(\mathbf{x})$ and vector potential $\mathbf{A}(\mathbf{x})$:
 
@@ -169,7 +169,7 @@ And the curl $\nabla \times \mathbf{A}$ is:
 \nabla \times \mathbf{A}
 = 
 \left[ 
-      \frac{1}{r}\frac{\partial A_z}{\partial A_\theta} 
+      \frac{1}{r}\frac{\partial A_z}{\partial \theta} 
     - \frac{\partial A_\theta}{\partial z} 
 \right] 
 \hat{r}
@@ -179,12 +179,10 @@ And the curl $\nabla \times \mathbf{A}$ is:
 \right] 
 \hat{\theta}
 + 
-\left[  
-    \frac{1}{r} 
-    \left(
-        \frac{\partial (r A_\theta)}{\partial r} - \frac{\partial A_r}{\partial \theta}
-    \right)
-\right] 
+\frac{1}{r} 
+\left[
+    \frac{\partial (r A_\theta)}{\partial r} - \frac{\partial A_r}{\partial \theta}
+\right]
 \hat{z} .
 \end{equation}
 
@@ -195,17 +193,6 @@ Axial symmetry means all partial derivatives with respect to $\theta$ are zero i
 
 \begin{equation}
 \begin{aligned}
-    E_r &= -\frac{\partial \phi}{\partial r} - \frac{\partial A_r}{\partial t} , \\
-    E_\theta &= -\frac{\partial A_\theta}{\partial t} , \\
-    E_z &= -\frac{\partial \phi}{\partial z} - \frac{\partial A_z}{\partial t} , \\
-    B_r &= -\frac{\partial A_\theta}{\partial r} , \\
-    B_\theta &= \frac{\partial A_r}{\partial z} - \frac{\partial A_z}{\partial r} , \\
-    B_z &= \frac{1}{r} \frac{\partial (r A_\theta)}{\partial r} .
-\end{aligned}
-\end{equation}
-
-\begin{equation}
-\begin{aligned}
 \mathbf{E} &= 
    \left[ -\frac{\partial \phi}{\partial r} - \frac{\partial A_r}{\partial t} \right] \hat{r}
  + \left[ -\frac{\partial A_\theta}{\partial t} \right] \hat{\theta}
@@ -213,16 +200,16 @@ Axial symmetry means all partial derivatives with respect to $\theta$ are zero i
  ,
  \\
  \mathbf{B} &=
-   \left[ -\frac{\partial A_\theta}{\partial a} \right] \hat{r}
+   \left[ -\frac{\partial A_\theta}{\partial r} \right] \hat{r}
  + \left[ \frac{\partial A_r}{\partial z} - \frac{\partial A_z}{\partial r}\right] \hat{\theta}
  + \left[ \frac{1}{r} \frac{\partial (r A_\theta)}{\partial r} \right] \hat{z}.
 \end{aligned}
 \end{equation}
 
 
----
+## Conservation of angular momentum
 
-Use the potentials to rewrite Eq. \eqref{eq-hi}:
+Use the potentials to rewrite the angular equation of motion (Eq. \eqref{eq-eom-theta}):
 
 \begin{equation}
 \label{eq-canonical-momentum-derivation}
@@ -274,8 +261,10 @@ p_\theta \equiv \gamma m r^2 \dot{\theta} + q r A_\theta,
 such that $dp_\theta / dt = 0$. We may also write $p_\theta$ in terms of the magnetic flux $\psi(r)$ though a circle of radius $r$ \textit{[Figure]}:
 
 \begin{equation}
-\psi(r) = \int \mathbf{B} \cdot d\mathbf{\Omega} = \int \nabla \times \mathbf{A} \cdot d\mathbf{\Omega} = \oint \mathbf{A} \cdot d\mathbf{l} = 2 \pi A_\theta.  
+\psi(r) = \int \mathbf{B} \cdot d\boldsymbol{\Omega} = \int \nabla \times \mathbf{A} \cdot d\boldsymbol{\Omega} = \oint \mathbf{A} \cdot d\mathbf{l} = 2 \pi r A_\theta.  
 \end{equation}
+
+Therefore, Eq. \eqref{eq-canonical-momentum} can be written
 
 \begin{equation}
 p_\theta \equiv \gamma m r^2 \dot{\theta} + \frac{q \psi(r)}{2 \pi}.
