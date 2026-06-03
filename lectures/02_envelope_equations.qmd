@@ -303,7 +303,7 @@ for scalar potentials $\phi$ and $\phi_m$. Additionally, the vanishing divergenc
 
 ---
 
-In cylindrical coordinates, the Laplace equation reads:
+In cylindrical coordinates, the Laplace equation for the potential is:
 
 \begin{equation}
 \frac{1}{r} \frac{\partial}{\partial r} \left( r \frac{\partial \phi}{\partial r} \right) + \frac{\partial^2 \phi}{\partial z^2} = 0.
@@ -315,7 +315,19 @@ The azimuthal symmetry will lead to a simplified form of the scalar potential in
 \phi(r, z) = \sum_{n = 0}^{\infty} h_{2n}(z) r^{2n},
 \end{equation}
 
-where the $h_{2n}(z)$ are functions of $z$. (The rotational symmetry eliminates all odd powers of $r$.) The derivatives in the Laplace equation are:
+where the $h_{2n}(z)$ are functions of $z$. The on-axis potential is given by $h_0(z) = \phi(0, z)$.
+
+
+---
+
+The rotational symmetry eliminates all odd powers of $r$ in the series. 
+
+At the origin ($r = 0$), we must have $E_r = B_r = 0$. If we allowed the $n = 1$ term $h_1(z) r$, we would have $E_r(0, z) = -\partial \phi(r, z) / \partial{r} \vert_{r=0} = h_1(z) \ne 0$. 
+
+
+---
+
+The derivatives in the Laplace equation are:
 
 \begin{equation}
 \begin{aligned}
