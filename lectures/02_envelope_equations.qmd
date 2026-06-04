@@ -128,16 +128,11 @@ leads to
 
 \begin{align}
 \frac{d(\gamma m \dot{r})}{dt} - \gamma m r \dot{\theta}^2 
-&= q \left( E_r + r \dot{\theta} B_z - \dot{z} B_\theta \right) ,
-\label{eq-eom-r}
-\\
+&= q \left( E_r + r \dot{\theta} B_z - \dot{z} B_\theta \right) \label{eq-eom-r} , \\
 \frac{1}{r} \frac{d(\gamma m r^2 \dot{\theta})}{dt}
-&= q \left( E_\theta + \dot{z} B_r - \dot{r} B_z \right) ,
-\label{eq-eom-theta}
-\\
+&= q \left( E_\theta + \dot{z} B_r - \dot{r} B_z \right) \label{eq-eom-theta} , \\
 \frac{d(\gamma m \dot{z})}{dt} 
-&= q \left( E_z + \dot{r} B_\theta - r \dot{\theta} B_r \right)
-\label{eq-eom-z}
+&= q \left( E_z + \dot{r} B_\theta - r \dot{\theta} B_r \right) \label{eq-eom-z}
 \end{align}
 
 
@@ -441,7 +436,7 @@ B_r(r, z) =
 
 ---
 
-A similar procedure gives the radial and longitudinal components of the electric field $\mathbf{E} = E_r \hat{r} + E_z \hat{z}$. Define $V(z)$ as the on-axis value of the electric potential $\phi$:
+A similar procedure gives the radial and longitudinal components of the electric field. Define $V(z)$ as the on-axis value of the electric potential $\phi$:
 
 \begin{equation}
 V(z) \equiv \phi(0, z).
@@ -467,37 +462,19 @@ E_r(r, z)
 
 ## Derivation of paraxial ray equation
 
+We will now take the \textit{paraxial} limit, assuming small transverse position and velocity: $\dot{r} \ll \dot{z}$, $r\dot{\theta} \ll \dot{z}$. If $v = (\dot{r}^2 + r^2\dot{\theta}^2) + \dot{z}^2)^{1/2}$ is the total velocity, the paraxial limit gives $\dot{z} = (v^2 - \dot{r}^2 - r^2\dot{\theta}^2)^{1/2} \approx v$.
 
-We will now take the \textit{paraxial} limit of small transverse velocity relative to to longitudinal velocity: $\dot{r} \ll \dot{z}$, $r\dot{\theta} \ll \dot{z}$. If $v = (v_r^2 + v_\theta^2 + v_z^2)^{1/2}$ is the total velocity, where $v_r = \dot{r}$, $v_\theta = r\dot{\theta}$, and $v_z = \dot{z}$, the paraxial limit gives $\dot{z} = (v^2 - \dot{r}^2 - r^2\dot{\theta}^2)^{1/2} \approx v.$ We will therefore only keep terms linear in $r$ in the equations of motion. 
-
-We will also add the self-generated fields to the equation of motion, writing
-
-\begin{equation}
-\begin{aligned}
-    \mathbf{E} &= \mathbf{E}^{(ext)} + \mathbf{E}^{(self)}, \\
-    \mathbf{B} &= \mathbf{B}^{(ext)} + \mathbf{B}^{(self)}.
-\end{aligned}
-\end{equation}
-
-[[Is there a way to derive the ray equation first, then add the self-fields later?]]{style="color: red;"}
-
-
----
-
-To first order in $r$, the external fields are:
+To first order in $r$ and ${r'}$, the external fields are:
 
 \begin{equation}
 \begin{aligned}
-E_r^{(ext)} &\approx \frac{r}{2} \frac{\partial^2 V(z)}{\partial z^2} , \\
-E_z^{(ext)} &\approx -\frac{\partial V(z)}{\partial z} , \\
-B_r^{(ext)} &\approx -\frac{r}{2} \frac{\partial B(z)}{\partial z} , \\
-B_z^{(ext)} &\approx B(z).
+E_r^{(ext)} &\approx \frac{1}{2} \frac{\partial^2 V(z)}{\partial z^2} r , \\
+B_z^{(ext)} &\approx B(z) , \\
+B_\theta^{(ext)} &= 0 (\partial \phi_m / \partial \theta = 0) .
 \end{aligned}
 \end{equation}
 
-Recall that $V(z) = \phi(0, z)$ and $B(z) = -\partial \phi_m(0, z) / \partial z$.
-
-Plug these truncated fields into Eq. \eqref{eq-dpdt-cylindrical-r} (the radial equation of motion):
+Plug these truncated fields into the radial equation of motion (Eq. \eqref{eq-eom-r}):
 
 \begin{equation}
 \begin{aligned}
@@ -505,51 +482,28 @@ Plug these truncated fields into Eq. \eqref{eq-dpdt-cylindrical-r} (the radial e
 &= q \left( E_r + r \dot{\theta} B_z - \dot{z} B_\theta \right) ,
 \\
 &\approx 
-q
-\underbrace{
-    \left( 
-        \frac{r}{2} \frac{\partial^2 V(z)}{\partial z^2}
-        + r \dot{\theta} B(z)
-    \right)
-}_{\text{external fields}}
-+
-q
-\underbrace{
-    \left( 
-        E_r^{(self)} - \dot{z} B_\theta^{(self)}
-    \right)
-}_{\text{self fields}}
-.
+q \left( \frac{1}{2} \frac{\partial^2 V(z)}{\partial z^2} r + r \dot{\theta} B(z) \right)
 \end{aligned}
 \end{equation}
 
-The $B_z^{(\text{self})}$ term is ignored in the paraxial limit.
-
-
 ---
 
-Two more steps will lead to our definition of the \textit{paraxial ray equation}. First, we will switch to the axial coordinate $z$ as the independent variable rather than the time $t$. It is more common in accelerator physics to use the label $s$, so we define $s \equiv z$ and $ds = v_z dt = \beta c dt$, where $c$ is the speed of light. Also define $' \equiv d/ds$. This gives (dropping the $\approx$ symbol from now on):
-
-\begin{multline}
-\beta c \frac{d\left( \gamma \beta m c r' \right)}{ds}
--
-\gamma m r (\beta c \theta')^2
-= \\
-q \left( \frac{1}{2} rV''(s) + r \beta c \theta' B(s) \right)
-+ 
-q \left( E_r^{(self)} - \beta c B_\theta^{(self)} \right)
-.
-\end{multline}
-
-Expand the derivative in the first term and divide by $\gamma m \beta^2 c^2$:
+Two more steps. First, use $z$ as independent variable: $dz = \beta c dt$. Using $' \equiv d/dz$ and dropping the $\approx$ symbol gives:
 
 \begin{equation}
-r'' + \frac{(\gamma \beta)'}{(\gamma \beta)} r' - r \theta'^2
-= 
-\frac{q}{\gamma m \beta^2 c^2}
-\left( \frac{r}{2} V''(s) + \beta c r \theta' B(s) + E_r^{(self)} - \beta c B_\theta^{(self)} \right).
+\beta c \frac{d\left( \gamma m \beta c r' \right)}{dz} - \gamma m r (\beta c \theta')^2 =
+q \left( \frac{1}{2} V''(z) r + r \beta c \theta' B(z) \right) .
 \end{equation}
 
+Expand the derivative in the first term and divide by $\gamma \beta^2 m c^2$:
+
+\begin{equation}
+\label{eq-rpp}
+r'' + \frac{(\gamma \beta)'}{(\gamma \beta)} r' - r \theta'^2
+= 
+\frac{q}{\gamma \beta^2 m c^2}
+\left( \frac{1}{2} V''(z) + \beta c \theta' B(z) \right) r .
+\end{equation}
 
 ---
 
@@ -561,10 +515,8 @@ Now use the definition of the canonical angular momentum $p_\theta$ (Eq. \eqref{
     \theta' 
     &= \frac{\dot{\theta}}{\beta c} 
     \\
-    \theta' 
-    &= \frac{1}{\gamma \beta m c r^2} \left( p_\theta - \frac{q \psi(r)}{2 \pi} \right),
+    &= \frac{1}{\beta c} \frac{1}{\gamma m r^2} \left( p_\theta - \frac{q \psi(r)}{2 \pi} \right),
     \\
-    \theta' 
     &= \frac{p_\theta}{\gamma \beta m c r^2} - \frac{\omega_c}{2 \gamma \beta c},
 \end{aligned}
 \end{equation}
@@ -578,30 +530,71 @@ where we have defined the \textit{cyclotron frequency}:
 
 Substitution of Eq. \eqref{eq-theta-prime} into Eq. \eqref{eq-rpp} gives:
 
-\begin{multline}
+\begin{equation}
     r'' + \frac{(\gamma\beta)'}{\gamma\beta} r
     + \left( \frac{\omega_c}{2 \gamma \beta c} \right)^2 r
     - \left(\frac{p_\theta}{\gamma \beta m c} \right)^2 \frac{1}{r^3}
-    = \\
-    \frac{q}{\gamma m \beta^2 c^2} 
-    \left( 
-        \frac{V''}{2} r + E_r^{(self)} - \beta c B_\theta^{(self)}
-    \right)
-\end{multline}
+    =
+    \frac{q}{\gamma m \beta^2 c^2} \frac{1}{2} V''(z) r
+\end{equation}
 
 
 ---
 
-Let us derive simplified expressions for $E_r^{(self)}$ and $B_\theta^{(self)}$ in terms of the charge and current density. Assuming cylindrical symmetry of the beam, the Poisson equation for the self-generated electric field is:
+The rate of change in the particle energy is given by
+
+\begin{align}
+\frac{d (\gamma m c^2)}{dt} &= q \mathbf{E} \cdot \mathbf{v} .
+\end{align}
+
+Rearrange and switch to $z$ as independent variable. In the paraxial limit:
+
+\begin{align}
+\gamma' 
+&= \frac{q}{mc^2} \frac{\mathbf{E} \cdot \mathbf{v}}{v_z} \\
+&= \frac{q}{mc^2} \frac{E_x v_x + E_y v_y + E_z v_z}{v_z} \\
+&\approx \frac{q}{mc^2} E_z .
+\end{align}
+
+Giving the approximate relationship:
+
+\begin{align}
+\gamma'' \approx \frac{q}{mc^2} E_z' = -\frac{q}{mc^2} V'' .
+\end{align}
+
+---
+
+This approximation of $\lambda''$ leads to the \textit{paraxial ray equation}:
 
 \begin{equation}
+\label{eq-paraxial}
+\begin{aligned}
+\boxed{
+r''
++ {\frac{(\gamma\beta)'}{(\gamma\beta)} r'}
++ \left( \frac{\gamma''}{2 \gamma \beta^2} \right) r
++ \left( \frac{\omega_c}{2\gamma \beta c} \right)^2 r
+- \left( \frac{p_\theta}{\gamma \beta m c} \right)^2 \frac{1}{r^3}
+= 0 .
+}
+\end{aligned}
+\end{equation}
+
+(i) inertial term; (ii) accelerative damping; $E_r$ from converging field lines; (iii) solenoidal focusing ($v_\theta B_z$, part of centrifugal term); (iv) centrifugal defocusing.
+
+
+---
+
+We can also account for linearized self-fields. Assuming cylindrical symmetry of the beam, the Poisson equation for the electric field is:
+
+\begin{equation} \label{eq-poisson-self-field}
 \begin{aligned}
     \nabla^2 \phi^{(self)}
     = \frac{1}{r} \frac{\partial}{\partial r} \left( r \frac{\partial \phi^{(self)}}{\partial r} \right) 
     + \frac{\partial^2 \phi^{(self)}}{\partial s^2} 
     = -\frac{\rho}{\epsilon_0}.
 \end{aligned}
-\end{equation}{#eq-poisson-self-field}
+\end{equation}
 
 Solving for $\partial \phi^{(self)} / \partial r$:
 
@@ -638,62 +631,18 @@ Using the definition $\mu_0 \epsilon_0 = c^{-2}$,
 B_\theta^{(self)} = \frac{\beta}{c} \frac{\lambda(r)}{2 \pi \epsilon_0 r}.
 \end{equation}
 
-With these approximations of the self-field components, Eq. \eqref{eq-paraxial-1} becomes:
-
-\begin{multline}
-    r'' + \frac{(\gamma\beta)'}{\gamma\beta} r
-    + \left( \frac{\omega_c}{2 \gamma \beta c} \right)^2 r
-    - \left(\frac{p_\theta}{\gamma \beta m c} \right)^2 \frac{1}{r^3}
-    = \\
-    \frac{q}{\gamma m \beta^2 c^2} 
-    \left[ 
-        \frac{r}{2} \left( \frac{\partial^2 V}{\partial s^2} + \frac{\partial^2 \phi^{(self)}}{\partial s^2} \right)
-        + \frac{1}{\gamma^2} \frac{\lambda(r)}{2 \pi \epsilon_0 r}
-    \right]
-    .
-\end{multline}
-
 
 ---
 
-A further simplification can be made by for the second derivatives of the potentials. The rate of change in the particle energy is given by
+Including the linear self fields in the paraxial limit adds a driving term to the right hand side:
 
 \begin{equation}
-\frac{d (\gamma m c^2)}{dt} = q \mathbf{E} \cdot \mathbf{v}.
-\end{equation}
-
-In the paraxial limit, the energy gain is almost entirely due to the longitudinal field:
-
-\begin{equation}
-\frac{d (\gamma m c^2)}{dt} \approx q E_z v_z = q \beta c E_z.
-\end{equation}
-
-Switching to $s$ as the independent variable, we find
-
-\begin{equation}
-\begin{aligned}
-    \gamma' &\approx \frac{q E_z}{m c^2}
-    \\
-    \gamma'' &\approx \frac{q}{mc^2} \frac{dE_z}{ds}
-    \\
-    \gamma'' &\approx \frac{q}{mc^2} \frac{d}{ds} \left( E_z^{(ext)} + E_z^{(self)} \right)
-    \\
-    \gamma'' &\approx -\frac{q}{mc^2} \left( \frac{\partial^2 V}{\partial s^2} + \frac{\partial^2 \phi^{(self)}}{\partial s^2} \right).
-\end{aligned}
-\end{equation}
-
-
----
-
-Inserting this approximation of $\lambda''$ in Eq. \eqref{eq-paraxial-2} gives our final form of the \textit{paraxial ray equation}:
-
-\begin{equation}
-\label{eq-paraxial}
+\label{eq-paraxial-sc}
 \begin{aligned}
 \boxed{
 r''
 + {\frac{(\gamma\beta)'}{(\gamma\beta)} r'}
-+ \left( \frac{\gamma''}{2 q \gamma \beta^2} \right) r
++ \left( \frac{\gamma''}{2 \gamma \beta^2} \right) r
 + \left( \frac{\omega_c}{2\gamma \beta c} \right)^2 r
 - \left( \frac{p_\theta}{\gamma \beta m c} \right)^2 \frac{1}{r^3}
 = \frac{q}{m c^2 \beta^2 \gamma^3} \frac{\lambda(r)}{2 \pi \epsilon_0 r}
@@ -701,12 +650,10 @@ r''
 \end{aligned}
 \end{equation}
 
-The equations are valid for axisymmetric external focusing forces in the paraxial limit, with the inclusion of linearized self-fields of an axially symmetric beam. The terms in Eq. \eqref{eq-paraxial represent}, in order: (i) [...]; (ii) accelerative damping; $E_r$ from converging field lines; (iii) solenoidal focusing ($v_\theta B_z$); (iv) centrifugal defocusing; (v) linearized self-field ($E_r - v_z B_\theta$).
-
 
 # Envelope equations for axially symmetric beams
 
-## Envelope equations for axially symmetric beams
+---
 
 The strategy in this section will be to compute the second moments of the transverse distribution function $f(x, x', y, y', s)$. For axially symmetric beams, the Vlasov equation will generate a set of differential equations for the evolution of the second moments such as $\langle rr \rangle$, $\langle rr' \rangle$, $\langle rr'' \rangle$, etc. Combining with the paraxial ray equation will generate a set of ordinary differential equations (ODEs) for the evolution of the beam \textit{envelope} radius $r_b = \sqrt{2 \langle rr \rangle}$. 
 
@@ -720,7 +667,12 @@ Start with the Vlasov equation:
 = 0,
 \end{equation}
 
-where $\mathbf{x} = (x, y)$. Multiply the Vlasov equation by $g(\mathbf{x}, \mathbf{x}')$, an arbitrary function of the phase space coordinates, and integrate over all phase space space:
+where $\mathbf{x} = (x, y)$. 
+
+
+---
+
+Multiply the Vlasov equation by $g(\mathbf{x}, \mathbf{x}')$, an arbitrary function of the phase space coordinates, and integrate over all phase space space:
 
 \begin{equation}
 \label{eq-vlasov-g-int}
@@ -733,6 +685,9 @@ where $\mathbf{x} = (x, y)$. Multiply the Vlasov equation by $g(\mathbf{x}, \mat
 d\mathbf{x} d\mathbf{x}'
 = 0.
 \end{equation}
+
+
+---
 
 Introduce bracket notation to indicate the expected value under the distribution; e.g.,
 
@@ -748,6 +703,10 @@ The first term is equivalent to $d\langle g \rangle /ds$:
 \end{equation}
 
 [[Shouldn't this be $\partial \langle g \rangle / \partial s$ instead of $d \langle g \rangle / ds$?]]{style="color: red;"}
+
+
+---
+
 Since the distribution function vanishes at the integration boundary, we can use integration by parts to flip the gradients from $f$ to $g$ in the next two terms.
 
 \begin{equation}
@@ -767,6 +726,9 @@ Since the distribution function vanishes at the integration boundary, we can use
     &= -\langle \mathbf{x}'' \cdot {\partial g}/{\partial \mathbf{x}'} \rangle.
 \end{aligned}
 \end{equation}
+
+
+---
 
 Eq. \eqref{eq-vlasov-g-int} then becomes:
 
@@ -792,6 +754,9 @@ d \langle g \rangle / ds = \langle g' \rangle.
 
 [[Is this not trivial?]]{style="color: red;"}
 
+
+--- 
+
 Define the root-mean-square (rms) beam radius $r_b$:
 
 \begin{equation}
@@ -809,6 +774,8 @@ r_b'' = \frac{2 \langle rr'' \rangle}{r_b}
 \end{equation}
 
 
+---
+
 Evaluate $\langle rr'' \rangle$: [...]
 
 \begin{multline} \label{eq:rpp}
@@ -823,6 +790,10 @@ Evaluate $\langle rr'' \rangle$: [...]
 + \langle r^2 \theta'^2 \rangle
 .
 \end{multline}
+
+
+
+---
 
 Inserting Eq. \eqref{eq-rrp} Eq. \eqref{eq-env-1} gives the following \textit{rms envelope equation}:
 [...]
