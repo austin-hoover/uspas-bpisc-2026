@@ -334,11 +334,11 @@ The derivatives in the Laplace equation are:
 \frac{1}{r} \frac{\partial}{\partial r} \left( r \frac{\partial \phi}{\partial r} \right)
 &= \sum_{n = 1}^{\infty} (2n)^2 h_{2n}(z) r^{2n - 2}, 
 \\
-\frac{\partial^2 \phi}{\partial z^2} &= \sum_{n=0}^{\infty} h_{2n}'(z) r^{2n},
+\frac{\partial^2 \phi}{\partial z^2} &= \sum_{n=0}^{\infty} h_{2n}''(z) r^{2n},
 \end{aligned}
 \end{equation}
 
-with $h'(z) = dh(z)/dz.$ 
+where $h'(z) = \partial h(z) / \partial z.$ 
 
 
 ---
