@@ -470,7 +470,7 @@ To first order in $r$ and ${r'}$, the external fields are:
 \begin{aligned}
 E_r^{(ext)} &\approx \frac{1}{2} \frac{\partial^2 V(z)}{\partial z^2} r , \\
 B_z^{(ext)} &\approx B(z) , \\
-B_\theta^{(ext)} &= 0 (\partial \phi_m / \partial \theta = 0) .
+B_\theta^{(ext)} &= 0 \quad (\text{since} \partial \phi_m / \partial \theta = 0) .
 \end{aligned}
 \end{equation}
 
@@ -488,7 +488,7 @@ q \left( \frac{1}{2} \frac{\partial^2 V(z)}{\partial z^2} r + r \dot{\theta} B(z
 
 ---
 
-Two more steps. First, use $z$ as independent variable: $dz = \beta c dt$. Using $' \equiv d/dz$ and dropping the $\approx$ symbol gives:
+Use $z$ as the independent variable: $dz = \beta c dt$. Using $' \equiv d/dz$ and dropping the $\approx$ symbol gives:
 
 \begin{equation}
 \beta c \frac{d\left( \gamma m \beta c r' \right)}{dz} - \gamma m r (\beta c \theta')^2 =
@@ -517,18 +517,13 @@ Now use the definition of the canonical angular momentum $p_\theta$ (Eq. \eqref{
     \\
     &= \frac{1}{\beta c} \frac{1}{\gamma m r^2} \left( p_\theta - \frac{q \psi(r)}{2 \pi} \right),
     \\
-    &= \frac{p_\theta}{\gamma \beta m c r^2} - \frac{\omega_c}{2 \gamma \beta c},
+    &= \frac{p_\theta}{\gamma \beta m c r^2} - \frac{\omega_c}{2 \gamma \beta c}.
 \end{aligned}
 \end{equation}
 
-where we have defined the \textit{cyclotron frequency}:
+We have defined the \textit{cyclotron frequency} $\omega_c \equiv \frac{qB}{m}$.
 
-\begin{equation}
-\label{eq-cyclotron-frequency}
-\omega_c \equiv \frac{qB}{m} .
-\end{equation}
-
-Substitution of Eq. \eqref{eq-theta-prime} into Eq. \eqref{eq-rpp} gives:
+Substitute Eq. \eqref{eq-theta-prime} into Eq. \eqref{eq-rpp}:
 
 \begin{equation}
     r'' + \frac{(\gamma\beta)'}{\gamma\beta} r
@@ -547,7 +542,7 @@ The rate of change in the particle energy is given by
 \frac{d (\gamma m c^2)}{dt} &= q \mathbf{E} \cdot \mathbf{v} .
 \end{align}
 
-Rearrange and switch to $z$ as independent variable. In the paraxial limit:
+Rearrange and switch from $t$ to $z$. In the paraxial limit:
 
 \begin{align}
 \gamma' 
@@ -580,7 +575,7 @@ r''
 \end{aligned}
 \end{equation}
 
-(i) inertial term; (ii) accelerative damping; $E_r$ from converging field lines; (iii) solenoidal focusing ($v_\theta B_z$, part of centrifugal term); (iv) centrifugal defocusing.
+Terms in order: (i) inertial term; (ii) accelerative damping; (iii) $E_r$ from converging field lines; (iv) solenoidal focusing ($v_\theta B_z$, part of centrifugal term); (v) centrifugal defocusing.
 
 
 ---
@@ -589,27 +584,26 @@ We can also account for linearized self-fields. Assuming cylindrical symmetry of
 
 \begin{equation} \label{eq-poisson-self-field}
 \begin{aligned}
-    \nabla^2 \phi^{(self)}
-    = \frac{1}{r} \frac{\partial}{\partial r} \left( r \frac{\partial \phi^{(self)}}{\partial r} \right) 
-    + \frac{\partial^2 \phi^{(self)}}{\partial s^2} 
-    = -\frac{\rho}{\epsilon_0}.
+    \frac{1}{r} \frac{\partial}{\partial r} \left( r \frac{\partial V^{(self)}}{\partial r} \right) 
+    + \frac{\partial^2 V^{(self)}}{\partial s^2} 
+    = -\frac{\rho(r, z)}{\epsilon_0}.
 \end{aligned}
 \end{equation}
 
-Solving for $\partial \phi^{(self)} / \partial r$:
+Solving for $\partial V^{(self)} / \partial r$ relates the radial electric field to $z$-derivative of the potential:
 
 \begin{equation}
 \begin{aligned}
     E_r^{(self)} 
-    = -\frac{\partial \phi^{(self)}}{\partial r} 
-    = \frac{\lambda(r)}{2 \pi \epsilon_0 r} + \frac{r}{2} \frac{\partial^2 \phi^{(self)}}{\partial s^2},
+    = -\frac{\partial V^{(self)}}{\partial r} 
+    = \frac{\lambda(r)}{2 \pi \epsilon_0 r} + \frac{1}{2} \frac{\partial^2 V^{(self)}}{\partial s^2} r,
 \end{aligned}
 \end{equation}
 
 where $\lambda$ is the line-charge density:
 
 \begin{equation}
-\lambda(r) \equiv 2\pi \int_{0}^{r} \rho(\tilde{r}) \tilde{r} d\tilde{r},
+\lambda(r) \equiv \int_{0}^{r} 2 \pi \rho(\tilde{r}) \tilde{r} d\tilde{r},
 \end{equation}
 
 
@@ -617,24 +611,16 @@ where $\lambda$ is the line-charge density:
 
 For the $B_\theta^{(self)}$ component of the self-generated magnetic field, we use Ampere's law:
 
-\begin{equation}
-\begin{aligned}
-    2 \pi r B_\theta^{(self)} 
-    = \mu_0 \int_{0}^{r} 2 \pi \tilde{r} J_z(\tilde{r}) d\tilde{r}.
-    = \mu_0 \beta c \lambda(r)
-\end{aligned}
-\end{equation}
-
-Using the definition $\mu_0 \epsilon_0 = c^{-2}$, 
-
-\begin{equation}
-B_\theta^{(self)} = \frac{\beta}{c} \frac{\lambda(r)}{2 \pi \epsilon_0 r}.
-\end{equation}
-
+\begin{align}
+\oint \mathbf{B}^{(self)} \cdot d\mathbf{l} &= \mu_0 I_{enc} \\
+2 \pi r B_\theta^{(self)} 
+&= \mu_0 \int_{0}^{r} 2 \pi \tilde{r} J_z(\tilde{r}) d\tilde{r} = \mu_0 \lambda(r) v_z \\
+B_\theta^{(self)} &= \frac{\mu_0 \beta c \lambda(r)}{2 \pi r} = \frac{\beta}{c} \frac{\lambda(r)}{2 \pi \epsilon_0 r}.
+\end{align}
 
 ---
 
-Including the linear self fields in the paraxial limit adds a driving term to the right hand side:
+Including the linear self fields adds a driving term to the right hand side:
 
 \begin{equation}
 \label{eq-paraxial-sc}
