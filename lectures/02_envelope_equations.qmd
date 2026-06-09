@@ -605,7 +605,7 @@ Assuming cylindrical symmetry of the beam, the Poisson equation for the self-gen
 \begin{aligned}
     \frac{1}{r} \frac{\partial}{\partial r} \left( r \frac{\partial \phi^{(self)}}{\partial r} \right) 
     + \frac{\partial^2 \phi^{(self)}}{\partial s^2} 
-    = -\frac{\rho(r, z)}{\epsilon_0}.
+    = -\frac{\rho(r)}{\epsilon_0}.
 \end{aligned}
 \end{equation}
 
@@ -615,14 +615,14 @@ Solving for $\partial \phi^{(self)} / \partial r$ relates the radial electric fi
 \begin{aligned}
     E_r^{(self)}
     = -\frac{\partial \phi^{(self)}}{\partial r} 
-    = \frac{\lambda(r, z)}{2 \pi \epsilon_0 r} + \frac{1}{2} \frac{\partial^2 \phi^{(self)}}{\partial z^2} r,
+    = \frac{\lambda(r)}{2 \pi \epsilon_0 r} + \frac{1}{2} \frac{\partial^2 \phi^{(self)}}{\partial z^2} r,
 \end{aligned}
 \end{equation}
 
 where $\lambda$ is the line-charge density,
 
 \begin{equation}
-\lambda(r, z) \equiv \int_{0}^{r} 2 \pi \rho(\tilde{r}, z) \tilde{r} d\tilde{r}.
+\lambda(r) \equiv \int_{0}^{r} 2 \pi \rho(\tilde{r}) \tilde{r} d\tilde{r}.
 \end{equation}
 
 Above, it is assumed that $\partial^2 \phi^{(self)} / \partial z^2$ has no dependence on $r$ (keep lowest-order term).
@@ -635,8 +635,8 @@ For the $\theta$ component of the self-generated magnetic field, use Ampere's la
 \begin{align}
 \oint \mathbf{B}^{(self)} \cdot d\mathbf{l} &= \mu_0 I_{enc} \\
 2 \pi r B_\theta^{(self)} 
-&= \mu_0 \int_{0}^{r} 2 \pi \tilde{r} J_z(\tilde{r}, z) d\tilde{r} = \mu_0 \lambda(r, z) v_z \\
-B_\theta^{(self)} &= \frac{\mu_0 \beta c \lambda(r, z)}{2 \pi r} = \frac{\beta}{c} \frac{\lambda(r, z)}{2 \pi \epsilon_0 r}.
+&= \mu_0 \int_{0}^{r} 2 \pi \tilde{r} J_z(\tilde{r}) d\tilde{r} = \mu_0 \lambda(r) v_z \\
+B_\theta^{(self)} &= \frac{\mu_0 \beta c \lambda(r)}{2 \pi r} = \frac{\beta}{c} \frac{\lambda(r)}{2 \pi \epsilon_0 r}.
 \end{align}
 
 
@@ -807,43 +807,28 @@ To evaluate $d\langle{g}\rangle/ds$, we can evaluate $dg/ds$ and then perform th
 ## Evolution of second moments
 
 
-Define root-mean-square (rms) radius $\tilde{r}$:
-
-\begin{equation}
-\tilde{r} \equiv \sqrt{\langle r^2 \rangle} .
-\end{equation}
+Define the root-mean-square (rms) radius $\tilde{r} \equiv \sqrt{\langle r^2 \rangle}$.
 
 Evaluate $\tilde{r}'$:
 
 \begin{equation}
 \begin{aligned}
-\tilde{r}^2 &= \langle r^2 \rangle \\
 \frac{d}{ds} \tilde{r}^2 &= \frac{d}{ds} \langle r^2 \rangle \\
-2 \tilde{r} \tilde{r}' &= 2 \langle rr' \rangle \\
 \tilde{r}' &= \frac{\langle rr' \rangle}{\tilde{r}} .
 \end{aligned}
 \end{equation}
-
----
 
 Evaluate $\tilde{r}''$:
 
 \begin{equation}
 \begin{aligned}
-\tilde{r}'' 
-&= \frac{\langle{rr''}\rangle + \langle{r'r'}\rangle}{\tilde{r}} - \frac{ \langle{rr'}\rangle \tilde{r}'}{\tilde{r}^2} \\
-&= \frac{\langle rr'' \rangle}{\tilde{r}} + \frac{\langle{rr}\rangle \langle{r'r'}\rangle - \langle{rr'}\rangle \langle{rr'}\rangle}{\tilde{r}^3} \\
-&= \frac{\langle rr'' \rangle}{\tilde{r}} + \frac{\varepsilon_r}{\tilde{r}^3} ,
+\tilde{r}'' &= \frac{\langle{rr''}\rangle + \langle{r'r'}\rangle}{\tilde{r}} - \frac{ \langle{rr'}\rangle \tilde{r}'}{\tilde{r}^2} \\
+\tilde{r}'' &= \frac{\langle rr'' \rangle}{\tilde{r}} + \frac{\langle{rr}\rangle \langle{r'r'}\rangle - \langle{rr'}\rangle \langle{rr'}\rangle}{\tilde{r}^3} .
 \end{aligned}
 \end{equation}
 
-where we have defined the *rms radial emittance* $\varepsilon_r$:
-
-\begin{equation}
-\varepsilon_r \equiv \langle{rr}\rangle \langle{r'r'}\rangle - \langle{rr'}\rangle \langle{rr'}\rangle .
-\end{equation}
-
 What is $\langle r r'' \rangle$ ?
+
 
 
 ## Evaluation of $\langle r r'' \rangle$
@@ -852,61 +837,106 @@ Return to the paraxial ray equation for the radius $r$ (including linear self-fi
 
 \begin{equation}
 \begin{aligned}
-\boxed{
 r''
 + {\frac{(\gamma\beta)'}{(\gamma\beta)} r'}
 + \left( \frac{\gamma''}{2 \gamma \beta^2} \right) r
 + \left( \frac{\omega_c}{2\gamma \beta c} \right)^2 r
 - \left( \frac{p_\theta}{\gamma \beta m c} \right)^2 \frac{1}{r^3}
-= \frac{q}{m c^2 \beta^2 \gamma^3} \frac{\lambda(r)}{2 \pi \epsilon_0 r}
-}
+- \frac{q}{m c^2 \beta^2 \gamma^3} \frac{\lambda(r)}{2 \pi \epsilon_0 r} 
+= 0 .
 \end{aligned}
 \end{equation}
 
+Rewrite as:
+
+\begin{equation}
+\begin{aligned}
+r''
++ {\frac{(\gamma\beta)'}{(\gamma\beta)} r'}
++ \left( \frac{\gamma''}{2 \gamma \beta^2} \right) r
+- \frac{\omega_c \theta' r}{\gamma \beta c}
+- \theta'^2 r
+- \frac{q}{m c^2 \beta^2 \gamma^3} \frac{\lambda(r)}{2 \pi \epsilon_0 r} 
+= 0.
+\end{aligned}
+\end{equation}
+
+Multiply by $r$ and take averages:
+
+\begin{multline}
+\langle{rr''}\rangle
++ \frac{(\gamma\beta)'}{(\gamma\beta)} \langle{rr'}\rangle
++ \left( \frac{\gamma''}{2 \gamma \beta^2} \right) \langle{r^2}\rangle
+- \frac{\omega_c}{\gamma \beta c} \langle{\theta' r^2}\rangle 
+- \langle{\theta'^2 r^2}\rangle
+- \frac{q}{m c^2 \beta^2 \gamma^3} \frac{\langle{\lambda(r)}\rangle}{2 \pi \epsilon_0} 
+= 0 .
+\end{multline}
 
 
 ---
 
-Inserting Eq. \eqref{eq-rrp} Eq. \eqref{eq-env-1} gives the following \textit{rms envelope equation}:
-[...]
+\begin{align}
+p_\theta &\equiv \gamma \beta m c r^2 \theta' + \frac{m \omega_c r^2}{2} 
+\\
+\langle p_\theta \rangle &= \gamma \beta m c \langle{r^2 \theta'}\rangle + \frac{m \omega_c \langle{r^2}\rangle}{2}
+\\
+\vdots 
+\\
+\frac{\omega_c}{\gamma \beta c} \langle{r^2 \theta'}\rangle &= 
+  \left( \frac{1}{\gamma\beta m c} \right)^2 \frac{\langle{p_\theta}\rangle^2}{\tilde{r}^2} 
+- \frac{\langle{r^2 \theta'}\rangle^2}{\tilde{r}^2} 
+- \left(\frac{\omega_c}{2 \gamma \beta c}\right)^2 \tilde{r}^2
+\end{align}
+
+
+---
 
 \begin{equation}
-\label{eq-env}
 \boxed{
-    r_b'' 
-    + \left( \frac{\gamma'}{\gamma\beta^2} \right) r_b' 
-    + \left( \frac{\gamma''}{2 \gamma\beta^2} \right) r_b
-    + \left( \frac{\omega_c}{2 \gamma \beta c} \right) r_b
-    - \left( \frac{2 \langle p_\theta \rangle}{\gamma \beta m c} \right)^2 \frac{1}{r_b^3}
-    - \frac{\varepsilon_r^2}{r_b^3} - \frac{Q}{r_b},
+\tilde{r}'' 
++ \frac{(\gamma \beta)'}{(\gamma\beta)} \tilde{r}'
++ \left( \frac{\gamma''}{2 \gamma \beta^2} \right) \tilde{r}
++ \left( \frac{\omega_c}{2 \gamma \beta c} \right)^2 \tilde{r}
+- \left( \frac{\langle p_\theta \rangle}{\gamma \beta m c} \right)^2 \frac{1}{\tilde{r}^3}
+- \frac{\varepsilon_r^2}{\tilde{r}^3}
+- \frac{Q}{\tilde{r}}
+= 0 
 }
 \end{equation}
 
-where $Q$ is the \textit{perveance}:
-
 \begin{equation}
-Q \equiv [\dots],
+Q \equiv \frac{1}{m c^2 \beta^2\gamma^3} \frac{q \langle \lambda(r) \rangle}{2\pi\epsilon_0}
 \end{equation}
 
-and $\varepsilon_r$ is the \textit{radial emittance}:
-
 \begin{equation}
-\begin{aligned}
-    \varepsilon_r^2
-    &\equiv
-    4 \left(
-        \langle r^2 \rangle \langle r'^2 \rangle - \langle rr' \rangle^2 + \langle r^2 \rangle \langle r^2 \theta'^2 \rangle - \langle r^2 \theta' \rangle^2
-    \right)
-    \\
-    \varepsilon_r^2 
-    &= \varepsilon_x^2 - 4 \langle r^2 \theta'\rangle^2
-    .
-\end{aligned}
+\varepsilon_r \equiv \sqrt{\langle{r^2}\rangle \langle{r'^2}\rangle - \langle{rr'}\rangle^2 + \langle{r^2}\rangle \langle{r^2 \theta'^2}\rangle - \langle{r^2 \theta'}\rangle^2}
 \end{equation}
+
+
 
 
 # Envelope equations for elliptically symmetric beams
 
+---
+
+Repeat the process in Cartesian coordinates. Envelope equations:
+
+\begin{align}
+\tilde{x} &= \sqrt{\langle{xx}\rangle} \\
+\tilde{x}' &= \frac{\langle{xx'}\rangle}{\tilde{x}} \\
+\tilde{x}'' 
+&= \frac{\langle{xx''}\rangle}{\tilde{x}} + \frac{\langle{xx}\rangle\langle{x'x'}\rangle - \langle{xx'}\rangle\langle{xx'}\rangle}{\tilde{x}^3} \\
+&= \frac{\langle{xx''}\rangle}{\tilde{x}} + \frac{\varepsilon_x^2}{\tilde{x}^3}
+\end{align}
+
+Equation of motion:
+
+
+\begin{align}
+\frac{d(\gamma m \dot{x})}{dt} &= q \left( E_x + \dot{y} B_z - \dot{z} B_y \right) , \\
+\frac{d(\gamma m \dot{y})}{dt} &= q \left( E_y + \dot{z} B_x - \dot{x} B_z \right) . \\
+\end{align}
 
 
 
