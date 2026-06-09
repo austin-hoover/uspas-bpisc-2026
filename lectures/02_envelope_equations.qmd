@@ -470,7 +470,7 @@ To first order in $r$ and ${r'}$, the external fields are:
 \begin{aligned}
 E_r^{(ext)} &\approx \frac{1}{2} \frac{\partial^2 V(z)}{\partial z^2} r , \\
 B_z^{(ext)} &\approx B(z) , \\
-B_\theta^{(ext)} &= 0 (\partial \phi_m / \partial \theta = 0) .
+B_\theta^{(ext)} &= 0 \quad (\text{since } \partial \phi_m / \partial \theta = 0) .
 \end{aligned}
 \end{equation}
 
@@ -488,7 +488,7 @@ q \left( \frac{1}{2} \frac{\partial^2 V(z)}{\partial z^2} r + r \dot{\theta} B(z
 
 ---
 
-Two more steps. First, use $z$ as independent variable: $dz = \beta c dt$. Using $' \equiv d/dz$ and dropping the $\approx$ symbol gives:
+Use $z$ as the independent variable: $dz = \beta c dt$. Using $' \equiv d/dz$ and dropping the $\approx$ symbol gives:
 
 \begin{equation}
 \beta c \frac{d\left( \gamma m \beta c r' \right)}{dz} - \gamma m r (\beta c \theta')^2 =
@@ -517,18 +517,13 @@ Now use the definition of the canonical angular momentum $p_\theta$ (Eq. \eqref{
     \\
     &= \frac{1}{\beta c} \frac{1}{\gamma m r^2} \left( p_\theta - \frac{q \psi(r)}{2 \pi} \right),
     \\
-    &= \frac{p_\theta}{\gamma \beta m c r^2} - \frac{\omega_c}{2 \gamma \beta c},
+    &= \frac{p_\theta}{\gamma \beta m c r^2} - \frac{\omega_c}{2 \gamma \beta c}.
 \end{aligned}
 \end{equation}
 
-where we have defined the \textit{cyclotron frequency}:
+We have defined the \textit{cyclotron frequency} $\omega_c \equiv \frac{qB}{m}$.
 
-\begin{equation}
-\label{eq-cyclotron-frequency}
-\omega_c \equiv \frac{qB}{m} .
-\end{equation}
-
-Substitution of Eq. \eqref{eq-theta-prime} into Eq. \eqref{eq-rpp} gives:
+Substitute Eq. \eqref{eq-theta-prime} into Eq. \eqref{eq-rpp}:
 
 \begin{equation}
     r'' + \frac{(\gamma\beta)'}{\gamma\beta} r
@@ -547,7 +542,7 @@ The rate of change in the particle energy is given by
 \frac{d (\gamma m c^2)}{dt} &= q \mathbf{E} \cdot \mathbf{v} .
 \end{align}
 
-Rearrange and switch to $z$ as independent variable. In the paraxial limit:
+Rearrange and switch from $t$ to $z$. In the paraxial limit:
 
 \begin{align}
 \gamma' 
@@ -580,61 +575,91 @@ r''
 \end{aligned}
 \end{equation}
 
-(i) inertial term; (ii) accelerative damping; $E_r$ from converging field lines; (iii) solenoidal focusing ($v_\theta B_z$, part of centrifugal term); (iv) centrifugal defocusing.
+Terms in order: (i) inertial term; (ii) accelerative damping; (iii) $E_r$ from converging field lines; (iv) solenoidal focusing ($v_\theta B_z$, part of centrifugal term); (v) centrifugal defocusing.
+
+
+## Addition of self-generated fields
+
+We can also account for linearized self-fields $\mathbf{E}^{(self)}$ and $\mathbf{B}^{(self)}$. Adding these self-generated fields to the radial equation of motion gives:
+
+\begin{equation}
+r'' + \frac{(\gamma\beta)'}{(\gamma\beta)} - r\theta'^2 
+= 
+\frac{q}{m c^2 \gamma \beta^2} 
+\left( 
+  \frac{1}{2} V''(z) r + \beta c \theta' B(z) r 
+  + E_r^{(self)} - \beta c B_{\theta}^{(self)} 
+\right) .
+\end{equation}
+
+So we only need the $r$ component of the self-generated electric field and the $\theta$ component of the self-generated magnetic field. We will ignore the $B_z^{(self)}$ term in the paraxial limit.
+
+Recall that $V(z) \equiv \phi(0, z)$ is the external potential $\phi$ on-axis, and to linear order $E_r(r, z) \approx V''(z) r / 2$. Similarly, $B(z) \equiv B_z(0, z)$ is the external magnetic field on-axis, and to linear order $B_z(r, z) \approx B(z)$.
 
 
 ---
 
-We can also account for linearized self-fields. Assuming cylindrical symmetry of the beam, the Poisson equation for the electric field is:
+Assuming cylindrical symmetry of the beam, the Poisson equation for the self-generated electric potential is:
 
 \begin{equation} \label{eq-poisson-self-field}
 \begin{aligned}
-    \nabla^2 \phi^{(self)}
-    = \frac{1}{r} \frac{\partial}{\partial r} \left( r \frac{\partial \phi^{(self)}}{\partial r} \right) 
+    \frac{1}{r} \frac{\partial}{\partial r} \left( r \frac{\partial \phi^{(self)}}{\partial r} \right) 
     + \frac{\partial^2 \phi^{(self)}}{\partial s^2} 
-    = -\frac{\rho}{\epsilon_0}.
+    = -\frac{\rho(r)}{\epsilon_0}.
 \end{aligned}
 \end{equation}
 
-Solving for $\partial \phi^{(self)} / \partial r$:
+Solving for $\partial \phi^{(self)} / \partial r$ relates the radial electric field to $z$-derivative of the potential:
 
 \begin{equation}
 \begin{aligned}
-    E_r^{(self)} 
+    E_r^{(self)}
     = -\frac{\partial \phi^{(self)}}{\partial r} 
-    = \frac{\lambda(r)}{2 \pi \epsilon_0 r} + \frac{r}{2} \frac{\partial^2 \phi^{(self)}}{\partial s^2},
+    = \frac{\lambda(r)}{2 \pi \epsilon_0 r} + \frac{1}{2} \frac{\partial^2 \phi^{(self)}}{\partial z^2} r,
 \end{aligned}
 \end{equation}
 
-where $\lambda$ is the line-charge density:
+where $\lambda$ is the line-charge density,
 
 \begin{equation}
-\lambda(r) \equiv 2\pi \int_{0}^{r} \rho(\tilde{r}) \tilde{r} d\tilde{r},
+\lambda(r) \equiv \int_{0}^{r} 2 \pi \rho(\tilde{r}) \tilde{r} d\tilde{r}.
 \end{equation}
+
+Above, it is assumed that $\partial^2 \phi^{(self)} / \partial z^2$ has no dependence on $r$ (keep lowest-order term).
 
 
 ---
 
-For the $B_\theta^{(self)}$ component of the self-generated magnetic field, we use Ampere's law:
+For the $\theta$ component of the self-generated magnetic field, use Ampere's law:
+
+\begin{align}
+\oint \mathbf{B}^{(self)} \cdot d\mathbf{l} &= \mu_0 I_{enc} \\
+2 \pi r B_\theta^{(self)} 
+&= \mu_0 \int_{0}^{r} 2 \pi \tilde{r} J_z(\tilde{r}) d\tilde{r} = \mu_0 \lambda(r) v_z \\
+B_\theta^{(self)} &= \frac{\mu_0 \beta c \lambda(r)}{2 \pi r} = \frac{\beta}{c} \frac{\lambda(r)}{2 \pi \epsilon_0 r}.
+\end{align}
+
+
+---
+
+We can now evaluate $E_r^{(self)} - \beta c B_\theta^{(self)}$:
 
 \begin{equation}
 \begin{aligned}
-    2 \pi r B_\theta^{(self)} 
-    = \mu_0 \int_{0}^{r} 2 \pi \tilde{r} J_z(\tilde{r}) d\tilde{r}.
-    = \mu_0 \beta c \lambda(r)
+E_r^{(self)} - \beta c B_\theta^{(self)}
+&= \frac{1}{\gamma^2} \frac{\lambda(r)}{2 \pi \epsilon_0 r} + \frac{1}{2} \frac{\partial^2 \phi^{(self)}}{\partial z^2} r,
 \end{aligned}
 \end{equation}
 
-Using the definition $\mu_0 \epsilon_0 = c^{-2}$, 
+We can also repeat the approximation of $\gamma''$ with the inclusion of the self-generated electric field.
 
 \begin{equation}
-B_\theta^{(self)} = \frac{\beta}{c} \frac{\lambda(r)}{2 \pi \epsilon_0 r}.
+\begin{aligned}
+\gamma'' &\approx -\frac{q}{mc^2} \frac{\partial^2}{\partial z^2} \left( V + \phi^{(self)} \right) .
+\end{aligned}
 \end{equation}
 
-
----
-
-Including the linear self fields in the paraxial limit adds a driving term to the right hand side:
+The result is a driving term on the right side of the paraxial ray equation:
 
 \begin{equation}
 \label{eq-paraxial-sc}
@@ -651,67 +676,49 @@ r''
 \end{equation}
 
 
+
+
 # Envelope equations for axially symmetric beams
 
----
+## Time-evolution of expected value
 
-The strategy in this section will be to compute the second moments of the transverse distribution function $f(x, x', y, y', s)$. For axially symmetric beams, the Vlasov equation will generate a set of differential equations for the evolution of the second moments such as $\langle rr \rangle$, $\langle rr' \rangle$, $\langle rr'' \rangle$, etc. Combining with the paraxial ray equation will generate a set of ordinary differential equations (ODEs) for the evolution of the beam \textit{envelope} radius $r_b = \sqrt{2 \langle rr \rangle}$. 
-
-Start with the Vlasov equation:
+Let $g(\mathbf{x}, \mathbf{x}')$ be any function of the phase space coordinates. Use brackets to indicate the expected value of $g$ under probability distribution $f$:
 
 \begin{equation}
-\label{eq-vlasov}
-\frac{\partial f}{\partial s}
-+ \mathbf{x}' \cdot \frac{\partial f}{\partial \mathbf{x}}
-+ \mathbf{x}'' \cdot \frac{\partial f}{\partial \mathbf{x}'}
-= 0,
+\langle g \rangle \equiv \iint g(\mathbf{x}, \mathbf{x}') f(\mathbf{x}, \mathbf{x'}, s) d\mathbf{x} d\mathbf{x}'.
 \end{equation}
 
-where $\mathbf{x} = (x, y)$. 
-
-
----
-
-Multiply the Vlasov equation by $g(\mathbf{x}, \mathbf{x}')$, an arbitrary function of the phase space coordinates, and integrate over all phase space space:
+What is the time-evolution of $\langle g \rangle$?
 
 \begin{equation}
-\label{eq-vlasov-g-int}
-\iint
-\left[
-    g \frac{\partial f}{\partial s}
-    + g \mathbf{x}' \cdot \frac{\partial f}{\partial \mathbf{x}}
-    + g \mathbf{x}'' \cdot \frac{\partial f}{\partial \mathbf{x}'}
-\right] 
-d\mathbf{x} d\mathbf{x}'
-= 0.
+\frac{d \langle g \rangle}{ds} = \frac{d}{ds} \iint g(\mathbf{x}, \mathbf{x}') f(\mathbf{x}, \mathbf{x'}, s) d\mathbf{x} d\mathbf{x}'
 \end{equation}
 
 
 ---
-
-Introduce bracket notation to indicate the expected value under the distribution; e.g.,
-
-\begin{equation}
-\langle g \rangle \equiv \iint g f(\mathbf{x}, \mathbf{x'}) d\mathbf{x} d\mathbf{x}'.
-\end{equation}
-
-The first term is equivalent to $d\langle g \rangle /ds$:
-
-\begin{equation}
-\iint g(\mathbf{x}, \mathbf{x}') \frac{\partial f(\mathbf{x}, \mathbf{x}', s)}{\partial s} d\mathbf{x}d\mathbf{x}'
-= \frac{d \langle g \rangle}{d s}.
-\end{equation}
-
-[[Shouldn't this be $\partial \langle g \rangle / \partial s$ instead of $d \langle g \rangle / ds$?]]{style="color: red;"}
-
-
----
-
-Since the distribution function vanishes at the integration boundary, we can use integration by parts to flip the gradients from $f$ to $g$ in the next two terms.
 
 \begin{equation}
 \begin{aligned}
-    \iint \left[ g \mathbf{x}' \cdot \frac{\partial f}{\partial \mathbf{x}} \right] d\mathbf{x}d\mathbf{x}'
+\frac{d \langle g \rangle}{ds} 
+&= \frac{d}{ds} \iint g(\mathbf{x}, \mathbf{x}') f(\mathbf{x}, \mathbf{x'}) d\mathbf{x} d\mathbf{x}' \\
+&= \iint g(\mathbf{x}, \mathbf{x}') \frac{\partial f(\mathbf{x}, \mathbf{x}', s)}{\partial s} d\mathbf{x} d\mathbf{x}' \quad \textit{(Leibniz Rule)} \\
+&= \iint g(\mathbf{x}, \mathbf{x}') 
+\left[
+  -\mathbf{x}' \cdot \frac{\partial f}{\partial \mathbf{x}} 
+  -\mathbf{x}'' \cdot \frac{\partial f}{\partial \mathbf{x}'} 
+\right] 
+d\mathbf{x} d\mathbf{x}' \quad \textit{(Vlasov equation)} .
+\end{aligned}
+\end{equation}
+
+
+---
+
+Since $f$ vanishes at the integration boundary ($\infty$), we can use integration by parts to flip the gradients from $f$ to $g$: 
+
+\begin{equation}
+\begin{aligned}
+    \iint \left[ \mathbf{x}' \cdot \frac{\partial f}{\partial \mathbf{x}} g \right] d\mathbf{x}d\mathbf{x}'
     &= -\iint \left[ \mathbf{x}' \cdot \frac{\partial g}{\partial \mathbf{x}} f \right] d\mathbf{x}d\mathbf{x}'
     \\
     &= -\langle \mathbf{x}' \cdot {\partial g}/{\partial \mathbf{x}} \rangle.
@@ -720,7 +727,7 @@ Since the distribution function vanishes at the integration boundary, we can use
 
 \begin{equation}
 \begin{aligned}
-    \iint \left[ g \mathbf{x}'' \cdot \frac{\partial f}{\partial \mathbf{x}'} \right] d\mathbf{x}d\mathbf{x}'
+    \iint \left[ \mathbf{x}'' \cdot \frac{\partial f}{\partial \mathbf{x}'} g \right] d\mathbf{x}d\mathbf{x}'
     &= -\iint \left[ \mathbf{x}'' \cdot \frac{\partial g}{\partial \mathbf{x}'} f \right] d\mathbf{x}d\mathbf{x}'
     \\
     &= -\langle \mathbf{x}'' \cdot {\partial g}/{\partial \mathbf{x}'} \rangle.
@@ -730,111 +737,206 @@ Since the distribution function vanishes at the integration boundary, we can use
 
 ---
 
-Eq. \eqref{eq-vlasov-g-int} then becomes:
+Integration by parts (one-dimensional):
 
 \begin{equation}
-\frac{d \langle g \rangle}{d s}
-= \langle \mathbf{x}' \cdot {\partial g}/{\partial \mathbf{x}} \rangle
-+ \langle \mathbf{x}'' \cdot {\partial g}/{\partial \mathbf{x}'} \rangle .
+\int_{a}^{b} f(x) g'(x) dx = \left[ f(x) g(x) \right]_{a}^{b} - \int_{a}^{b} f'(x) g(x) dx .
 \end{equation}
-
-From the definition of the total derivative with respect to $s$:
-
-\begin{equation}
-\frac{dg}{ds}
-= \mathbf{x}' \cdot {\partial g}/{\partial \mathbf{x}}
-+ \mathbf{x}'' \cdot {\partial g}/{\partial \mathbf{x}'}.
-\end{equation}
-
-Therefore, the time-derivative of the average $\langle g \rangle$ is the same as the average of the time-derivative $dg/dt$:
-
-\begin{equation}
-d \langle g \rangle / ds = \langle g' \rangle.
-\end{equation}
-
-[[Is this not trivial?]]{style="color: red;"}
-
-
---- 
-
-Define the root-mean-square (rms) beam radius $r_b$:
-
-\begin{equation}
-\label{eq-radius}
-r_b \equiv \sqrt{2\langle rr \rangle}.
-\end{equation}
-
-We will also call $r_b$ the \textit{envelope radius}. Eq. \eqref{eq-radius}, the time-evolution of the rms beam radius is:
-
-\begin{equation}
-\label{eq-env-1}
-r_b'' = \frac{2 \langle rr'' \rangle}{r_b}
-+ \frac{4 \langle rr \rangle \langle r'r' \rangle - 4 \langle rr' \rangle^2 }{r_b^3}
-.
-\end{equation}
-
 
 ---
-
-Evaluate $\langle rr'' \rangle$: [...]
-
-\begin{multline} \label{eq:rpp}
-\langle rr'' \rangle
-= \frac{\gamma'}{\beta^2 \gamma} \langle rr' \rangle
-+ \frac{\gamma''}{2 \gamma \beta^2} \langle rr \rangle
-- \frac{q}{mc^2 \beta^2 \gamma^3} \frac{\langle \lambda(r) \rangle}{2\pi\epsilon_0}
-\\
-+ \left( \frac{\langle p_\theta \rangle}{\gamma\beta mc} \right)^2 \frac{1}{\langle r^2 \rangle}
-- \left( \frac{\omega_c}{2 \gamma \beta c} \right)^2 \langle rr \rangle
-- \frac{\langle r^2 \theta' \rangle^2}{\langle rr \rangle}
-+ \langle r^2 \theta'^2 \rangle
-.
-\end{multline}
-
-
-
----
-
-Inserting Eq. \eqref{eq-rrp} Eq. \eqref{eq-env-1} gives the following \textit{rms envelope equation}:
-[...]
-
-\begin{equation}
-\label{eq-env}
-\boxed{
-    r_b'' 
-    + \left( \frac{\gamma'}{\gamma\beta^2} \right) r_b' 
-    + \left( \frac{\gamma''}{2 \gamma\beta^2} \right) r_b
-    + \left( \frac{\omega_c}{2 \gamma \beta c} \right) r_b
-    - \left( \frac{2 \langle p_\theta \rangle}{\gamma \beta m c} \right)^2 \frac{1}{r_b^3}
-    - \frac{\varepsilon_r^2}{r_b^3} - \frac{Q}{r_b},
-}
-\end{equation}
-
-where $Q$ is the \textit{perveance}:
-
-\begin{equation}
-Q \equiv [\dots],
-\end{equation}
-
-and $\varepsilon_r$ is the \textit{radial emittance}:
 
 \begin{equation}
 \begin{aligned}
-    \varepsilon_r^2
-    &\equiv
-    4 \left(
-        \langle r^2 \rangle \langle r'^2 \rangle - \langle rr' \rangle^2 + \langle r^2 \rangle \langle r^2 \theta'^2 \rangle - \langle r^2 \theta' \rangle^2
-    \right)
-    \\
-    \varepsilon_r^2 
-    &= \varepsilon_x^2 - 4 \langle r^2 \theta'\rangle^2
-    .
+. 
+&= \iint g(\mathbf{x}, \mathbf{x}') \mathbf{x}' \cdot \frac{\partial f(\mathbf{x}, \mathbf{x}', s)}{\partial \mathbf{x}} d\mathbf{x} d\mathbf{x}' \\
+&= 
+\iiiint g(x, x', y, y') 
+\left[ 
+  x' \frac{\partial}{\partial x} + y' \frac{\partial}{\partial y} 
+\right] 
+f(x, x', y, y', s) dx dx' dy dy' 
+\\
+&= 
+  \iiint x' \left[ \int g \frac{\partial f}{\partial x} dx \right] dx' dy dy' 
++ \iiint y' \left[ \int g \frac{\partial f}{\partial y} dy \right] dx dx' dy'
+\\
+&= - \iiiint f \left[ x' \frac{\partial g}{\partial x} + x' \frac{\partial g}{\partial x} \right] dx dx' dy dy' \\
+&= - \iint f(\mathbf{x}, \mathbf{x}', s) \left[ \mathbf{x}' \cdot \frac{\partial g(\mathbf{x}, \mathbf{x}')}{\partial \mathbf{x}} \right] d\mathbf{x} d\mathbf{x}' \\
+&= - \langle \mathbf{x}'  \cdot \frac{\partial g}{\partial \mathbf{x}} \rangle .
 \end{aligned}
 \end{equation}
 
 
+---
+
+We can then write $d \langle g \rangle / ds$ as:
+
+\begin{equation}
+\frac{d \langle g \rangle}{d s}
+= \langle \mathbf{x}'  \cdot \frac{\partial g}{\partial \mathbf{x} } \rangle
++ \langle \mathbf{x}'' \cdot \frac{\partial g}{\partial \mathbf{x}'} \rangle .
+\end{equation}
+
+From the definition of the total derivative:
+
+\begin{equation}
+\frac{dg}{ds}
+= \mathbf{x}'  \cdot \frac{\partial g}{\partial \mathbf{x}}
++ \mathbf{x}'' \cdot \frac{\partial g}{\partial \mathbf{x}'}.
+\end{equation}
+
+Therefore, the time-derivative of the expected value is the same as the expected value of the time-derivative:
+
+\begin{equation}
+\frac{d \langle g \rangle} {ds} = \langle \frac{dg}{ds} \rangle.
+\end{equation}
+
+
+---
+
+To evaluate $d\langle{g}\rangle/ds$, we can evaluate $dg/ds$ and then perform the averaging. For example:
+
+\begin{align}
+\frac{d}{ds} \langle x x  \rangle &= 2 \langle xx' \rangle \\
+\frac{d}{ds} \langle x'x' \rangle &= 2 \langle x'x'' \rangle \\
+\frac{d}{ds} \langle x x' \rangle &= \langle xx'' \rangle + \langle x'x' \rangle \\
+\vdots
+\end{align}
+
+
+## Evolution of second moments
+
+
+Define the root-mean-square (rms) radius $\tilde{r} \equiv \sqrt{\langle r^2 \rangle}$.
+
+Evaluate $\tilde{r}'$:
+
+\begin{equation}
+\begin{aligned}
+\frac{d}{ds} \tilde{r}^2 &= \frac{d}{ds} \langle r^2 \rangle \\
+\tilde{r}' &= \frac{\langle rr' \rangle}{\tilde{r}} .
+\end{aligned}
+\end{equation}
+
+Evaluate $\tilde{r}''$:
+
+\begin{equation}
+\begin{aligned}
+\tilde{r}'' &= \frac{\langle{rr''}\rangle + \langle{r'r'}\rangle}{\tilde{r}} - \frac{ \langle{rr'}\rangle \tilde{r}'}{\tilde{r}^2} \\
+\tilde{r}'' &= \frac{\langle rr'' \rangle}{\tilde{r}} + \frac{\langle{rr}\rangle \langle{r'r'}\rangle - \langle{rr'}\rangle \langle{rr'}\rangle}{\tilde{r}^3} .
+\end{aligned}
+\end{equation}
+
+What is $\langle r r'' \rangle$ ?
+
+
+
+## Evaluation of $\langle r r'' \rangle$
+
+Return to the paraxial ray equation for the radius $r$ (including linear self-fields):
+
+\begin{equation}
+\begin{aligned}
+r''
++ {\frac{(\gamma\beta)'}{(\gamma\beta)} r'}
++ \left( \frac{\gamma''}{2 \gamma \beta^2} \right) r
++ \left( \frac{\omega_c}{2\gamma \beta c} \right)^2 r
+- \left( \frac{p_\theta}{\gamma \beta m c} \right)^2 \frac{1}{r^3}
+- \frac{q}{m c^2 \beta^2 \gamma^3} \frac{\lambda(r)}{2 \pi \epsilon_0 r} 
+= 0 .
+\end{aligned}
+\end{equation}
+
+Rewrite as:
+
+\begin{equation}
+\begin{aligned}
+r''
++ {\frac{(\gamma\beta)'}{(\gamma\beta)} r'}
++ \left( \frac{\gamma''}{2 \gamma \beta^2} \right) r
+- \frac{\omega_c \theta' r}{\gamma \beta c}
+- \theta'^2 r
+- \frac{q}{m c^2 \beta^2 \gamma^3} \frac{\lambda(r)}{2 \pi \epsilon_0 r} 
+= 0.
+\end{aligned}
+\end{equation}
+
+Multiply by $r$ and take averages:
+
+\begin{multline}
+\langle{rr''}\rangle
++ \frac{(\gamma\beta)'}{(\gamma\beta)} \langle{rr'}\rangle
++ \left( \frac{\gamma''}{2 \gamma \beta^2} \right) \langle{r^2}\rangle
+- \frac{\omega_c}{\gamma \beta c} \langle{\theta' r^2}\rangle 
+- \langle{\theta'^2 r^2}\rangle
+- \frac{q}{m c^2 \beta^2 \gamma^3} \frac{\langle{\lambda(r)}\rangle}{2 \pi \epsilon_0} 
+= 0 .
+\end{multline}
+
+
+---
+
+\begin{align}
+p_\theta &\equiv \gamma \beta m c r^2 \theta' + \frac{m \omega_c r^2}{2} 
+\\
+\langle p_\theta \rangle &= \gamma \beta m c \langle{r^2 \theta'}\rangle + \frac{m \omega_c \langle{r^2}\rangle}{2}
+\\
+\vdots 
+\\
+\frac{\omega_c}{\gamma \beta c} \langle{r^2 \theta'}\rangle &= 
+  \left( \frac{1}{\gamma\beta m c} \right)^2 \frac{\langle{p_\theta}\rangle^2}{\tilde{r}^2} 
+- \frac{\langle{r^2 \theta'}\rangle^2}{\tilde{r}^2} 
+- \left(\frac{\omega_c}{2 \gamma \beta c}\right)^2 \tilde{r}^2
+\end{align}
+
+
+---
+
+\begin{equation}
+\boxed{
+\tilde{r}'' 
++ \frac{(\gamma \beta)'}{(\gamma\beta)} \tilde{r}'
++ \left( \frac{\gamma''}{2 \gamma \beta^2} \right) \tilde{r}
++ \left( \frac{\omega_c}{2 \gamma \beta c} \right)^2 \tilde{r}
+- \left( \frac{\langle p_\theta \rangle}{\gamma \beta m c} \right)^2 \frac{1}{\tilde{r}^3}
+- \frac{\varepsilon_r^2}{\tilde{r}^3}
+- \frac{Q}{\tilde{r}}
+= 0 
+}
+\end{equation}
+
+\begin{equation}
+Q \equiv \frac{1}{m c^2 \beta^2\gamma^3} \frac{q \langle \lambda(r) \rangle}{2\pi\epsilon_0}
+\end{equation}
+
+\begin{equation}
+\varepsilon_r \equiv \sqrt{\langle{r^2}\rangle \langle{r'^2}\rangle - \langle{rr'}\rangle^2 + \langle{r^2}\rangle \langle{r^2 \theta'^2}\rangle - \langle{r^2 \theta'}\rangle^2}
+\end{equation}
+
+
+
+
 # Envelope equations for elliptically symmetric beams
 
+---
+
+Repeat the process in Cartesian coordinates. Envelope equations:
+
+\begin{align}
+\tilde{x} &= \sqrt{\langle{xx}\rangle} \\
+\tilde{x}' &= \frac{\langle{xx'}\rangle}{\tilde{x}} \\
+\tilde{x}'' 
+&= \frac{\langle{xx''}\rangle}{\tilde{x}} + \frac{\langle{xx}\rangle\langle{x'x'}\rangle - \langle{xx'}\rangle\langle{xx'}\rangle}{\tilde{x}^3} \\
+&= \frac{\langle{xx''}\rangle}{\tilde{x}} + \frac{\varepsilon_x^2}{\tilde{x}^3}
+\end{align}
+
+Equation of motion:
+
+
+\begin{align}
+\frac{d(\gamma m \dot{x})}{dt} &= q \left( E_x + \dot{y} B_z - \dot{z} B_y \right) , \\
+\frac{d(\gamma m \dot{y})}{dt} &= q \left( E_y + \dot{z} B_x - \dot{x} B_z \right) . \\
+\end{align}
 
 
 
