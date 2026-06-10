@@ -517,7 +517,7 @@ Now use the definition of the canonical angular momentum $p_\theta$ (Eq. \eqref{
     \\
     &= \frac{1}{\beta c} \frac{1}{\gamma m r^2} \left( p_\theta - \frac{q \psi(r)}{2 \pi} \right),
     \\
-    &= \frac{p_\theta}{\gamma \beta m c r^2} - \frac{\omega_c}{2 \gamma \beta c}.
+    &= \frac{p_\theta}{\gamma m \beta c r^2} - \frac{\omega_c}{2 \gamma \beta c}.
 \end{aligned}
 \end{equation}
 
@@ -528,7 +528,7 @@ Substitute Eq. \eqref{eq-theta-prime} into Eq. \eqref{eq-rpp}:
 \begin{equation}
     r'' + \frac{(\gamma\beta)'}{\gamma\beta} r
     + \left( \frac{\omega_c}{2 \gamma \beta c} \right)^2 r
-    - \left(\frac{p_\theta}{\gamma \beta m c} \right)^2 \frac{1}{r^3}
+    - \left(\frac{p_\theta}{\gamma m \beta c} \right)^2 \frac{1}{r^3}
     =
     \frac{q}{\gamma m \beta^2 c^2} \frac{1}{2} V''(z) r
 \end{equation}
@@ -569,7 +569,7 @@ r''
 + {\frac{(\gamma\beta)'}{(\gamma\beta)} r'}
 + \left( \frac{\gamma''}{2 \gamma \beta^2} \right) r
 + \left( \frac{\omega_c}{2\gamma \beta c} \right)^2 r
-- \left( \frac{p_\theta}{\gamma \beta m c} \right)^2 \frac{1}{r^3}
+- \left( \frac{p_\theta}{\gamma m \beta c} \right)^2 \frac{1}{r^3}
 = 0 .
 }
 \end{aligned}
@@ -669,7 +669,7 @@ r''
 + {\frac{(\gamma\beta)'}{(\gamma\beta)} r'}
 + \left( \frac{\gamma''}{2 \gamma \beta^2} \right) r
 + \left( \frac{\omega_c}{2\gamma \beta c} \right)^2 r
-- \left( \frac{p_\theta}{\gamma \beta m c} \right)^2 \frac{1}{r^3}
+- \left( \frac{p_\theta}{\gamma m \beta c} \right)^2 \frac{1}{r^3}
 = \frac{q}{m c^2 \beta^2 \gamma^3} \frac{\lambda(r)}{2 \pi \epsilon_0 r}
 }
 \end{aligned}
@@ -841,7 +841,7 @@ r''
 + {\frac{(\gamma\beta)'}{(\gamma\beta)} r'}
 + \left( \frac{\gamma''}{2 \gamma \beta^2} \right) r
 + \left( \frac{\omega_c}{2\gamma \beta c} \right)^2 r
-- \left( \frac{p_\theta}{\gamma \beta m c} \right)^2 \frac{1}{r^3}
+- \left( \frac{p_\theta}{\gamma m \beta c} \right)^2 \frac{1}{r^3}
 - \frac{q}{m c^2 \beta^2 \gamma^3} \frac{\lambda(r)}{2 \pi \epsilon_0 r} 
 = 0 .
 \end{aligned}
@@ -877,9 +877,9 @@ Multiply by $r$ and take averages:
 ---
 
 \begin{align}
-p_\theta &\equiv \gamma \beta m c r^2 \theta' + \frac{m \omega_c r^2}{2} 
+p_\theta &\equiv \gamma m \beta c r^2 \theta' + \frac{m \omega_c r^2}{2} 
 \\
-\langle p_\theta \rangle &= \gamma \beta m c \langle{r^2 \theta'}\rangle + \frac{m \omega_c \langle{r^2}\rangle}{2}
+\langle p_\theta \rangle &= \gamma m \beta c \langle{r^2 \theta'}\rangle + \frac{m \omega_c \langle{r^2}\rangle}{2}
 \\
 \vdots 
 \\
@@ -898,7 +898,7 @@ p_\theta &\equiv \gamma \beta m c r^2 \theta' + \frac{m \omega_c r^2}{2}
 + \frac{(\gamma \beta)'}{(\gamma\beta)} \tilde{r}'
 + \left( \frac{\gamma''}{2 \gamma \beta^2} \right) \tilde{r}
 + \left( \frac{\omega_c}{2 \gamma \beta c} \right)^2 \tilde{r}
-- \left( \frac{\langle p_\theta \rangle}{\gamma \beta m c} \right)^2 \frac{1}{\tilde{r}^3}
+- \left( \frac{\langle p_\theta \rangle}{\gamma m \beta c} \right)^2 \frac{1}{\tilde{r}^3}
 - \frac{\varepsilon_r^2}{\tilde{r}^3}
 - \frac{Q}{\tilde{r}}
 = 0 
@@ -946,18 +946,40 @@ Add electrostatic potential $\phi$ in beam rest frame:
 
 \begin{align}
 {x}'' + \frac{(\gamma\beta)'}{(\gamma\beta)} {x}' 
-&= \frac{q}{\gamma m \beta^2 c^2} \left[ {E}_x + \beta c \left( y' B_z - B_y \right) - \frac{1}{\gamma^2} \frac{\partial^2 \phi}{\partial {x}} \right] 
+&= \frac{q}{\gamma m \beta^2 c^2} \left[ {E}_x + \beta c \left( y' B_z - B_y \right) - \frac{1}{\gamma^2} \frac{\partial \phi}{\partial {x}} \right] 
 \\
 {y}'' + \frac{(\gamma\beta)'}{(\gamma\beta)} {y}' 
-&= \frac{q}{\gamma m \beta^2 c^2} \left[ {E}_y + \beta c \left( B_x - x' B_z \right) - \frac{1}{\gamma^2} \frac{\partial^2 \phi}{\partial {y}} \right]
+&= \frac{q}{\gamma m \beta^2 c^2} \left[ {E}_y + \beta c \left( B_x - x' B_z \right) - \frac{1}{\gamma^2} \frac{\partial \phi}{\partial {y}} \right]
 \end{align}
 
 
 ---
 
-Assume no external electric field ($E_x = E_y = 0$) and approximate magnetic field as $B_y = G x$, $B_x = -G y$.
+Assume no external electric field ($E_x = E_y = 0$) and approximate magnetic field as $B_y = G x$, $B_x = -G y$, $B_z = 0$. (See Lund lectures for more detail.)
 
-[...]
+\begin{align}
+{x}'' + \frac{(\gamma\beta)'}{(\gamma\beta)} {x}' 
+&= +\frac{q G}{\gamma m \beta c} x - \frac{1}{m c^2 \beta^2 \gamma^3} \frac{\partial \phi}{\partial {x}}
+\\
+{y}'' + \frac{(\gamma\beta)'}{(\gamma\beta)} {y}' 
+&= -\frac{q G}{\gamma m \beta c} y - \frac{1}{m c^2 \beta^2 \gamma^3} \frac{\partial \phi}{\partial {y}}
+\end{align}
+
+---
+
+Define rigidity $[B\rho] = p/q = \gamma\beta m c / q$ and linear focusing strengths $\kappa_{x, y} = \pm q G / [B\rho]$.
+
+\begin{align}
+y'' 
++ \frac{(\gamma\beta)'}{(\gamma\beta)} {x}' 
++\kappa_x(s) x - \frac{q}{m c^2 \beta^2 \gamma^3} \frac{\partial \phi}{\partial {x}}
+&= 0
+\\
+y'' 
++ \frac{(\gamma\beta)'}{(\gamma\beta)} {y}' 
++\kappa_y(s) y - \frac{q}{m c^2 \beta^2 \gamma^3} \frac{\partial \phi}{\partial {y}}
+&= 0
+\end{align}
 
 
 ---
@@ -971,6 +993,89 @@ Assume no external electric field ($E_x = E_y = 0$) and approximate magnetic fie
 \end{align}
 
 ---
+
+
+Now get $\langle{xx''}\rangle$ from equation of motion:
+
+\begin{align}
+x'' + \frac{(\gamma\beta)'}{(\gamma\beta)} x'
++\kappa_x(s) x - \frac{q}{m c^2 \beta^2 \gamma^3} \frac{\partial \phi}{\partial x}
+&= 0
+\\
+xx'' + \frac{(\gamma\beta)'}{(\gamma\beta)} xx'
++\kappa_x(s) x^2 - \frac{q}{m c^2 \beta^2 \gamma^3} x \frac{\partial \phi}{\partial x}
+&= 0
+\\
+\langle{xx''}\rangle + \frac{(\gamma\beta)'}{(\gamma\beta)} \langle{xx'}\rangle
++\kappa_x(s) \langle{x^2}\rangle - \frac{q}{m c^2 \beta^2 \gamma^3} \langle{ x \frac{\partial \phi}{\partial x} }\rangle
+&= 0
+\end{align}
+
+
+---
+
+
+\begin{align}
+\tilde{x}'' 
++ \frac{(\gamma\beta)'}{(\gamma\beta)} \tilde{x}' 
++ \kappa_x(s) \tilde{x}
+- \frac{\varepsilon_x^2}{\tilde{x}^3} 
+- \frac{q}{mc^2 \beta^2 \gamma^3} \frac{\langle x \partial{\phi}/\partial{x} \rangle}{\tilde{x}}
+&= 0
+\\
+\tilde{y}'' 
++ \frac{(\gamma\beta)'}{(\gamma\beta)} \tilde{y}' 
++ \kappa_y(s) \tilde{y}
+- \frac{\varepsilon_y^2}{\tilde{y}^3} 
+- \frac{q}{mc^2 \beta^2 \gamma^3} \frac{\langle y \partial{\phi}/\partial{y} \rangle}{\tilde{y}}
+&= 0
+\end{align}
+
+
+---
+
+What is $\langle x \frac{\partial \phi}{\partial x} \rangle$?
+
+\begin{equation}
+\left( \frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial x^2} \right) \phi(x, y) = -\frac{\rho(x, y)}{\epsilon_0} .
+\end{equation}
+
+Assume elliptical symmetry: $\rho(x, y) = \rho\left( (x/\tilde{x})^2 + (y/\tilde{y})^2 \right)$. It can then be shown that:
+
+\begin{align}
+\langle x \frac{\partial \phi}{\partial x} \rangle &= -\frac{\lambda}{4 \pi \epsilon_0} \frac{\tilde{x}}{\tilde{x} + \tilde{y}} , \\
+\langle y \frac{\partial \phi}{\partial y} \rangle &= -\frac{\lambda}{4 \pi \epsilon_0} \frac{\tilde{x}}{\tilde{x} + \tilde{y}} .
+\end{align}
+
+---
+
+\begin{align}
+\tilde{x}'' 
++ \frac{(\gamma\beta)'}{(\gamma\beta)} \tilde{x}' 
++ \kappa_x(s) \tilde{x}
+- \frac{\varepsilon_x^2}{\tilde{x}^3} 
+- \frac{2 Q}{\tilde{x} + \tilde{y}}
+&= 0 ,
+\\
+\tilde{y}'' 
++ \frac{(\gamma\beta)'}{(\gamma\beta)} \tilde{y}' 
++ \kappa_y(s) \tilde{y}
+- \frac{\varepsilon_y^2}{\tilde{y}^3} 
+- \frac{2 Q}{\tilde{x} + \tilde{y}}
+&= 0 ,
+\end{align}
+
+\begin{equation}
+Q  = \frac{\lambda}{mc^2\beta^2\gamma^3} \frac{2 q}{4 \pi \epsilon_0} .
+\end{equation}
+
+
+* These are the transverse rms envelope equations for an elliptically symmetric distribution in linear (magnetic) external fields. Acceleration is included, but no energy spread.
+* Does not assume uniform density! Proved by Sacherer.
+* Note: space charge kick is always the same in both planes!
+
+
+## What is $\langle x \frac{\partial \phi}{\partial x} \rangle$?
 
 
 
