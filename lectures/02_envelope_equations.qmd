@@ -920,7 +920,47 @@ Q \equiv \frac{1}{m c^2 \beta^2\gamma^3} \frac{q \langle \lambda(r) \rangle}{2\p
 
 ---
 
-Repeat the process in Cartesian coordinates. Envelope equations:
+Equations of motion ($\mathbf{x} = [x, y]$):
+
+\begin{align}
+\frac{d(\gamma m \dot{{x}})}{dt} &= q \left( {E}_x + \dot{y} B_z - \dot{z} B_y \right) \\
+\frac{d(\gamma m \dot{{y}})}{dt} &= q \left( {E}_y + \dot{z} B_x - \dot{x} B_z \right)
+\end{align}
+
+---
+
+Use $z$ as independent variable: $dz = \beta c dt$:
+
+\begin{align}
+{x}'' + \frac{(\gamma\beta)'}{(\gamma\beta)} {x}' 
+&= \frac{q}{\gamma m \beta^2 c^2} \left[ {E}_x + \beta c \left( y' B_z - B_y \right) \right] 
+\\
+{y}'' + \frac{(\gamma\beta)'}{(\gamma\beta)} {y}' 
+&= \frac{q}{\gamma m \beta^2 c^2} \left[ {E}_y + \beta c \left( B_x - x' B_z \right) \right]
+\end{align}
+
+
+---
+
+Add electrostatic potential $\phi$ in beam rest frame:
+
+\begin{align}
+{x}'' + \frac{(\gamma\beta)'}{(\gamma\beta)} {x}' 
+&= \frac{q}{\gamma m \beta^2 c^2} \left[ {E}_x + \beta c \left( y' B_z - B_y \right) - \frac{1}{\gamma^2} \frac{\partial^2 \phi}{\partial {x}} \right] 
+\\
+{y}'' + \frac{(\gamma\beta)'}{(\gamma\beta)} {y}' 
+&= \frac{q}{\gamma m \beta^2 c^2} \left[ {E}_y + \beta c \left( B_x - x' B_z \right) - \frac{1}{\gamma^2} \frac{\partial^2 \phi}{\partial {y}} \right]
+\end{align}
+
+
+---
+
+Assume no external electric field ($E_x = E_y = 0$) and approximate magnetic field as $B_y = G x$, $B_x = -G y$.
+
+[...]
+
+
+---
 
 \begin{align}
 \tilde{x} &= \sqrt{\langle{xx}\rangle} \\
@@ -930,13 +970,7 @@ Repeat the process in Cartesian coordinates. Envelope equations:
 &= \frac{\langle{xx''}\rangle}{\tilde{x}} + \frac{\varepsilon_x^2}{\tilde{x}^3}
 \end{align}
 
-Equation of motion:
-
-
-\begin{align}
-\frac{d(\gamma m \dot{x})}{dt} &= q \left( E_x + \dot{y} B_z - \dot{z} B_y \right) , \\
-\frac{d(\gamma m \dot{y})}{dt} &= q \left( E_y + \dot{z} B_x - \dot{x} B_z \right) . \\
-\end{align}
+---
 
 
 
