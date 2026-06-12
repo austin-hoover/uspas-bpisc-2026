@@ -13,20 +13,10 @@ author:
     
 format:
   beamer:
-    theme: metropolis
-    # colortheme: seagull
+    theme: metropolis  # [metropolis, seagull]
     fonttheme: serif
     fontsize: "9pt"
+    number-sections: true
+    toc: true
     pdf-engine: lualatex
-    include-in-header:
-      text: |
-        \setbeamerfont{frametitle}{series=\bfseries, size=\LARGE}
-        \setbeamerfont{title}{series=\bfseries, size=\huge}
-        \setbeamertemplate{footline}[frame number]
-
-
-# \setbeamerfont{titlelike}{series=\bfseries, size=\huge}
-# \setbeamerfont{frametitle}{series=\bfseries, size=\LARGE}
-# \setbeamerfont{title}{series=\bfseries, size=\huge}
-# \setbeamerfont{subtitle}{series=\bfseries}
-# \setbeamertemplate{footline}[frame number]
+    include-in-header: header.tex

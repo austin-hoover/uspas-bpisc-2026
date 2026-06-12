@@ -4,3 +4,58 @@ toc: true
 bibliography: references.bib 
 csl: aps.csl
 ---
+
+
+# Beam current limits in axisymmetric focusing channels
+
+
+## Radial envelope equations
+
+For axially symmetric focusing systems, we derived the radial envelope equation:
+
+\begin{equation}
+\tilde{r}'' 
++ \frac{(\gamma \beta)'}{(\gamma\beta)} \tilde{r}'
++ \left( \frac{\gamma''}{2 \gamma \beta^2} \right) \tilde{r}
++ \left( \frac{\omega_c}{2 \gamma \beta c} \right)^2 \tilde{r}
+- \left( \frac{\langle p_\theta \rangle}{\gamma m \beta c} \right)^2 \frac{1}{\tilde{r}^3}
+- \frac{\varepsilon_r^2}{\tilde{r}^3}
+- \frac{Q}{\tilde{r}}
+= 0 
+\end{equation}
+
+\begin{equation}
+\label{eq-canonical-angular-momentum}
+p_\theta \equiv \gamma m r^2 \dot{\theta} + q r A_\theta,
+\end{equation}
+
+\begin{equation}
+\varepsilon_r \equiv \sqrt{\langle{r^2}\rangle \langle{r'^2}\rangle - \langle{rr'}\rangle^2 + \langle{r^2}\rangle \langle{r^2 \theta'^2}\rangle - \langle{r^2 \theta'}\rangle^2}
+\end{equation}
+
+\begin{equation}
+Q \equiv \frac{1}{m c^2 \beta^2\gamma^3} \frac{q \langle \lambda(r) \rangle}{2\pi\epsilon_0}
+\end{equation}
+
+
+
+# Beam current limits in quadrupolar focusing channels
+
+
+## RMS envelope equations
+
+\begin{align}
+\tilde{x}'' 
++ \frac{(\gamma\beta)'}{(\gamma\beta)} \tilde{x}' 
++ \kappa_x(s) \tilde{x}
+- \frac{\varepsilon_x(s)^2}{\tilde{x}^3} 
+- \frac{2 Q}{\tilde{x} + \tilde{y}}
+&= 0 ,
+\\
+\tilde{y}'' 
++ \frac{(\gamma\beta)'}{(\gamma\beta)} \tilde{y}' 
++ \kappa_y(s) \tilde{y}
+- \frac{\varepsilon_y(s)^2}{\tilde{y}^3} 
+- \frac{2 Q}{\tilde{x} + \tilde{y}}
+&= 0 .
+\end{align}
