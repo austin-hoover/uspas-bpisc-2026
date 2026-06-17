@@ -99,6 +99,33 @@ Q = \frac{1}{2} \left( \frac{\omega_c \tilde{r}}{\gamma \beta c} \right)^2
 [Image of Einzel lens]
 
 
+---
+
+[Image of beam envelope
+
+
+---
+
+Ignore centrifugal term, emittance term, and solenoid term ($B_z$) in radial envelope equation.
+
+\begin{equation}
+\tilde{r}'' + \frac{\gamma'}{\gamma \beta^2} \tilde{r}' + \frac{\gamma''}{2 \gamma \beta^2} - \frac{Q}{2 \tilde{r}} = 0
+\end{equation}
+
+Assume non-relativistic beam: $\beta \ll 1$, $\gamma \approx 1$:
+
+\begin{align}
+\gamma' &= \beta \beta' \gamma^3 \approx \beta \beta' \\
+\gamma'' &\approx \beta' \beta' + \beta \beta''
+\end{align}
+
+\begin{align}
+\tilde{r}'' 
++ \frac{\beta'}{\beta} \tilde{r}' 
++ \frac{1}{2} \left[ \frac{\beta'^2}{\beta^2} + \frac{\beta''}{\beta} \right] \tilde{r} 
+- \frac{Q}{2 \tilde{r}}
+= 0
+\end{align}
 
 
 # Beam current limits in quadrupolar focusing channels
