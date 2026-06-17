@@ -59,12 +59,44 @@ Q \equiv \frac{1}{m c^2 \beta^2\gamma^3} \frac{q \langle \lambda(r) \rangle}{2\p
 At equilibrium, $\tilde{r}' = \tilde{r}'' = 0$:
 
 \begin{equation}
-Q_{max} = \left( \frac{\omega_c}{\gamma \beta c} \right)^2 \frac{\tilde{r}^2}{2}
+Q = \frac{1}{2} \left( \frac{\omega_c \tilde{r}}{\gamma \beta c} \right)^2
 \end{equation}
 
 
 ## Low-energy current limit derived from force balance
 
+* Particle moves with angular velocity $\v_\theta = \omega r$. 
+* Particle sees linear focusing force from solenoid field $B_z = \omega_c m / q$.
+* Within beam envelope, particle sees linear defocusing force from space charge.
+
+\begin{align}
+\underbrace{m \omega^2 r}_{\text{centrifugal}}
++ \underbrace{\frac{Q m \beta^2 c^2}{2 \tilde{r}^2} r}_{\text{centrifugal}}
+&= \underbrace{q v_\theta B_z}_{\text{magnetic}}
+\\
+\omega^2 r + \frac{Q \beta^2 c^2}{2 \tilde{r}^2} r &= \omega_c \omega r
+\end{align}
+
+
+---
+
+\begin{align}
+Q(\omega) &= \frac{2 \tilde{r}^2}{\beta^2 c^2} \left( \omega \omega_c - \omega^2 \right) \\
+\omega^* &= \max_{\omega} Q(\omega) = \frac{\omega_c}{2} \\
+Q(\omega^*) &= \frac{1}{2} \left( \frac{\omega_c \tilde{r}}{\beta c} \right)^2
+\end{align}
+
+Equivalent to result from envelope equations when $\gamma^2 \rightarrow 1$:
+
+\begin{equation}
+Q = \frac{1}{2} \left( \frac{\omega_c \tilde{r}}{\gamma \beta c} \right)^2
+\end{equation}
+
+
+
+## Einzel lens
+
+[Image of Einzel lens]
 
 
 
