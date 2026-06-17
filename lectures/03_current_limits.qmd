@@ -101,7 +101,7 @@ Q = \frac{1}{2} \left( \frac{\omega_c \tilde{r}}{\gamma \beta c} \right)^2
 
 ---
 
-[Image of beam envelope
+[Image of beam envelope]
 
 
 ---
@@ -125,6 +125,51 @@ Assume non-relativistic beam: $\beta \ll 1$, $\gamma \approx 1$:
 + \frac{1}{2} \left[ \frac{\beta'^2}{\beta^2} + \frac{\beta''}{\beta} \right] \tilde{r} 
 - \frac{Q}{2 \tilde{r}}
 = 0
+\end{align}
+
+
+---
+
+Define new variable $R$:
+
+\begin{align}
+\tilde{r} = \left( \frac{\beta_0}{\beta}\right)^{1/2} R ,
+\end{align}
+
+where $\beta_0$ is the velocity at $s = 0$.
+
+\begin{align} 
+\tilde{r}' 
+&= 
+  \left(\frac{\beta}{\beta_0}\right)^{-1/2} R'
+- \frac{1}{2} \left(\frac{\beta}{\beta_0}\right)^{-3/2} \left(\frac{\beta'}{\beta}\right) R
+\\
+\tilde{r}'' 
+&=
+\left(\frac{\beta}{\beta_0}\right)^{-1/2} R''
+- \left(\frac{\beta}{\beta_0}\right)^{-3/2} \left(\frac{\beta'}{\beta_0}\right) R'
++ \frac{3}{4} \left(\frac{\beta}{\beta_0}\right)^{-5/2} \left(\frac{\beta'}{\beta_0}\right)^2 R
+- \frac{1}{2} \left(\frac{\beta}{\beta_0}\right)^{-3/2} \left( \frac{\beta''}{\beta_0} \right) R
+\end{align}
+
+
+\begin{equation}
+\boxed{
+R'' + \frac{3}{4} \left(\frac{\beta}{\beta}\right)^2 R - \frac{1}{2} \frac{\beta}{\beta_0} \frac{Q}{R} = 0 .
+}
+\end{equation}
+
+
+---
+
+Approximate potential as $\phi(r, z) = \phi_0 \cos(\pi z / L)$.d
+
+Conservation of energy:
+
+\begin{align}
+\frac{1}{2} m v^2 + 2 q \phi &= \text{constant} \\
+\Delta \left( v^2 \right) &= -\Delta \left( \frac{2 q \phi}{m} \right) \\
+v^2 - v_0^2 &= -\frac{2 q \phi_0}{m} \cos{\left( \frac{\pi z}{L} \right)}
 \end{align}
 
 
