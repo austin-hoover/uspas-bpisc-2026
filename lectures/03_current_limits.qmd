@@ -20,7 +20,7 @@ For axially symmetric focusing systems, we derived the radial envelope equation:
 + \left( \frac{\omega_c}{2 \gamma \beta c} \right)^2 \tilde{r}
 - \left( \frac{\langle p_\theta \rangle}{\gamma m \beta c} \right)^2 \frac{1}{\tilde{r}^3}
 - \frac{\varepsilon_r^2}{\tilde{r}^3}
-- \frac{Q}{\tilde{r}}
+- \frac{Q}{2 \tilde{r}}
 = 0 
 \end{equation}
 
@@ -36,6 +36,36 @@ p_\theta \equiv \gamma m r^2 \dot{\theta} + q r A_\theta,
 \begin{equation}
 Q \equiv \frac{1}{m c^2 \beta^2\gamma^3} \frac{q \langle \lambda(r) \rangle}{2\pi\epsilon_0}
 \end{equation}
+
+
+## Solenoid focusing
+
+[Image of solenoid]
+
+
+## Current limit in solenoid
+
+* Assume infinitely long solenoid: $\mathbf{B} = B_z \hat{z}$.
+* Assume $\gamma' = \gamma'' = 0$.
+* Assume $p_{\theta}= 0$ and $\epsilon_r = 0$ to minimizing "repelling" forces.
+
+\begin{equation}
+\tilde{r}'' 
++ \left( \frac{\omega_c}{2 \gamma \beta c} \right)^2 \tilde{r}
+- \frac{Q}{2 \tilde{r}}
+= 0 
+\end{equation}
+
+At equilibrium, $\tilde{r}' = \tilde{r}'' = 0$:
+
+\begin{equation}
+Q_{max} = \left( \frac{\omega_c}{\gamma \beta c} \right)^2 \frac{\tilde{r}^2}{2}
+\end{equation}
+
+
+## Low-energy current limit derived from force balance
+
+
 
 
 

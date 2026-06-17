@@ -898,7 +898,7 @@ p_\theta &\equiv \gamma m \beta c r^2 \theta' + \frac{m \omega_c r^2}{2}
 + \left( \frac{\omega_c}{2 \gamma \beta c} \right)^2 \tilde{r}
 - \left( \frac{\langle p_\theta \rangle}{\gamma m \beta c} \right)^2 \frac{1}{\tilde{r}^3}
 - \frac{\varepsilon_r^2}{\tilde{r}^3}
-- \frac{Q}{\tilde{r}}
+- \frac{Q}{2 \tilde{r}}
 = 0 
 }
 \end{equation}
