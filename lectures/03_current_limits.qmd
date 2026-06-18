@@ -9,6 +9,11 @@ csl: aps.csl
 # Beam current limits in axisymmetric focusing channels
 
 
+---
+
+![](images/einzel_and_solenoid.png){fig-align=center height=300px}
+
+
 ## Radial envelope equations
 
 \begin{equation}
@@ -38,11 +43,6 @@ Q \equiv \frac{1}{m c^2 \beta^2\gamma^3} \frac{q \langle \lambda(r) \rangle}{2\p
 
 ## Solenoid focusing
 
-[Image of solenoid]
-
-
-## Beam current limit in long solenoid
-
 * Long solenoid: $\mathbf{B} = B_z \hat{z}$.
 * No acceleration $\gamma' = \gamma'' = 0$.
 * Set $p_{\theta}= 0$ and $\epsilon_r = 0$ to minimizing "repelling" forces.
@@ -61,7 +61,7 @@ Q = \frac{1}{2} \left( \frac{\omega_c \tilde{r}}{\gamma \beta c} \right)^2
 \end{equation}
 
 
-## Derivation from force balance in non-relativistic beams
+## Derivation from force balance in non-relativistic beams and the line goes longer
 
 * Particle moves with angular velocity $\v_\theta = \omega r$. 
 * Particle sees linear focusing force from solenoid field $B_z = \omega_c m / q$.
@@ -76,6 +76,7 @@ Q = \frac{1}{2} \left( \frac{\omega_c \tilde{r}}{\gamma \beta c} \right)^2
 \begin{equation}
 \omega^2 r + \frac{Q \beta^2 c^2}{2 \tilde{r}^2} r = \omega_c \omega r
 \end{equation}
+
 
 ---
 
@@ -112,6 +113,7 @@ B_z(z) = B_0 \left[ \Theta(z) + \Theta(L - z) - 1 \right]
 \frac{\partial B_z}{\partial z} = B_0 \left[ \delta(z) - \delta(L - z) \right]
 \end{equation}
 
+
 ---
 
 Use earlier result to relate longitudinal derivative to radial magnetic field:
@@ -133,6 +135,7 @@ Compute change in $\theta$ component of momentum at $z = \epsilon$, just after s
 \begin{equation}
 v_\theta = \frac{r q B_0}{2 m} = \frac{r \omega_c}{2}
 \end{equation}
+
 
 
 ## Einzel lens
@@ -171,13 +174,7 @@ Assume non-relativistic beam: $\beta \ll 1$, $\gamma \approx 1$:
 
 ---
 
-Define new variable $R$:
-
-\begin{align}
-\tilde{r} = \left( \frac{\beta_0}{\beta}\right)^{1/2} R ,
-\end{align}
-
-where $\beta_0$ is the velocity at $s = 0$.
+Define new variable $R = \sqrt{\beta / \beta_0} \tilde{r}$, where $\beta_0$ is the initial velocity.
 
 \begin{align} 
 \tilde{r}' 
@@ -203,51 +200,51 @@ where $\beta_0$ is the velocity at $s = 0$.
 
 ---
 
-Approximate potential as $\phi(r, z) = \phi_0 \cos(\pi z / L)$.
-
-Conservation of energy:
+Approximate potential as $\phi(r, z) = \phi_0 \cos(\pi z / L)$. From conservation of energy:
 
 \begin{align}
 \Delta \left( \frac{1}{2} m v^2 \right) &= -\Delta \left( \frac{q \phi}{m} \right) \\
 \frac{1}{2} m \left( v^2 - v_0^2 \right) &= -q \phi_0 \cos{\left( \frac{\pi z}{L} \right)} \\
-v^2 &= v_0^2 - \frac{2 q \phi_0}{m} \cos{\left( \frac{\pi z}{L} \right)} \\
+v^2 &= v_0^2 - \frac{2 q \phi_0}{m} \cos{\left( \frac{\pi z}{L} \right)}
 \end{align}
 
+Use this to rewrite $(\beta' / \beta)^2$:
+
+\begin{align}
+v' &= \frac{q \phi_0}{m v} \left( \frac{\pi}{L} \right) \sin \left( \frac{\pi z}{L} \right) 
+\\
+\frac{v'}{v} &= \frac{q \phi_0}{m v^2} \left( \frac{\pi}{L} \right) \sin \left( \frac{\pi z}{L} \right) 
+\\
+\left(\frac{\beta'}{\beta}\right)^2 &= \left( \frac{q \phi_0}{m v} \right)^2 \left( \frac{\pi}{L} \right)^2 \sin^2 \left( \frac{\pi z}{L} \right)
+\end{align}
 
 ---
 
 Assume $v_0^2 \gg \frac{2 q \phi_0}{m}$, so that $v \approx v_0$.
 
 \begin{equation}
-\begin{aligned}
-v' &= \frac{q \phi_0}{m v} \left( \frac{\pi}{L} \right) \sin \left( \frac{\pi z}{L} \right) \\
-v' &\approx \frac{q \phi_0}{m v_0} \left( \frac{\pi}{L} \right) \sin \left( \frac{\pi z}{L} \right)
-\end{aligned}
-\end{equation}
-
-\begin{equation}
-\left(\frac{\beta'}{\beta}\right)^2 = 
-\left(\frac{v'}{v}\right)^2 
+\left(\frac{\beta'}{\beta}\right)^2 
 \approx 
 \left( \frac{q \phi_0}{m v_0} \right)^2 \left( \frac{\pi}{L} \right)^2 \sin^2 \left( \frac{\pi z}{L} \right)
 \end{equation}
 
+For equilibrium ($R'' = R' = 0$), look at averages over $z$:
 
----
+\begin{align}
+\overline{\left(\frac{\beta'}{\beta}\right)^2} &= \frac{1}{2} \left( \frac{q \phi_0}{m v_0} \right)^2 \left( \frac{\pi}{L} \right)^2
+\\
+\overline{\left(\frac{\beta}{\beta_0}\right)} &= 0 
+\\
+\overline{R} &= \overline{\left(\frac{\beta}{\beta_0}\right)^{1/2}} \tilde{r} = \tilde{r} 
+\end{align}
+
+Inserting these terms in the envelope equation with $R'' = 0$ gives the maximum beam perveance:
 
 \begin{equation}
-\begin{aligned}
-R'' 
-&= \frac{1}{2} \frac{\beta}{\beta_0} \frac{Q}{R} - \frac{3}{4} \left(\frac{\beta'}{\beta}\right)^2 R
-&\approx \frac{1}{2} \frac{Q}{R} - \frac{3}{4} \left(\frac{\beta'}{\beta}\right)^2 R \\\
-\end{aligned}
+\boxed{
+Q_{max} = \frac{3 \pi^2}{4} \left(\frac{q \phi_0}{m \beta_0^2 c^2}\right)^2 \left(\frac{\tilde{r}}{L}\right)^2
+}
 \end{equation}
-
-
----
-
-
-
 
 
 
@@ -256,7 +253,7 @@ R''
 
 ---
 
-![](images/einzel.png){fig-align=center height=300px}
+![](images/quad.png){fig-align=center height=300px}
 
 
 ## RMS envelope equations
