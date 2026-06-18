@@ -11,8 +11,6 @@ csl: aps.csl
 
 ## Radial envelope equations
 
-For axially symmetric focusing systems, we derived the radial envelope equation:
-
 \begin{equation}
 \tilde{r}'' 
 + \frac{(\gamma \beta)'}{(\gamma\beta)} \tilde{r}'
@@ -43,11 +41,11 @@ Q \equiv \frac{1}{m c^2 \beta^2\gamma^3} \frac{q \langle \lambda(r) \rangle}{2\p
 [Image of solenoid]
 
 
-## Current limit in solenoid
+## Beam current limit in long solenoid
 
-* Assume infinitely long solenoid: $\mathbf{B} = B_z \hat{z}$.
-* Assume $\gamma' = \gamma'' = 0$.
-* Assume $p_{\theta}= 0$ and $\epsilon_r = 0$ to minimizing "repelling" forces.
+* Long solenoid: $\mathbf{B} = B_z \hat{z}$.
+* No acceleration $\gamma' = \gamma'' = 0$.
+* Set $p_{\theta}= 0$ and $\epsilon_r = 0$ to minimizing "repelling" forces.
 
 \begin{equation}
 \tilde{r}'' 
@@ -56,14 +54,14 @@ Q \equiv \frac{1}{m c^2 \beta^2\gamma^3} \frac{q \langle \lambda(r) \rangle}{2\p
 = 0 
 \end{equation}
 
-At equilibrium, $\tilde{r}' = \tilde{r}'' = 0$:
+Maximum beam perveance occurs at equilibrium, when $\tilde{r}' = \tilde{r}'' = 0$:
 
 \begin{equation}
 Q = \frac{1}{2} \left( \frac{\omega_c \tilde{r}}{\gamma \beta c} \right)^2
 \end{equation}
 
 
-## Low-energy current limit derived from force balance
+## Derivation from force balance in non-relativistic beams
 
 * Particle moves with angular velocity $\v_\theta = \omega r$. 
 * Particle sees linear focusing force from solenoid field $B_z = \omega_c m / q$.
@@ -73,10 +71,11 @@ Q = \frac{1}{2} \left( \frac{\omega_c \tilde{r}}{\gamma \beta c} \right)^2
 \underbrace{m \omega^2 r}_{\text{centrifugal}}
 + \underbrace{\frac{Q m \beta^2 c^2}{2 \tilde{r}^2} r}_{\text{centrifugal}}
 &= \underbrace{q v_\theta B_z}_{\text{magnetic}}
-\\
-\omega^2 r + \frac{Q \beta^2 c^2}{2 \tilde{r}^2} r &= \omega_c \omega r
 \end{align}
 
+\begin{equation}
+\omega^2 r + \frac{Q \beta^2 c^2}{2 \tilde{r}^2} r = \omega_c \omega r
+\end{equation}
 
 ---
 
@@ -93,15 +92,57 @@ Q = \frac{1}{2} \left( \frac{\omega_c \tilde{r}}{\gamma \beta c} \right)^2
 \end{equation}
 
 
+## Angular kick at solenoid entrance
+
+Approximate solenoid field as step function:
+
+\begin{equation}
+\begin{aligned}
+B_z(z) = B_0 \left[ \Theta(z) + \Theta(L - z) - 1 \right]
+=
+\begin{cases}
+  0   & \text{if } z < 0 \\
+  B_0 & \text{if } 0 \leq z \leq L \\
+  0   & \text{if } z > L
+\end{cases}
+\end{aligned}
+\end{equation}
+
+\begin{equation}
+\frac{\partial B_z}{\partial z} = B_0 \left[ \delta(z) - \delta(L - z) \right]
+\end{equation}
+
+---
+
+Use earlier result to relate longitudinal derivative to radial magnetic field:
+
+\begin{equation}
+B_r(r, z) \approx -\frac{r}{2} \frac{\partial B_z}{\partial z} = \frac{r B_0}{2} \left[ \delta(z) - \delta(L - z) \right]
+\end{equation}
+
+Compute change in $\theta$ component of momentum at $z = \epsilon$, just after solenoid entrance:
+
+\begin{align}
+\frac{d}{dt} p_{\theta}^{*}(r) &= q v_z B_r \\
+\Delta p_{\theta}^{*}(r) 
+&= q \int_{-\infty}^{\epsilon} B_r(r, z) dz \\
+&= \frac{q r B_0}{2} \int_{-\infty}^{\epsilon} \left[ \delta(z) - \delta(L - z) \right] dz \\
+&= \frac{q r B_0}{2}
+\end{align}
+
+\begin{equation}
+v_\theta = \frac{r q B_0}{2 m} = \frac{r \omega_c}{2}
+\end{equation}
+
 
 ## Einzel lens
 
-[Image of Einzel lens]
+![](images/einzel.png){fig-align=center height=300px}
 
 
 ---
 
-[Image of beam envelope]
+![](images/einzel_envelope.png){fig-align=center height=300px}
 
 
 ---
@@ -155,25 +196,67 @@ where $\beta_0$ is the velocity at $s = 0$.
 
 \begin{equation}
 \boxed{
-R'' + \frac{3}{4} \left(\frac{\beta}{\beta}\right)^2 R - \frac{1}{2} \frac{\beta}{\beta_0} \frac{Q}{R} = 0 .
+  R'' + \frac{3}{4} \left(\frac{\beta'}{\beta}\right)^2 R - \frac{1}{2} \frac{\beta}{\beta_0} \frac{Q}{R} = 0 .
 }
 \end{equation}
 
 
 ---
 
-Approximate potential as $\phi(r, z) = \phi_0 \cos(\pi z / L)$.d
+Approximate potential as $\phi(r, z) = \phi_0 \cos(\pi z / L)$.
 
 Conservation of energy:
 
 \begin{align}
-\frac{1}{2} m v^2 + 2 q \phi &= \text{constant} \\
-\Delta \left( v^2 \right) &= -\Delta \left( \frac{2 q \phi}{m} \right) \\
-v^2 - v_0^2 &= -\frac{2 q \phi_0}{m} \cos{\left( \frac{\pi z}{L} \right)}
+\Delta \left( \frac{1}{2} m v^2 \right) &= -\Delta \left( \frac{q \phi}{m} \right) \\
+\frac{1}{2} m \left( v^2 - v_0^2 \right) &= -q \phi_0 \cos{\left( \frac{\pi z}{L} \right)} \\
+v^2 &= v_0^2 - \frac{2 q \phi_0}{m} \cos{\left( \frac{\pi z}{L} \right)} \\
 \end{align}
 
 
+---
+
+Assume $v_0^2 \gg \frac{2 q \phi_0}{m}$, so that $v \approx v_0$.
+
+\begin{equation}
+\begin{aligned}
+v' &= \frac{q \phi_0}{m v} \left( \frac{\pi}{L} \right) \sin \left( \frac{\pi z}{L} \right) \\
+v' &\approx \frac{q \phi_0}{m v_0} \left( \frac{\pi}{L} \right) \sin \left( \frac{\pi z}{L} \right)
+\end{aligned}
+\end{equation}
+
+\begin{equation}
+\left(\frac{\beta'}{\beta}\right)^2 = 
+\left(\frac{v'}{v}\right)^2 
+\approx 
+\left( \frac{q \phi_0}{m v_0} \right)^2 \left( \frac{\pi}{L} \right)^2 \sin^2 \left( \frac{\pi z}{L} \right)
+\end{equation}
+
+
+---
+
+\begin{equation}
+\begin{aligned}
+R'' 
+&= \frac{1}{2} \frac{\beta}{\beta_0} \frac{Q}{R} - \frac{3}{4} \left(\frac{\beta'}{\beta}\right)^2 R
+&\approx \frac{1}{2} \frac{Q}{R} - \frac{3}{4} \left(\frac{\beta'}{\beta}\right)^2 R \\\
+\end{aligned}
+\end{equation}
+
+
+---
+
+
+
+
+
+
+
 # Beam current limits in quadrupolar focusing channels
+
+---
+
+![](images/einzel.png){fig-align=center height=300px}
 
 
 ## RMS envelope equations

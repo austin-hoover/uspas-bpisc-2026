@@ -278,7 +278,7 @@ Consider external fields $\mathbf{E}$ and $\mathbf{B}$ with azimuthal symmetry (
     \nabla \times \mathbf{E} &= 0 , \\
     \nabla \times \mathbf{B} &= 0 . \\
 \end{aligned}
- \end{equation}
+\end{equation}
 
 The vanishing curl means we can express the fields as
 
