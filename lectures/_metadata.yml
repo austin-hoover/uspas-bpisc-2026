@@ -13,8 +13,9 @@ author:
     
 format:
   beamer:
-    theme: metropolis  # [metropolis, seagull]
+    # theme: metropolis
     fonttheme: serif
+    colortheme: seagull
     fontsize: "9pt"
     number-sections: true
     toc: true
