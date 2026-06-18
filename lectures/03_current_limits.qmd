@@ -263,13 +263,15 @@ Q_{max} = \frac{3 \pi^2}{4} \left(\frac{q \phi_0}{m \beta_0^2 c^2}\right)^2 \lef
 + \frac{(\gamma\beta)'}{(\gamma\beta)} \tilde{x}' 
 + \kappa_x(s) \tilde{x}
 - \frac{\varepsilon_x(s)^2}{\tilde{x}^3} 
-- \frac{2 Q}{\tilde{x} + \tilde{y}}
+- \frac{Q}{2 \left( \tilde{x} + \tilde{y} \right) }
 &= 0 ,
 \\
 \tilde{y}'' 
 + \frac{(\gamma\beta)'}{(\gamma\beta)} \tilde{y}' 
 + \kappa_y(s) \tilde{y}
 - \frac{\varepsilon_y(s)^2}{\tilde{y}^3} 
-- \frac{2 Q}{\tilde{x} + \tilde{y}}
+- \frac{Q}{2 \left( \tilde{x} + \tilde{y} \right) }
 &= 0 .
 \end{align}
+
+

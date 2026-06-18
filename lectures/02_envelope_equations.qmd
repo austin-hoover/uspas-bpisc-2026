@@ -968,7 +968,7 @@ Assume no external electric field ($E_x = E_y = 0$) and approximate magnetic fie
 Define rigidity $[B\rho] = p/q = \gamma\beta m c / q$ and linear focusing strengths $\kappa_{x, y} = \pm q G / [B\rho]$.
 
 \begin{align}
-y'' 
+x'' 
 + \frac{(\gamma\beta)'}{(\gamma\beta)} {x}' 
 +\kappa_x(s) x - \frac{q}{m c^2 \beta^2 \gamma^3} \frac{\partial \phi}{\partial {x}}
 &= 0
@@ -993,7 +993,7 @@ y''
 ---
 
 
-Now get $\langle{xx''}\rangle$ from equation of motion:
+Calculate $\langle{xx''}\rangle$ from equation of motion:
 
 \begin{align}
 x'' + \frac{(\gamma\beta)'}{(\gamma\beta)} x'
@@ -1042,7 +1042,7 @@ Assume elliptical symmetry: $\rho(x, y) = \rho\left( (x/\tilde{x})^2 + (y/\tilde
 
 \begin{align}
 \langle x \frac{\partial \phi}{\partial x} \rangle &= -\frac{\lambda}{4 \pi \epsilon_0} \frac{\tilde{x}}{\tilde{x} + \tilde{y}} , \\
-\langle y \frac{\partial \phi}{\partial y} \rangle &= -\frac{\lambda}{4 \pi \epsilon_0} \frac{\tilde{x}}{\tilde{x} + \tilde{y}} .
+\langle y \frac{\partial \phi}{\partial y} \rangle &= -\frac{\lambda}{4 \pi \epsilon_0} \frac{\tilde{y}}{\tilde{x} + \tilde{y}} .
 \end{align}
 
 ---
@@ -1052,19 +1052,19 @@ Assume elliptical symmetry: $\rho(x, y) = \rho\left( (x/\tilde{x})^2 + (y/\tilde
 + \frac{(\gamma\beta)'}{(\gamma\beta)} \tilde{x}' 
 + \kappa_x(s) \tilde{x}
 - \frac{\varepsilon_x(s)^2}{\tilde{x}^3} 
-- \frac{2 Q}{\tilde{x} + \tilde{y}}
+- \frac{Q}{2 \left( \tilde{x} + \tilde{y} \right) }
 &= 0 ,
 \\
 \tilde{y}'' 
 + \frac{(\gamma\beta)'}{(\gamma\beta)} \tilde{y}' 
 + \kappa_y(s) \tilde{y}
 - \frac{\varepsilon_y(s)^2}{\tilde{y}^3} 
-- \frac{2 Q}{\tilde{x} + \tilde{y}}
+- \frac{Q}{2 \left( \tilde{x} + \tilde{y} \right) }
 &= 0 ,
 \end{align}
 
 \begin{equation}
-Q  = \frac{\lambda}{mc^2\beta^2\gamma^3} \frac{2 q}{4 \pi \epsilon_0} .
+Q  = \frac{\lambda}{mc^2\beta^2\gamma^3} \frac{q}{2 \pi \epsilon_0} .
 \end{equation}
 
 
