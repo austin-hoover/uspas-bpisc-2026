@@ -14,7 +14,7 @@ csl: aps.csl
 ![](images/einzel_and_solenoid.png){fig-align=center height=300px}
 
 
-## Radial envelope equations
+## Radial envelope equation
 
 \begin{equation}
 \tilde{r}'' 
@@ -41,7 +41,7 @@ Q \equiv \frac{1}{m c^2 \beta^2\gamma^3} \frac{q \langle \lambda(r) \rangle}{2\p
 \end{equation}
 
 
-## Solenoid focusing
+## Beam current limit in long solenoid
 
 * Long solenoid: $\mathbf{B} = B_z \hat{z}$.
 * No acceleration $\gamma' = \gamma'' = 0$.
@@ -61,7 +61,7 @@ Q = \frac{1}{2} \left( \frac{\omega_c \tilde{r}}{\gamma \beta c} \right)^2
 \end{equation}
 
 
-## Derivation from force balance in non-relativistic beams and the line goes longer
+## Derivation from force balance at low energies
 
 * Particle moves with angular velocity $\v_\theta = \omega r$. 
 * Particle sees linear focusing force from solenoid field $B_z = \omega_c m / q$.
@@ -138,7 +138,7 @@ v_\theta = \frac{r q B_0}{2 m} = \frac{r \omega_c}{2}
 
 
 
-## Einzel lens
+## Beam current limits in periodic Einzel lens
 
 ![](images/einzel.png){fig-align=center height=300px}
 

@@ -19,5 +19,6 @@ format:
     fontsize: "9pt"
     number-sections: true
     toc: true
+    toc-title: "Outline"
     pdf-engine: lualatex
     include-in-header: header.tex
