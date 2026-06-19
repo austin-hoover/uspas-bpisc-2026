@@ -285,17 +285,17 @@ Q &= \frac{q \lambda}{2 \pi \epsilon_0 m c^2 \beta^2 \gamma^3} \\
 
 ---
 
-Let $\kappa_x(s) = f(s) \kappa_0$ and $\kappa_y(s) = -$\kappa_x(s)$. Ignoring acceleration ($\gamma' = 0$):
+Let $\kappa_x(s) = f(s) \kappa$ and $\kappa_y(s) = -\kappa_x(s)$. Ignoring acceleration ($\gamma' = 0$):
 
 \begin{align}
 \tilde{x}'' 
-+ \kappa_0 f(s) \tilde{x}
++ \kappa f(s) \tilde{x}
 - \frac{\varepsilon_x^2}{\tilde{x}^3} 
 - \frac{Q}{2 \left( \tilde{x} + \tilde{y} \right) }
 &= 0 
 \\
 \tilde{y}'' 
-- \kappa_0 f(s) \tilde{y}
+- \kappa f(s) \tilde{y}
 - \frac{\varepsilon_y^2}{\tilde{y}^3} 
 - \frac{Q}{2 \left( \tilde{x} + \tilde{y} \right) }
 &= 0 
@@ -309,9 +309,9 @@ Let $\kappa_x(s) = f(s) \kappa_0$ and $\kappa_y(s) = -$\kappa_x(s)$. Ignoring ac
 \begin{equation}
 f(s) =
 \begin{cases}
-  +1 & \text{if } 0               \leq s / 1 < \eta / 2 \\
-  -1 & \text{if } 1 - \eta L / 2  \leq s / L < 1 + \eta / 2 \\
-  +1 & \text{if } 2 - \eta / 2 \leq s / L < 2
+  +1 & \text{if } 0               \leq s < L \eta / 2 \\
+  -1 & \text{if } L - \eta L / 2  \leq s < L + L \eta / 2 \\
+  +1 & \text{if } 2 L - L \eta / 2 \leq s < 2 L
 \end{cases}
 \end{equation}
 
@@ -392,18 +392,18 @@ Plugging these appoximations into rms envelope equations:
 
 \begin{align}
 -\left[ 
-  \delta \frac{\pi^2}{L^2} - \frac{4 \kappa_0}{\pi} \sin\left(\frac{\eta \pi}{2}\right) 
+  \delta \frac{\pi^2}{L^2} - \frac{4 \kappa}{\pi} \sin\left(\frac{\eta \pi}{2}\right) 
 \right] 
 \cos\left(\frac{\pi s}{L}\right)
-+ \frac{2 \kappa_0 \delta}{\pi} \sin\left(\frac{\eta \pi}{2}\right)
++ \frac{2 \kappa \delta}{\pi} \sin\left(\frac{\eta \pi}{2}\right)
 &= 
 \frac{Q}{2 \tilde{r}_0^2} ,
 \\
 +\left[ 
-  \delta \frac{\pi^2}{L^2} - \frac{4 \kappa_0}{\pi} \sin\left(\frac{\eta \pi}{2}\right) 
+  \delta \frac{\pi^2}{L^2} - \frac{4 \kappa}{\pi} \sin\left(\frac{\eta \pi}{2}\right) 
 \right] 
 \cos\left(\frac{\pi s}{L}\right)
-+ \frac{2 \kappa_0 \delta}{\pi} \sin\left(\frac{\eta \pi}{2}\right)
++ \frac{2 \kappa \delta}{\pi} \sin\left(\frac{\eta \pi}{2}\right)
 &= 
 \frac{Q}{2 \tilde{r}_0^2} .
 \end{align}
@@ -411,14 +411,70 @@ Plugging these appoximations into rms envelope equations:
 Solve for $\delta$ and $Q$:
 
 \begin{align}
-\delta &= \frac{4 \kappa_0 L^2}{\pi^3} \sin\left(\frac{\eta\pi}{2}\right)
+\delta &= \frac{4 \kappa L^2}{\pi^3} \sin\left(\frac{\eta\pi}{2}\right)
 \\
-Q &= \frac{4 \kappa_0 \delta}{\pi} \sin\left(\frac{\eta\pi}{2}\right) \tilde{r}_{0}^2
+Q &= \frac{4 \kappa \delta}{\pi} \sin\left(\frac{\eta\pi}{2}\right) \tilde{r}_{0}^2
 \end{align}
 
 
 \begin{equation}
+\label{eq:qmax_fodo}
 \boxed{
-  Q_{max} \approx \frac{2 \kappa_0 L \eta}{\pi} \left[ \frac{\sin(\eta\pi / 2)}{(\eta\pi / 2)} \right]^2 \tilde{r}_0^2
+  Q_{max} \approx \left( \frac{2 \kappa L \eta}{\pi} \right)^2 \left( \frac{\sin(\eta\pi / 2)}{(\eta\pi / 2)} \right)^2 \tilde{r}_0^2
 }
 \end{equation}
+
+
+## Continuous focusing
+
+\begin{align}
+\tilde{x}'' 
++ \omega_0^2 \tilde{x}
+- \frac{\varepsilon^2}{\tilde{x}^3} 
+- \frac{Q}{2 \left( \tilde{x} + \tilde{y} \right) }
+&= 0 ,
+\\
+\tilde{y}'' 
++ \omega_0^2 \tilde{y}
+- \frac{\varepsilon_y^2}{\tilde{y}^3} 
+- \frac{Q}{2 \left( \tilde{x} + \tilde{y} \right) }
+&= 0 .
+\end{align}
+
+At equilibrium ($\tilde{x}'' = \tilde{y}'' = 0$), the defocusing space charge term balances the external focusing term. This occurs at the equilibrium rms radius $\tilde{r}_0 = \sqrt{2} \tilde{x} = \sqrt{2} \tilde{y}$.
+
+\begin{equation}
+Q_{max} = 2 \omega_{0}^2 \tilde{r}_{0}^2
+\end{equation}
+
+Comparing to Eq. \eqref{eq:qmax_fodo} gives the oscillation frequency $\omega_0^2$ for the smooth-focusing approximation of the FODO channel:
+
+\begin{equation}
+\omega_0^2 = \frac{2 \kappa^2 L^2 \eta^2}{\pi^2}\left( \frac{\sin(\eta\pi / 2)}{(\eta \pi / 2)} \right)^2
+\end{equation}
+
+
+---
+
+Define the phase advance $\sigma_0 = \omega_0 / (2 L)$:
+
+[...]
+
+
+## Summary
+
+::: {layout-ncol="3"}
+
+\begin{equation} \nonumber
+Q_{max} = \dots
+\end{equation}
+
+\begin{equation} \nonumber
+Q_{max} = \dots
+\end{equation}
+
+\begin{equation} \nonumber
+Q_{max} = \dots
+\end{equation}
+
+:::
