@@ -965,7 +965,7 @@ Assume no external electric field ($E_x = E_y = 0$) and approximate magnetic fie
 
 ---
 
-Define rigidity $[B\rho] = p/q = \gamma\beta m c / q$ and linear focusing strengths $\kappa_{x, y} = \pm q G / [B\rho]$.
+Define rigidity $[B\rho] = p/q = \gamma \beta m c / q$ and linear focusing strengths $\kappa_{x, y} = \pm G / [B\rho]$.
 
 \begin{align}
 x'' 

@@ -150,7 +150,7 @@ v_\theta = \frac{r q B_0}{2 m} = \frac{r \omega_c}{2}
 
 ---
 
-Ignore centrifugal term, emittance term, and solenoid term ($B_z$) in radial envelope equation.
+Ignore centrifugal term, emittance term, and solenoid term in radial envelope equation.
 
 \begin{equation}
 \tilde{r}'' + \frac{\gamma'}{\gamma \beta^2} \tilde{r}' + \frac{\gamma''}{2 \gamma \beta^2} - \frac{Q}{2 \tilde{r}} = 0
@@ -262,16 +262,163 @@ Q_{max} = \frac{3 \pi^2}{4} \left(\frac{q \phi_0}{m \beta_0^2 c^2}\right)^2 \lef
 \tilde{x}'' 
 + \frac{(\gamma\beta)'}{(\gamma\beta)} \tilde{x}' 
 + \kappa_x(s) \tilde{x}
-- \frac{\varepsilon_x(s)^2}{\tilde{x}^3} 
+- \frac{\varepsilon_x^2}{\tilde{x}^3} 
 - \frac{Q}{2 \left( \tilde{x} + \tilde{y} \right) }
-&= 0 ,
+&= 0 
 \\
 \tilde{y}'' 
 + \frac{(\gamma\beta)'}{(\gamma\beta)} \tilde{y}' 
 + \kappa_y(s) \tilde{y}
-- \frac{\varepsilon_y(s)^2}{\tilde{y}^3} 
+- \frac{\varepsilon_y^2}{\tilde{y}^3} 
 - \frac{Q}{2 \left( \tilde{x} + \tilde{y} \right) }
-&= 0 .
+&= 0 
+\end{align}
+
+\begin{align}
+Q &= \frac{q \lambda}{2 \pi \epsilon_0 m c^2 \beta^2 \gamma^3} \\
+\varepsilon_x(s) &= \sqrt{\langle xx \rangle \langle x'x' \rangle - \langle xx' \rangle \langle xx' \rangle} \\
+\varepsilon_y(s) &= \sqrt{\langle yy \rangle \langle y'y' \rangle - \langle yy' \rangle \langle yy' \rangle} \\
+\kappa_x(s) &= +\frac{q G} {\gamma \beta m c} \\
+\kappa_y(s) &= -\frac{q G} {\gamma \beta m c}
 \end{align}
 
 
+---
+
+Let $\kappa_x(s) = f(s) \kappa_0$ and $\kappa_y(s) = -$\kappa_x(s)$. Ignoring acceleration ($\gamma' = 0$):
+
+\begin{align}
+\tilde{x}'' 
++ \kappa_0 f(s) \tilde{x}
+- \frac{\varepsilon_x^2}{\tilde{x}^3} 
+- \frac{Q}{2 \left( \tilde{x} + \tilde{y} \right) }
+&= 0 
+\\
+\tilde{y}'' 
+- \kappa_0 f(s) \tilde{y}
+- \frac{\varepsilon_y^2}{\tilde{y}^3} 
+- \frac{Q}{2 \left( \tilde{x} + \tilde{y} \right) }
+&= 0 
+\end{align}
+
+
+---
+
+![](images/fodo.png){fig-align=center height=175px}
+
+\begin{equation}
+f(s) =
+\begin{cases}
+  +1 & \text{if } 0               \leq s / 1 < \eta / 2 \\
+  -1 & \text{if } 1 - \eta L / 2  \leq s / L < 1 + \eta / 2 \\
+  +1 & \text{if } 2 - \eta / 2 \leq s / L < 2
+\end{cases}
+\end{equation}
+
+---
+
+To derive the maximum beam current, approximate $f(s)$, $\tilde{x}(s)$, and $\tilde{y}(s)$ as sinusoidal functions at the lattice frequency. Then plug into envelope equation, ignore fast-oscillating terms, and solve for equilibrium.
+
+Start with the focusing strength $f(s)$:
+
+\begin{align}
+f(s) &= \sum_{n=1}^{\infty} a_n \cos\left(\frac{n \pi s}{L}\right) \\
+a_n &= \frac{1}{L} \int_{0}^{2L} f(s) \cos\left(\frac{n \pi s}{L}\right) ds 
+\end{align}
+
+\begin{align}
+\boxed{
+f(s) \approx a_1 \cos\left(\frac{\pi s}{L}\right) 
+= \frac{4}{\pi} \sin\left(\frac{\pi \eta}{2}\right) \cos\left(\frac{\pi s}{L}\right) 
+}
+\end{align}
+
+
+---
+
+Approximate rms envelope evolution as:
+
+\begin{align}
+\tilde{x}(s) &= \frac{\tilde{r}_0}{\sqrt{2}} \left[ 1 + \delta \cos\left( \frac{\pi s}{L} \right) \right] \\
+\tilde{y}(s) &= \frac{\tilde{r}_0}{\sqrt{2}} \left[ 1 - \delta \cos\left( \frac{\pi s}{L} \right) \right]
+\end{align}
+
+Now evaluate terms in rms envelope equations: $\tilde{x}''$, $f(s) \tilde{x}$, etc.
+
+\begin{align}
+\tilde{x}'' = -\frac{\tilde{r}_0}{\sqrt{2}} \delta \frac{\pi^2}{L^2} \cos\left( \frac{\pi s}{L} \right) \\
+\tilde{y}'' = +\frac{\tilde{r}_0}{\sqrt{2}} \delta \frac{\pi^2}{L^2} \cos\left( \frac{\pi s}{L} \right)
+\end{align}
+
+
+---
+
+\begin{align}
+f(s) \tilde{x}(s) 
+&=
+\frac{4 \tilde{r}_0}{\sqrt{2} \pi} \sin\left(\frac{\pi \eta}{2}\right) \cos\left(\frac{\pi s}{L}\right) 
+\left[ 1 + \delta \cos\left( \frac{\pi s}{L} \right) \right] ,
+\\
+&= 
+\frac{4 \tilde{r}_0}{\sqrt{2} \pi} \sin\left(\frac{\pi \eta}{2}\right) 
+\left[ \cos\left(\frac{\pi s}{L}\right) + \delta \cos^2\left( \frac{\pi s}{L} \right) \right] .
+\end{align}
+
+Ignore fast oscillating component of $\cos^2(\pi s / L)$:
+
+\begin{equation}
+\cos^2\left( \frac{\pi s}{L} \right) 
+= \frac{1}{2} + \frac{1}{2} \cos\left(\frac{2 \pi s}{L}\right) \approx \frac{1}{2} .
+\end{equation}
+
+This gives:
+
+\begin{align}
+f(s) \tilde{x}(s) 
+&\approx
+\frac{4 \tilde{r}_0}{\sqrt{2} \pi} \sin\left(\frac{\pi \eta}{2}\right) 
+\left[ \cos\left(\frac{\pi s}{L}\right) + \frac{\delta}{2} \right] ,
+\\
+f(s) \tilde{y}(s) 
+&\approx
+\frac{4 \tilde{r}_0}{\sqrt{2} \pi} \sin\left(\frac{\pi \eta}{2}\right) 
+\left[ \cos\left(\frac{\pi s}{L}\right) - \frac{\delta}{2} \right] .
+\end{align}
+
+
+---
+
+Plugging these appoximations into rms envelope equations:
+
+\begin{align}
+-\left[ 
+  \delta \frac{\pi^2}{L^2} - \frac{4 \kappa_0}{\pi} \sin\left(\frac{\eta \pi}{2}\right) 
+\right] 
+\cos\left(\frac{\pi s}{L}\right)
++ \frac{2 \kappa_0 \delta}{\pi} \sin\left(\frac{\eta \pi}{2}\right)
+&= 
+\frac{Q}{2 \tilde{r}_0^2} ,
+\\
++\left[ 
+  \delta \frac{\pi^2}{L^2} - \frac{4 \kappa_0}{\pi} \sin\left(\frac{\eta \pi}{2}\right) 
+\right] 
+\cos\left(\frac{\pi s}{L}\right)
++ \frac{2 \kappa_0 \delta}{\pi} \sin\left(\frac{\eta \pi}{2}\right)
+&= 
+\frac{Q}{2 \tilde{r}_0^2} .
+\end{align}
+
+Solve for $\delta$ and $Q$:
+
+\begin{align}
+\delta &= \frac{4 \kappa_0 L^2}{\pi^3} \sin\left(\frac{\eta\pi}{2}\right)
+\\
+Q &= \frac{4 \kappa_0 \delta}{\pi} \sin\left(\frac{\eta\pi}{2}\right) \tilde{r}_{0}^2
+\end{align}
+
+
+\begin{equation}
+\boxed{
+  Q_{max} \approx \frac{2 \kappa_0 L \eta}{\pi} \left[ \frac{\sin(\eta\pi / 2)}{(\eta\pi / 2)} \right]^2 \tilde{r}_0^2
+}
+\end{equation}
