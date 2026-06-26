@@ -2,14 +2,9 @@
 title: "Plasma Physics of Beams"
 ---
 
-
-## Overview 
-
-* We'll use concepts/techniques from plasma physics to describe intense charged particle beams.
-* This lecture introduces the *kinetic theory* of plasmas, a self-consistent treatment including both external and self-generated electromagnetic fields. 
-* We'll derive the Vlasov-Poisson (V-P) equations, which are the basis of the analysis in the rest of the course.
+* This lecture introduces the *kinetic theory* of plasmas, which provides a complete description of charged particle beams in accelerators. 
+* The goal is to derive the Vlasov-Poisson (V-P) equations, which are the basis for the analysis in the rest of the course.
 * We start by introducing several useful quantities: the *Debye length*, *plasma parameter*, and *plasma frequency*. 
-* These quantities are derived for neutral plasmas in thermal equilibrium, but they will also appear in the analysis of charged particle beams (non-neutral plasmas).
 
 
 # Debye length, plasma parameter, and plasma frequency
