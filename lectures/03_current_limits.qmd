@@ -456,25 +456,49 @@ Comparing to Eq. \eqref{eq:qmax_fodo} gives the oscillation frequency $\omega_0^
 
 ---
 
-Define the phase advance $\sigma_0 = \omega_0 / (2 L)$:
+Define the phase advance $\sigma_0 = \omega_0 / (2 L)$ to eliminate $L$:
 
-[...]
+\begin{equation}
+\omega_0^2 = \frac{\eta k \sigma_0}{\sqrt{2} \pi} \frac{\sin(\eta\pi / 2)}{(\eta \pi / 2)}
+\end{equation}
+
+\begin{equation}
+Q_{max} 
+= 2 \omega_{0}^2 \tilde{r}_{0}^2
+= \frac{\sqrt{2} \eta k \sigma_0}{\pi} \frac{\sin(\eta\pi / 2)}{(\eta \pi / 2)} \tilde{r}_0^2 .
+\end{equation}
+
+
+---
+
+Define $r_b \equiv \sqrt{2} \tilde{r}_0$ as beam edge radius and $r_p$ as pipe radius.
+
+\begin{equation}
+Q_{max} = \frac{\eta k \sigma_0}{\sqrt{2} \pi} \frac{\sin(\eta\pi / 2)}{(\eta \pi / 2)} r_b^2 .
+\end{equation}
+
+Magnetic quadrupoles:
+
+\begin{equation}
+k = \frac{q}{\gamma m \beta c} \frac{dB}{dx} \sim \frac{q}{\gamma m \beta c} \frac{B}{r_p} .
+\end{equation}
+
+Electric quadrupoles:
+
+\begin{equation}
+k = \frac{q}{\gamma m \beta^2 c^2} \frac{dE}{dx} \sim \frac{2 q V_q}{\gamma m \beta^2 c^2} ,
+\end{equation}
+
+where $V_q = \frac{1}{2}\frac{dE}{dx} r_p^2$.
+
+
+
 
 
 ## Summary
 
-::: {layout-ncol="3"}
+![](images/summary_perveance.png){fig-align=center width=400px}
 
-\begin{equation} \nonumber
-Q_{max} = \dots
-\end{equation}
+For low-energy beams ($\gamma \approx 1$), $\lambda_{max} \sim Q_{max} V$ where $V = \frac{1}{2} m \beta^2 c^2 / q$. 
 
-\begin{equation} \nonumber
-Q_{max} = \dots
-\end{equation}
-
-\begin{equation} \nonumber
-Q_{max} = \dots
-\end{equation}
-
-:::
+![](images/summary_line_density.png){fig-align=center width=400px}
