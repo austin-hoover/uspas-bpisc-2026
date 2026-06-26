@@ -1,8 +1,5 @@
 ---
 title: "Envelope Equations"
-toc: true
-bibliography: references.bib 
-csl: aps.csl
 ---
 
 ## Envelope equations: reduced-order characterization of beam dynamics in terms of second-order moments {.unlisted}

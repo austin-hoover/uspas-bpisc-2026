@@ -1,8 +1,5 @@
 ---
 title: "Beam Mismatch and Halo Formation"
-toc: false
-bibliography: references.bib 
-csl: aps.csl
 ---
 
 

@@ -2,6 +2,19 @@
 
 Lecture notes for USPAS course *Beam Physics with Intense Space Charge (BPISC)*, July 2026.
 
-This is currently a draft. It makes and HTML page with links to the output PDFs.
+Run scripts to generate figures:
+```
+./run-scripts.sh
+```
 
-`quarto preview` will build website locally.
+Render all PDFs:
+
+```
+quarto render
+```
+
+Render one PDF:
+
+```
+quarto render 01_plasma_physics/main.qmd
+```

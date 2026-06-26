@@ -1,10 +1,28 @@
 project:
-  type: website
-  title: "USPAS BPISC 2026"
-  render:
-    - index.qmd
-    - lectures/*.qmd
+  type: default
+
+subtitle: USPAS - Beam Physics with Intense Space Charge
+date: July 2026
+date-format: MMMM YYYY
+author:
+  - name: Austin Hoover
+    affiliation: Oak Ridge National Laboratory
+  - name: Steven Lund
+    affiliation: Michigan State University
+  - name: Daniel Winklehner
+    affiliation: Massachusetts Institute of Technology
+  - name: John Barnard
+    affiliation: Lawrence Livermore National Laboratory
+bibliography: references.bib
+csl: ../aps.csl
 
 format:
-  html:
-    theme: pandoc
+  beamer:
+    fonttheme: serif
+    colortheme: seagull
+    fontsize: "9pt"
+    number-sections: true
+    toc: true
+    toc-title: "Outline"
+    pdf-engine: lualatex
+    include-in-header: header.tex

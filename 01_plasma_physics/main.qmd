@@ -1,8 +1,5 @@
 ---
 title: "Plasma Physics of Beams"
-toc: true
-bibliography: references.bib
-csl: aps.csl
 ---
 
 
