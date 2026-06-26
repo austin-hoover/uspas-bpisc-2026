@@ -1,5 +1,6 @@
 project:
   type: default
+  # output-dir: output
 
 subtitle: USPAS - Beam Physics with Intense Space Charge
 date: July 2026
@@ -13,6 +14,7 @@ author:
     affiliation: Massachusetts Institute of Technology
   - name: John Barnard
     affiliation: Lawrence Livermore National Laboratory
+    
 bibliography: references.bib
 csl: ../aps.csl
 

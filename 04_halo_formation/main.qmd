@@ -106,7 +106,7 @@ r_y(s) = r_0 + \eta_y(s). \\
 \end{aligned}
 \end{equation}
 
-Substituting \eqref{eq-env-deviations} into \eqref{eq-env_continuous} gives:
+Substituting \eqref{eq-env-deviations} into \eqref{eq-env-continuous} gives:
 
 \begin{equation}
 \begin{aligned}
@@ -139,12 +139,12 @@ Factoring $\eta_x$ and $\eta_y$ gives:
 \end{aligned}
 \end{equation}
 
-where we have used @eq-equilibrium-radius-equation to eliminate the remaining terms. 
+where we have used Eq. @-equilibrium-radius-equation to eliminate the remaining terms. 
 
 
 ---
 
-Using the definition of $k$ (@eq-depressed-focusing-strength) we find:
+Using the definition of $k$ (Eq. @-depressed-focusing-strength) we find:
 
 \begin{equation} \label{eq-env-pert-coupled-1}
 \begin{aligned}
@@ -158,7 +158,7 @@ Using the definition of $k$ (@eq-depressed-focusing-strength) we find:
 
 ## Eigenmode analysis or perturbed envelope equations
 
-\eqref{eq-env-pert-coupled-1} defines a coupled linear system of equations for $\eta_{x, y}$. We will analyze this system in terms of its normal modes. In vector form, @eq-env-pert-coupeld-1 can be written:
+\eqref{eq-env-pert-coupled-1} defines a coupled linear system of equations for $\eta_{x, y}$. We will analyze this system in terms of its normal modes. In vector form, Eq. @-env-pert-coupeld-1 can be written:
 
 \begin{equation}
 \boldsymbol{\eta}'' + \mathbf{A}\boldsymbol{\eta} = 0,
@@ -378,7 +378,7 @@ Note that the second term (core oscillation) now extends beyond the core. While 
 
 ## Phase-amplitude coordinates
 
-To analyze the equations of motion in @eq-pcm-eom-pendulum}, we transform to amplitude-phase coordinates $A$, $\psi$:
+To analyze the equations of motion in Eq. @-pcm-eom-pendulum}, we transform to amplitude-phase coordinates $A$, $\psi$:
 
 \begin{align}
 \frac{x(s)}{R_0} &\equiv A(s) \sin(\psi(s)) ,\label{eq:pcm_phase_amp_x} \\
@@ -392,25 +392,25 @@ with the phase $\psi(s)$ defined as
 \psi(s) = k s + \alpha(s),
 \end{equation}
 
-where $ks$ is the unperturbed phase advance within the beam and $\alpha(s)$ is a slowly varying function. We will derive dynamical equations for $A$ and $\psi$ by substituting @eq-pcm-phase-amp-x and @eq-pcm-phase-amp-xp into @eq-pcm-eom-pendulum. 
+where $ks$ is the unperturbed phase advance within the beam and $\alpha(s)$ is a slowly varying function. We will derive dynamical equations for $A$ and $\psi$ by substituting Eq. @-pcm-phase-amp-x and Eq. @-pcm-phase-amp-xp into Eq. @-pcm-eom-pendulum. 
 
 
 ---
 
-First, note that the $s$-derivative of @eq-pcm-phase-amp-x gives
+First, note that the $s$-derivative of Eq. @-pcm-phase-amp-x gives
 
 \begin{equation}
 \frac{x'}{R_0} = A' \sin\psi + A (k + \alpha') \cos\psi .
 \end{equation}
 
-Therefore, from the definition in @eq-pcm-phase-amp-x,
+Therefore, from the definition in Eq. @-pcm-phase-amp-x,
 
 \begin{equation}
 \label{eq-pcm-deriv-x}
 A' \sin\psi + \alpha' A \cos\psi = 0.
 \end{equation}
 
-The derivative of $x'$ in @eq-pcm-phase-amp-xp gives
+The derivative of $x'$ in Eq. @-pcm-phase-amp-xp gives
 
 \begin{equation}
 \frac{x''}{R_0} = k A' \cos\psi - k A (k + \alpha') \sin\psi .
@@ -419,14 +419,14 @@ The derivative of $x'$ in @eq-pcm-phase-amp-xp gives
 
 ---
 
-The equation of motion @eq-pcm-eom-pendulum can then be written as
+The equation of motion Eq. @-pcm-eom-pendulum can then be written as
 
 \begin{equation}
 \label{eq-pcm-eom-pendulum-amp-phase}
 R_0 k \left( A' \cos\psi - A \alpha' \sin\psi  \right) = f(A, \psi, s),
 \end{equation}
 
-where $f(A, \psi, s)$ is the driving force on the right hand side of @eq-pcm-eom-pendulum expressed in the new coordinates:
+where $f(A, \psi, s)$ is the driving force on the right hand side of Eq. @-pcm-eom-pendulum expressed in the new coordinates:
 
 \begin{equation} \label{eq-pcm-amp-phase-drive}
 \begin{aligned}
@@ -437,7 +437,7 @@ where $f(A, \psi, s)$ is the driving force on the right hand side of @eq-pcm-eom
 
 ---
 
-@eq-pcm-deriv-x and @eq-pcm-eom-pendulum-amp-phase} define a linear system to solve for $A'$ and $\alpha'$.
+Eq. @-pcm-deriv-x and Eq. @-pcm-eom-pendulum-amp-phase} define a linear system to solve for $A'$ and $\alpha'$.
 
 \begin{equation}
 \begin{bmatrix}
@@ -473,7 +473,7 @@ We expect resonance to occur when the envelope oscillation frequency $k_+$ is a 
 \Psi \equiv 2 \psi - k_{+}s. 
 \end{equation}
 
-Using this new variable, the driving force in @eq-pcm-amp-phase-drive becomes
+Using this new variable, the driving force in Eq. @-pcm-amp-phase-drive becomes
 
 \begin{equation} \label{eq-pcm-amp-phase-drive-new}
 \begin{aligned}
@@ -494,7 +494,7 @@ A' &= \frac{Q}{k R_0^2} \left[ A^3 \sin^3\psi \cos\psi + 2 \epsilon A \sin\psi \
 
 ---
 
-We now average the expressions @eq-pcm-dyn over one period:
+We now average the expressions Eq. @-pcm-dyn over one period:
 
 \begin{equation}
 \begin{aligned}
@@ -557,7 +557,7 @@ w'    &= \partial H / \partial \Psi , \\
 
 ## Comparison to exact model
 
-The exact (hard-edged) model in @eq-pcm-eom-exact can be treated in the same way. [...]
+The exact (hard-edged) model in Eq. @-pcm-eom-exact can be treated in the same way. [...]
 
 
 ## Particle tracking results
