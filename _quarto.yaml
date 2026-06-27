@@ -1,6 +1,10 @@
 project:
   type: default
   # output-dir: output
+  render:
+    - "*.qmd"
+    - "!*.py"
+    - "!*.ipynb"
 
 subtitle: USPAS - Beam Physics with Intense Space Charge
 date: July 2026
