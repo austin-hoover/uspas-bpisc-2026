@@ -1,4 +1,6 @@
 import numpy as np
+from tqdm import tqdm
+from tqdm import trange
 
 from orbit.core.bunch import Bunch
 from orbit.core.bunch import BunchTwissAnalysis
@@ -8,6 +10,30 @@ from orbit.envelope import EnvelopeTracker
 from orbit.lattice import AccLattice
 from orbit.lattice import AccNode
 
+
+def samp_dist_norm_kv(size: int) -> np.ndarray:
+    coords = np.random.normal(size=(size, 4))
+    coords = coords / np.linalg.norm(coords, axis=1, keepdims=True)
+    coords = coords / np.std(coords, axis=0)
+    return coords
+    
+
+def samp_dist_norm_gauss(size: int) -> np.ndarray:
+    return np.random.normal(size=(size, 4))
+
+
+def samp_dist(size: int, name: str = "kv", cov_matrix: np.ndarray = None):
+    if name == "kv":
+        coords = samp_dist_norm_kv(size)
+    elif name == "gauss":
+        coords = samp_dist_norm_gauss(size)
+    else:
+        raise ValueError(f"Invalid distribution name '{name}'")
+        
+    if cov_matrix is not None:
+        coords = coords @ np.linalg.cholesky(cov_matrix)
+    return coords
+    
 
 def track_env_tbt(envelope: Envelope, lattice: AccLattice, turns: int, copy: bool = False) -> dict[str, np.ndarray]:    
     history_keys = ["rms_x", "rms_y"]
@@ -47,7 +73,7 @@ def track_bunch_tbt(bunch: Bunch, lattice: AccLattice, turns: int, copy: bool = 
     else:
         bunch_out = bunch
         
-    for i in range(turns + 1):
+    for i in trange(turns + 1):
         if i > 0:
             lattice.trackBunch(bunch_out)
 
