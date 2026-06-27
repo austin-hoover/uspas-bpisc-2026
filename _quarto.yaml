@@ -20,7 +20,7 @@ author:
     affiliation: Lawrence Livermore National Laboratory
     
 bibliography: references.bib
-csl: ../aps.csl
+# csl: ../aps.csl
 
 format:
   beamer:
