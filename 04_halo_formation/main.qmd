@@ -231,12 +231,12 @@ The frequencies correspond to eigenvectors $\boldsymbol{\eta}_\pm$:
 
 ## Mode frequency vs. tune depression
 
-[Plots showing mode frequency vs. tune depression.]
+![](images/env_mode_freq.png){#fig-env-mode-freq fig-align=center width=300px}
 
 
 ## Breathing vs. quadrupole mode
 
-[Plots showing breathing vs. quadrupole mode.]
+![](images/env_mode_diag.png){fig-align=center width=300px}
 
 
 
@@ -251,16 +251,16 @@ It is natural to extend the above analysis to three-dimensional systems. We will
 # Particle-core models of halo formation
 
 
-## Measured phase space distribution in SNS linac
-
-![](images/sns_lw.png){#fig-sns-lw width=300px}
-
-
 ## What is halo?
 
 * Vague definition: low-density cloud surrounding dense core.
 * Important for high-power accelerators (beam loss).
 * Difficult to measure and predict.
+
+
+---
+
+![Measured phase space distribution in SNS linac.](images/sns_lw.png){#fig-sns-lw width=300px}
 
 
 ## Particle-core models of halo formation
@@ -270,19 +270,34 @@ It is natural to extend the above analysis to three-dimensional systems. We will
 * Basic features of particle-core models show up in PIC simulations.
 
 
+---
+
+![](images/peanut_pic.png){fig-align=center width=400px}
+
+
+
 ## Plan of attack
 
 * Start with KV equilibria in two-dimensional, axisymmetric, continuous focusing systems. 
 * Particles within beam experience \textit{linear} forces and remain there for all time. (Even with mismatch!)
-* Introduce mismatch of envelope, such that particles can move in/out of the core.
-
-##  
-
-Return to @fig-mode-freq which plots the envelope mode frequencies $k_{\pm}$ as a function of the depressed single-particle frequency (a measure of space charge intensity). Particles far from the core oscillate at the natural frequency $k_0$, which is determined by the external focusing strength. Particles inside the core oscillate at the depressed frequency $k \le k_0$. Outside the core, the oscillation frequency decreases continuously and nonlinearly with the radius $r$. We expect resonances to occur when the particle oscillation frequency is a multiple of the envelope frequency $k_\pm$---particularly when the envelope frequency is \textit{twice} the single-particle frequency. We also expect resonances to be enhanced by larger oscillations of the beam. [...]
-
-This section will focus on an important paper written by Gluckstern in 1994 @gluckstern_1994_analytic. At the time, the maximum halo extent was an important theoretical question---and an important practical question for the design of new high-power accelerator. Gluckstern used classical perturbation theory to derive an approximate Hamiltonian to describe the resonant particle dynamics and, consequently, an upper bound on the halo amplitude. The Hamiltonian contours form the famous ``peanut diagram'' and is reproduced quite well by PIC simulations. [...]
+* Introduce mismatch of envelope so that particles can move in/out of the core.
 
 
+## The basic idea
+
+* Return to @fig-env-mode-freq, which plots envelope mode frequencies $k_{\pm}$ as function of  depressed single-particle frequency (space charge intensity). 
+* Particles far from core oscillate at natural frequency $k_0$.
+* Particles inside core oscillate at depressed frequency $k \le k_0$. 
+* Outside core, frequency decreases continuously + nonlinearly with distance $r$.
+* Resonances possible when particle frequency $k$ approaches multiple of envelope frequency $k_\pm$---particularly when $k_\pm = 2 k$. 
+* Resonances enhanced by oscillations of beam core.
+
+
+---
+
+* Gluckstern [@gluckstern_1994_analytic] used classical perturbation theory to derive an approximate Hamiltonian to describe the resonant particle dynamics.
+* This model was used to estimate upper bounds on halo amplitude. 
+* Contours of the Hamiltonian form the ``peanut diagram''.
 
 
 ## Equations of motion
@@ -563,7 +578,7 @@ w'    &= \partial H / \partial \Psi , \\
 
 ## Comparison to exact model
 
-The exact (hard-edged) model in Eq. \eqref{eq-pcm-eom-exact can be treated in the same way. [...]
+The exact (hard-edged) model in Eq. \eqref{eq-pcm-eom-exact} can be treated in the same way. [...]
 
 
 ## Particle tracking results
