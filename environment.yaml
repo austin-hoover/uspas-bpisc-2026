@@ -1,0 +1,21 @@
+name: uspas-bpisc-2026
+channels:
+  - conda-forge
+dependencies:
+  - python=3.14
+  - fftw=3.3.11
+  - ipykernel=7.3.0
+  - ipywidgets=8.1.8
+  - meson=1.11.1
+  - numpy=2.5.1
+  - matplotlib=3.11.0
+  - ninja=1.13.2
+  - pkg-config=0.29.2 
+  - scipy=1.18.0
+  - tqdm=4.68.3
+  - pip
+  - pip:
+    - meson-python==0.20.0
+    - setuptools==83.0.0
+    - setuptools-scm==10.2.0
+    - git+https://github.com/PyORBIT-Collaboration/PyORBIT3.git@b3cf2f5adda41852d40e2b44170d74177334c919

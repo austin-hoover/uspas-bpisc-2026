@@ -1,0 +1,62 @@
+project:
+  type: default
+#  output-dir: outputs
+  render:
+    - "*.qmd"
+    - "!*.py"
+    - "!*.ipynb"
+
+subtitle: USPAS - Beam Physics with Intense Space Charge
+date: July 2026
+date-format: MMMM YYYY
+author:
+  - name: Austin Hoover
+    affiliation: Oak Ridge National Laboratory
+  - name: Steven Lund
+    affiliation: Michigan State University
+  - name: Daniel Winklehner
+    affiliation: Massachusetts Institute of Technology
+  - name: John Barnard
+    affiliation: Lawrence Livermore National Laboratory
+    
+bibliography: references.bib
+
+format:
+  beamer:
+    fonttheme: serif
+    colortheme: seagull
+    fontsize: "9pt"
+    number-sections: true
+    number-depth: 1
+    toc: true
+    toc-title: "Table of Contents"
+    incremental: true
+    pdf-engine: lualatex
+    header-includes: |
+      \usepackage{animate}
+
+      \setbeamerfont{frametitle}{series=\bfseries, size=\LARGE}
+      \setbeamerfont{title}{series=\bfseries, size=\huge}
+      \setbeamertemplate{footline}[frame number]
+      \setbeamertemplate{itemize items}[circle]
+      
+      \AtBeginSection[]{
+        \begin{frame}
+          \frametitle{Table of Contents}
+          \tableofcontents[currentsection]
+        \end{frame}
+      }
+          
+  revealjs:
+    fontsize: 24px
+    width: 900
+    theme: dark  # {default, dark}
+    css: style.css
+    slide-number: true
+    scrollable: true
+    html-math-method: mathjax
+    toc: true
+    toc-depth: 1
+    incremental: true
+    auto-stretch: true
+    embed-resources: true

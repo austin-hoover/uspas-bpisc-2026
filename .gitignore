@@ -1,0 +1,13 @@
+main_files
+*.pdf
+
+.DS_Store
+.ipynb_checkpoints
+.idea
+*.html
+__pycache__
+outputs
+
+_site
+/.quarto/
+**/*.quarto_ipynb
