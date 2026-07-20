@@ -50,7 +50,7 @@ format:
   revealjs:
     fontsize: 24px
     width: 900
-    theme: dark  # {default, dark}
+    theme: default  # {default, dark}
     css: style.css
     slide-number: true
     scrollable: true
