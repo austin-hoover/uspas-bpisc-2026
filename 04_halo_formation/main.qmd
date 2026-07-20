@@ -182,8 +182,8 @@ Define deviations from the equilibrium radii:
 
 \begin{equation} \label{eq-env-deviations}
 \begin{aligned}
-r_x(s) = R_0 + \eta_x(s), \\
-r_y(s) = R_0 + \eta_y(s). \\
+r_x(s) = R_0 + \xi_x(s), \\
+r_y(s) = R_0 + \xi_y(s). \\
 \end{aligned}
 \end{equation}
 
@@ -191,32 +191,32 @@ Substituting Eq. \eqref{eq-env-deviations} into Eq. \eqref{eq-env-continuous} gi
 
 \begin{equation}
 \begin{aligned}
-\eta_x'' + k_0^2 (R_0 + \eta_x) - \frac{Q}{R_0} \left(1 + \frac{\eta_x + \eta_y}{2 R_0}\right)^{-1} - \frac{\varepsilon^2}{R_0^3} \left( 1 + \frac{\eta_x}{R_0} \right)^{-3} &= 0, 
+\xi_x'' + k_0^2 (R_0 + \xi_x) - \frac{Q}{R_0} \left(1 + \frac{\xi_x + \xi_y}{2 R_0}\right)^{-1} - \frac{\varepsilon^2}{R_0^3} \left( 1 + \frac{\xi_x}{R_0} \right)^{-3} &= 0, 
 \\
-\eta_y'' + k_0^2 (R_0 + \eta_y) - \frac{Q}{R_0} \left(1 + \frac{\eta_x + \eta_y}{2 R_0}\right)^{-1} - \frac{\varepsilon^2}{R_0^3} \left( 1 + \frac{\eta_y}{R_0} \right)^{-3} &= 0.
+\xi_y'' + k_0^2 (R_0 + \xi_y) - \frac{Q}{R_0} \left(1 + \frac{\xi_x + \xi_y}{2 R_0}\right)^{-1} - \frac{\varepsilon^2}{R_0^3} \left( 1 + \frac{\xi_y}{R_0} \right)^{-3} &= 0.
 \end{aligned}
 \end{equation}
 
 
 ---
 
-Assume deviations $\eta_{x, y}$ are much smaller than equilibrium radius $R_0$. Then linearize perturbed envelope equations to give:
+Assume deviations $\xi_{x, y}$ are much smaller than equilibrium radius $R_0$. Then linearize perturbed envelope equations to give:
 
 \begin{equation}
 \begin{aligned}
-\eta_x'' + k_0^2 (R_0 + \eta_x) - \frac{Q}{R_0} \left( 1 - \frac{\eta_x + \eta_y}{2 R_0} \right) - \frac{\varepsilon^2}{R_0^3} \left(1 - 3 \frac{\eta_x}{R_0} \right) = 0,
+\xi_x'' + k_0^2 (R_0 + \xi_x) - \frac{Q}{R_0} \left( 1 - \frac{\xi_x + \xi_y}{2 R_0} \right) - \frac{\varepsilon^2}{R_0^3} \left(1 - 3 \frac{\xi_x}{R_0} \right) = 0,
 \\
-\eta_y'' + k_0^2 (R_0 + \eta_y) - \frac{Q}{R_0} \left( 1 - \frac{\eta_x + \eta_y}{2 R_0} \right) - \frac{\varepsilon^2}{R_0^3} \left(1 - 3 \frac{\eta_y}{R_0} \right) = 0.
+\xi_y'' + k_0^2 (R_0 + \xi_y) - \frac{Q}{R_0} \left( 1 - \frac{\xi_x + \xi_y}{2 R_0} \right) - \frac{\varepsilon^2}{R_0^3} \left(1 - 3 \frac{\xi_y}{R_0} \right) = 0.
 \end{aligned}
 \end{equation}
 
-Facotr $\eta_x$ and $\eta_y$:
+Facotr $\xi_x$ and $\xi_y$:
 
 \begin{equation}
 \begin{aligned}
-\eta_x'' + \left( k_0^2 + \frac{Q}{2 R_0^2} + \frac{3 \varepsilon^2}{R_0^4} \right) \eta_x + \left( \frac{Q}{2 R_0^2} \right) \eta_y &= 0,
+\xi_x'' + \left( k_0^2 + \frac{Q}{2 R_0^2} + \frac{3 \varepsilon^2}{R_0^4} \right) \xi_x + \left( \frac{Q}{2 R_0^2} \right) \xi_y &= 0,
 \\
-\eta_y'' + \left( k_0^2 + \frac{Q}{2 R_0^2} + \frac{3 \varepsilon^2}{R_0^4} \right) \eta_y + \left( \frac{Q}{2 R_0^2} \right) \eta_x &= 0,
+\xi_y'' + \left( k_0^2 + \frac{Q}{2 R_0^2} + \frac{3 \varepsilon^2}{R_0^4} \right) \xi_y + \left( \frac{Q}{2 R_0^2} \right) \xi_x &= 0,
 \end{aligned}
 \end{equation}
 
@@ -229,9 +229,9 @@ Using the definition of $k$ (Eq. \eqref{eq-depressed-focusing-strength}) we find
 
 \begin{equation} \label{eq-env-pert-coupled-1}
 \begin{aligned}
-\eta_x'' + \left( \frac{3}{2}k_0^2 + \frac{5}{2} k^2 \right) \eta_x + \left( \frac{1}{2}k_0^2 - \frac{1}{2} k^2 \right) \eta_y &= 0,
+\xi_x'' + \left( \frac{3}{2}k_0^2 + \frac{5}{2} k^2 \right) \xi_x + \left( \frac{1}{2}k_0^2 - \frac{1}{2} k^2 \right) \xi_y &= 0,
 \\
-\eta_y'' + \left( \frac{3}{2}k_0^2 + \frac{5}{2} k^2 \right) \eta_y + \left( \frac{1}{2}k_0^2 - \frac{1}{2} k^2 \right) \eta_x &= 0.
+\xi_y'' + \left( \frac{3}{2}k_0^2 + \frac{5}{2} k^2 \right) \xi_y + \left( \frac{1}{2}k_0^2 - \frac{1}{2} k^2 \right) \xi_x &= 0.
 \end{aligned}
 \end{equation}
 
@@ -239,13 +239,13 @@ Using the definition of $k$ (Eq. \eqref{eq-depressed-focusing-strength}) we find
 
 ## Eigenmode decomposition of perturbed envelope equations
 
-Eq. \eqref{eq-env-pert-coupled-1} defines a coupled linear system of equations for $\eta_{x, y}$. We will analyze this system in terms of its normal modes. In vector form, Eq. \eqref{eq-env-pert-coupled-1} can be written:
+Eq. \eqref{eq-env-pert-coupled-1} defines a coupled linear system of equations for $\xi_{x, y}$. We will analyze this system in terms of its normal modes. In vector form, Eq. \eqref{eq-env-pert-coupled-1} can be written:
 
 \begin{equation}
-\boldsymbol{\eta}'' + \mathbf{A}\boldsymbol{\eta} = 0,
+\boldsymbol{\xi}'' + \mathbf{A}\boldsymbol{\xi} = 0,
 \end{equation}
 
-where $\boldsymbol{\eta} = [\eta_x, \eta_y]^T$ is the vector of perturbed envelope radii and $\mathbf{A}$ is a symmetric matrix of coefficients:
+where $\boldsymbol{\xi} = [\xi_x, \xi_y]^T$ is the vector of perturbed envelope radii and $\mathbf{A}$ is a symmetric matrix of coefficients:
 
 \begin{equation}
 \mathbf{A} = 
@@ -269,13 +269,13 @@ with entries defined as:
 We search for solutions of the form:
 
 \begin{equation} \label{eq-ansantz}
-\boldsymbol{\eta}_\pm(s) = \boldsymbol{\eta}_0 e^{i k_\pm s},
+\boldsymbol{\xi}_\pm(s) = \boldsymbol{\xi}_0 e^{i k_\pm s},
 \end{equation}
 
 where $k_\pm$ are two distinct frequencies. This leads to an eivenvalue problem:
 
 \begin{equation}
-\left( \mathbf{A} - \mathbf{I} k_\pm^2 \right) \boldsymbol{\eta}_\pm = 0.
+\left( \mathbf{A} - \mathbf{I} k_\pm^2 \right) \boldsymbol{\xi}_\pm = 0.
 \end{equation}
 
 
@@ -291,14 +291,14 @@ The eigenvalues give the spatial frequency (wavenumber) of the mismatch oscillat
 \end{aligned}
 \end{equation}
 
-The corresponding eigenvectors are $\boldsymbol{\eta}_\pm$:
+The corresponding eigenvectors are $\boldsymbol{\xi}_\pm$:
 
 \begin{equation}
 \begin{aligned}
-\boldsymbol{\eta}_{+} &= \sqrt{\frac{1}{2}} 
+\boldsymbol{\xi}_{+} &= \sqrt{\frac{1}{2}} 
 \begin{bmatrix} +1 \\ +1 \end{bmatrix} \quad \text{(breathing mode)}.
 \\    
-\boldsymbol{\eta}_{-} &= \sqrt{\frac{1}{2}} 
+\boldsymbol{\xi}_{-} &= \sqrt{\frac{1}{2}} 
 \begin{bmatrix} +1 \\ -1 \end{bmatrix} \quad \text{(quadrupole mode)}.
 \end{aligned}
 \end{equation}
