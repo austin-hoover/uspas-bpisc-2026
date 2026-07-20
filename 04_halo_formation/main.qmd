@@ -732,8 +732,8 @@ where $u = Q / (2 \varepsilon k_0)$.
 Use $R_0$ and $k_0$ to define the the dimensionless coordinates $s \rightarrow k_0 s$ and $R \rightarrow R / R_0$. The equations of motion become:
 
 \begin{align}
-R'' &= -R + \frac{\eta^2}{R^3} + \frac{1 - \eta^2}{R} , \\
-x'' &= -x + (1 - \eta^2) F(x) \\
+R'' &= -R + \frac{(k / k_0)^2}{R^3} + \frac{1 - (k / k_0)^2}{R} , \\
+x'' &= -x + (1 - (k / k_0)^2) F(x) \\
 F(x) &= 
 \begin{cases}
     x / {R^2} & |x| \leq R , \\
@@ -741,7 +741,7 @@ F(x) &=
 \end{cases}
 \end{align}
 
-where $\eta = k / k_0 = \sqrt{1 + u^2} - u$ is the tune depression ratio within the beam at the equilibrium radius.
+where $k / k_0 = \sqrt{1 + u^2} - u$ is the tune depression ratio within the beam at the equilibrium radius.
 
 
 ---
@@ -861,23 +861,23 @@ where $\eta = k / k_0 = \sqrt{1 + u^2} - u$ is the tune depression ratio within 
 
 ---
 
-![Stroboscopic plot: $\eta = 0.9$](scripts/outputs/pcm/run_01/fig_strobe.png){fig-align=center width=200px}
+![Stroboscopic plot: $k / k_0 = 0.9$](scripts/outputs/pcm/run_01/fig_strobe.png){fig-align=center width=200px}
 
 ---
 
-![Stroboscopic plot: $\eta = 0.7$](scripts/outputs/pcm/run_02/fig_strobe.png){fig-align=center width=200px}
+![Stroboscopic plot: $k / k_0 = 0.7$](scripts/outputs/pcm/run_02/fig_strobe.png){fig-align=center width=200px}
 
 ---
 
-![Stroboscopic plot: $\eta = 0.5$](scripts/outputs/pcm/run_03/fig_strobe.png){fig-align=center width=200px}
+![Stroboscopic plot: $k / k_0 = 0.5$](scripts/outputs/pcm/run_03/fig_strobe.png){fig-align=center width=200px}
 
 ---
 
-![Stroboscopic plot: $\eta = 0.3$](scripts/outputs/pcm/run_04/fig_strobe.png){fig-align=center width=200px}
+![Stroboscopic plot: $k / k_0 = 0.3$](scripts/outputs/pcm/run_04/fig_strobe.png){fig-align=center width=200px}
 
 ---
 
-![Stroboscopic plot: $\eta = 0.1$](scripts/outputs/pcm/run_05/fig_strobe.png){fig-align=center width=200px}
+![Stroboscopic plot: $k / k_0 = 0.1$](scripts/outputs/pcm/run_05/fig_strobe.png){fig-align=center width=200px}
 
 
 
@@ -889,7 +889,7 @@ where $\eta = k / k_0 = \sqrt{1 + u^2} - u$ is the tune depression ratio within 
 ## Comments
 
 * Patterns in stroboscopic plots are very similar to analytic model.
-* For strong space charge (small $\eta$), motion becomes chaotic near separatrix $\rightarrow$ easier for particles to be driven into halo.
+* For strong space charge ($k \ll k_0$), motion becomes chaotic near separatrix $\rightarrow$ easier for particles to be driven into halo.
 * Some progress on analytic model for Gaussian distribution [@batygin_2021_chaotic]. More complicated!
 * Tracking models can be extended to 3D or non-continuous focusing channels (@sec-extensions).
 
