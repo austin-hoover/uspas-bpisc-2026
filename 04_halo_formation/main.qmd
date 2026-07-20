@@ -110,7 +110,7 @@ where $\varepsilon_{x, y}$ are invariant emittances, $Q$ is beam perveance, and 
 
 Restrict attention to continuous, axisymmetric focusing systems with $\kappa_x(s) = \kappa_y(s) = k_0^2$. 
 
-Also assume equal emittances: $\varepsilon_x = \varepsilon_y = 0$.
+Also assume equal emittances: $\varepsilon_x = \varepsilon_y = \varepsilon$.
 
 \begin{equation} \label{eq-env-continuous}
 \begin{aligned}
@@ -1293,6 +1293,7 @@ where $I$ is the beam current, $\lambda$ is the RF wavelength, and $c$ is the sp
 * Halo amplitude bounded from nonlinear detuning outside core.
 * Analytic, ODE, and PIC models agree on main features.
 * Real story is more complicated. One example: [@bohn_2003_fluctuations]. Need to consider all effects together!
+* See [https://github.com/austin-hoover/uspas-bpisc-2026](https://github.com/austin-hoover/uspas-bpisc-2026) for source code or to point out mistakes. 
 
 
 ## References {.allowframebreaks}
