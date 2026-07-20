@@ -354,8 +354,8 @@ Energy gain for particle passing through core depends on relative phase of parti
 Suppose $x$ oscillates at half the core frequency:
 
 \begin{align}
-x       &\sim \sin(\omega t / 2 + \delta / 2) , \\
-\dot{x} &\sim \cos(\omega t / 2 + \delta / 2) , \\
+x       &\sim \sin(\Omega t / 2 + \delta / 2) , \\
+\dot{x} &\sim \cos(\Omega t / 2 + \delta / 2) , \\
 \dot{U} &\sim \sin(\Omega t) \sin(\Omega t + \delta) .
 \end{align}
 
@@ -677,8 +677,8 @@ The variables $w$ and $\Psi$ are canonically conjugate: their evolution equation
 \begin{equation}
 \begin{aligned}
 H(w, \Psi) &= \frac{Q}{k R_0^2} \left[ \Delta w - \frac{3}{8}w^2 - \epsilon w \cos\Psi \right] , \\
-w'    &= \partial H / \partial \Psi , \\
-\Psi' &= \partial H / \partial w . 
+w'    &= +\partial H / \partial \Psi , \\
+\Psi' &= -\partial H / \partial w . 
 \end{aligned}
 \end{equation}
 
