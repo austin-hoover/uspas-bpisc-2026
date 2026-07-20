@@ -123,22 +123,22 @@ r_y'' + k_0^2 r_y - \frac{2 Q}{r_x + r_y} - \frac{\varepsilon^2}{r_y^3} &= 0.
 
 ---
 
-Equilibrium occurs when $r_x'' = r_y'' = 0$. The equilibrium radius $r_x = r_y = r_0$ solves:
+Equilibrium occurs when $r_x'' = r_y'' = 0$. The equilibrium radius $r_x = r_y = R_0$ solves:
 
 \begin{equation}
 \label{eq-equilibrium-radius-equation}
-k_0^2 r_0 - Q r_0^{-1} - \varepsilon_2 r_0^{-3} = 0.
+k_0^2 R_0 - Q R_0^{-1} - \varepsilon_2 R_0^{-3} = 0.
 \end{equation}
 
 \begin{equation}
 \label{eq-radius}
-r_0 = \frac{Q^{1/2}}{k_0} \left[ \frac{1}{2} + \frac{1}{2} \sqrt{1 + \frac{4 k_0^2 \varepsilon^2}{Q^2}} \right]^{1/2}.
+R_0 = \frac{Q^{1/2}}{k_0} \left[ \frac{1}{2} + \frac{1}{2} \sqrt{1 + \frac{4 k_0^2 \varepsilon^2}{Q^2}} \right]^{1/2}.
 \end{equation}
 
 In limit of space-charge-dominated ($2 k_0 \varepsilon \ll Q$), or emittance-dominated ($2 k_0 \varepsilon \gg Q$) beam,
 
 \begin{equation}
-r_0 \rightarrow \left\{
+R_0 \rightarrow \left\{
 \begin{array}{@{}ll@{}}
   \sqrt{Q} / {k_0}, & 2 k_0 \varepsilon \ll Q, \\
   \sqrt{\varepsilon / k_0}, & 2 k_0 \varepsilon \gg Q.
@@ -159,12 +159,12 @@ y'' + k_0^2 y - \frac{2 Q}{r_x + r_y} \frac{y}{r_y} = 0.
 \end{aligned}
 \end{equation}
 
-At equilibrium ($r_x = r_y = r_0$),
+At equilibrium ($r_x = r_y = R_0$),
 
 \begin{equation}
 \begin{aligned}
-x'' + \left( k_0^2 - \frac{Q}{r_0^2} \right) x = 0, \\
-y'' + \left( k_0^2 - \frac{Q}{r_0^2} \right) y = 0. \\
+x'' + \left( k_0^2 - \frac{Q}{R_0^2} \right) x = 0, \\
+y'' + \left( k_0^2 - \frac{Q}{R_0^2} \right) y = 0. \\
 \end{aligned}
 \end{equation}
 
@@ -172,7 +172,7 @@ Particles in core oscillate with depressed wavenumber $k$:
 
 \begin{equation}
 \label{eq-depressed-focusing-strength}
-k^2 \equiv k_0^2 - {Q} / {r_0^2} .
+k^2 \equiv k_0^2 - {Q} / {R_0^2} .
 \end{equation}
 
 
@@ -685,7 +685,7 @@ w'    &= +\partial H / \partial \Psi , \\
 
 ## Analysis of the Hamiltonian
 
-![](scripts/outputs/analytic/pcm_eps_cos_vs_w.png){fig-align=center width=200px}
+![](scripts/outputs/analytic/pcm_eps_cos_vs_w.png){fig-align=center width=300px}
 
 
 ## Hamiltonian contours (polar coordinates)
