@@ -345,7 +345,7 @@ R &\approx R_0 \left( 1 + A \sin(\Omega t) \right) \\
 Energy gain for particle passing through core depends on relative phase of particle position/velocity and envelope radius:
 
 \begin{align}
-\dot{U} = F x \approx A \Omega^2 x \dot{x} \sin(\Omega t) .
+\dot{U} = F \dot{x} \approx A \Omega^2 x \dot{x} \sin(\Omega t) .
 \end{align}
 
 
