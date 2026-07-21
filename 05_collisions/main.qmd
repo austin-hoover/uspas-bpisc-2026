@@ -1,5 +1,6 @@
 ---
 title: "Intrabeam Collisions, Gas and Electron Effects"
+bibliography: references.bib
 ---
 
 
