@@ -30,7 +30,7 @@ format:
     number-depth: 1
     toc: true
     toc-title: "Table of Contents"
-    incremental: true
+    incremental: false
     pdf-engine: lualatex
     header-includes: |
       \usepackage{animate}
@@ -57,6 +57,6 @@ format:
     html-math-method: mathjax
     toc: true
     toc-depth: 1
-    incremental: true
+    incremental: false
     auto-stretch: true
     embed-resources: true
