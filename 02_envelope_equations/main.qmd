@@ -1161,8 +1161,8 @@ dx dy
 Define polar coordinates $r$ and $\theta$:
 
 \begin{align}
-r \cos\theta &= \frac{x^2}{r_x^2 + x} \\
-r \sin\theta &= \frac{y^2}{r_y^2 + y} \\
+r \cos\theta &= \frac{x^2}{r_x^2 + t} \\
+r \sin\theta &= \frac{y^2}{r_y^2 + t} \\
 dx dy &= (r_x^2 + t)^{1/2} (r_y^2 + t)^{1/2} r dr d\theta
 \end{align}
 
