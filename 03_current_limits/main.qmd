@@ -504,10 +504,6 @@ where $V_q = \frac{1}{2}\frac{dE}{dx} r_p^2$.
 
 
 
-## Summary
+---
 
-![](images/summary_perveance.png){fig-align=center width=400px}
-
-For low-energy beams ($\gamma \approx 1$), $\lambda_{max} \sim Q_{max} V$ where $V = \frac{1}{2} m \beta^2 c^2 / q$. 
-
-![](images/summary_line_density.png){fig-align=center width=400px}
+![](images/summary.png){fig-align=center}
